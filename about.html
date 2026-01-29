@@ -14,28 +14,137 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
     <style>
+        /* Modern Leadership Section */
+        .leadership-modern {
+            background: linear-gradient(180deg, #fafafa 0%, #ffffff 50%, #fafafa 100%);
+        }
+
         .leadership-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 24px;
-            margin-top: 32px;
+            gap: 32px;
+            margin-top: 40px;
         }
-        .leader-card {
-            background: var(--color-white);
-            padding: 24px;
-            border-radius: var(--radius-card);
-            border: 1px solid var(--color-gray-light);
+
+        .leader-card-modern {
+            position: relative;
+            background: white;
+            padding: 32px 24px;
+            border-radius: 20px;
+            border: 1px solid #f0f0f0;
             text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
         }
-        .leader-card h4 {
-            font-size: 18px;
-            margin-bottom: 4px;
+
+        .leader-card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-accent-purple), var(--color-accent-red));
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.4s ease;
+        }
+
+        .leader-card-modern:hover::before {
+            transform: scaleX(1);
+        }
+
+        .leader-card-modern:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(137, 56, 159, 0.15);
+            border-color: rgba(137, 56, 159, 0.2);
+        }
+
+        .leader-avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .leader-card-modern:hover .leader-avatar {
+            transform: scale(1.05);
+            box-shadow: 0 12px 32px rgba(137, 56, 159, 0.2);
+            border-color: rgba(137, 56, 159, 0.1);
+        }
+
+        .leader-card-modern h4 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
             color: var(--color-primary);
+            font-family: var(--font-heading);
         }
-        .leader-card p {
-            font-size: 14px;
-            color: var(--color-gray-medium);
+
+        .leader-card-modern p {
+            font-size: 15px;
+            color: var(--color-accent-purple);
+            font-weight: 500;
             margin: 0;
+        }
+
+        .leadership-section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .leadership-section-header h2 {
+            font-size: 42px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-red));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0;
+        }
+
+        .team-category-header {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin: 64px 0 24px 0;
+            font-family: var(--font-heading);
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .team-category-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-accent-purple), var(--color-accent-red));
+            border-radius: 2px;
+        }
+
+        .team-category-header:first-of-type {
+            margin-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            .leadership-section-header h2 {
+                font-size: 32px;
+            }
+
+            .team-category-header {
+                font-size: 24px;
+            }
+
+            .leadership-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 24px;
+            }
         }
         .client-grid {
             display: grid;
@@ -248,70 +357,70 @@
     </section>
 
     <!-- Leadership -->
-    <section style="background: #fafafa;">
+    <section class="leadership-modern" style="padding: 80px 0;">
         <div class="container">
-            <div class="section-header">
+            <div class="leadership-section-header">
                 <h2>Leadership Team</h2>
             </div>
 
-            <h3 style="margin-bottom: 24px;">Management Team</h3>
+            <h3 class="team-category-header">Management Team</h3>
             <div class="leadership-grid">
-                <div class="leader-card">
-                    <img src="images/leadership/mani-vadivel.png" alt="Mani Vadivel" style="width: 120px; height: 120px; border-radius: 50%; margin-bottom: 16px; object-fit: cover;">
+                <div class="leader-card-modern">
+                    <img src="images/leadership/mani-vadivel.png" alt="Mani Vadivel" class="leader-avatar">
                     <h4>Mani Vadivel</h4>
                     <p>CEO & Founder</p>
                 </div>
-                <div class="leader-card">
-                    <img src="images/leadership/amith-krishnan.png" alt="Amith Krishnan" style="width: 120px; height: 120px; border-radius: 50%; margin-bottom: 16px; object-fit: cover;">
+                <div class="leader-card-modern">
+                    <img src="images/leadership/amith-krishnan.png" alt="Amith Krishnan" class="leader-avatar">
                     <h4>Amith Krishnan</h4>
                     <p>Director of Marketing</p>
                 </div>
-                <div class="leader-card">
-                    <img src="images/leadership/jerrys-nesamoney.png" alt="Jerrys Nesamoney" style="width: 120px; height: 120px; border-radius: 50%; margin-bottom: 16px; object-fit: cover;">
+                <div class="leader-card-modern">
+                    <img src="images/leadership/jerrys-nesamoney.png" alt="Jerrys Nesamoney" class="leader-avatar">
                     <h4>Jerrys Nesamoney</h4>
                     <p>Director of Partnerships</p>
                 </div>
-                <div class="leader-card">
-                    <img src="images/leadership/krishnamoorthi-ks.png" alt="Krishnamoorthi KS" style="width: 120px; height: 120px; border-radius: 50%; margin-bottom: 16px; object-fit: cover;">
+                <div class="leader-card-modern">
+                    <img src="images/leadership/krishnamoorthi-ks.png" alt="Krishnamoorthi KS" class="leader-avatar">
                     <h4>Krishnamoorthi KS</h4>
                     <p>Director, India Operations</p>
                 </div>
-                <div class="leader-card">
-                    <img src="images/leadership/navin-kumar.png" alt="Navin Kumar" style="width: 120px; height: 120px; border-radius: 50%; margin-bottom: 16px; object-fit: cover;">
+                <div class="leader-card-modern">
+                    <img src="images/leadership/navin-kumar.png" alt="Navin Kumar" class="leader-avatar">
                     <h4>Navin Kumar</h4>
                     <p>Director of Engineering</p>
                 </div>
-                <div class="leader-card">
-                    <img src="images/leadership/polo-granados.png" alt="Polo Granados" style="width: 120px; height: 120px; border-radius: 50%; margin-bottom: 16px; object-fit: cover;">
+                <div class="leader-card-modern">
+                    <img src="images/leadership/polo-granados.png" alt="Polo Granados" class="leader-avatar">
                     <h4>Polo Granados</h4>
                     <p>Head of Sales, LATAM</p>
                 </div>
-                <div class="leader-card">
-                    <img src="images/leadership/steve-nicholas.png" alt="Steve Nicholas" style="width: 120px; height: 120px; border-radius: 50%; margin-bottom: 16px; object-fit: cover;">
+                <div class="leader-card-modern">
+                    <img src="images/leadership/steve-nicholas.png" alt="Steve Nicholas" class="leader-avatar">
                     <h4>Steve Nicholas</h4>
                     <p>VP, Business Development</p>
                 </div>
-                <div class="leader-card">
-                    <img src="images/leadership/sumit-saurabh.png" alt="Sumit Saurabh" style="width: 120px; height: 120px; border-radius: 50%; margin-bottom: 16px; object-fit: cover;">
+                <div class="leader-card-modern">
+                    <img src="images/leadership/sumit-saurabh.png" alt="Sumit Saurabh" class="leader-avatar">
                     <h4>Sumit Saurabh</h4>
                     <p>Technical Program Manager</p>
                 </div>
             </div>
 
-            <h3 style="margin-top: 48px; margin-bottom: 24px;">Advisory Board</h3>
-            <div class="leadership-grid" style="grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));">
-                <div class="leader-card">
-                    <img src="images/leadership/dan-kelly.png" alt="Dan Kelly" style="width: 120px; height: 120px; border-radius: 50%; margin-bottom: 16px; object-fit: cover;">
+            <h3 class="team-category-header">Advisory Board</h3>
+            <div class="leadership-grid">
+                <div class="leader-card-modern">
+                    <img src="images/leadership/dan-kelly.png" alt="Dan Kelly" class="leader-avatar">
                     <h4>Dan Kelly</h4>
                     <p>Advisory Board Member</p>
                 </div>
-                <div class="leader-card">
-                    <img src="images/leadership/mike-relich.png" alt="Mike Relich" style="width: 120px; height: 120px; border-radius: 50%; margin-bottom: 16px; object-fit: cover;">
+                <div class="leader-card-modern">
+                    <img src="images/leadership/mike-relich.png" alt="Mike Relich" class="leader-avatar">
                     <h4>Mike Relich</h4>
                     <p>Advisory Board Member</p>
                 </div>
-                <div class="leader-card">
-                    <img src="images/leadership/vanessa-cartwright.png" alt="Vanessa Cartwright" style="width: 120px; height: 120px; border-radius: 50%; margin-bottom: 16px; object-fit: cover;">
+                <div class="leader-card-modern">
+                    <img src="images/leadership/vanessa-cartwright.png" alt="Vanessa Cartwright" class="leader-avatar">
                     <h4>Vanessa Cartwright</h4>
                     <p>Advisory Board Member</p>
                 </div>
