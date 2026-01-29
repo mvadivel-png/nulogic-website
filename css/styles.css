@@ -52,6 +52,12 @@ body {
   background: var(--color-white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* ===== Typography ===== */
@@ -334,7 +340,7 @@ nav {
 /* ===== Cards Grid ===== */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: var(--space-l);
   margin-top: var(--space-xl);
 }
@@ -565,7 +571,27 @@ footer {
 }
 
 /* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 100%;
+    padding: 0 var(--space-l);
+  }
+
+  .container-narrow {
+    max-width: 100%;
+    padding: 0 var(--space-l);
+  }
+}
+
 @media (max-width: 768px) {
+  .container {
+    padding: 0 var(--space-m);
+  }
+
+  .container-narrow {
+    padding: 0 var(--space-m);
+  }
+
   h1 {
     font-size: 32px;
   }
@@ -596,6 +622,36 @@ footer {
 
   section {
     padding: var(--space-xl) 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--space-s);
+  }
+
+  .container-narrow {
+    padding: 0 var(--space-s);
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  section {
+    padding: var(--space-l) 0;
   }
 }
 
