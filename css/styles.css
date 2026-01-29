@@ -60,6 +60,14 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
+}
+
+.responsive-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 table {
@@ -660,6 +668,13 @@ footer {
     padding: 12px 24px;
     font-size: 14px;
   }
+
+  .container-narrow img,
+  .container img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -727,6 +742,19 @@ footer {
   .footer-content {
     grid-template-columns: 1fr;
     gap: var(--space-l);
+  }
+
+  img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .container-narrow img,
+  .container img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
 }
 
