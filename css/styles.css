@@ -2,18 +2,18 @@
 
 /* ===== CSS Variables (Brand Colors & Fonts) ===== */
 :root {
-  /* Dark Theme Colors */
-  --color-primary: #FFFFFF;
-  --color-primary-dark: #F5F5F5;
-  --color-accent-purple: #A855F7;
-  --color-accent-red: #F87171;
+  /* Light Theme Colors */
+  --color-primary: #1A1A1A;
+  --color-primary-dark: #141414;
+  --color-accent-purple: #89389f;
+  --color-accent-red: #ed2925;
   --color-white: #FFFFFF;
-  --color-gray-light: #4B5563;
-  --color-gray-medium: #9CA3AF;
-  --color-gray-dark: #D1D5DB;
-  --color-background: #0F172A;
-  --color-background-secondary: #1E293B;
-  --color-background-tertiary: #334155;
+  --color-gray-light: #D9D9D9;
+  --color-gray-medium: #979797;
+  --color-gray-dark: #424242;
+  --color-background: #FFFFFF;
+  --color-background-secondary: #FAFAFA;
+  --color-background-tertiary: #F0F0F0;
 
   /* Typography */
   --font-heading: 'Space Grotesk', 'Poppins', 'Montserrat', sans-serif;
@@ -151,12 +151,12 @@ section {
 
 /* ===== Header & Navigation ===== */
 header {
-  background: var(--color-background-secondary);
-  border-bottom: 1px solid var(--color-background-tertiary);
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-gray-light);
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 nav {
@@ -341,7 +341,7 @@ nav {
 }
 
 .client-logos {
-  background: var(--color-background-secondary);
+  background: #fafafa;
   padding: var(--space-xl) 0;
   text-align: center;
 }
@@ -372,18 +372,17 @@ nav {
 }
 
 .card {
-  background: var(--color-background-secondary);
+  background: var(--color-white);
   border-radius: var(--radius-card);
   padding: var(--space-l);
-  border: 1px solid var(--color-background-tertiary);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--color-gray-light);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: var(--transition-standard);
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
-  border-color: var(--color-accent-purple);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
 .card h3 {
@@ -552,10 +551,9 @@ nav {
 
 /* ===== Footer ===== */
 footer {
-  background: var(--color-background-secondary);
-  color: var(--color-gray-dark);
+  background: var(--color-primary);
+  color: var(--color-white);
   padding: var(--space-xxl) 0 var(--space-l);
-  border-top: 1px solid var(--color-background-tertiary);
 }
 
 .footer-content {
