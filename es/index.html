@@ -717,26 +717,212 @@
                 <p>Resultados reales de automatización inteligente y comercio impulsado por IA</p>
             </div>
 
+            <style>
+                .case-study-card {
+                    position: relative;
+                    background: white;
+                    border-radius: 20px;
+                    padding: 40px 32px 32px;
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+                    border: 1px solid #f0f0f0;
+                    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                }
+
+                .case-study-card:hover {
+                    transform: translateY(-8px);
+                    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+                    border-color: #4A90E2;
+                }
+
+                .case-study-logo {
+                    position: absolute;
+                    top: 24px;
+                    right: 24px;
+                    width: 80px;
+                    height: 80px;
+                    background: white;
+                    border-radius: 12px;
+                    padding: 12px;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: 0.9;
+                    transition: all 0.3s ease;
+                }
+
+                .case-study-card:hover .case-study-logo {
+                    opacity: 1;
+                    transform: scale(1.05);
+                    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+                }
+
+                .case-study-logo img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+
+                .case-study-tag {
+                    display: inline-block;
+                    background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+                    color: white;
+                    padding: 6px 16px;
+                    border-radius: 20px;
+                    font-size: 12px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                    margin-bottom: 16px;
+                }
+
+                .case-study-title {
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: #1a1a1a;
+                    margin-bottom: 24px;
+                    padding-right: 90px;
+                    line-height: 1.3;
+                }
+
+                .case-study-section {
+                    margin-bottom: 20px;
+                }
+
+                .case-study-section-label {
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: #4A90E2;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    margin-bottom: 8px;
+                }
+
+                .case-study-section-text {
+                    font-size: 15px;
+                    line-height: 1.6;
+                    color: #555;
+                    margin: 0;
+                }
+
+                .case-study-results {
+                    background: linear-gradient(135deg, #f8fbff 0%, #f0f7ff 100%);
+                    border-left: 4px solid #4A90E2;
+                    padding: 16px 20px;
+                    border-radius: 8px;
+                    margin-top: auto;
+                    margin-bottom: 20px;
+                }
+
+                .case-study-results .case-study-section-text {
+                    font-size: 15px;
+                    color: #333;
+                }
+
+                .case-study-results strong {
+                    color: #4A90E2;
+                    font-weight: 700;
+                }
+
+                .case-study-cta {
+                    display: inline-flex;
+                    align-items: center;
+                    color: #4A90E2;
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-size: 15px;
+                    transition: all 0.3s ease;
+                    margin-top: auto;
+                }
+
+                .case-study-cta:hover {
+                    color: #357ABD;
+                    transform: translateX(4px);
+                }
+
+                @media (max-width: 768px) {
+                    .case-study-logo {
+                        width: 60px;
+                        height: 60px;
+                        top: 16px;
+                        right: 16px;
+                        padding: 8px;
+                    }
+
+                    .case-study-title {
+                        font-size: 18px;
+                        padding-right: 70px;
+                    }
+
+                    .case-study-card {
+                        padding: 32px 24px 24px;
+                    }
+                }
+            </style>
+
             <div class="cards-grid">
-                <div class="card">
-                    <h4>Leslie's Pool Supplies | Gestión de Inventario Autónoma</h4>
-                    <p><strong>Desafío:</strong> Volatilidad de demanda estacional, químicos perecederos y pronósticos manuales en más de 900 ubicaciones</p>
-                    <p><strong>Resultado:</strong> Agentes de IA redujeron agotamientos 62%, cortaron exceso de inventario 38%, lograron 95% de precisión en pronósticos y entregaron $18M en ahorros anuales</p>
-                    <a href="work/leslies.html" class="card-link">Leer Caso de Estudio →</a>
+                <div class="case-study-card">
+                    <div class="case-study-logo">
+                        <img src="../images/clients/leslie.svg" alt="Leslie's">
+                    </div>
+                    <span class="case-study-tag">IA Agéntica</span>
+                    <h3 class="case-study-title">Leslie's Pool Supplies | Gestión de Inventario Autónoma</h3>
+
+                    <div class="case-study-section">
+                        <div class="case-study-section-label">Desafío</div>
+                        <p class="case-study-section-text">Volatilidad de demanda estacional, químicos perecederos y pronósticos manuales en más de 900 ubicaciones</p>
+                    </div>
+
+                    <div class="case-study-results">
+                        <div class="case-study-section-label">Resultados</div>
+                        <p class="case-study-section-text">Agentes de IA redujeron agotamientos <strong>62%</strong>, cortaron exceso de inventario <strong>38%</strong>, lograron <strong>95%</strong> de precisión en pronósticos y entregaron <strong>$18M</strong> en ahorros anuales</p>
+                    </div>
+
+                    <a href="work/leslies.html" class="case-study-cta">Leer Caso de Estudio →</a>
                 </div>
 
-                <div class="card">
-                    <h4>Express | Búsqueda y Personalización Impulsada por IA</h4>
-                    <p><strong>Desafío:</strong> Necesitaba búsqueda inteligente y descubrimiento de productos personalizado para mejor participación del cliente</p>
-                    <p><strong>Resultado:</strong> Implementó Vertex AI para búsqueda semántica con migración sin tiempo de inactividad, entregando relevancia impulsada por IA y recomendaciones personalizadas</p>
-                    <a href="../work/express.html" class="card-link">Leer Caso de Estudio →</a>
+                <div class="case-study-card">
+                    <div class="case-study-logo">
+                        <img src="../images/clients/express.png" alt="Express">
+                    </div>
+                    <span class="case-study-tag">Búsqueda IA</span>
+                    <h3 class="case-study-title">Express | Búsqueda y Personalización Impulsada por IA</h3>
+
+                    <div class="case-study-section">
+                        <div class="case-study-section-label">Desafío</div>
+                        <p class="case-study-section-text">Necesitaba búsqueda inteligente y descubrimiento de productos personalizado para mejor participación del cliente</p>
+                    </div>
+
+                    <div class="case-study-results">
+                        <div class="case-study-section-label">Resultados</div>
+                        <p class="case-study-section-text">Implementó <strong>Vertex AI</strong> para búsqueda semántica con migración sin tiempo de inactividad, entregando relevancia impulsada por IA y recomendaciones personalizadas</p>
+                    </div>
+
+                    <a href="work/express.html" class="case-study-cta">Leer Caso de Estudio →</a>
                 </div>
 
-                <div class="card">
-                    <h4>Walmart Chile | Soporte Mejorado con IA 24/7</h4>
-                    <p><strong>Desafío:</strong> Requería monitoreo continuo y resolución rápida de incidentes para plataforma crítica de comercio electrónico</p>
-                    <p><strong>Resultado:</strong> Logró 99.9%+ de tiempo de actividad, <15 min de tiempo de respuesta para incidentes críticos, y estabilidad continua de plataforma durante temporadas pico</p>
-                    <a href="../work/walmart.html" class="card-link">Leer Caso de Estudio →</a>
+                <div class="case-study-card">
+                    <div class="case-study-logo">
+                        <img src="../images/clients/walmart.png" alt="Walmart">
+                    </div>
+                    <span class="case-study-tag">Soporte 24/7</span>
+                    <h3 class="case-study-title">Walmart Chile | Soporte Mejorado con IA 24/7</h3>
+
+                    <div class="case-study-section">
+                        <div class="case-study-section-label">Desafío</div>
+                        <p class="case-study-section-text">Requería monitoreo continuo y resolución rápida de incidentes para plataforma crítica de comercio electrónico</p>
+                    </div>
+
+                    <div class="case-study-results">
+                        <div class="case-study-section-label">Resultados</div>
+                        <p class="case-study-section-text">Logró <strong>99.9%+</strong> de tiempo de actividad, <strong><15 min</strong> de tiempo de respuesta para incidentes críticos, y estabilidad continua de plataforma durante temporadas pico</p>
+                    </div>
+
+                    <a href="work/walmart.html" class="case-study-cta">Leer Caso de Estudio →</a>
                 </div>
             </div>
         </div>

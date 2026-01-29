@@ -710,33 +710,220 @@
     </section>
 
     <!-- Case Studies Preview -->
-    <section>
+    <section style="background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);">
         <div class="container">
             <div class="section-header">
-                <h2>Agentic AI in Action</h2>
+                <h2 style="background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-red)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Agentic AI in Action</h2>
                 <p>Real results from intelligent automation and AI-powered commerce</p>
             </div>
 
+            <style>
+                .case-study-card {
+                    position: relative;
+                    background: white;
+                    border-radius: 20px;
+                    padding: 40px 32px 32px;
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+                    border: 1px solid #f0f0f0;
+                    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                }
+
+                .case-study-card::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: 5px;
+                    background: linear-gradient(90deg, var(--color-accent-purple), var(--color-accent-red));
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                }
+
+                .case-study-card:hover::before {
+                    opacity: 1;
+                }
+
+                .case-study-card:hover {
+                    transform: translateY(-12px);
+                    box-shadow: 0 20px 40px rgba(137, 56, 159, 0.15);
+                    border-color: rgba(137, 56, 159, 0.2);
+                }
+
+                .case-study-logo {
+                    position: absolute;
+                    top: 24px;
+                    right: 24px;
+                    width: 80px;
+                    height: 80px;
+                    background: white;
+                    border-radius: 12px;
+                    padding: 12px;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: 0.9;
+                    transition: all 0.3s ease;
+                }
+
+                .case-study-card:hover .case-study-logo {
+                    opacity: 1;
+                    transform: scale(1.05);
+                    box-shadow: 0 6px 16px rgba(137, 56, 159, 0.15);
+                }
+
+                .case-study-logo img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    object-fit: contain;
+                }
+
+                .case-study-tag {
+                    display: inline-block;
+                    background: linear-gradient(135deg, rgba(137, 56, 159, 0.1), rgba(237, 41, 37, 0.1));
+                    color: var(--color-accent-purple);
+                    padding: 6px 14px;
+                    border-radius: 20px;
+                    font-size: 12px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                    margin-bottom: 16px;
+                }
+
+                .case-study-title {
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: var(--color-primary);
+                    margin-bottom: 20px;
+                    line-height: 1.3;
+                    padding-right: 90px;
+                }
+
+                .case-study-section {
+                    margin-bottom: 20px;
+                }
+
+                .case-study-section-label {
+                    font-size: 11px;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    color: var(--color-accent-purple);
+                    margin-bottom: 8px;
+                }
+
+                .case-study-section-text {
+                    font-size: 15px;
+                    line-height: 1.6;
+                    color: #4a4a4a;
+                }
+
+                .case-study-results {
+                    background: linear-gradient(135deg, rgba(137, 56, 159, 0.05) 0%, rgba(237, 41, 37, 0.05) 100%);
+                    padding: 20px;
+                    border-radius: 12px;
+                    margin-top: auto;
+                    margin-bottom: 20px;
+                    border-left: 3px solid var(--color-accent-purple);
+                }
+
+                .case-study-cta {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    color: var(--color-accent-purple);
+                    font-weight: 700;
+                    text-decoration: none;
+                    font-size: 15px;
+                    transition: all 0.3s ease;
+                    margin-top: auto;
+                }
+
+                .case-study-cta:hover {
+                    gap: 12px;
+                    color: var(--color-accent-red);
+                }
+
+                @media (max-width: 768px) {
+                    .case-study-logo {
+                        width: 60px;
+                        height: 60px;
+                        top: 16px;
+                        right: 16px;
+                    }
+
+                    .case-study-title {
+                        padding-right: 70px;
+                        font-size: 20px;
+                    }
+                }
+            </style>
+
             <div class="cards-grid">
-                <div class="card">
-                    <h4>Leslie's Pool Supplies | Autonomous Inventory Management</h4>
-                    <p><strong>Challenge:</strong> Seasonal demand volatility, perishable chemicals, and manual forecasting across 900+ locations</p>
-                    <p><strong>Result:</strong> AI agents reduced stockouts by 62%, cut excess inventory by 38%, achieved 95% forecast accuracy, and delivered $18M in annual savings</p>
-                    <a href="work/leslies.html" class="card-link">Read Case Study →</a>
+                <div class="case-study-card">
+                    <div class="case-study-logo">
+                        <img src="images/clients/leslie.svg" alt="Leslie's">
+                    </div>
+                    <span class="case-study-tag">Agentic AI</span>
+                    <h3 class="case-study-title">Leslie's Pool Supplies | Autonomous Inventory Management</h3>
+
+                    <div class="case-study-section">
+                        <div class="case-study-section-label">Challenge</div>
+                        <p class="case-study-section-text">Seasonal demand volatility, perishable chemicals, and manual forecasting across 900+ locations</p>
+                    </div>
+
+                    <div class="case-study-results">
+                        <div class="case-study-section-label">Results</div>
+                        <p class="case-study-section-text">AI agents reduced stockouts by <strong>62%</strong>, cut excess inventory by <strong>38%</strong>, achieved <strong>95%</strong> forecast accuracy, and delivered <strong>$18M</strong> in annual savings</p>
+                    </div>
+
+                    <a href="work/leslies.html" class="case-study-cta">Read Case Study →</a>
                 </div>
 
-                <div class="card">
-                    <h4>Express | AI-Powered Search & Personalization</h4>
-                    <p><strong>Challenge:</strong> Needed intelligent search and personalized product discovery for better customer engagement</p>
-                    <p><strong>Result:</strong> Implemented Vertex AI for semantic search with zero downtime migration, delivering AI-driven relevance and personalized recommendations</p>
-                    <a href="work/express.html" class="card-link">Read Case Study →</a>
+                <div class="case-study-card">
+                    <div class="case-study-logo">
+                        <img src="images/clients/express.png" alt="Express">
+                    </div>
+                    <span class="case-study-tag">AI Search</span>
+                    <h3 class="case-study-title">Express | AI-Powered Search & Personalization</h3>
+
+                    <div class="case-study-section">
+                        <div class="case-study-section-label">Challenge</div>
+                        <p class="case-study-section-text">Needed intelligent search and personalized product discovery for better customer engagement</p>
+                    </div>
+
+                    <div class="case-study-results">
+                        <div class="case-study-section-label">Results</div>
+                        <p class="case-study-section-text">Implemented <strong>Vertex AI</strong> for semantic search with <strong>zero downtime</strong> migration, delivering AI-driven relevance and personalized recommendations</p>
+                    </div>
+
+                    <a href="work/express.html" class="case-study-cta">Read Case Study →</a>
                 </div>
 
-                <div class="card">
-                    <h4>Walmart Chile | 24/7 AI-Enhanced Support</h4>
-                    <p><strong>Challenge:</strong> Required round-the-clock monitoring and rapid incident resolution for critical e-commerce platform</p>
-                    <p><strong>Result:</strong> Achieved 99.9%+ uptime, <15 min response time for critical incidents, and continuous platform stability during peak seasons</p>
-                    <a href="work/walmart.html" class="card-link">Read Case Study →</a>
+                <div class="case-study-card">
+                    <div class="case-study-logo">
+                        <img src="images/clients/walmart.png" alt="Walmart">
+                    </div>
+                    <span class="case-study-tag">24/7 Support</span>
+                    <h3 class="case-study-title">Walmart Chile | 24/7 AI-Enhanced Support</h3>
+
+                    <div class="case-study-section">
+                        <div class="case-study-section-label">Challenge</div>
+                        <p class="case-study-section-text">Required round-the-clock monitoring and rapid incident resolution for critical e-commerce platform</p>
+                    </div>
+
+                    <div class="case-study-results">
+                        <div class="case-study-section-label">Results</div>
+                        <p class="case-study-section-text">Achieved <strong>99.9%+</strong> uptime, <strong>&lt;15 min</strong> response time for critical incidents, and continuous platform stability during peak seasons</p>
+                    </div>
+
+                    <a href="work/walmart.html" class="case-study-cta">Read Case Study →</a>
                 </div>
             </div>
         </div>
