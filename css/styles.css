@@ -594,7 +594,16 @@ footer {
 }
 
 /* ===== Responsive Design ===== */
-@media (max-width: 1024px) {
+
+/* Extra Large Screens */
+@media (max-width: 1920px) {
+  h1 {
+    font-size: calc(2rem + 1vw);
+  }
+}
+
+/* Desktop */
+@media (max-width: 1200px) {
   .container {
     max-width: 100%;
     padding: 0 var(--space-l);
@@ -604,9 +613,26 @@ footer {
     max-width: 100%;
     padding: 0 var(--space-l);
   }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  section {
+    padding: 50px 0;
+  }
 }
 
-@media (max-width: 768px) {
+/* Tablet Landscape */
+@media (max-width: 992px) {
   .container {
     padding: 0 var(--space-m);
   }
@@ -616,24 +642,71 @@ footer {
   }
 
   h1 {
+    font-size: 38px;
+  }
+
+  h2 {
     font-size: 32px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-m);
+  }
+
+  section {
+    padding: 40px 0;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .container-narrow {
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 2.7rem;
   }
 
   h2 {
     font-size: 28px;
+    line-height: 1.4;
+  }
+
+  h3 {
+    font-size: 24px;
   }
 
   .hero h1 {
-    font-size: 36px;
+    font-size: 2rem;
+    line-height: 2.7rem;
   }
 
   .nav-links {
-    display: none; /* Simplified for mobile - add hamburger menu if needed */
+    display: none;
   }
 
   .cards-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-m);
+    gap: 20px;
   }
 
   .form-row {
@@ -646,27 +719,37 @@ footer {
   }
 
   section {
-    padding: var(--space-xl) 0;
+    padding: 30px 0;
   }
 
   .logo {
     font-size: 20px;
   }
 
-  .client-grid,
+  .client-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
   .leadership-grid {
-    grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
-    gap: var(--space-m);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   .benefit-item {
     flex-direction: column;
     text-align: center;
+    padding: 20px;
   }
 
   .btn {
     padding: 12px 24px;
     font-size: 14px;
+    min-height: 33px;
+  }
+
+  .card {
+    padding: 24px;
   }
 
   .container-narrow img,
@@ -675,49 +758,55 @@ footer {
     max-width: 100%;
     height: auto;
   }
+
+  .footer-content {
+    padding: 30px 0;
+  }
 }
 
+/* Small Mobile */
 @media (max-width: 480px) {
   .container {
-    padding: 0 var(--space-s);
+    padding: 0 15px;
   }
 
   .container-narrow {
-    padding: 0 var(--space-s);
+    padding: 0 15px;
   }
 
   h1 {
-    font-size: 28px;
-    line-height: 1.2;
+    font-size: 1.75rem;
+    line-height: 2.2rem;
   }
 
   h2 {
-    font-size: 24px;
-    line-height: 1.3;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   h4 {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   .hero h1 {
-    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 2.2rem;
   }
 
   section {
-    padding: var(--space-l) 0;
+    padding: 20px 0;
   }
 
   .cards-grid {
-    gap: var(--space-s);
+    gap: 15px;
   }
 
   .card {
-    padding: var(--space-m);
+    padding: 20px;
   }
 
   .logo {
@@ -727,21 +816,35 @@ footer {
   .btn {
     padding: 10px 20px;
     font-size: 14px;
+    min-height: 33px;
   }
 
   .btn-primary {
     width: 100%;
   }
 
-  .client-grid,
+  .client-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
   .leadership-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-s);
+    gap: 15px;
   }
 
   .footer-content {
     grid-template-columns: 1fr;
     gap: var(--space-l);
+    padding: 20px 0;
+  }
+
+  .benefit-item {
+    padding: 15px;
+  }
+
+  .benefit-item-icon {
+    margin-bottom: 10px;
   }
 
   img {
@@ -755,6 +858,11 @@ footer {
     width: 100%;
     max-width: 100%;
     height: auto;
+  }
+
+  .leader-card img {
+    width: 100px !important;
+    height: 100px !important;
   }
 }
 
