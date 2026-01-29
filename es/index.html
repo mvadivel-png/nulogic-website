@@ -231,6 +231,152 @@
                 gap: 48px;
             }
         }
+
+        /* Modern What We Deliver Section */
+        .services-modern {
+            background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
+        }
+
+        .services-modern .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card-modern {
+            position: relative;
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid #f0f0f0;
+            overflow: hidden;
+        }
+
+        .service-card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-accent-purple), var(--color-accent-red));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card-modern:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card-modern:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(137, 56, 159, 0.15);
+            border-color: rgba(137, 56, 159, 0.2);
+        }
+
+        .service-card-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, rgba(137, 56, 159, 0.1), rgba(237, 41, 37, 0.1));
+            border-radius: 12px;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--color-accent-purple);
+            margin-bottom: 20px;
+            font-family: var(--font-heading);
+        }
+
+        .service-card-modern h3 {
+            color: var(--color-primary);
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .service-card-modern > p {
+            color: var(--color-gray-dark);
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .service-card-modern ul {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .service-card-modern ul li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            color: var(--color-gray-dark);
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .service-card-modern ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent-purple);
+            font-weight: 600;
+        }
+
+        .service-card-modern .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--color-accent-purple);
+            font-weight: 600;
+            text-decoration: none;
+            transition: gap 0.3s ease;
+        }
+
+        .service-card-modern .card-link:hover {
+            gap: 12px;
+            color: var(--color-accent-red);
+        }
+
+        .section-header-modern {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-header-modern h2 {
+            font-size: 42px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-red));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+        }
+
+        .section-header-modern p {
+            font-size: 18px;
+            color: var(--color-gray-dark);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .services-modern .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header-modern h2 {
+                font-size: 32px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -431,16 +577,17 @@
     </section>
 
     <!-- What We Deliver (5 Core Services) -->
-    <section>
+    <section class="services-modern" style="padding: 80px 0;">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header-modern">
                 <h2>Lo Que Entregamos</h2>
                 <p>Desde la implementación hasta las operaciones 24/7, cubrimos el ciclo de vida completo de las plataformas de comercio empresarial.</p>
             </div>
 
             <div class="cards-grid">
                 <!-- Card 1: Commerce Build & Modernize -->
-                <div class="card">
+                <div class="service-card-modern">
+                    <div class="service-card-number">01</div>
                     <h3>Construcción y Modernización de Comercio</h3>
                     <p>Lance nuevas plataformas, replantee sistemas existentes o mejore su stack de comercio actual con velocidad y confiabilidad.</p>
                     <ul>
@@ -453,7 +600,8 @@
                 </div>
 
                 <!-- Card 2: 24/7 Run & Support -->
-                <div class="card">
+                <div class="service-card-modern">
+                    <div class="service-card-number">02</div>
                     <h3>Ejecución y Soporte 24/7</h3>
                     <p>Mantenga su plataforma de comercio estable, rápida y disponible con soporte gestionado L2/L3 24/7, respuesta a incidentes y gestión de lanzamientos.</p>
                     <ul>
@@ -466,7 +614,8 @@
                 </div>
 
                 <!-- Card 3: Cloud, Performance & Reliability -->
-                <div class="card">
+                <div class="service-card-modern">
+                    <div class="service-card-number">03</div>
                     <h3>Nube, Rendimiento y Confiabilidad</h3>
                     <p>Escale con confianza con infraestructura en la nube, optimización de rendimiento e ingeniería de observabilidad en AWS y GCP.</p>
                     <ul>
@@ -479,7 +628,8 @@
                 </div>
 
                 <!-- Card 4: Data, AI & Analytics -->
-                <div class="card">
+                <div class="service-card-modern">
+                    <div class="service-card-number">04</div>
                     <h3>Datos, IA y Analítica para Comercio</h3>
                     <p>Convierta los datos de comercio en conocimientos accionables con ingeniería de datos, plataformas de analítica y aplicaciones prácticas de IA.</p>
                     <ul>
@@ -492,7 +642,8 @@
                 </div>
 
                 <!-- Card 5: Agentic Commerce -->
-                <div class="card">
+                <div class="service-card-modern">
+                    <div class="service-card-number">05</div>
                     <h3>Comercio Agéntico</h3>
                     <p>Aproveche agentes de IA autónomos para automatizar flujos de trabajo, personalizar experiencias de clientes y optimizar operaciones en tiempo real.</p>
                     <ul>
