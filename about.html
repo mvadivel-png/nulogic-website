@@ -53,10 +53,19 @@
             font-size: 14px;
             color: var(--color-gray-dark);
             transition: var(--transition-standard);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80px;
         }
         .client-item:hover {
             border-color: var(--color-accent-purple);
             transform: translateY(-2px);
+        }
+        .client-item img {
+            max-height: 50px;
+            width: auto;
+            object-fit: contain;
         }
         .job-listing {
             background: var(--color-white);
@@ -158,6 +167,10 @@
             <p>Founded by engineers and commerce platform experts, NuLogic was built on a simple belief: retailers need partners who understand both the technology and the business of commerce. We've spent years building and running commerce platforms for major retailers, and we bring that expertise to every engagement.</p>
 
             <p>Today, we work with enterprise retailers, DTC brands, and multi-brand retail organizations across the globe, delivering implementations, 24/7 managed support, performance engineering, and data/AI capabilities. We're trusted by companies like Walmart and other leading retailers to run mission-critical commerce platforms and deliver results that matter.</p>
+
+            <div style="margin-top: 48px; text-align: center;">
+                <img src="images/leadership/team-about.png" alt="NuLogic Team" style="max-width: 100%; height: auto; border-radius: var(--radius-card);">
+            </div>
         </div>
     </section>
 
@@ -166,10 +179,12 @@
         <div class="container">
             <div class="mission-vision-grid">
                 <div class="mission-vision-card">
+                    <img src="images/icons/mission.png" alt="Mission" style="width: 60px; height: 60px; margin-bottom: 16px;">
                     <h3>Our Mission</h3>
                     <p>Delivering cutting-edge, scalable, and customer-centric solutions that drive digital transformation, enhance operational efficiency, and create exceptional value.</p>
                 </div>
                 <div class="mission-vision-card" style="border-left-color: var(--color-accent-red);">
+                    <img src="images/icons/vision.png" alt="Vision" style="width: 60px; height: 60px; margin-bottom: 16px;">
                     <h3>Our Vision</h3>
                     <p>To be a global leader in delivering innovative, technology-driven solutions that empower businesses to thrive in a rapidly evolving digital world.</p>
                 </div>
@@ -187,31 +202,37 @@
 
             <div class="cards-grid">
                 <div class="card">
+                    <img src="images/icons/engineering.png" alt="Engineering" style="width: 60px; height: 60px; margin-bottom: 16px;">
                     <h3>Engineering Experts</h3>
                     <p>Leveraging decades of experience while adapting to emerging technologies, delivering robust technical solutions for complex commerce challenges.</p>
                 </div>
 
                 <div class="card">
+                    <img src="images/icons/delivery.png" alt="Delivery" style="width: 60px; height: 60px; margin-bottom: 16px;">
                     <h3>Delivery Obsessed</h3>
                     <p>Exceeding expectations through ROI-focused implementation. We're committed to delivering results that drive your business forward.</p>
                 </div>
 
                 <div class="card">
+                    <img src="images/icons/quality.png" alt="Quality" style="width: 60px; height: 60px; margin-bottom: 16px;">
                     <h3>Quality Fanatics</h3>
                     <p>Ensuring robust, scalable digital presence. We hold ourselves to the highest standards of engineering quality, performance, and security.</p>
                 </div>
 
                 <div class="card">
+                    <img src="images/icons/communication.png" alt="Communication" style="width: 60px; height: 60px; margin-bottom: 16px;">
                     <h3>Communication Champs</h3>
                     <p>Prioritizing open dialogue and direct challenge resolution. We communicate clearly, honestly, and proactively.</p>
                 </div>
 
                 <div class="card">
+                    <img src="images/icons/agility.png" alt="Agility" style="width: 60px; height: 60px; margin-bottom: 16px;">
                     <h3>Agility Drivers</h3>
                     <p>Maintaining flexibility and responsiveness for sustained success in a rapidly changing commerce landscape.</p>
                 </div>
 
                 <div class="card">
+                    <img src="images/icons/innovation.png" alt="Innovation" style="width: 60px; height: 60px; margin-bottom: 16px;">
                     <h3>Innovative Thinkers</h3>
                     <p>Valuing diverse ideas and varied experiences. We're always learning, optimizing, and pushing ourselves to deliver better results.</p>
                 </div>
@@ -265,14 +286,17 @@
             <h3 style="margin-top: 48px; margin-bottom: 24px;">Advisory Board</h3>
             <div class="leadership-grid" style="grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));">
                 <div class="leader-card">
+                    <img src="images/leadership/dan-kelly.png" alt="Dan Kelly" style="width: 120px; height: 120px; border-radius: 50%; margin-bottom: 16px; object-fit: cover;">
                     <h4>Dan Kelly</h4>
                     <p>Advisory Board Member</p>
                 </div>
                 <div class="leader-card">
+                    <img src="images/leadership/mike-relich.png" alt="Mike Relich" style="width: 120px; height: 120px; border-radius: 50%; margin-bottom: 16px; object-fit: cover;">
                     <h4>Mike Relich</h4>
                     <p>Advisory Board Member</p>
                 </div>
                 <div class="leader-card">
+                    <img src="images/leadership/vanessa-cartwright.png" alt="Vanessa Cartwright" style="width: 120px; height: 120px; border-radius: 50%; margin-bottom: 16px; object-fit: cover;">
                     <h4>Vanessa Cartwright</h4>
                     <p>Advisory Board Member</p>
                 </div>
@@ -288,15 +312,23 @@
                 <p>Trusted by leading retailers and brands across the globe</p>
             </div>
 
-            <h3 style="margin-bottom: 16px;">Retail & E-Commerce</h3>
+            <div style="text-align: center; margin-bottom: 48px;">
+                <img src="images/clients-banner.jpg" alt="Our Clients" style="max-width: 100%; height: auto; border-radius: var(--radius-card);">
+            </div>
+
+            <h3 style="margin-bottom: 16px;">Featured Retail & E-Commerce Clients</h3>
             <div class="client-grid">
-                <div class="client-item">Walmart</div>
-                <div class="client-item">Express</div>
-                <div class="client-item">Eddie Bauer</div>
+                <div class="client-item"><img src="images/clients/walmart.png" alt="Walmart" style="max-width: 100%; height: auto;"></div>
+                <div class="client-item"><img src="images/clients/express.png" alt="Express" style="max-width: 100%; height: auto;"></div>
+                <div class="client-item"><img src="images/clients/eddie-bauer.svg" alt="Eddie Bauer" style="max-width: 100%; height: auto;"></div>
+                <div class="client-item"><img src="images/clients/pokemon.png" alt="Pokémon" style="max-width: 100%; height: auto;"></div>
+                <div class="client-item"><img src="images/clients/brooks.png" alt="Brooks" style="max-width: 100%; height: auto;"></div>
+                <div class="client-item"><img src="images/clients/reebok.png" alt="Reebok" style="max-width: 100%; height: auto;"></div>
+                <div class="client-item"><img src="images/clients/falabella.png" alt="Falabella" style="max-width: 100%; height: auto;"></div>
+                <div class="client-item"><img src="images/clients/liverpool.png" alt="Liverpool" style="max-width: 100%; height: auto;"></div>
                 <div class="client-item">Sephora</div>
                 <div class="client-item">Road Runner Sports</div>
                 <div class="client-item">Wild Fork Foods</div>
-                <div class="client-item">Pokémon</div>
                 <div class="client-item">Leslie's Pool Supplies</div>
                 <div class="client-item">Good Feet Store</div>
                 <div class="client-item">Rivoli</div>
@@ -305,12 +337,8 @@
                 <div class="client-item">Nautica</div>
                 <div class="client-item">Lucky Brand</div>
                 <div class="client-item">Aeropostale</div>
-                <div class="client-item">Brooks</div>
                 <div class="client-item">PacSun</div>
                 <div class="client-item">Sodimac</div>
-                <div class="client-item">Falabella</div>
-                <div class="client-item">Liverpool</div>
-                <div class="client-item">Reebok</div>
                 <div class="client-item">Líder</div>
                 <div class="client-item">Tottus</div>
                 <div class="client-item">Price Shoes</div>
@@ -318,18 +346,14 @@
                 <div class="client-item">PetMeds</div>
             </div>
 
-            <h3 style="margin-top: 48px; margin-bottom: 16px;">Telecommunications</h3>
+            <h3 style="margin-top: 48px; margin-bottom: 16px;">Telecommunications & Financial Services</h3>
             <div class="client-grid">
+                <div class="client-item"><img src="images/clients/att.png" alt="AT&T" style="max-width: 100%; height: auto;"></div>
+                <div class="client-item"><img src="images/clients/amex.png" alt="American Express" style="max-width: 100%; height: auto;"></div>
+                <div class="client-item"><img src="images/clients/ally.png" alt="Ally" style="max-width: 100%; height: auto;"></div>
                 <div class="client-item">Entel</div>
                 <div class="client-item">VTR</div>
-                <div class="client-item">AT&T</div>
                 <div class="client-item">WOM</div>
-            </div>
-
-            <h3 style="margin-top: 48px; margin-bottom: 16px;">Financial Services & Other</h3>
-            <div class="client-grid">
-                <div class="client-item">American Express</div>
-                <div class="client-item">Ally</div>
                 <div class="client-item">AFEX</div>
             </div>
         </div>
@@ -338,6 +362,10 @@
     <!-- Careers -->
     <section style="background: #fafafa;">
         <div class="container">
+            <div style="text-align: center; margin-bottom: 48px;">
+                <img src="images/careers-banner.png" alt="Careers at NuLogic" style="max-width: 100%; height: auto; border-radius: var(--radius-card);">
+            </div>
+
             <div class="section-header">
                 <h2>Careers at NuLogic</h2>
                 <p>Join our team of diverse, passionate professionals empowering excellence in digital commerce</p>
@@ -455,6 +483,19 @@
                 <p style="font-size: 18px; margin-bottom: 16px;">Interested in joining our team?</p>
                 <p style="margin-bottom: 24px;">Send your resume to <a href="mailto:careers@nulogic.io" style="font-weight: 600;">careers@nulogic.io</a></p>
                 <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section style="background: #fafafa; padding: 48px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h3>Our Certifications</h3>
+            </div>
+            <div style="display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; align-items: center;">
+                <img src="images/certifications/iso-cert-1.svg" alt="ISO Certification" style="height: 100px;">
+                <img src="images/certifications/iso-cert-2.svg" alt="ISO Certification" style="height: 100px;">
             </div>
         </div>
     </section>
