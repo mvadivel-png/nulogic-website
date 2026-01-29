@@ -13,6 +13,48 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .hero-rotating {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-slide {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transition: opacity 1s ease-in-out;
+            pointer-events: none;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            position: relative;
+            pointer-events: auto;
+        }
+
+        .hero-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 32px;
+        }
+
+        .hero-indicator {
+            width: 40px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .hero-indicator.active {
+            background: rgba(255, 255, 255, 0.9);
+        }
+    </style>
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -64,16 +106,84 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero hero-rotating">
         <div class="container">
-            <h1>Construya, Ejecute y Escale su Plataforma de Comercio Digital con Confianza</h1>
-            <p>NuLogic ayuda a minoristas empresariales a implementar, optimizar y operar plataformas de comercio — con ingeniería experta, soporte gestionado 24/7 y resultados comprobados desde la temporada alta hasta las operaciones diarias.</p>
-            <div class="hero-cta">
-                <a href="contact.html" class="btn btn-primary">Reservar una Consulta de 30 Minutos</a>
-                <a href="services-24x7.html" class="btn btn-secondary">Ver Cómo Ejecutamos el Soporte 24/7</a>
+            <!-- Slide 1: Build, Run, Scale -->
+            <div class="hero-slide active">
+                <h1>Construya, Ejecute y Escale su Plataforma de Comercio Digital con Confianza</h1>
+                <p>NuLogic ayuda a minoristas empresariales a implementar, optimizar y operar plataformas de comercio — con ingeniería experta, soporte gestionado 24/7 y resultados comprobados desde la temporada alta hasta las operaciones diarias.</p>
+                <div class="hero-cta">
+                    <a href="contact.html" class="btn btn-primary">Reservar una Consulta de 30 Minutos</a>
+                    <a href="services.html" class="btn btn-secondary">Explorar Nuestros Servicios</a>
+                </div>
+            </div>
+
+            <!-- Slide 2: Agentic Commerce -->
+            <div class="hero-slide">
+                <h1>Transforme el Comercio con Automatización Inteligente y Agentes de IA</h1>
+                <p>Aproveche el poder de la IA agéntica para automatizar flujos de trabajo, personalizar experiencias y optimizar operaciones — desde recomendaciones inteligentes de productos hasta gestión autónoma de inventario y servicio al cliente.</p>
+                <div class="hero-cta">
+                    <a href="contact.html" class="btn btn-primary">Explorar Comercio Agéntico</a>
+                    <a href="services.html#data-ai" class="btn btn-secondary">Conocer Capacidades de IA</a>
+                </div>
+            </div>
+
+            <!-- Slide 3: Data & Analytics -->
+            <div class="hero-slide">
+                <h1>Convierta Datos de Comercio en Insights Estratégicos y Ventaja Competitiva</h1>
+                <p>Construya potentes pipelines de datos, analítica en tiempo real y personalización impulsada por ML que impulsan el crecimiento de ingresos — desde analítica de comportamiento del cliente hasta merchandising predictivo e inteligencia de negocio.</p>
+                <div class="hero-cta">
+                    <a href="contact.html" class="btn btn-primary">Comenzar su Viaje de Datos</a>
+                    <a href="services.html#data-ai" class="btn btn-secondary">Ver Soluciones de Datos</a>
+                </div>
+            </div>
+
+            <!-- Rotation Indicators -->
+            <div class="hero-indicators">
+                <div class="hero-indicator active" data-slide="0"></div>
+                <div class="hero-indicator" data-slide="1"></div>
+                <div class="hero-indicator" data-slide="2"></div>
             </div>
         </div>
     </section>
+
+    <script>
+        (function() {
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.hero-slide');
+            const indicators = document.querySelectorAll('.hero-indicator');
+            const totalSlides = slides.length;
+            const rotationInterval = 6000; // 6 seconds per slide
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    indicators[i].classList.remove('active');
+                });
+
+                slides[index].classList.add('active');
+                indicators[index].classList.add('active');
+                currentSlide = index;
+            }
+
+            function nextSlide() {
+                const next = (currentSlide + 1) % totalSlides;
+                showSlide(next);
+            }
+
+            // Auto-rotation
+            let autoRotate = setInterval(nextSlide, rotationInterval);
+
+            // Manual control via indicators
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    clearInterval(autoRotate);
+                    showSlide(index);
+                    autoRotate = setInterval(nextSlide, rotationInterval);
+                });
+            });
+        })();
+    </script>
 
     <!-- Client Logos -->
     <section class="client-logos">

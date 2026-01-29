@@ -13,6 +13,48 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .hero-rotating {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-slide {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transition: opacity 1s ease-in-out;
+            pointer-events: none;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            position: relative;
+            pointer-events: auto;
+        }
+
+        .hero-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 32px;
+        }
+
+        .hero-indicator {
+            width: 40px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .hero-indicator.active {
+            background: rgba(255, 255, 255, 0.9);
+        }
+    </style>
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -64,16 +106,84 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero hero-rotating">
         <div class="container">
-            <h1>Build, Run, and Scale Your Digital Commerce Platform with Confidence</h1>
-            <p>NuLogic helps enterprise retailers implement, optimize, and operate commerce platforms — with expert engineering, 24/7 managed support, and proven outcomes from peak season to daily operations.</p>
-            <div class="hero-cta">
-                <a href="contact.html" class="btn btn-primary">Book a 30-Minute Consult</a>
-                <a href="services-24x7.html" class="btn btn-secondary">See How We Run 24/7 Support</a>
+            <!-- Slide 1: Build, Run, Scale -->
+            <div class="hero-slide active">
+                <h1>Build, Run, and Scale Your Digital Commerce Platform with Confidence</h1>
+                <p>NuLogic helps enterprise retailers implement, optimize, and operate commerce platforms — with expert engineering, 24/7 managed support, and proven outcomes from peak season to daily operations.</p>
+                <div class="hero-cta">
+                    <a href="contact.html" class="btn btn-primary">Book a 30-Minute Consult</a>
+                    <a href="services.html" class="btn btn-secondary">Explore Our Services</a>
+                </div>
+            </div>
+
+            <!-- Slide 2: Agentic Commerce -->
+            <div class="hero-slide">
+                <h1>Transform Commerce with Intelligent Automation and AI Agents</h1>
+                <p>Harness the power of agentic AI to automate workflows, personalize experiences, and optimize operations — from intelligent product recommendations to autonomous inventory management and customer service.</p>
+                <div class="hero-cta">
+                    <a href="contact.html" class="btn btn-primary">Explore Agentic Commerce</a>
+                    <a href="services.html#data-ai" class="btn btn-secondary">Learn About AI Capabilities</a>
+                </div>
+            </div>
+
+            <!-- Slide 3: Data & Analytics -->
+            <div class="hero-slide">
+                <h1>Turn Commerce Data into Strategic Insights and Competitive Advantage</h1>
+                <p>Build powerful data pipelines, real-time analytics, and ML-driven personalization that drive revenue growth — from customer behavior analytics to predictive merchandising and business intelligence.</p>
+                <div class="hero-cta">
+                    <a href="contact.html" class="btn btn-primary">Start Your Data Journey</a>
+                    <a href="services.html#data-ai" class="btn btn-secondary">See Data Solutions</a>
+                </div>
+            </div>
+
+            <!-- Rotation Indicators -->
+            <div class="hero-indicators">
+                <div class="hero-indicator active" data-slide="0"></div>
+                <div class="hero-indicator" data-slide="1"></div>
+                <div class="hero-indicator" data-slide="2"></div>
             </div>
         </div>
     </section>
+
+    <script>
+        (function() {
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.hero-slide');
+            const indicators = document.querySelectorAll('.hero-indicator');
+            const totalSlides = slides.length;
+            const rotationInterval = 6000; // 6 seconds per slide
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    indicators[i].classList.remove('active');
+                });
+
+                slides[index].classList.add('active');
+                indicators[index].classList.add('active');
+                currentSlide = index;
+            }
+
+            function nextSlide() {
+                const next = (currentSlide + 1) % totalSlides;
+                showSlide(next);
+            }
+
+            // Auto-rotation
+            let autoRotate = setInterval(nextSlide, rotationInterval);
+
+            // Manual control via indicators
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    clearInterval(autoRotate);
+                    showSlide(index);
+                    autoRotate = setInterval(nextSlide, rotationInterval);
+                });
+            });
+        })();
+    </script>
 
     <!-- Client Logos -->
     <section class="client-logos">
