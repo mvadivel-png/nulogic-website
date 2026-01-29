@@ -15,8 +15,25 @@
             <nav>
                 <a href="index.html" class="logo"><img src="images/nulogic-logo.svg" alt="NuLogic" style="height: 32px;"></a>
                 <ul class="nav-links">
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="platforms.html">Platforms</a></li>
+                    <li class="nav-item-with-dropdown">
+                        <a href="services.html">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html#commerce-build">Commerce Build & Modernize</a></li>
+                            <li><a href="services.html#support">24/7 Run & Support</a></li>
+                            <li><a href="services.html#cloud">Cloud, Performance & Reliability</a></li>
+                            <li><a href="services.html#data-ai">Data, AI & Analytics</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-with-dropdown">
+                        <a href="platforms.html">Platforms</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
+                            <li><a href="platforms.html#shopify">Shopify Plus</a></li>
+                            <li><a href="platforms.html#commercetools">commercetools</a></li>
+                            <li><a href="platforms.html#shopware">Shopware</a></li>
+                            <li><a href="platforms.html#magento">Magento / Adobe Commerce</a></li>
+                        </ul>
+                    </li>
                     <li><a href="work.html">Work</a></li>
                     <li><a href="partners.html">Partners</a></li>
                     <li><a href="about.html">About</a></li>
@@ -36,7 +53,7 @@
     <section>
         <div class="container">
             <div class="cards-grid">
-                <div class="card">
+                <div class="card" id="commerce-build">
                     <h3>Commerce Build & Modernize</h3>
                     <p>Launch new platforms, replatform existing systems, or enhance your current commerce stack with speed and reliability.</p>
                     <ul>
@@ -48,7 +65,7 @@
                     <a href="contact.html" class="card-link">Get Started →</a>
                 </div>
 
-                <div class="card">
+                <div class="card" id="support">
                     <h3>24/7 Run & Support</h3>
                     <p>Keep your commerce platform stable with 24/7 L2/L3 managed support, incident response, and release management.</p>
                     <ul>
@@ -60,7 +77,7 @@
                     <a href="contact.html" class="card-link">Get Started →</a>
                 </div>
 
-                <div class="card">
+                <div class="card" id="cloud">
                     <h3>Cloud, Performance & Reliability</h3>
                     <p>Scale confidently with cloud infrastructure, performance optimization, and observability engineering.</p>
                     <ul>
@@ -72,7 +89,7 @@
                     <a href="contact.html" class="card-link">Get Started →</a>
                 </div>
 
-                <div class="card">
+                <div class="card" id="data-ai">
                     <h3>Data, AI & Analytics</h3>
                     <p>Turn commerce data into actionable insights with data engineering, analytics, and practical AI.</p>
                     <ul>
