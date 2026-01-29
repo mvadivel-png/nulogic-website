@@ -48,26 +48,61 @@
             border-radius: var(--radius-card);
             overflow: hidden;
             border: 1px solid var(--color-gray-light);
-            transition: var(--transition-standard);
+            transition: all 0.35s ease;
             position: relative;
+            cursor: pointer;
         }
         .work-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
         }
         .work-card-image {
-            background: linear-gradient(135deg, rgba(137, 56, 159, 0.1) 0%, rgba(237, 41, 37, 0.1) 100%);
-            padding: 48px 24px;
+            position: relative;
+            padding: 0;
             text-align: center;
-            min-height: 120px;
+            min-height: 300px;
+            height: 300px;
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
+            background: #f5f5f5;
+        }
+        .work-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.35s ease;
+        }
+        .work-card:hover .work-card-image img {
+            transform: scale(1.05);
+        }
+        .work-card-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.2);
+            transition: all 0.35s ease;
+        }
+        .work-card:hover .work-card-image::after {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(3px);
         }
         .work-card-image h3 {
             margin: 0;
-            color: var(--color-primary);
-            font-size: 24px;
+            color: white;
+            font-size: 32px;
+            position: absolute;
+            z-index: 2;
+            font-weight: 700;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.35s ease;
+        }
+        .work-card:hover .work-card-image h3 {
+            transform: translateY(-20px);
         }
         .work-card-content {
             padding: 24px;
@@ -260,8 +295,9 @@
             <div class="work-grid" id="workGrid">
 
                 <!-- U.S. PROJECTS -->
-                <div class="work-card" data-region="us">
+                <div class="work-card" data-region="us" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/express-thumb.png" alt="Express">
                         <h3>Express</h3>
                     </div>
                     <div class="work-card-content">
@@ -275,8 +311,9 @@
                     </div>
                 </div>
 
-                <div class="work-card" data-region="us">
+                <div class="work-card" data-region="us" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/sephora-thumb.png" alt="Sephora">
                         <h3>Sephora</h3>
                     </div>
                     <div class="work-card-content">
@@ -290,8 +327,9 @@
                     </div>
                 </div>
 
-                <div class="work-card" data-region="us">
+                <div class="work-card" data-region="us" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/eddie-bauer-thumb.png" alt="Eddie Bauer">
                         <h3>Eddie Bauer</h3>
                     </div>
                     <div class="work-card-content">
@@ -305,8 +343,9 @@
                     </div>
                 </div>
 
-                <div class="work-card" data-region="us">
+                <div class="work-card" data-region="us" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/brooks-thumb.png" alt="Brooks">
                         <h3>Brooks Brothers</h3>
                     </div>
                     <div class="work-card-content">
@@ -320,8 +359,9 @@
                     </div>
                 </div>
 
-                <div class="work-card" data-region="us">
+                <div class="work-card" data-region="us" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/pacsun-thumb.png" alt="PacSun">
                         <h3>PacSun</h3>
                     </div>
                     <div class="work-card-content">
@@ -335,8 +375,9 @@
                     </div>
                 </div>
 
-                <div class="work-card" data-region="us">
+                <div class="work-card" data-region="us" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/reebok-thumb.png" alt="Reebok">
                         <h3>Reebok</h3>
                     </div>
                     <div class="work-card-content">
@@ -350,8 +391,9 @@
                     </div>
                 </div>
 
-                <div class="work-card" data-region="us">
+                <div class="work-card" data-region="us" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/roadrunner-thumb.png" alt="Road Runner Sports">
                         <h3>Road Runner Sports</h3>
                     </div>
                     <div class="work-card-content">
@@ -365,8 +407,9 @@
                     </div>
                 </div>
 
-                <div class="work-card" data-region="us">
+                <div class="work-card" data-region="us" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/goodfeet-thumb.png" alt="The Good Feet Store">
                         <h3>The Good Feet Store</h3>
                     </div>
                     <div class="work-card-content">
@@ -380,8 +423,9 @@
                     </div>
                 </div>
 
-                <div class="work-card" data-region="us">
+                <div class="work-card" data-region="us" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/leslies-thumb.png" alt="Leslie's">
                         <h3>Leslie's</h3>
                     </div>
                     <div class="work-card-content">
@@ -395,8 +439,9 @@
                     </div>
                 </div>
 
-                <div class="work-card" data-region="us">
+                <div class="work-card" data-region="us" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/pokemon-thumb.png" alt="Pokémon">
                         <h3>Pokémon</h3>
                     </div>
                     <div class="work-card-content">
@@ -410,8 +455,9 @@
                     </div>
                 </div>
 
-                <div class="work-card" data-region="us">
+                <div class="work-card" data-region="us" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/forever21-thumb.png" alt="Forever 21">
                         <h3>Forever 21</h3>
                     </div>
                     <div class="work-card-content">
@@ -425,8 +471,9 @@
                     </div>
                 </div>
 
-                <div class="work-card" data-region="us">
+                <div class="work-card" data-region="us" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/aeropostale-thumb.png" alt="Aeropostale">
                         <h3>Aeropostale</h3>
                     </div>
                     <div class="work-card-content">
@@ -440,8 +487,9 @@
                     </div>
                 </div>
 
-                <div class="work-card" data-region="us">
+                <div class="work-card" data-region="us" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/luckybrand-thumb.png" alt="Lucky Brand">
                         <h3>Lucky Brand</h3>
                     </div>
                     <div class="work-card-content">
@@ -455,8 +503,9 @@
                     </div>
                 </div>
 
-                <div class="work-card" data-region="us">
+                <div class="work-card" data-region="us" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/ally-thumb.png" alt="Ally Bank">
                         <h3>Ally Bank</h3>
                     </div>
                     <div class="work-card-content">
@@ -470,8 +519,9 @@
                     </div>
                 </div>
 
-                <div class="work-card" data-region="us">
+                <div class="work-card" data-region="us" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/klllk-thumb.png" alt="klllk">
                         <h3>klllk</h3>
                     </div>
                     <div class="work-card-content">
@@ -485,8 +535,9 @@
                     </div>
                 </div>
 
-                <div class="work-card" data-region="us">
+                <div class="work-card" data-region="us" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/uppababy-thumb.png" alt="UPPAbaby">
                         <h3>UPPAbaby</h3>
                     </div>
                     <div class="work-card-content">
@@ -501,8 +552,9 @@
                 </div>
 
                 <!-- LATAM PROJECTS -->
-                <div class="work-card" data-region="latam">
+                <div class="work-card" data-region="latam" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/walmart-thumb.png" alt="Walmart Chile">
                         <h3>Walmart Chile</h3>
                     </div>
                     <div class="work-card-content">
@@ -516,8 +568,9 @@
                     </div>
                 </div>
 
-                <div class="work-card" data-region="latam">
+                <div class="work-card" data-region="latam" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/sodimac-thumb.png" alt="Sodimac Home Center">
                         <h3>Sodimac Home Center</h3>
                     </div>
                     <div class="work-card-content">
@@ -531,8 +584,9 @@
                     </div>
                 </div>
 
-                <div class="work-card" data-region="latam">
+                <div class="work-card" data-region="latam" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/falabella-thumb.png" alt="Falabella">
                         <h3>Falabella</h3>
                     </div>
                     <div class="work-card-content">
@@ -546,8 +600,9 @@
                     </div>
                 </div>
 
-                <div class="work-card" data-region="latam">
+                <div class="work-card" data-region="latam" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/wildfork-thumb.png" alt="Wild Fork Foods">
                         <h3>Wild Fork Foods</h3>
                     </div>
                     <div class="work-card-content">
@@ -561,8 +616,9 @@
                     </div>
                 </div>
 
-                <div class="work-card" data-region="latam">
+                <div class="work-card" data-region="latam" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/tottus-thumb.png" alt="Tottus">
                         <h3>Tottus</h3>
                     </div>
                     <div class="work-card-content">
@@ -576,8 +632,9 @@
                     </div>
                 </div>
 
-                <div class="work-card" data-region="latam">
+                <div class="work-card" data-region="latam" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/palacio-thumb.png" alt="El Palacio de Hierro">
                         <h3>El Palacio de Hierro</h3>
                     </div>
                     <div class="work-card-content">
@@ -591,8 +648,9 @@
                     </div>
                 </div>
 
-                <div class="work-card" data-region="latam">
+                <div class="work-card" data-region="latam" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/mobility-ado-thumb.png" alt="Mobility ADO">
                         <h3>Mobility ADO</h3>
                     </div>
                     <div class="work-card-content">
@@ -607,8 +665,9 @@
                 </div>
 
                 <!-- EMEA PROJECTS -->
-                <div class="work-card" data-region="emea">
+                <div class="work-card" data-region="emea" onclick="window.location.href='contact.html'">
                     <div class="work-card-image">
+                        <img src="images/casestudies/rivoli-thumb.png" alt="Rivoli Group">
                         <h3>Rivoli Group</h3>
                     </div>
                     <div class="work-card-content">
