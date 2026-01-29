@@ -54,6 +54,65 @@
         .hero-indicator.active {
             background: rgba(255, 255, 255, 0.9);
         }
+
+        /* Logo Carousel Styles */
+        .logo-carousel {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            margin-top: 32px;
+        }
+
+        .logo-track {
+            display: flex;
+            gap: 64px;
+            animation: scroll 40s linear infinite;
+            width: max-content;
+        }
+
+        .logo-track:hover {
+            animation-play-state: paused;
+        }
+
+        .logo-item {
+            flex-shrink: 0;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .logo-item:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .logo-item img {
+            height: 100%;
+            width: auto;
+            max-width: 160px;
+            object-fit: contain;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .logo-item {
+                height: 36px;
+            }
+            .logo-track {
+                gap: 48px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -189,10 +248,44 @@
     <section class="client-logos">
         <div class="container">
             <h3>Confiado por minoristas empresariales y marcas globales</h3>
-            <div class="logo-grid">
-                <p style="font-size: 18px; font-weight: 600; color: #424242;">Walmart</p>
-                <p style="font-size: 18px; font-weight: 600; color: #424242;">Minoristas Empresariales</p>
-                <p style="font-size: 18px; font-weight: 600; color: #424242;">Marcas Globales</p>
+            <div class="logo-carousel">
+                <div class="logo-track">
+                    <!-- First set of logos -->
+                    <div class="logo-item"><img src="../images/clients/walmart.png" alt="Walmart" /></div>
+                    <div class="logo-item"><img src="../images/clients/express.png" alt="Express" /></div>
+                    <div class="logo-item"><img src="../images/clients/reebok.png" alt="Reebok" /></div>
+                    <div class="logo-item"><img src="../images/clients/sephora.svg" alt="Sephora" /></div>
+                    <div class="logo-item"><img src="../images/clients/forever21.svg" alt="Forever 21" /></div>
+                    <div class="logo-item"><img src="../images/clients/brooks.png" alt="Brooks" /></div>
+                    <div class="logo-item"><img src="../images/clients/pokemon.png" alt="Pokemon" /></div>
+                    <div class="logo-item"><img src="../images/clients/goodfeet.svg" alt="Good Feet" /></div>
+                    <div class="logo-item"><img src="../images/clients/ally.png" alt="Ally" /></div>
+                    <div class="logo-item"><img src="../images/clients/falabella.png" alt="Falabella" /></div>
+                    <div class="logo-item"><img src="../images/clients/liverpool.png" alt="Liverpool" /></div>
+                    <div class="logo-item"><img src="../images/clients/leslie.svg" alt="Leslie's" /></div>
+                    <div class="logo-item"><img src="../images/clients/roadrunner.svg" alt="Roadrunner" /></div>
+                    <div class="logo-item"><img src="../images/clients/amex.png" alt="American Express" /></div>
+                    <div class="logo-item"><img src="../images/clients/att.png" alt="AT&T" /></div>
+                    <div class="logo-item"><img src="../images/clients/eddie-bauer.svg" alt="Eddie Bauer" /></div>
+
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="logo-item"><img src="../images/clients/walmart.png" alt="Walmart" /></div>
+                    <div class="logo-item"><img src="../images/clients/express.png" alt="Express" /></div>
+                    <div class="logo-item"><img src="../images/clients/reebok.png" alt="Reebok" /></div>
+                    <div class="logo-item"><img src="../images/clients/sephora.svg" alt="Sephora" /></div>
+                    <div class="logo-item"><img src="../images/clients/forever21.svg" alt="Forever 21" /></div>
+                    <div class="logo-item"><img src="../images/clients/brooks.png" alt="Brooks" /></div>
+                    <div class="logo-item"><img src="../images/clients/pokemon.png" alt="Pokemon" /></div>
+                    <div class="logo-item"><img src="../images/clients/goodfeet.svg" alt="Good Feet" /></div>
+                    <div class="logo-item"><img src="../images/clients/ally.png" alt="Ally" /></div>
+                    <div class="logo-item"><img src="../images/clients/falabella.png" alt="Falabella" /></div>
+                    <div class="logo-item"><img src="../images/clients/liverpool.png" alt="Liverpool" /></div>
+                    <div class="logo-item"><img src="../images/clients/leslie.svg" alt="Leslie's" /></div>
+                    <div class="logo-item"><img src="../images/clients/roadrunner.svg" alt="Roadrunner" /></div>
+                    <div class="logo-item"><img src="../images/clients/amex.png" alt="American Express" /></div>
+                    <div class="logo-item"><img src="../images/clients/att.png" alt="AT&T" /></div>
+                    <div class="logo-item"><img src="../images/clients/eddie-bauer.svg" alt="Eddie Bauer" /></div>
+                </div>
             </div>
         </div>
     </section>
