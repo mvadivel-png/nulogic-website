@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About NuLogic | Commerce Engineering & Managed Services for Retailers</title>
-    <meta name="description" content="NuLogic delivers commerce engineering, 24/7 managed support, and platform expertise for enterprise retailers. Proven with Walmart and leading brands.">
+    <meta name="description" content="Founded in 2008, NuLogic has 250+ professionals delivering commerce engineering, 24/7 managed support, and platform expertise for enterprise retailers globally.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +13,98 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+        .leader-card {
+            background: var(--color-white);
+            padding: 24px;
+            border-radius: var(--radius-card);
+            border: 1px solid var(--color-gray-light);
+            text-align: center;
+        }
+        .leader-card h4 {
+            font-size: 18px;
+            margin-bottom: 4px;
+            color: var(--color-primary);
+        }
+        .leader-card p {
+            font-size: 14px;
+            color: var(--color-gray-medium);
+            margin: 0;
+        }
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 16px;
+            margin-top: 32px;
+        }
+        .client-item {
+            background: var(--color-white);
+            padding: 20px;
+            border-radius: var(--radius-input);
+            border: 1px solid var(--color-gray-light);
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--color-gray-dark);
+            transition: var(--transition-standard);
+        }
+        .client-item:hover {
+            border-color: var(--color-accent-purple);
+            transform: translateY(-2px);
+        }
+        .job-listing {
+            background: var(--color-white);
+            border: 1px solid var(--color-gray-light);
+            border-radius: var(--radius-card);
+            padding: 24px;
+            margin-bottom: 16px;
+            transition: var(--transition-standard);
+        }
+        .job-listing:hover {
+            border-color: var(--color-accent-purple);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 12px;
+        }
+        .job-header h4 {
+            margin: 0;
+            font-size: 20px;
+        }
+        .job-meta {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 8px;
+        }
+        .job-meta span {
+            font-size: 14px;
+            color: var(--color-gray-medium);
+        }
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 32px;
+        }
+        .mission-vision-card {
+            background: linear-gradient(135deg, rgba(137, 56, 159, 0.05) 0%, rgba(237, 41, 37, 0.05) 100%);
+            padding: 32px;
+            border-radius: var(--radius-card);
+            border-left: 4px solid var(--color-accent-purple);
+        }
+        .mission-vision-card h3 {
+            margin-bottom: 16px;
+        }
+    </style>
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -50,10 +142,10 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="padding: 64px 0;">
+    <section class="hero" style="padding: 80px 0;">
         <div class="container">
-            <h1>Commerce Engineering & Managed Services Built for Retailers</h1>
-            <p>NuLogic helps enterprise retailers build, run, and scale digital commerce platforms with expert engineering, 24/7 support, and proven outcomes.</p>
+            <h1>Building the Future of Digital Commerce Today</h1>
+            <p>Founded in 2008, NuLogic has evolved into a trusted digital commerce partner with over 250 skilled professionals distributed across the US, Canada, Mexico, Chile, and India.</p>
         </div>
     </section>
 
@@ -61,7 +153,7 @@
     <section>
         <div class="container-narrow">
             <h2>Who We Are</h2>
-            <p>NuLogic is a commerce engineering and managed services firm focused exclusively on retail and e-commerce. We help enterprise retailers and brands implement, optimize, and operate commerce platforms — delivering the technical depth and operational excellence that modern retail demands.</p>
+            <p>NuLogic is a commerce engineering and managed services firm focused exclusively on retail and e-commerce. We provide engineering expertise and strategic guidance to retail and eCommerce companies pursuing digital transformation.</p>
 
             <p>Founded by engineers and commerce platform experts, NuLogic was built on a simple belief: retailers need partners who understand both the technology and the business of commerce. We've spent years building and running commerce platforms for major retailers, and we bring that expertise to every engagement.</p>
 
@@ -69,135 +161,300 @@
         </div>
     </section>
 
-    <!-- What Sets Us Apart -->
+    <!-- Mission & Vision -->
     <section style="background: #fafafa;">
         <div class="container">
+            <div class="mission-vision-grid">
+                <div class="mission-vision-card">
+                    <h3>Our Mission</h3>
+                    <p>Delivering cutting-edge, scalable, and customer-centric solutions that drive digital transformation, enhance operational efficiency, and create exceptional value.</p>
+                </div>
+                <div class="mission-vision-card" style="border-left-color: var(--color-accent-red);">
+                    <h3>Our Vision</h3>
+                    <p>To be a global leader in delivering innovative, technology-driven solutions that empower businesses to thrive in a rapidly evolving digital world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Strengths -->
+    <section>
+        <div class="container">
             <div class="section-header">
-                <h2>What Sets Us Apart</h2>
+                <h2>Our Core Strengths</h2>
+                <p>Built on innovation, collaboration, and unwavering commitment to excellence</p>
             </div>
 
             <div class="cards-grid">
                 <div class="card">
-                    <h3>Deep commerce expertise</h3>
-                    <p>We live and breathe retail and e-commerce. We understand peak season, omnichannel, complex integrations, and the operational realities retailers face.</p>
+                    <h3>Engineering Experts</h3>
+                    <p>Leveraging decades of experience while adapting to emerging technologies, delivering robust technical solutions for complex commerce challenges.</p>
                 </div>
 
                 <div class="card">
-                    <h3>From implementation to operations</h3>
-                    <p>We don't just build and walk away. We run platforms, provide 24/7 support, and optimize continuously.</p>
+                    <h3>Delivery Obsessed</h3>
+                    <p>Exceeding expectations through ROI-focused implementation. We're committed to delivering results that drive your business forward.</p>
                 </div>
 
                 <div class="card">
-                    <h3>Proven with enterprise retailers</h3>
-                    <p>Walmart selected NuLogic for 24/7 managed support. We deliver for retailers with demanding requirements and zero tolerance for downtime.</p>
+                    <h3>Quality Fanatics</h3>
+                    <p>Ensuring robust, scalable digital presence. We hold ourselves to the highest standards of engineering quality, performance, and security.</p>
                 </div>
 
                 <div class="card">
-                    <h3>Multi-platform expertise</h3>
-                    <p>Certified across all major platforms (Salesforce Commerce Cloud, Shopify Plus, commercetools, Shopware, Magento). We recommend the right fit, not just what we know.</p>
+                    <h3>Communication Champs</h3>
+                    <p>Prioritizing open dialogue and direct challenge resolution. We communicate clearly, honestly, and proactively.</p>
                 </div>
 
                 <div class="card">
-                    <h3>Practical, outcome-focused approach</h3>
-                    <p>We focus on business value — faster releases, better uptime, higher conversion — not vanity metrics or buzzwords.</p>
+                    <h3>Agility Drivers</h3>
+                    <p>Maintaining flexibility and responsiveness for sustained success in a rapidly changing commerce landscape.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Innovative Thinkers</h3>
+                    <p>Valuing diverse ideas and varied experiences. We're always learning, optimizing, and pushing ourselves to deliver better results.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Expertise -->
+    <!-- Leadership -->
+    <section style="background: #fafafa;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Leadership Team</h2>
+            </div>
+
+            <h3 style="margin-bottom: 24px;">Management Team</h3>
+            <div class="leadership-grid">
+                <div class="leader-card">
+                    <h4>Mani Vadivel</h4>
+                    <p>CEO & Founder</p>
+                </div>
+                <div class="leader-card">
+                    <h4>Amith Krishnan</h4>
+                    <p>Director of Marketing</p>
+                </div>
+                <div class="leader-card">
+                    <h4>Jerrys Nesamoney</h4>
+                    <p>Director of Partnerships</p>
+                </div>
+                <div class="leader-card">
+                    <h4>Krishnamoorthi KS</h4>
+                    <p>Director, India Operations</p>
+                </div>
+                <div class="leader-card">
+                    <h4>Navin Kumar</h4>
+                    <p>Director of Engineering</p>
+                </div>
+                <div class="leader-card">
+                    <h4>Polo Granados</h4>
+                    <p>Head of Sales, LATAM</p>
+                </div>
+                <div class="leader-card">
+                    <h4>Steve Nicholas</h4>
+                    <p>VP, Business Development</p>
+                </div>
+                <div class="leader-card">
+                    <h4>Sumit Saurabh</h4>
+                    <p>Technical Program Manager</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 48px; margin-bottom: 24px;">Advisory Board</h3>
+            <div class="leadership-grid" style="grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));">
+                <div class="leader-card">
+                    <h4>Dan Kelly</h4>
+                    <p>Advisory Board Member</p>
+                </div>
+                <div class="leader-card">
+                    <h4>Mike Relich</h4>
+                    <p>Advisory Board Member</p>
+                </div>
+                <div class="leader-card">
+                    <h4>Vanessa Cartwright</h4>
+                    <p>Advisory Board Member</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients -->
     <section>
         <div class="container">
             <div class="section-header">
-                <h2>Our Expertise</h2>
+                <h2>Our Clients</h2>
+                <p>Trusted by leading retailers and brands across the globe</p>
+            </div>
+
+            <h3 style="margin-bottom: 16px;">Retail & E-Commerce</h3>
+            <div class="client-grid">
+                <div class="client-item">Walmart</div>
+                <div class="client-item">Express</div>
+                <div class="client-item">Eddie Bauer</div>
+                <div class="client-item">Sephora</div>
+                <div class="client-item">Road Runner Sports</div>
+                <div class="client-item">Wild Fork Foods</div>
+                <div class="client-item">Pokémon</div>
+                <div class="client-item">Leslie's Pool Supplies</div>
+                <div class="client-item">Good Feet Store</div>
+                <div class="client-item">Rivoli</div>
+                <div class="client-item">UPPAbaby</div>
+                <div class="client-item">Palacio</div>
+                <div class="client-item">Nautica</div>
+                <div class="client-item">Lucky Brand</div>
+                <div class="client-item">Aeropostale</div>
+                <div class="client-item">Brooks</div>
+                <div class="client-item">PacSun</div>
+                <div class="client-item">Sodimac</div>
+                <div class="client-item">Falabella</div>
+                <div class="client-item">Liverpool</div>
+                <div class="client-item">Reebok</div>
+                <div class="client-item">Líder</div>
+                <div class="client-item">Tottus</div>
+                <div class="client-item">Price Shoes</div>
+                <div class="client-item">La Comer</div>
+                <div class="client-item">PetMeds</div>
+            </div>
+
+            <h3 style="margin-top: 48px; margin-bottom: 16px;">Telecommunications</h3>
+            <div class="client-grid">
+                <div class="client-item">Entel</div>
+                <div class="client-item">VTR</div>
+                <div class="client-item">AT&T</div>
+                <div class="client-item">WOM</div>
+            </div>
+
+            <h3 style="margin-top: 48px; margin-bottom: 16px;">Financial Services & Other</h3>
+            <div class="client-grid">
+                <div class="client-item">American Express</div>
+                <div class="client-item">Ally</div>
+                <div class="client-item">AFEX</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers -->
+    <section style="background: #fafafa;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Careers at NuLogic</h2>
+                <p>Join our team of diverse, passionate professionals empowering excellence in digital commerce</p>
             </div>
 
             <div class="cards-grid">
                 <div class="card">
-                    <h3>Commerce Build & Modernize</h3>
-                    <p>Full-service implementation, replatforming, and enhancement for Salesforce Commerce Cloud, Shopify Plus, commercetools, Shopware, and Magento.</p>
-                    <a href="services.html" class="card-link">Learn More →</a>
+                    <h3>Innovative Projects</h3>
+                    <p>Work with cutting-edge technologies and the latest commerce platforms, solving complex challenges for enterprise retailers.</p>
                 </div>
 
                 <div class="card">
-                    <h3>24/7 Run & Support</h3>
-                    <p>L2/L3 managed support, incident response, release management, and proactive monitoring for live commerce platforms.</p>
-                    <a href="services-24x7.html" class="card-link">Learn More →</a>
+                    <h3>Career Growth</h3>
+                    <p>Continuous learning, mentorship, and clear advancement pathways to help you reach your professional goals.</p>
                 </div>
 
                 <div class="card">
-                    <h3>Cloud, Performance & Reliability</h3>
-                    <p>Cloud infrastructure, performance optimization, observability, and peak season readiness for commerce platforms.</p>
-                    <a href="services-cloud.html" class="card-link">Learn More →</a>
+                    <h3>Collaborative Culture</h3>
+                    <p>A supportive, inclusive team environment where diverse perspectives are valued and innovation thrives.</p>
                 </div>
 
                 <div class="card">
-                    <h3>Data, AI & Analytics</h3>
-                    <p>Data engineering, analytics platforms, personalization, and Penumbra AI (commerce-focused AI capabilities).</p>
-                    <a href="services-data.html" class="card-link">Learn More →</a>
+                    <h3>Work-Life Balance</h3>
+                    <p>Flexible work arrangements that support your personal life and professional success.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Competitive Compensation</h3>
+                    <p>Market-leading salary, comprehensive benefits, and performance bonuses.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Global Impact</h3>
+                    <p>Work on projects with worldwide significance, supporting major retailers across multiple continents.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Values -->
-    <section style="background: #fafafa;">
-        <div class="container">
-            <div class="section-header">
-                <h2>What We Stand For</h2>
-            </div>
-
-            <div class="benefits-list">
-                <div class="benefit-item">
-                    <div class="benefit-item-icon">✓</div>
-                    <div class="benefit-item-content">
-                        <h4>Technical Excellence</h4>
-                        <p>We hold ourselves to the highest standards of engineering quality, performance, and security.</p>
-                    </div>
-                </div>
-
-                <div class="benefit-item">
-                    <div class="benefit-item-icon">✓</div>
-                    <div class="benefit-item-content">
-                        <h4>Retail Domain Expertise</h4>
-                        <p>We understand the unique challenges retailers face and bring practical, commerce-specific solutions.</p>
-                    </div>
-                </div>
-
-                <div class="benefit-item">
-                    <div class="benefit-item-icon">✓</div>
-                    <div class="benefit-item-content">
-                        <h4>Ownership and Accountability</h4>
-                        <p>We own outcomes, not just tasks. When we commit, we deliver.</p>
-                    </div>
-                </div>
-
-                <div class="benefit-item">
-                    <div class="benefit-item-icon">✓</div>
-                    <div class="benefit-item-content">
-                        <h4>Transparency and Communication</h4>
-                        <p>We communicate clearly, honestly, and proactively. No surprises, no excuses.</p>
-                    </div>
-                </div>
-
-                <div class="benefit-item">
-                    <div class="benefit-item-icon">✓</div>
-                    <div class="benefit-item-content">
-                        <h4>Continuous Improvement</h4>
-                        <p>We're always learning, optimizing, and pushing ourselves to deliver better results.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
+    <!-- Current Openings -->
     <section>
         <div class="container">
-            <div class="cta-banner">
-                <h2>Ready to Work with Us?</h2>
-                <p>Whether you're launching a new platform, replatforming, or need 24/7 support, we'd love to help.</p>
-                <a href="contact.html" class="btn">Schedule a Call</a>
+            <div class="section-header">
+                <h2>Current Openings</h2>
+                <p>Explore opportunities to join our growing team</p>
+            </div>
+
+            <div class="job-listing">
+                <div class="job-header">
+                    <h4>Senior Shopify Developer</h4>
+                </div>
+                <div class="job-meta">
+                    <span><strong>Experience:</strong> 5+ years</span>
+                    <span><strong>Location:</strong> Remote, US</span>
+                </div>
+                <p>Looking for experienced Shopify developers to build and optimize enterprise e-commerce solutions.</p>
+            </div>
+
+            <div class="job-listing">
+                <div class="job-header">
+                    <h4>Node.js Developer</h4>
+                </div>
+                <div class="job-meta">
+                    <span><strong>Experience:</strong> 5-8 years</span>
+                    <span><strong>Location:</strong> Remote, US</span>
+                </div>
+                <p>Join our engineering team to build scalable commerce APIs and microservices.</p>
+            </div>
+
+            <div class="job-listing">
+                <div class="job-header">
+                    <h4>Salesforce Developer</h4>
+                </div>
+                <div class="job-meta">
+                    <span><strong>Experience:</strong> 7-10 years</span>
+                    <span><strong>Location:</strong> Chennai, India</span>
+                </div>
+                <p>Salesforce Commerce Cloud expert to lead implementation and customization projects.</p>
+            </div>
+
+            <div class="job-listing">
+                <div class="job-header">
+                    <h4>Java Microservices Developer</h4>
+                </div>
+                <div class="job-meta">
+                    <span><strong>Experience:</strong> 7-9 years</span>
+                    <span><strong>Location:</strong> Chennai, India</span>
+                </div>
+                <p>Develop and maintain microservices architecture for enterprise commerce platforms.</p>
+            </div>
+
+            <div class="job-listing">
+                <div class="job-header">
+                    <h4>Data Engineer</h4>
+                </div>
+                <div class="job-meta">
+                    <span><strong>Experience:</strong> 3-5 years</span>
+                    <span><strong>Location:</strong> Chennai, India</span>
+                </div>
+                <p>Build data pipelines and analytics solutions for commerce platforms.</p>
+            </div>
+
+            <div class="job-listing">
+                <div class="job-header">
+                    <h4>Delivery Manager</h4>
+                </div>
+                <div class="job-meta">
+                    <span><strong>Experience:</strong> 12-15 years</span>
+                    <span><strong>Location:</strong> Chennai, India</span>
+                </div>
+                <p>Lead project delivery and client relationships for enterprise commerce implementations.</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 48px;">
+                <p style="font-size: 18px; margin-bottom: 16px;">Interested in joining our team?</p>
+                <p style="margin-bottom: 24px;">Send your resume to <a href="mailto:careers@nulogic.io" style="font-weight: 600;">careers@nulogic.io</a></p>
+                <a href="contact.html" class="btn btn-primary">Get in Touch</a>
             </div>
         </div>
     </section>
@@ -209,20 +466,13 @@
                 <div class="footer-column">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="services-commerce.html">Commerce Build & Modernize</a></li>
-                        <li><a href="services-24x7.html">24/7 Run & Support</a></li>
-                        <li><a href="services-cloud.html">Cloud, Performance & Reliability</a></li>
-                        <li><a href="services-data.html">Data, AI & Analytics</a></li>
+                        <li><a href="services.html">All Services</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4>Platforms</h4>
                     <ul>
-                        <li><a href="platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
-                        <li><a href="platforms.html#shopify">Shopify Plus</a></li>
-                        <li><a href="platforms.html#commercetools">commercetools</a></li>
-                        <li><a href="platforms.html#shopware">Shopware</a></li>
-                        <li><a href="platforms.html#magento">Magento</a></li>
+                        <li><a href="platforms.html">All Platforms</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
