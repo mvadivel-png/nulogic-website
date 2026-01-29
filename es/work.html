@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo | Historias de Éxito de Clientes | NuLogic</title>
+    <meta name="description" content="No solo integramos sistemas; integramos el éxito. Explore nuestros estudios de caso de clientes y resultados probados en EE.UU., LATAM y EMEA.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .filter-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin: 32px 0;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 10px 24px;
+            background: transparent;
+            border: 2px solid var(--color-gray-light);
+            border-radius: var(--radius-button);
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--color-primary);
+            cursor: pointer;
+            transition: var(--transition-standard);
+        }
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: linear-gradient(90deg, var(--color-accent-purple) 0%, var(--color-accent-red) 100%);
+            color: white;
+            border-color: transparent;
+        }
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .work-card {
+            background: var(--color-white);
+            border-radius: var(--radius-card);
+            overflow: hidden;
+            border: 1px solid var(--color-gray-light);
+            transition: all 0.35s ease;
+            position: relative;
+            cursor: pointer;
+        }
+        .work-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+        .work-card-image {
+            position: relative;
+            padding: 0;
+            text-align: center;
+            min-height: 300px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #f5f5f5;
+        }
+        .work-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.35s ease;
+        }
+        .work-card:hover .work-card-image img {
+            transform: scale(1.05);
+        }
+        .work-card-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.2);
+            transition: all 0.35s ease;
+        }
+        .work-card:hover .work-card-image::after {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(3px);
+        }
+        .work-card-image h3 {
+            margin: 0;
+            color: white;
+            font-size: 32px;
+            position: absolute;
+            z-index: 2;
+            font-weight: 700;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.35s ease;
+        }
+        .work-card:hover .work-card-image h3 {
+            transform: translateY(-20px);
+        }
+        .work-card-content {
+            padding: 24px;
+        }
+        .work-card-content p {
+            color: var(--color-gray-dark);
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        .work-card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        .tag {
+            background: rgba(137, 56, 159, 0.1);
+            color: var(--color-accent-purple);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .region-label {
+            display: inline-block;
+            padding: 4px 12px;
+            background: linear-gradient(90deg, var(--color-accent-purple) 0%, var(--color-accent-red) 100%);
+            color: white;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        /* Responsive Design for Work Page */
+        @media (max-width: 1200px) {
+            .work-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .work-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            .work-card-image {
+                padding: 32px 16px;
+                min-height: 100px;
+            }
+            .work-card-image h3 {
+                font-size: 20px;
+            }
+            .work-card-content {
+                padding: 20px;
+            }
+            .filter-buttons {
+                margin: 24px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .work-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                margin-top: 32px;
+            }
+            .work-card-image {
+                padding: 24px 16px;
+                min-height: 80px;
+            }
+            .work-card-image h3 {
+                font-size: 18px;
+            }
+            .work-card-content {
+                padding: 16px;
+            }
+            .work-card-content p {
+                font-size: 14px;
+            }
+            .filter-buttons {
+                gap: 8px;
+                margin: 20px 0;
+            }
+            .filter-btn {
+                padding: 8px 16px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .work-grid {
+                gap: 16px;
+                margin-top: 24px;
+            }
+            .work-card-image {
+                padding: 20px 12px;
+                min-height: 70px;
+            }
+            .work-card-image h3 {
+                font-size: 16px;
+            }
+            .work-card-content {
+                padding: 12px;
+            }
+            .work-card-content p {
+                font-size: 13px;
+                margin-bottom: 10px;
+            }
+            .work-card-tags {
+                gap: 6px;
+                margin-top: 12px;
+            }
+            .tag {
+                padding: 3px 10px;
+                font-size: 11px;
+            }
+            .region-label {
+                padding: 3px 10px;
+                font-size: 10px;
+                margin-bottom: 10px;
+            }
+            .filter-buttons {
+                gap: 6px;
+                margin: 16px 0;
+            }
+            .filter-btn {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NuLogic" style="height: 32px;"></a>
+                <ul class="nav-links">
+                    <li class="nav-item-with-dropdown">
+                        <a href="services.html">Servicios</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html#commerce-build">Construcción y Modernización de Comercio</a></li>
+                            <li><a href="services.html#support">Operación y Soporte 24/7</a></li>
+                            <li><a href="services.html#cloud">Nube, Rendimiento y Confiabilidad</a></li>
+                            <li><a href="services.html#data-ai">Datos, IA y Análisis</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-with-dropdown">
+                        <a href="platforms.html">Plataformas</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
+                            <li><a href="platforms.html#shopify">Shopify Plus</a></li>
+                            <li><a href="platforms.html#commercetools">commercetools</a></li>
+                            <li><a href="platforms.html#shopware">Shopware</a></li>
+                            <li><a href="platforms.html#magento">Magento / Adobe Commerce</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="work.html">Trabajo</a></li>
+                    <li><a href="partners.html">Socios</a></li>
+                    <li><a href="about.html">Acerca de</a></li>
+                    <li class="nav-item-with-dropdown">
+                        <a href="#">ES</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../work.html">English</a></li>
+                            <li><a href="work.html">Español</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="btn btn-primary">Agendar Llamada</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 80px 0;">
+        <div class="container">
+            <h1>No solo integramos sistemas;<br>integramos el éxito.</h1>
+            <p style="max-width: 700px; margin: 0 auto;">Estamos moldeando mejores resultados de negocio para nuestros clientes. A continuación, una muestra de nuestras capacidades y experiencia.</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section style="padding: 32px 0 64px;">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterRegion('all')">Todas las Regiones</button>
+                <button class="filter-btn" onclick="filterRegion('us')">EE.UU.</button>
+                <button class="filter-btn" onclick="filterRegion('latam')">LATAM</button>
+                <button class="filter-btn" onclick="filterRegion('emea')">EMEA</button>
+            </div>
+
+            <!-- Work Grid -->
+            <div class="work-grid" id="workGrid">
+
+                <!-- U.S. PROJECTS -->
+                <div class="work-card" data-region="us" onclick="window.location.href='../work/express.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/express-thumb.png" alt="Express">
+                        <h3>Express</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">EE.UU.</span>
+                        <p><strong>Modernización de Google Cloud</strong> con implementación de búsqueda Vertex AI para mejorar la experiencia del cliente y el descubrimiento inteligente de productos.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">Google Cloud</span>
+                            <span class="tag">Vertex AI</span>
+                            <span class="tag">Búsqueda</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-region="us" onclick="window.location.href='../work/sephora.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/sephora-thumb.png" alt="Sephora">
+                        <h3>Sephora</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">EE.UU.</span>
+                        <p><strong>Transformación digital</strong> con soluciones de comercio integradas, ofreciendo experiencias omnicanal fluidas en web y móvil.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">Transformación Digital</span>
+                            <span class="tag">Comercio</span>
+                            <span class="tag">Omnicanal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-region="us" onclick="window.location.href='../work/eddie-bauer.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/eddie-bauer-thumb.png" alt="Eddie Bauer">
+                        <h3>Eddie Bauer</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">EE.UU.</span>
+                        <p><strong>Migración de legacy a la nube</strong> con implementación de arquitectura MACH, modernizando la infraestructura de comercio para escalabilidad y flexibilidad.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">Migración a la Nube</span>
+                            <span class="tag">Arquitectura MACH</span>
+                            <span class="tag">Modernización</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-region="us" onclick="window.location.href='../work/brooks.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/brooks-thumb.png" alt="Brooks">
+                        <h3>Brooks Brothers</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">EE.UU.</span>
+                        <p><strong>Seguridad Cloudflare</strong> y optimización de SFCC, mejorando el rendimiento del sitio y protegiendo contra amenazas cibernéticas.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">Cloudflare</span>
+                            <span class="tag">SFCC</span>
+                            <span class="tag">Seguridad</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-region="us" onclick="window.location.href='../work/pacsun.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/pacsun-thumb.png" alt="PacSun">
+                        <h3>PacSun</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">EE.UU.</span>
+                        <p><strong>Ingeniería de comercio escalable</strong> ofreciendo soluciones de e-commerce de alto rendimiento para manejo de tráfico pico y optimización de conversión.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">Ingeniería de Comercio</span>
+                            <span class="tag">Escalabilidad</span>
+                            <span class="tag">Rendimiento</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-region="us" onclick="window.location.href='../work/reebok.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/reebok-thumb.png" alt="Reebok">
+                        <h3>Reebok</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">EE.UU.</span>
+                        <p><strong>Migración de plataforma MACH sin tiempo de inactividad</strong>, transformando infraestructura legacy a arquitectura componible moderna sin interrupción del negocio.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">MACH</span>
+                            <span class="tag">Sin Tiempo de Inactividad</span>
+                            <span class="tag">Migración</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-region="us" onclick="window.location.href='../work/roadrunner.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/roadrunner-thumb.png" alt="Road Runner Sports">
+                        <h3>Road Runner Sports</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">EE.UU.</span>
+                        <p><strong>Implementación de Bloomreach Discovery</strong> para búsqueda inteligente de productos y recomendaciones personalizadas.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">Bloomreach</span>
+                            <span class="tag">Búsqueda</span>
+                            <span class="tag">Personalización</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-region="us" onclick="window.location.href='../work/goodfeet.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/goodfeet-thumb.png" alt="The Good Feet Store">
+                        <h3>The Good Feet Store</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">EE.UU.</span>
+                        <p><strong>Modernización en la nube AWS</strong> logrando 99.99% de tiempo de actividad con infraestructura robusta e ingeniería de confiabilidad.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">AWS</span>
+                            <span class="tag">Nube</span>
+                            <span class="tag">99.99% Uptime</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-region="us" onclick="window.location.href='../work/leslies.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/leslies-thumb.png" alt="Leslie's">
+                        <h3>Leslie's</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">EE.UU.</span>
+                        <p><strong>Optimización de rendimiento</strong> y mejora móvil, mejorando velocidades de carga de página y experiencia de usuario móvil.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">Rendimiento</span>
+                            <span class="tag">Móvil</span>
+                            <span class="tag">Optimización</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-region="us" onclick="window.location.href='../work/pokemon.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/pokemon-thumb.png" alt="Pokémon">
+                        <h3>Pokémon</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">EE.UU.</span>
+                        <p><strong>AWS DevOps</strong> y optimización de React, construyendo infraestructura escalable y experiencias frontend de alto rendimiento.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">AWS</span>
+                            <span class="tag">DevOps</span>
+                            <span class="tag">React</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-region="us" onclick="window.location.href='../work/forever21.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/forever21-thumb.png" alt="Forever 21">
+                        <h3>Forever 21</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">EE.UU.</span>
+                        <p><strong>Optimización proactiva de rendimiento</strong> con monitoreo continuo y mejora para preparación de temporada alta.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">Rendimiento</span>
+                            <span class="tag">Monitoreo</span>
+                            <span class="tag">Optimización</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-region="us" onclick="window.location.href='../work/aeropostale.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/aeropostale-thumb.png" alt="Aeropostale">
+                        <h3>Aeropostale</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">EE.UU.</span>
+                        <p><strong>Servicios de monitoreo 24/7</strong> proporcionando vigilancia de plataforma las 24 horas y respuesta a incidentes.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">Soporte 24/7</span>
+                            <span class="tag">Monitoreo</span>
+                            <span class="tag">Respuesta a Incidentes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-region="us" onclick="window.location.href='../work/luckybrand.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/luckybrand-thumb.png" alt="Lucky Brand">
+                        <h3>Lucky Brand</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">EE.UU.</span>
+                        <p><strong>Soporte continuo de Salesforce</strong> con optimización y mejora continua de la plataforma Salesforce Commerce Cloud.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">Salesforce</span>
+                            <span class="tag">SFCC</span>
+                            <span class="tag">Soporte</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-region="us" onclick="window.location.href='../work/ally.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/ally-thumb.png" alt="Ally Bank">
+                        <h3>Ally Bank</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">EE.UU.</span>
+                        <p><strong>Framework de datos Snowflake</strong> implementación para análisis avanzado y toma de decisiones basada en datos.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">Snowflake</span>
+                            <span class="tag">Ingeniería de Datos</span>
+                            <span class="tag">Análisis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-region="us" onclick="window.location.href='../work/klllk.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/klllk-thumb.png" alt="klllk">
+                        <h3>klllk</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">EE.UU.</span>
+                        <p><strong>Desarrollo personalizado iOS/Android</strong> creando experiencias móviles nativas con integración de comercio fluida.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">Aplicaciones Móviles</span>
+                            <span class="tag">iOS</span>
+                            <span class="tag">Android</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-region="us" onclick="window.location.href='../work/uppababy.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/uppababy-thumb.png" alt="UPPAbaby">
+                        <h3>UPPAbaby</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">EE.UU.</span>
+                        <p><strong>Implementación de Shopware</strong> ofreciendo plataforma de comercio moderna para catálogo de productos y operaciones de e-commerce.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">Shopware</span>
+                            <span class="tag">Implementación</span>
+                            <span class="tag">E-Commerce</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LATAM PROJECTS -->
+                <div class="work-card" data-region="latam" onclick="window.location.href='../work/walmart.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/walmart-thumb.png" alt="Walmart Chile">
+                        <h3>Walmart Chile</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">LATAM</span>
+                        <p><strong>Servicios de soporte L2/L3 24/7</strong> proporcionando soporte administrado de nivel empresarial para operaciones críticas de plataforma de comercio.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">Soporte 24/7</span>
+                            <span class="tag">Servicios Administrados</span>
+                            <span class="tag">L2/L3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-region="latam" onclick="window.location.href='../work/sodimac.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/sodimac-thumb.png" alt="Sodimac Home Center">
+                        <h3>Sodimac Home Center</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">LATAM</span>
+                        <p><strong>Migración a commercetools</strong> moviéndose a arquitectura de comercio componible para mayor flexibilidad y escalabilidad.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">commercetools</span>
+                            <span class="tag">Migración</span>
+                            <span class="tag">Componible</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-region="latam" onclick="window.location.href='../work/falabella.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/falabella-thumb.png" alt="Falabella">
+                        <h3>Falabella</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">LATAM</span>
+                        <p><strong>Modernización ATG-a-Azure</strong> transformando la plataforma legacy Oracle ATG a infraestructura moderna en la nube Azure.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">Azure</span>
+                            <span class="tag">Migración ATG</span>
+                            <span class="tag">Nube</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-region="latam" onclick="window.location.href='../work/wildfork.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/wildfork-thumb.png" alt="Wild Fork Foods">
+                        <h3>Wild Fork Foods</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">LATAM</span>
+                        <p><strong>Migración de Shopify Plus a commercetools</strong> evolucionando a comercio componible empresarial para requisitos comerciales complejos.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">Shopify Plus</span>
+                            <span class="tag">commercetools</span>
+                            <span class="tag">Migración</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-region="latam" onclick="window.location.href='../work/tottus.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/tottus-thumb.png" alt="Tottus">
+                        <h3>Tottus</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">LATAM</span>
+                        <p><strong>Cambio de plataforma ATG</strong> con despliegue en Google Cloud, modernizando infraestructura de comercio para mejor rendimiento.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">ATG</span>
+                            <span class="tag">Google Cloud</span>
+                            <span class="tag">Cambio de Plataforma</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-region="latam" onclick="window.location.href='../work/palacio.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/palacio-thumb.png" alt="El Palacio de Hierro">
+                        <h3>El Palacio de Hierro</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">LATAM</span>
+                        <p><strong>Marketplace Mirakl</strong> e integración SFCC, construyendo capacidades de marketplace multi-vendedor en Salesforce Commerce Cloud.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">Mirakl</span>
+                            <span class="tag">SFCC</span>
+                            <span class="tag">Marketplace</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card" data-region="latam" onclick="window.location.href='../work/mobility-ado.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/mobility-ado-thumb.png" alt="Mobility ADO">
+                        <h3>Mobility ADO</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">LATAM</span>
+                        <p><strong>Modernización de aplicación móvil personalizada</strong> transformando aplicaciones móviles legacy con arquitectura moderna y UX.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">Móvil</span>
+                            <span class="tag">Modernización</span>
+                            <span class="tag">Aplicación Personalizada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EMEA PROJECTS -->
+                <div class="work-card" data-region="emea" onclick="window.location.href='../work/rivoli.html'">
+                    <div class="work-card-image">
+                        <img src="../images/casestudies/rivoli-thumb.png" alt="Rivoli Group">
+                        <h3>Rivoli Group</h3>
+                    </div>
+                    <div class="work-card-content">
+                        <span class="region-label">EMEA</span>
+                        <p><strong>Servicios administrados para comercio</strong> proporcionando gestión integral de plataforma y optimización para operaciones de retail de lujo.</p>
+                        <div class="work-card-tags">
+                            <span class="tag">Servicios Administrados</span>
+                            <span class="tag">Comercio</span>
+                            <span class="tag">Retail de Lujo</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="background: #fafafa; padding: 80px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trabajemos Juntos</h2>
+                <p>¿Listo para discutir cómo podemos ayudar a transformar su plataforma de comercio?</p>
+            </div>
+
+            <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+                <div style="margin: 32px 0;">
+                    <p style="font-size: 18px; margin-bottom: 8px;"><strong>Correo Electrónico:</strong></p>
+                    <a href="mailto:sales@nulogic.io" style="font-size: 20px; color: var(--color-accent-purple); font-weight: 600;">sales@nulogic.io</a>
+                </div>
+
+                <div style="margin: 32px 0;">
+                    <p style="font-size: 18px; margin-bottom: 8px;"><strong>Teléfono:</strong></p>
+                    <a href="tel:+14699226985" style="font-size: 20px; color: var(--color-accent-purple); font-weight: 600;">+1 (469) 922-6985</a>
+                </div>
+
+                <div style="margin-top: 48px;">
+                    <a href="contact.html" class="btn btn-primary" style="font-size: 18px; padding: 16px 48px;">Contáctenos →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="services.html">Todos los Servicios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Plataformas</h4>
+                    <ul>
+                        <li><a href="platforms.html">Todas las Plataformas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="about.html">Acerca de</a></li>
+                        <li><a href="work.html">Trabajo</a></li>
+                        <li><a href="partners.html">Socios</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NuLogic. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function filterRegion(region) {
+            const cards = document.querySelectorAll('.work-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Update active button
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Filter cards
+            cards.forEach(card => {
+                if (region === 'all' || card.dataset.region === region) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

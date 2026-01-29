@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Caso de Estudio | Migración a Google Nube y Vertex AI | NuLogic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../../es/index.html" class="logo"><img src="../../images/nulogic-logo.svg" alt="NuLogic" style="height: 32px;"></a>
+                <ul class="nav-links">
+                    <li class="nav-item-with-dropdown">
+                        <a href="../../es/services.html">Servicios</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../../es/services.html#commerce-build">Construcción y Modernización de Comercio</a></li>
+                            <li><a href="../../es/services.html#support">Soporte 24/7</a></li>
+                            <li><a href="../../es/services.html#cloud">Nube, Rendimiento y Confiabilidad</a></li>
+                            <li><a href="../../es/services.html#data-ai">Datos, IA y Analítica</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-with-dropdown">
+                        <a href="../../es/platforms.html">Plataformas</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../../es/platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
+                            <li><a href="../../es/platforms.html#shopify">Shopify Plus</a></li>
+                            <li><a href="../../es/platforms.html#commercetools">commercetools</a></li>
+                            <li><a href="../../es/platforms.html#shopware">Shopware</a></li>
+                            <li><a href="../../es/platforms.html#magento">Magento / Adobe Comercio</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../es/work.html">Trabajo</a></li>
+                    <li><a href="../../es/partners.html">Socios</a></li>
+                    <li><a href="../../es/about.html">Acerca de</a></li>
+                    <li class="nav-item-with-dropdown">
+                        <a href="#">ES</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../../work/express.html">English</a></li>
+                            <li><a href="express.html">Español</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../es/contact.html" class="btn btn-primary">Reservar una Llamada</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 80px 0; background: linear-gradient(135deg, rgba(137, 56, 159, 0.9) 0%, rgba(237, 41, 37, 0.9) 100%);">
+        <div class="container">
+            <p style="color: rgba(255,255,255,0.9); margin-bottom: 16px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Caso de Estudio</p>
+            <h1 style="color: white; margin-bottom: 24px;">Express Moderniza su Nube con Google e Impulsa Búsquedas Más Inteligentes con Vertex AI</h1>
+            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 900px;">Express confió en NuLogic para fortalecer su infraestructura tecnológica y construir una plataforma preparada para el futuro en Google Nube, invirtiendo en herramientas impulsadas por IA y automatización para acelerar la innovación y personalizar las compras.</p>
+        </div>
+    </section>
+
+    <!-- Cliente Info -->
+    <section style="background: #fafafa; padding: 40px 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px;">
+                <div>
+                    <h4 style="color: var(--color-accent-purple); font-size: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Cliente</h4>
+                    <p style="font-size: 18px; font-weight: 600;">Express</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--color-accent-purple); font-size: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Región</h4>
+                    <p style="font-size: 18px; font-weight: 600;">Estados Unidos</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--color-accent-purple); font-size: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Cliente Desde</h4>
+                    <p style="font-size: 18px; font-weight: 600;">2012</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--color-accent-purple); font-size: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Industria</h4>
+                    <p style="font-size: 18px; font-weight: 600;">Comercio Minorista y Ropa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge -->
+    <section>
+        <div class="container-narrow">
+            <h2>El Desafío</h2>
+            <p>Express enfrentó presiones de modernización que requerían actualizaciones de infraestructura y mejoras en la experiencia de compra. Las iniciativas clave incluyeron:</p>
+            <ul style="margin-top: 24px;">
+                <li style="margin-bottom: 16px;"><strong>Migración a Google Nube Platform:</strong> Desbloquear agilidad, resistencia y eficiencia de costos</li>
+                <li style="margin-bottom: 16px;"><strong>Pipelines DevOps automatizados:</strong> Acelerar lanzamientos y reducir errores</li>
+                <li style="margin-bottom: 16px;"><strong>Búsqueda impulsada por IA:</strong> Entregar descubrimiento de productos contextual y personalizado</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section style="background: #fafafa;">
+        <div class="container-narrow">
+            <h2>La Solución</h2>
+
+            <h3 style="margin-top: 32px;">Modernización de Nube (AWS → GCP)</h3>
+            <ul style="margin-top: 16px;">
+                <li style="margin-bottom: 12px;">Automatización Terraform para gestión de recursos de Google Nube</li>
+                <li style="margin-bottom: 12px;">Flujos de trabajo GitOps usando ArgoCD y GitHub Actions</li>
+                <li style="margin-bottom: 12px;">Reemplazo de pipelines Jenkins con Argo Workflows</li>
+                <li style="margin-bottom: 12px;">Transición de gestión Kubernetes de Rancher a ArgoCD</li>
+            </ul>
+
+            <h3 style="margin-top: 32px;">Búsqueda Inteligente con Vertex AI</h3>
+            <ul style="margin-top: 16px;">
+                <li style="margin-bottom: 12px;">Implementación de Vertex AI Búsqueda para Comercio</li>
+                <li style="margin-bottom: 12px;">Habilitación de búsqueda semántica, resultados multi-modales y refinamiento conversacional</li>
+                <li style="margin-bottom: 12px;">Mejora de recomendaciones personalizadas aprovechando comportamiento del usuario</li>
+                <li style="margin-bottom: 12px;">Entrega de relevancia impulsada por IA sin gestionar pipelines ML internos</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Resultados -->
+    <section>
+        <div class="container-narrow">
+            <h2>Resultados</h2>
+            <div class="cards-grid" style="margin-top: 32px;">
+                <div class="card" style="text-align: center;">
+                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">Cero</h3>
+                    <p>Tiempo de inactividad durante migración AWS a GCP</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">Más Rápido</h3>
+                    <p>Ciclos de lanzamiento con Terraform + GitOps</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">Impulsado por IA</h3>
+                    <p>Búsqueda semántica y personalización</p>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, rgba(137, 56, 159, 0.05) 0%, rgba(237, 41, 37, 0.05) 100%); padding: 32px; border-radius: var(--radius-card); border-left: 4px solid var(--color-accent-purple); margin-top: 48px;">
+                <p style="font-size: 20px; font-style: italic; line-height: 1.8; margin-bottom: 16px;">"NULogic ha sido más que un socio tecnológico: ha sido una fuerza constante en el viaje digital de Express durante muchos años."</p>
+                <p style="font-weight: 600; color: var(--color-accent-purple);">— VP de Tecnología, Express</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies -->
+    <section style="background: #fafafa;">
+        <div class="container-narrow">
+            <h2>Tecnologías y Servicios</h2>
+            <div style="margin-top: 24px;">
+                <h4 style="margin-bottom: 16px; color: var(--color-accent-purple);">Stack de Ingeniería</h4>
+                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">AWS</span>
+                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Google Nube Platform</span>
+                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Kubernetes</span>
+                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">ArgoCD</span>
+                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Terraform</span>
+                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">GitHub Actions</span>
+                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Vertex AI</span>
+                </div>
+
+                <h4 style="margin-top: 32px; margin-bottom: 16px; color: var(--color-accent-purple);">Servicios Entregados</h4>
+                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Diseño de Arquitectura</span>
+                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Servicios en la Nube</span>
+                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Servicios de Integración</span>
+                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Observabilidad</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+        <div class="container">
+            <div class="cta-banner">
+                <h2>¿Listo para modernizar su plataforma de comercio?</h2>
+                <p>Hablemos sobre cómo podemos ayudarle a lograr resultados similares.</p>
+                <a href="../../es/contact.html" class="btn">Reservar una Llamada →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="../../es/services.html">Todos los Servicios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Plataformas</h4>
+                    <ul>
+                        <li><a href="../../es/platforms.html">Todas las Plataformas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="../../es/about.html">Acerca de</a></li>
+                        <li><a href="../../es/work.html">Trabajo</a></li>
+                        <li><a href="../../es/partners.html">Socios</a></li>
+                        <li><a href="../../es/contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NuLogic. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
