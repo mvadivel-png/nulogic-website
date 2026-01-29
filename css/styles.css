@@ -341,7 +341,7 @@ nav {
 }
 
 .client-logos {
-  background: #fafafa;
+  background: var(--color-background-secondary);
   padding: var(--space-xl) 0;
   text-align: center;
 }

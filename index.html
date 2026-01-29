@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css?v=2">
+    <link rel="stylesheet" href="css/styles.css?v=3">
     <style>
         .hero-rotating {
             position: relative;
@@ -197,14 +197,13 @@
             height: 48px;
             display: flex;
             align-items: center;
-            filter: grayscale(100%);
-            opacity: 0.7;
+            filter: grayscale(0%);
+            opacity: 1;
             transition: all 0.3s ease;
         }
 
         .logo-item:hover {
-            filter: grayscale(0%);
-            opacity: 1;
+            transform: scale(1.05);
         }
 
         .logo-item img {
