@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ally Bank Case Study | Snowflake Data Framework | NuLogic</title>
+    <title>Ally Bank Case Study | Snowflake Native Extraction Framework | NuLogic</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -55,48 +55,101 @@
         <div class="container">
             <p style="color: rgba(255,255,255,0.9); margin-bottom: 16px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Case Study</p>
             <h1 style="color: white; margin-bottom: 24px;">Ally Bank</h1>
-            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 900px;">Snowflake data framework implementation for advanced analytics and data-driven decision making.</p>
+            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 900px;">Snowflake Native Extraction Framework replacing Matillion ETL, eliminating licensing costs while delivering automated extracts and enhanced operational visibility.</p>
         </div>
     </section>
 
-    <!-- Overview -->
+    <!-- Client Overview -->
     <section>
         <div class="container-narrow">
-            <h2>Overview</h2>
-            <p>NuLogic partnered with Ally Bank to implement a robust Snowflake data framework. Our work enabled this leading digital bank to unlock powerful analytics capabilities and make data-driven decisions at scale.</p>
+            <h2>Client Overview</h2>
+            <p><strong>Ally Financial Inc.</strong> is the nation's largest all-digital bank and a leader in auto financing, with expertise in deposits, securities, investment advisory, and insurance. Operating across the U.S., Ally has been a NuLogic client since 2023.</p>
+            <p style="margin-top: 16px;"><strong>Website:</strong> <a href="https://www.ally.com" target="_blank" style="color: var(--color-primary);">www.ally.com</a></p>
+        </div>
+    </section>
 
-            <div style="margin-top: 40px;">
-                <h3>Key Deliverables</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Snowflake data warehouse architecture and implementation</li>
-                    <li style="margin-bottom: 12px;">Data pipeline development and ETL processes</li>
-                    <li style="margin-bottom: 12px;">Advanced analytics and reporting capabilities</li>
-                    <li style="margin-bottom: 12px;">Data governance and security framework</li>
+    <!-- The Challenge -->
+    <section style="background: #fafafa;">
+        <div class="container-narrow">
+            <h2>The Challenge</h2>
+            <p>Ally Bank's data engineering teams confronted three primary obstacles:</p>
+            <ul style="margin-top: 20px;">
+                <li style="margin-bottom: 16px;"><strong>High licensing costs and infrastructure overhead</strong> from Matillion ETL on EC2</li>
+                <li style="margin-bottom: 16px;"><strong>Limited flexibility</strong> requiring additional coding for each new extract, delaying delivery and consuming developer capacity</li>
+                <li style="margin-bottom: 16px;"><strong>Absence of centralized monitoring</strong>, complicating troubleshooting of critical data flows and raising operational risk</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- The Solution -->
+    <section>
+        <div class="container-narrow">
+            <h2>The Solution</h2>
+            <p>NuLogic implemented a fully Snowflake Native Extraction Framework replacing Matillion, featuring:</p>
+
+            <div style="margin-top: 32px;">
+                <h3>Key Components</h3>
+                <ul style="margin-top: 20px;">
+                    <li style="margin-bottom: 16px;"><strong>Config-Driven Extract Automation:</strong> Reusable Python procedures and Snowflake logic dynamically handle extractions, writing results directly to S3</li>
+                    <li style="margin-bottom: 16px;"><strong>Centralized Audit & Monitoring:</strong> Detailed logs at every stage with audit and summary tables for governance and real-time visibility</li>
+                    <li style="margin-bottom: 16px;"><strong>Dependency & Error Handling:</strong> Extracts trigger only when upstream data is ready, with proactive alerts and rapid failure recovery</li>
+                    <li style="margin-bottom: 16px;"><strong>Snowflake Task Scheduling:</strong> Native task scheduling replaced Matillion jobs, minimizing external dependencies</li>
+                    <li style="margin-bottom: 16px;"><strong>Config-Based Flexibility:</strong> New extracts onboarded instantly without new code—only configuration table updates required</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Technologies -->
+    <!-- Results -->
     <section style="background: #fafafa;">
         <div class="container-narrow">
+            <h2>Results Achieved</h2>
+            <h3 style="margin-top: 32px;">Business Outcomes</h3>
+            <ul style="margin-top: 20px;">
+                <li style="margin-bottom: 16px;"><strong>Matillion fully retired</strong>, eliminating license fees and infrastructure costs</li>
+                <li style="margin-bottom: 16px;"><strong>Significant expense savings</strong> reinvested in analytics and customer experience optimization</li>
+                <li style="margin-bottom: 16px;"><strong>Faster onboarding</strong> of new extracts completed in minutes instead of days with zero new code required</li>
+                <li style="margin-bottom: 16px;"><strong>Onshore developer time freed</strong> for innovation and AI-driven personalization</li>
+                <li style="margin-bottom: 16px;"><strong>Improved observability</strong> through centralized monitoring and logging</li>
+                <li style="margin-bottom: 16px;"><strong>Future scalability</strong> supporting new vendors, formats, and advanced transformations</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Technologies -->
+    <section>
+        <div class="container-narrow">
             <h2>Technologies & Services</h2>
-            <div style="margin-top: 24px;">
-                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+
+            <div style="margin-top: 32px;">
+                <h3>Engineering Stack</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px;">
+                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Amazon Web Services (AWS)</span>
                     <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Snowflake</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Data Engineering</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Analytics</span>
                 </div>
+            </div>
+
+            <div style="margin-top: 32px;">
+                <h3>Services Delivered</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px;">
+                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Data Engineering</span>
+                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Cloud Services</span>
+                </div>
+            </div>
+
+            <div style="margin-top: 32px;">
+                <h3>Key Highlights</h3>
+                <p style="margin-top: 16px;">The framework delivers automated Snowflake-native data extracts, reduces developer workload through config-driven onboarding, enhances operational visibility via centralized logging, and scales for omnichannel retail and AI-driven insights.</p>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section>
+    <section style="background: #fafafa;">
         <div class="container">
             <div class="cta-banner">
-                <h2>Ready to unlock your data potential?</h2>
-                <p>Let's discuss how we can build a modern data framework for your organization.</p>
+                <h2>Ready to modernize your data infrastructure?</h2>
+                <p>Let's discuss how we can build a Snowflake-native framework that reduces costs and accelerates your data operations.</p>
                 <a href="../contact.html" class="btn">Schedule a Call →</a>
             </div>
         </div>
