@@ -50,156 +50,123 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="padding: 80px 0; background: linear-gradient(135deg, rgba(137, 56, 159, 0.9) 0%, rgba(237, 41, 37, 0.9) 100%);">
-        <div class="container">
-            <p style="color: rgba(255,255,255,0.9); margin-bottom: 16px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Case Study</p>
-            <h1 style="color: white; margin-bottom: 24px;">From Legacy to Cloud: Eddie Bauer's Digital Commerce Makeover with MACH Architecture and AWS Infrastructure</h1>
-            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 900px;">Transforming a 100+ year old outdoor brand's digital commerce with modern MACH architecture on AWS.</p>
+    <!-- Hero Banner -->
+    <section style="padding: 0;">
+        <div style="max-width: 100%; overflow: hidden;">
+            <img src="../images/casestudies/eddie-bauer-hero.png" alt="Eddie Bauer Case Study" style="width: 100%; height: auto; display: block;">
+        </div>
+    </section>
 
-            <div style="margin-top: 40px; display: flex; gap: 40px; flex-wrap: wrap;">
+    <!-- Title Section -->
+    <section style="padding: 80px 0; background: white;">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+                <div style="margin-bottom: 32px;">
+                    <img src="../images/casestudies/eddie-bauer-logo.png" alt="Eddie Bauer" style="height: 60px;">
+                </div>
+                <h1 style="font-size: 48px; margin-bottom: 24px; color: #2B2B2B;">From Legacy to Cloud: Eddie Bauer's Digital Commerce Makeover with MACH Architecture and AWS Infrastructure</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Info Grid -->
+    <section style="background: #F9F9F9; padding: 60px 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 900px; margin: 0 auto;">
                 <div>
-                    <p style="color: rgba(255,255,255,0.7); font-size: 14px; margin-bottom: 8px;">Region</p>
-                    <p style="color: white; font-weight: 600;">U.S.</p>
+                    <h4 style="color: #89389f; font-size: 14px; margin-bottom: 12px; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Region</h4>
+                    <p style="font-size: 18px; font-weight: 600; color: #2B2B2B;">U.S.</p>
                 </div>
                 <div>
-                    <p style="color: rgba(255,255,255,0.7); font-size: 14px; margin-bottom: 8px;">Website</p>
-                    <p style="color: white; font-weight: 600;"><a href="https://www.eddiebauer.com" target="_blank" style="color: white;">eddiebauer.com</a></p>
+                    <h4 style="color: #89389f; font-size: 14px; margin-bottom: 12px; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Website</h4>
+                    <p style="font-size: 18px; font-weight: 600; color: #2B2B2B;"><a href="https://www.eddiebauer.com" target="_blank" style="color: #2B2B2B; text-decoration: none;">eddiebauer.com</a></p>
                 </div>
                 <div>
-                    <p style="color: rgba(255,255,255,0.7); font-size: 14px; margin-bottom: 8px;">Client Since</p>
-                    <p style="color: white; font-weight: 600;">2019</p>
+                    <h4 style="color: #89389f; font-size: 14px; margin-bottom: 12px; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Client Since</h4>
+                    <p style="font-size: 18px; font-weight: 600; color: #2B2B2B;">2019</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Client Overview -->
-    <section>
-        <div class="container-narrow">
-            <h2>Client Overview</h2>
-            <p>Eddie Bauer is a 100+ year old outdoor brand providing rugged, high-quality gear including performance outerwear, apparel, footwear, and accessories. Products available through their website and 200+ retail locations across U.S., Canada, Germany, Japan, and international markets.</p>
-        </div>
-    </section>
-
-    <!-- Challenge -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>The Challenge</h2>
-            <p>The company operated on an outdated, monolithic ATG framework that created significant limitations:</p>
-
-            <div style="margin-top: 32px;">
-                <div style="margin-bottom: 24px;">
-                    <h3 style="font-size: 18px; margin-bottom: 12px; color: var(--color-primary);">Legacy Technology Restrictions</h3>
-                    <p>ATG framework prevented agile updates and caused performance bottlenecks</p>
-                </div>
-
-                <div style="margin-bottom: 24px;">
-                    <h3 style="font-size: 18px; margin-bottom: 12px; color: var(--color-primary);">Scalability Requirements</h3>
-                    <p>Needed modern, modular architecture supporting quick scaling and third-party integrations</p>
-                </div>
-
-                <div style="margin-bottom: 24px;">
-                    <h3 style="font-size: 18px; margin-bottom: 12px; color: var(--color-primary);">Payment Processing Failures</h3>
-                    <p>Order authorization issues post-MAO mismatches disrupted fulfillment workflows</p>
-                </div>
-
-                <div style="margin-bottom: 24px;">
-                    <h3 style="font-size: 18px; margin-bottom: 12px; color: var(--color-primary);">Infrastructure Complexity</h3>
-                    <p>Legacy configurations increased maintenance overhead and operational costs</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solution -->
-    <section>
-        <div class="container-narrow">
-            <h2>The Solution</h2>
-
-            <div style="margin-top: 32px;">
-                <div style="margin-bottom: 32px;">
-                    <h3 style="font-size: 20px; margin-bottom: 16px; color: var(--color-primary);">MACH Architecture Implementation</h3>
-                    <p>Replaced monolithic ATG system with Node.js, React, GraphQL, Python, MongoDB, and AWS microservices, enabling weekly production releases with module-level deployments.</p>
-                </div>
-
-                <div style="margin-bottom: 32px;">
-                    <h3 style="font-size: 20px; margin-bottom: 16px; color: var(--color-primary);">AWS Infrastructure Migration</h3>
-                    <ul style="margin-top: 16px;">
-                        <li style="margin-bottom: 12px;">Deployed AWS CloudFront for faster global content delivery</li>
-                        <li style="margin-bottom: 12px;">Optimized server performance and page load times during peak shopping periods</li>
-                        <li style="margin-bottom: 12px;">Integrated WAF with CloudFront to block malicious bot traffic targeting GraphQL endpoints</li>
-                    </ul>
-                </div>
-
-                <div style="margin-bottom: 32px;">
-                    <h3 style="font-size: 20px; margin-bottom: 16px; color: var(--color-primary);">DevOps & Cost Optimization</h3>
-                    <ul style="margin-top: 16px;">
-                        <li style="margin-bottom: 12px;">Switched Lambda processors from x86 to ARM64 architecture, reducing compute costs approximately 32%</li>
-                        <li style="margin-bottom: 12px;">Eliminated redundant logs, Lambda executions, and MongoDB collections</li>
-                    </ul>
-                </div>
-
-                <div style="margin-bottom: 32px;">
-                    <h3 style="font-size: 20px; margin-bottom: 16px; color: var(--color-primary);">Monitoring & Analytics</h3>
-                    <ul style="margin-top: 16px;">
-                        <li style="margin-bottom: 12px;">Implemented DataDog and GTM for real-time event tracking, error monitoring, and performance analytics</li>
-                        <li style="margin-bottom: 12px;">Deployed EB Toolkit providing QA and business users deployment and testing visibility</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Results -->
-    <section style="background: linear-gradient(135deg, rgba(137, 56, 159, 0.95) 0%, rgba(237, 41, 37, 0.95) 100%); color: white;">
+    <section style="padding: 80px 0; background: white;">
         <div class="container">
-            <h2 style="color: white; text-align: center; margin-bottom: 48px;">Results & Impact</h2>
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h2 style="font-size: 32px; margin-bottom: 24px; color: #2B2B2B;">Client Overview</h2>
+                <p style="font-size: 18px; line-height: 1.8; color: #424242;">Eddie Bauer is a 100+ year heritage outdoor brand offering apparel, footwear, and gear with over 200 stores across the U.S. and international markets.</p>
+            </div>
+        </div>
+    </section>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin-bottom: 48px;">
-                <div style="text-align: center; padding: 24px;">
-                    <div style="font-size: 48px; font-weight: 700; margin-bottom: 12px;">Zero</div>
-                    <div style="font-size: 16px; opacity: 0.9;">Downtime during key migration phases</div>
+    <!-- Challenge Section with Image -->
+    <section style="padding: 80px 0; background: #F9F9F9;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+                <div>
+                    <img src="../images/casestudies/eddie-bauer-challenge.png" alt="Challenge" style="width: 100%; height: auto; border-radius: 8px;">
                 </div>
-
-                <div style="text-align: center; padding: 24px;">
-                    <div style="font-size: 48px; font-weight: 700; margin-bottom: 12px;">~60%</div>
-                    <div style="font-size: 16px; opacity: 0.9;">Annual operating expense savings on platform OPEX</div>
-                </div>
-
-                <div style="text-align: center; padding: 24px;">
-                    <div style="font-size: 48px; font-weight: 700; margin-bottom: 12px;">~32%</div>
-                    <div style="font-size: 16px; opacity: 0.9;">Infrastructure cost reduction through ARM64 Lambda optimization</div>
-                </div>
-
-                <div style="text-align: center; padding: 24px;">
-                    <div style="font-size: 48px; font-weight: 700; margin-bottom: 12px;">Weekly</div>
-                    <div style="font-size: 16px; opacity: 0.9;">Production release cycle achieved</div>
+                <div>
+                    <h2 style="font-size: 32px; margin-bottom: 24px; color: #2B2B2B;">The Challenge</h2>
+                    <ul style="list-style: disc; margin-left: 24px;">
+                        <li style="font-size: 18px; line-height: 1.8; color: #424242; margin-bottom: 12px;">Legacy ATG framework with scalability issues and technical debt</li>
+                        <li style="font-size: 18px; line-height: 1.8; color: #424242; margin-bottom: 12px;">Payment flow authorization failures impacting revenue</li>
+                        <li style="font-size: 18px; line-height: 1.8; color: #424242; margin-bottom: 12px;">Infrastructure overhead and maintenance complexity</li>
+                    </ul>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div style="max-width: 800px; margin: 0 auto;">
-                <h3 style="color: white; margin-bottom: 24px; font-size: 24px;">Additional Achievements</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 16px; padding-left: 24px; position: relative;">
-                        <span style="position: absolute; left: 0;">✓</span>
-                        WAF + CloudFront successfully blocked malicious attacks
+    <!-- Solution Section -->
+    <section style="padding: 80px 0; background: white;">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h2 style="font-size: 32px; margin-bottom: 32px; color: #2B2B2B;">The Solution</h2>
+
+                <h3 style="font-size: 24px; margin-bottom: 20px; color: #2B2B2B;">Strategic Architecture with AWS CloudFront</h3>
+
+                <h4 style="font-size: 20px; margin-top: 24px; margin-bottom: 16px; color: #2B2B2B;">1. MACH Architecture Implementation</h4>
+                <ul style="list-style: disc; margin-left: 24px; margin-bottom: 24px;">
+                    <li style="font-size: 18px; line-height: 1.8; color: #424242; margin-bottom: 12px;">Built composable, API-first platform using Node.js, React, GraphQL, Python, and MongoDB</li>
+                    <li style="font-size: 18px; line-height: 1.8; color: #424242; margin-bottom: 12px;">Enabled flexible integrations and rapid feature deployment</li>
+                </ul>
+
+                <h4 style="font-size: 20px; margin-bottom: 16px; color: #2B2B2B;">2. AWS CloudFront Migration</h4>
+                <ul style="list-style: disc; margin-left: 24px; margin-bottom: 24px;">
+                    <li style="font-size: 18px; line-height: 1.8; color: #424242; margin-bottom: 12px;">Migrated infrastructure to AWS CloudFront for enhanced performance and global content delivery</li>
+                </ul>
+
+                <h4 style="font-size: 20px; margin-bottom: 16px; color: #2B2B2B;">3. DevOps Optimization</h4>
+                <ul style="list-style: disc; margin-left: 24px; margin-bottom: 24px;">
+                    <li style="font-size: 18px; line-height: 1.8; color: #424242; margin-bottom: 12px;">Transitioned Lambda functions to ARM64 architecture, achieving 32% infrastructure cost reduction</li>
+                </ul>
+
+                <h4 style="font-size: 20px; margin-bottom: 16px; color: #2B2B2B;">4. Monitoring & Analytics</h4>
+                <ul style="list-style: disc; margin-left: 24px;">
+                    <li style="font-size: 18px; line-height: 1.8; color: #424242; margin-bottom: 12px;">Deployed DataDog and Google Tag Manager for real-time observability</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section style="padding: 80px 0; background: #F9F9F9;">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h2 style="font-size: 32px; margin-bottom: 24px; color: #2B2B2B;">The Results</h2>
+                <ul style="list-style: none; margin: 0; padding: 0;">
+                    <li style="font-size: 18px; line-height: 1.8; color: #424242; margin-bottom: 20px; padding-left: 0;">
+                        <strong style="color: #2B2B2B;">Zero Downtime Migration:</strong> Seamless transition to AWS with no service disruptions
                     </li>
-                    <li style="margin-bottom: 16px; padding-left: 24px; position: relative;">
-                        <span style="position: absolute; left: 0;">✓</span>
-                        Scalable infrastructure established for launching new brands/sites
+                    <li style="font-size: 18px; line-height: 1.8; color: #424242; margin-bottom: 20px; padding-left: 0;">
+                        <strong style="color: #2B2B2B;">60% Annual OPEX Savings:</strong> Significant reduction in operational expenses
                     </li>
-                    <li style="margin-bottom: 16px; padding-left: 24px; position: relative;">
-                        <span style="position: absolute; left: 0;">✓</span>
-                        No site crashes during peak shopping seasons post-2020
+                    <li style="font-size: 18px; line-height: 1.8; color: #424242; margin-bottom: 20px; padding-left: 0;">
+                        <strong style="color: #2B2B2B;">32% Infrastructure Cost Reduction:</strong> Through ARM64 Lambda optimization
                     </li>
-                    <li style="margin-bottom: 16px; padding-left: 24px; position: relative;">
-                        <span style="position: absolute; left: 0;">✓</span>
-                        Advanced integrations implemented: TrueFit, Loyalty, BOPIS, and omnichannel features
-                    </li>
-                    <li style="margin-bottom: 16px; padding-left: 24px; position: relative;">
-                        <span style="position: absolute; left: 0;">✓</span>
-                        Business-friendly PIM and promotion management via Talon One
+                    <li style="font-size: 18px; line-height: 1.8; color: #424242; margin-bottom: 20px; padding-left: 0;">
+                        <strong style="color: #2B2B2B;">Weekly Deployment Cycle:</strong> Enhanced release velocity and business agility
                     </li>
                 </ul>
             </div>
@@ -207,76 +174,55 @@
     </section>
 
     <!-- Testimonial -->
-    <section>
-        <div class="container-narrow">
-            <div style="background: #fafafa; padding: 48px; border-radius: 8px; border-left: 4px solid var(--color-primary);">
-                <p style="font-size: 20px; line-height: 1.6; margin-bottom: 24px; font-style: italic;">
-                    "NULogic helped modernize our digital commerce foundation by building, deploying, and managing a cutting-edge MACH architecture on AWS. From there, we launched new brand sites and omnichannel initiatives flawlessly—their team made it easy to move fast and get it right."
-                </p>
-                <div>
-                    <p style="font-weight: 700; margin-bottom: 4px;">Sam Biswas</p>
-                    <p style="color: #666; font-size: 14px;">SVP Digital Technologies, Engineering and Data, Sparc Group, LLC</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Provided -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>Services Provided</h2>
-            <div style="margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px;">
-                <span class="tag" style="background: white; color: var(--color-primary); padding: 12px 20px; font-size: 14px; border: 1px solid #e0e0e0;">Headless CMS Implementation</span>
-                <span class="tag" style="background: white; color: var(--color-primary); padding: 12px 20px; font-size: 14px; border: 1px solid #e0e0e0;">Cloud & DevOps</span>
-                <span class="tag" style="background: white; color: var(--color-primary); padding: 12px 20px; font-size: 14px; border: 1px solid #e0e0e0;">QA & Testing Automation</span>
-                <span class="tag" style="background: white; color: var(--color-primary); padding: 12px 20px; font-size: 14px; border: 1px solid #e0e0e0;">Data Engineering and Analytics</span>
-                <span class="tag" style="background: white; color: var(--color-primary); padding: 12px 20px; font-size: 14px; border: 1px solid #e0e0e0;">Monitoring and Support Operations</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technologies -->
-    <section>
-        <div class="container-narrow">
-            <h2>Technologies Stack</h2>
-
-            <div style="margin-top: 32px;">
-                <h3 style="font-size: 18px; margin-bottom: 16px; color: var(--color-primary);">Engineering Stack</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">AWS</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Amazon</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Node.js</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">React</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">GraphQL</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Python</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Java</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">DataDog</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">MongoDB</span>
-                </div>
-            </div>
-
-            <div style="margin-top: 32px;">
-                <h3 style="font-size: 18px; margin-bottom: 16px; color: var(--color-primary);">Partner Integrations</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Bloomreach</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">PayPal</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Forter</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Klarna</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Manhattan</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">MuleSoft</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Talon.One</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section style="background: #fafafa;">
+    <section style="padding: 80px 0; background: white;">
         <div class="container">
-            <div class="cta-banner">
-                <h2>Ready to modernize your digital commerce platform?</h2>
-                <p>Let's discuss how we can help you migrate to modern MACH architecture on AWS.</p>
-                <a href="../contact.html" class="btn">Schedule a Call →</a>
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div style="padding: 40px; background: white; border-radius: 8px; border-left: 4px solid #89389f;">
+                    <p style="font-size: 20px; line-height: 1.8; font-style: italic; color: #2B2B2B; margin-bottom: 24px;">"NULogic helped us modernize our digital commerce foundation by building, deploying, and managing a cutting-edge MACH architecture on AWS."</p>
+                    <p style="font-weight: 600; color: #2B2B2B;">Sam Biswas</p>
+                    <p style="font-size: 14px; color: #666;">SVP Digital Technologies, Sparc Group LLC</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Technologies -->
+    <section style="padding: 80px 0; background: #F9F9F9;">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h2 style="font-size: 32px; margin-bottom: 32px; color: #2B2B2B;">Services & Technologies</h2>
+
+                <h4 style="margin-bottom: 16px; color: #89389f; font-size: 16px; font-weight: 600;">Engineering Stack</h4>
+                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px;">
+                    <span style="background: white; color: #2B2B2B; padding: 10px 20px; border-radius: 4px; font-size: 14px; font-weight: 500;">AWS</span>
+                    <span style="background: white; color: #2B2B2B; padding: 10px 20px; border-radius: 4px; font-size: 14px; font-weight: 500;">Node.js</span>
+                    <span style="background: white; color: #2B2B2B; padding: 10px 20px; border-radius: 4px; font-size: 14px; font-weight: 500;">React</span>
+                    <span style="background: white; color: #2B2B2B; padding: 10px 20px; border-radius: 4px; font-size: 14px; font-weight: 500;">GraphQL</span>
+                    <span style="background: white; color: #2B2B2B; padding: 10px 20px; border-radius: 4px; font-size: 14px; font-weight: 500;">Python</span>
+                    <span style="background: white; color: #2B2B2B; padding: 10px 20px; border-radius: 4px; font-size: 14px; font-weight: 500;">MongoDB</span>
+                    <span style="background: white; color: #2B2B2B; padding: 10px 20px; border-radius: 4px; font-size: 14px; font-weight: 500;">DataDog</span>
+                </div>
+
+                <h4 style="margin-bottom: 16px; color: #89389f; font-size: 16px; font-weight: 600;">Integrations</h4>
+                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+                    <span style="background: white; color: #2B2B2B; padding: 10px 20px; border-radius: 4px; font-size: 14px; font-weight: 500;">Bloomreach</span>
+                    <span style="background: white; color: #2B2B2B; padding: 10px 20px; border-radius: 4px; font-size: 14px; font-weight: 500;">PayPal</span>
+                    <span style="background: white; color: #2B2B2B; padding: 10px 20px; border-radius: 4px; font-size: 14px; font-weight: 500;">Forter</span>
+                    <span style="background: white; color: #2B2B2B; padding: 10px 20px; border-radius: 4px; font-size: 14px; font-weight: 500;">Klarna</span>
+                    <span style="background: white; color: #2B2B2B; padding: 10px 20px; border-radius: 4px; font-size: 14px; font-weight: 500;">MuleSoft</span>
+                    <span style="background: white; color: #2B2B2B; padding: 10px 20px; border-radius: 4px; font-size: 14px; font-weight: 500;">Talon.One</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding: 80px 0; background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);">
+        <div class="container">
+            <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: 36px; margin-bottom: 20px; color: white;">Ready to modernize your commerce platform?</h2>
+                <p style="font-size: 18px; color: rgba(255,255,255,0.95); margin-bottom: 32px;">Let's discuss how we can help you achieve similar results.</p>
+                <a href="../contact.html" class="btn" style="background: white; color: #89389f; padding: 14px 32px; border-radius: 4px; text-decoration: none; font-weight: 600; display: inline-block;">Schedule a Call →</a>
             </div>
         </div>
     </section>

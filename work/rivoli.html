@@ -8,6 +8,357 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Case Study Specific Styles */
+        .case-study-hero {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            background-color: #2B2B2B;
+        }
+
+        .case-study-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .case-study-title {
+            padding: 60px 0 40px;
+            background: white;
+        }
+
+        .case-study-title .container-narrow {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .client-logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 32px;
+        }
+
+        .case-study-title h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #2B2B2B;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .client-info-grid {
+            background: #F9F9F9;
+            padding: 48px 0;
+        }
+
+        .client-info-grid .grid-3col {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .info-item h3 {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #89389f;
+            margin-bottom: 12px;
+        }
+
+        .info-item p {
+            font-size: 18px;
+            font-weight: 500;
+            color: #2B2B2B;
+            margin: 0;
+        }
+
+        .info-item a {
+            color: #2B2B2B;
+            text-decoration: none;
+        }
+
+        .info-item a:hover {
+            color: #89389f;
+        }
+
+        .section-white {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .section-gray {
+            background: #F9F9F9;
+            padding: 80px 0;
+        }
+
+        .container-narrow {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #2B2B2B;
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+
+        .section-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #424242;
+            margin-bottom: 20px;
+        }
+
+        .challenge-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .challenge-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .challenge-text h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #2B2B2B;
+            margin-bottom: 24px;
+        }
+
+        .challenge-quote {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #424242;
+            font-style: italic;
+            margin-bottom: 24px;
+            padding-left: 24px;
+            border-left: 4px solid #89389f;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 48px;
+        }
+
+        .solution-item h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2B2B2B;
+            margin-bottom: 16px;
+        }
+
+        .solution-item ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .solution-item li {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #424242;
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .solution-item li:before {
+            content: "•";
+            color: #89389f;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+        }
+
+        .device-showcase {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 20px;
+            margin: 60px 0;
+            position: relative;
+        }
+
+        .device-showcase img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .device-desktop {
+            width: 40%;
+            z-index: 1;
+        }
+
+        .device-laptop {
+            width: 35%;
+            z-index: 2;
+        }
+
+        .device-mobile {
+            width: 15%;
+            z-index: 3;
+        }
+
+        .results-list {
+            list-style: none;
+            padding: 0;
+            margin: 40px 0;
+        }
+
+        .results-list li {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #424242;
+            margin-bottom: 24px;
+            padding-left: 32px;
+            position: relative;
+        }
+
+        .results-list li:before {
+            content: "✓";
+            color: #89389f;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 24px;
+        }
+
+        .results-list strong {
+            color: #2B2B2B;
+            font-weight: 600;
+        }
+
+        .highlights-image {
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            margin: 48px auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .services-tech-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 48px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .tech-tag {
+            background: white;
+            color: #89389f;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 14px;
+            font-weight: 500;
+            border: 2px solid #89389f;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-section h2 {
+            font-size: 42px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 24px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 32px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #89389f;
+            padding: 16px 40px;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .case-study-hero {
+                height: 300px;
+            }
+
+            .client-info-grid .grid-3col {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .challenge-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .solution-grid,
+            .services-tech-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .device-showcase {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .device-desktop,
+            .device-laptop,
+            .device-mobile {
+                width: 80%;
+            }
+
+            .case-study-title h1 {
+                font-size: 36px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -50,150 +401,188 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="padding: 80px 0; background: linear-gradient(135deg, rgba(137, 56, 159, 0.9) 0%, rgba(237, 41, 37, 0.9) 100%);">
-        <div class="container">
-            <p style="color: rgba(255,255,255,0.9); margin-bottom: 16px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Case Study</p>
-            <h1 style="color: white; margin-bottom: 24px;">Rivoli Group</h1>
-            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 900px;">A luxury lifestyle retailer operating 220+ stores across UAE, Oman, Qatar, and Bahrain. NuLogic provides managed commerce retainer services ensuring round-the-clock reliability and customer experience excellence.</p>
+    <!-- Hero Banner Image -->
+    <div class="case-study-hero">
+        <img src="../images/casestudies/rivoli-hero.png" alt="Rivoli Group - Luxury Retail Excellence">
+    </div>
+
+    <!-- Title Section with Client Logo -->
+    <section class="case-study-title">
+        <div class="container-narrow">
+            <img src="../images/casestudies/rivoli-logo.svg" alt="Rivoli Group Logo" class="client-logo">
+            <h1>Rivoli Group</h1>
         </div>
     </section>
 
-    <!-- Overview -->
-    <section>
-        <div class="container-narrow">
-            <h2>Overview</h2>
-            <p>The Rivoli Group is a luxury lifestyle retailer operating 220+ stores across UAE, Oman, Qatar, and Bahrain, representing 100+ international brands. Since 2023, NuLogic has served as their managed commerce partner, providing comprehensive platform support and optimization services.</p>
-
-            <p style="margin-top: 16px;">Our managed commerce retainer service delivers round-the-clock monitoring, incident resolution, and strategic guidance to keep Rivoli's complex digital commerce ecosystem running at peak performance.</p>
-
-            <div style="margin-top: 40px;">
-                <h3>Engagement Details</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;"><strong>Client:</strong> The Rivoli Group - Luxury lifestyle retailer with 220+ stores</li>
-                    <li style="margin-bottom: 12px;"><strong>Engagement Type:</strong> Managed commerce retainer service</li>
-                    <li style="margin-bottom: 12px;"><strong>Partnership Duration:</strong> Since 2023</li>
-                    <li style="margin-bottom: 12px;"><strong>Region:</strong> EMEA (UAE, Oman, Qatar, Bahrain)</li>
-                </ul>
+    <!-- Client Info Grid (3 Columns) -->
+    <section class="client-info-grid">
+        <div class="grid-3col">
+            <div class="info-item">
+                <h3>Region</h3>
+                <p>EMEA</p>
+            </div>
+            <div class="info-item">
+                <h3>Website</h3>
+                <p><a href="https://www.rivoligroup.com" target="_blank">rivoligroup.com</a></p>
+            </div>
+            <div class="info-item">
+                <h3>Client Since</h3>
+                <p>2023</p>
             </div>
         </div>
     </section>
 
-    <!-- Business Challenges -->
-    <section style="background: #fafafa;">
+    <!-- Client Overview Section (White Background) -->
+    <section class="section-white">
         <div class="container-narrow">
-            <h2>Business Challenges</h2>
-            <p>The Rivoli Group faced significant complexity managing their digital commerce ecosystem. Key challenges included:</p>
-
-            <ul style="margin-top: 24px;">
-                <li style="margin-bottom: 16px;"><strong>Complex Stack Management:</strong> Managing a sophisticated technology stack including commercetools, Fluent Commerce OMS, and multiple supporting systems requiring continuous oversight</li>
-                <li style="margin-bottom: 16px;"><strong>24/7 Reliability Requirements:</strong> Need for round-the-clock reliability and customer experience excellence to support luxury retail operations</li>
-                <li style="margin-bottom: 16px;"><strong>Global Support Coverage:</strong> Internal teams required dependable global off-hours commerce support to maintain operations</li>
-                <li style="margin-bottom: 16px;"><strong>Evolving Customer Expectations:</strong> Necessity to keep pace with rapidly evolving customer expectations and emerging technologies</li>
-            </ul>
+            <h2 class="section-title">Client Overview</h2>
+            <p class="section-text">A luxury lifestyle retailer operating across the UAE, Oman, Qatar, and Bahrain, representing 100+ international brands with 220+ stores. Headquartered in Dubai, the group manages retail and travel retail operations across major airports and airlines.</p>
         </div>
     </section>
 
-    <!-- Solutions -->
-    <section>
+    <!-- The Challenge Section (Gray Background, 2-Column Layout) -->
+    <section class="section-gray">
         <div class="container-narrow">
-            <h2>Solutions Implemented</h2>
-            <p>NuLogic delivered comprehensive managed commerce support across multiple dimensions to address Rivoli's complex operational needs:</p>
-
-            <div style="margin-top: 40px;">
-                <h3>Platform Support</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Real-time monitoring and incident resolution for commercetools</li>
-                    <li style="margin-bottom: 12px;">Performance stability optimization and operational efficiency improvements</li>
-                    <li style="margin-bottom: 12px;">Fluent Commerce OMS configuration and intelligent integrations</li>
-                </ul>
-            </div>
-
-            <div style="margin-top: 32px;">
-                <h3>Customer Experience Enhancement</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">UI/UX redesign with focus on personalized search and advanced discovery</li>
-                    <li style="margin-bottom: 12px;">Strategic guidance on website refresh initiatives</li>
-                    <li style="margin-bottom: 12px;">Conversion rate optimization improvements</li>
-                </ul>
-            </div>
-
-            <div style="margin-top: 32px;">
-                <h3>System Integration</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Regular upgrades and seamless integration across connected systems</li>
-                    <li style="margin-bottom: 12px;">Omnichannel retail growth enablement</li>
-                    <li style="margin-bottom: 12px;">AI-powered merchandising automation</li>
-                </ul>
-            </div>
-
-            <div style="margin-top: 32px;">
-                <h3>Support Model</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">24/7 global coverage from India and LATAM regions</li>
-                    <li style="margin-bottom: 12px;">Off-hours responsiveness capabilities</li>
-                </ul>
+            <div class="challenge-section">
+                <div class="challenge-image-wrapper">
+                    <img src="../images/casestudies/rivoli-hero.png" alt="Complex Commerce Platform" class="challenge-image">
+                </div>
+                <div class="challenge-text">
+                    <h2>The Challenge</h2>
+                    <p class="challenge-quote">"Managing a complex stack—including commercetools, Fluent Commerce OMS, and multiple supporting systems—required ongoing monitoring, enhancements, and seamless integrations."</p>
+                    <p class="section-text">The organization needed continuous support for round-the-clock reliability and performance optimization.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Results -->
-    <section style="background: #fafafa;">
+    <!-- Solution Section (White Background) -->
+    <section class="section-white">
         <div class="container-narrow">
-            <h2>Results Achieved</h2>
-            <p>Our managed commerce partnership with Rivoli Group has delivered measurable improvements across all key operational metrics:</p>
+            <h2 class="section-title">The Solution</h2>
+            <p class="section-text">NuLogic delivered a comprehensive managed services approach with global support coverage and platform expertise.</p>
 
-            <ul style="margin-top: 24px;">
-                <li style="margin-bottom: 16px;"><strong>Improved System Reliability:</strong> Zero downtime during peak seasons across all commerce applications</li>
-                <li style="margin-bottom: 16px;"><strong>Faster Issue Resolution:</strong> AI-powered monitoring and global support enable rapid problem identification and resolution</li>
-                <li style="margin-bottom: 16px;"><strong>Enhanced Customer Experience:</strong> Stronger customer experience driving higher conversion rates</li>
-                <li style="margin-bottom: 16px;"><strong>Streamlined Operations:</strong> Smoother upgrades and streamlined fulfillment workflows</li>
-                <li style="margin-bottom: 16px;"><strong>24/7 Operational Peace of Mind:</strong> AI-driven responsiveness ensures continuous operational excellence</li>
-            </ul>
-        </div>
-    </section>
+            <div class="solution-grid">
+                <div class="solution-item">
+                    <h3>commercetools Platform Support</h3>
+                    <ul>
+                        <li>Real-time monitoring and incident resolution</li>
+                        <li>Performance stability optimization</li>
+                        <li>Operational efficiency improvements</li>
+                    </ul>
+                </div>
 
-    <!-- Technologies -->
-    <section>
-        <div class="container-narrow">
-            <h2>Technologies & Integrations</h2>
+                <div class="solution-item">
+                    <h3>Fluent Commerce OMS</h3>
+                    <ul>
+                        <li>Integrations and order flow optimization</li>
+                        <li>Intelligent configuration management</li>
+                        <li>Streamlined fulfillment workflows</li>
+                    </ul>
+                </div>
 
-            <div style="margin-top: 32px;">
-                <h3>Engineering Stack</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Google Cloud</span>
+                <div class="solution-item">
+                    <h3>UI/UX Redesign</h3>
+                    <ul>
+                        <li>Personalized search and discovery enhancements</li>
+                        <li>Data-driven interface design</li>
+                        <li>Conversion rate optimization</li>
+                    </ul>
+                </div>
+
+                <div class="solution-item">
+                    <h3>Ancillary Systems</h3>
+                    <ul>
+                        <li>Regular upgrades and seamless integration</li>
+                        <li>Omnichannel retail growth enablement</li>
+                        <li>AI-powered merchandising automation</li>
+                    </ul>
+                </div>
+
+                <div class="solution-item">
+                    <h3>Global Support Model</h3>
+                    <ul>
+                        <li>Off-hours coverage from India and LATAM</li>
+                        <li>24/7 operational responsiveness</li>
+                        <li>AI-driven monitoring and alerts</li>
+                    </ul>
                 </div>
             </div>
 
-            <div style="margin-top: 32px;">
-                <h3>Partner Integrations</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">commercetools</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Concrete CMS</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Fluent Commerce (OMS)</span>
-                </div>
-            </div>
-
-            <div style="margin-top: 32px;">
-                <h3>Services Delivered</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;"><strong>eCommerce Development:</strong> Microservices, APIs, headless commerce</li>
-                    <li style="margin-bottom: 12px;"><strong>UI/UX Design:</strong> Data-driven interfaces, responsive design</li>
-                    <li style="margin-bottom: 12px;"><strong>QA & Testing Automation:</strong> Regression testing, performance validation</li>
-                    <li style="margin-bottom: 12px;"><strong>Monitoring & Support Operations:</strong> 24/7 global support, proactive management</li>
-                </ul>
+            <!-- Device Showcase -->
+            <div class="device-showcase">
+                <img src="../images/casestudies/rivoli-desktop.png" alt="Desktop View" class="device-desktop">
+                <img src="../images/casestudies/rivoli-laptop.png" alt="Laptop View" class="device-laptop">
+                <img src="../images/casestudies/rivoli-mobile.png" alt="Mobile View" class="device-mobile">
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section style="background: #fafafa;">
-        <div class="container">
-            <div class="cta-banner">
-                <h2>Need comprehensive managed commerce services?</h2>
-                <p>Let's discuss how our 24/7 managed services can optimize your commerce platform and deliver operational excellence.</p>
-                <a href="../contact.html" class="btn">Schedule a Call →</a>
+    <!-- Results Section (Gray Background) -->
+    <section class="section-gray">
+        <div class="container-narrow">
+            <h2 class="section-title">Results Achieved</h2>
+            <p class="section-text">Our managed commerce partnership with Rivoli Group has delivered measurable improvements across all key operational metrics.</p>
+
+            <ul class="results-list">
+                <li><strong>Improved system reliability</strong> across all retail applications</li>
+                <li><strong>Faster issue resolution</strong> with AI-powered monitoring</li>
+                <li><strong>Enhanced customer experience</strong> through UI/UX redesign</li>
+                <li><strong>Operational efficiency gains</strong> with streamlined workflows</li>
+                <li><strong>24/7 global support model</strong> with real-time responsiveness</li>
+            </ul>
+
+            <img src="../images/casestudies/rivoli-highlights.png" alt="Rivoli Highlights" class="highlights-image">
+        </div>
+    </section>
+
+    <!-- Services & Technologies Section (White Background) -->
+    <section class="section-white">
+        <div class="container-narrow">
+            <h2 class="section-title">Services & Technologies</h2>
+
+            <div class="services-tech-grid">
+                <div>
+                    <h3 style="font-size: 24px; font-weight: 600; color: #2B2B2B; margin-bottom: 24px;">Services Offered</h3>
+                    <div class="solution-item">
+                        <ul>
+                            <li><strong>eCommerce Development</strong> - Microservices, API integrations, headless commerce</li>
+                            <li><strong>UI/UX Design</strong> - Data-driven interfaces, responsive design</li>
+                            <li><strong>QA & Testing Automation</strong> - Regression testing, performance validation</li>
+                            <li><strong>Monitoring & Support Operations</strong> - 24/7 global coverage</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="font-size: 24px; font-weight: 600; color: #2B2B2B; margin-bottom: 24px;">Technology Stack</h3>
+
+                    <div style="margin-bottom: 32px;">
+                        <h4 style="font-size: 16px; font-weight: 600; color: #424242; margin-bottom: 12px;">Engineering</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Google Cloud</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 style="font-size: 16px; font-weight: 600; color: #424242; margin-bottom: 12px;">Partner Integrations</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">commercetools</span>
+                            <span class="tech-tag">Concrete CMS</span>
+                            <span class="tech-tag">Fluent Commerce</span>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- CTA Section (Purple to Red Gradient) -->
+    <section class="cta-section">
+        <div class="container-narrow">
+            <h2>Ready to optimize your commerce platform?</h2>
+            <p>Let's discuss how our managed services can deliver operational excellence and round-the-clock reliability for your business.</p>
+            <a href="../contact.html" class="cta-button">Schedule a Consultation</a>
         </div>
     </section>
 

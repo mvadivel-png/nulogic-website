@@ -3,17 +3,555 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UPPAbaby Case Study | Shopware Implementation | NuLogic</title>
+    <title>UPPAbaby Case Study - Shopware Implementation | NuLogic</title>
+    <meta name="description" content="How NULogic helped UPPAbaby consolidate 29 websites into 7 global sales channels with Shopware, achieving an 8-month go-live for their premium baby gear ecommerce platform.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-purple: #89389f;
+            --color-red: #ed2925;
+            --color-text-dark: #2B2B2B;
+            --color-text-black: #141414;
+            --color-text-medium: #424242;
+            --color-bg-gray: #F9F9F9;
+            --color-bg-light-gray: #F2F2F2;
+            --color-border: #D9D9D9;
+            --font-primary: 'Inter', sans-serif;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-condensed: 'Barlow Condensed', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            color: var(--color-text-dark);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .container-narrow {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header Navigation */
+        header {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            padding: 16px 24px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            height: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            color: var(--color-text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: linear-gradient(135deg, var(--color-purple) 0%, var(--color-red) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-item-with-dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            list-style: none;
+            padding: 12px 0;
+            min-width: 200px;
+            margin-top: 8px;
+        }
+
+        .nav-item-with-dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu li a {
+            display: block;
+            padding: 8px 20px;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-purple) 0%, var(--color-red) 100%);
+            color: white !important;
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(137, 56, 159, 0.3);
+            -webkit-text-fill-color: white;
+        }
+
+        /* Hero Section */
+        .hero-banner {
+            width: 100%;
+            height: 500px;
+            background-image: url('../images/casestudies/uppababy-hero.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .hero-content {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-heading);
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--color-text-black);
+            margin-bottom: 32px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .client-logo {
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .client-logo img {
+            max-height: 60px;
+        }
+
+        /* Client Info Grid */
+        .client-info-grid {
+            background: var(--color-bg-gray);
+            padding: 48px 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .info-item {
+            text-align: center;
+        }
+
+        .info-label {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-text-medium);
+            margin-bottom: 8px;
+        }
+
+        .info-value {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--color-text-black);
+        }
+
+        .info-value a {
+            color: var(--color-purple);
+            text-decoration: none;
+        }
+
+        .info-value a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .bg-gray {
+            background: var(--color-bg-gray);
+        }
+
+        h2 {
+            font-family: var(--font-heading);
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--color-text-black);
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+
+        h3 {
+            font-family: var(--font-heading);
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-text-black);
+            margin-bottom: 16px;
+            margin-top: 40px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--color-text-dark);
+            margin-bottom: 16px;
+        }
+
+        .lead {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.7;
+            color: var(--color-text-black);
+            margin-bottom: 24px;
+        }
+
+        .highlight-box {
+            background: var(--color-bg-light-gray);
+            border-left: 4px solid var(--color-purple);
+            padding: 24px 32px;
+            margin: 32px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .two-column img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Lists */
+        ul {
+            list-style: none;
+            margin: 24px 0;
+        }
+
+        ul li {
+            padding-left: 32px;
+            position: relative;
+            margin-bottom: 16px;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        ul li:before {
+            content: "•";
+            color: var(--color-purple);
+            font-weight: bold;
+            font-size: 24px;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        ul li strong {
+            color: var(--color-text-black);
+            font-weight: 700;
+        }
+
+        /* Quote */
+        .quote {
+            border-left: 4px solid var(--color-purple);
+            padding: 24px 32px;
+            margin: 32px 0;
+            font-style: italic;
+            background: white;
+        }
+
+        .quote p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: var(--color-text-dark);
+            margin: 0;
+        }
+
+        .quote-author {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--color-text-medium);
+            font-style: normal;
+            margin-top: 12px;
+        }
+
+        /* Results Grid */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .result-card {
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .result-card h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--color-text-black);
+            margin-bottom: 16px;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin: 32px 0;
+        }
+
+        .service-item {
+            padding: 24px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid var(--color-border);
+        }
+
+        .service-item h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--color-text-black);
+            margin-bottom: 8px;
+        }
+
+        .service-item p {
+            font-size: 16px;
+            margin: 0;
+            color: var(--color-text-medium);
+        }
+
+        /* Technologies */
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            align-items: center;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        .tech-grid img {
+            height: 50px;
+            width: auto;
+        }
+
+        .tech-section {
+            margin-bottom: 48px;
+        }
+
+        .tech-section h3 {
+            font-size: 20px;
+            margin-bottom: 24px;
+            margin-top: 0;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--color-purple) 0%, var(--color-red) 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.95);
+            font-size: 20px;
+            margin-bottom: 32px;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--color-purple);
+            padding: 14px 32px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-text-black);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: white;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 8px;
+            padding: 0;
+        }
+
+        .footer-column ul li:before {
+            display: none;
+        }
+
+        .footer-column a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.6);
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header Navigation -->
     <header>
         <div class="container">
             <nav>
-                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NuLogic" style="height: 32px;"></a>
+                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NuLogic"></a>
                 <ul class="nav-links">
                     <li class="nav-item-with-dropdown">
                         <a href="../services.html">Services</a>
@@ -44,113 +582,226 @@
                             <li><a href="../es/work/uppababy.html">Español</a></li>
                         </ul>
                     </li>
-                    <li><a href="../contact.html" class="btn btn-primary">Book a Call</a></li>
+                    <li><a href="../contact.html" class="btn-primary">Book a Call</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="padding: 80px 0; background: linear-gradient(135deg, rgba(137, 56, 159, 0.9) 0%, rgba(237, 41, 37, 0.9) 100%);">
+    <!-- Hero Banner -->
+    <div class="hero-banner"></div>
+
+    <!-- Hero Content -->
+    <section class="hero-content">
         <div class="container">
-            <p style="color: rgba(255,255,255,0.9); margin-bottom: 16px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Case Study</p>
-            <h1 style="color: white; margin-bottom: 24px;">UPPAbaby</h1>
-            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 900px;">Consolidating 29 localized websites into 7 global sales channels with Shopware migration, achieving 8-month go-live for premium baby gear brand.</p>
+            <h1>NULogic Helped a Premium Baby Gear Brand Balance Cost, Flexibility, and Scale with Shopware</h1>
+            <div class="client-logo">
+                <img src="../images/casestudies/uppababy-logo.png" alt="UPPAbaby Logo">
+            </div>
         </div>
     </section>
 
-    <!-- Overview -->
+    <!-- Client Info Grid -->
+    <div class="client-info-grid">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">Region</div>
+                    <div class="info-value">U.S.</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Website</div>
+                    <div class="info-value"><a href="https://uppababy.com/" target="_blank" rel="noopener">uppababy.com</a></div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Client Since</div>
+                    <div class="info-value">2024</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Client Overview -->
     <section>
         <div class="container-narrow">
-            <h2>Overview</h2>
-            <p>UPPAbaby is a premium baby gear brand specializing in innovative strollers, car seats, and parenting accessories with global expansion ambitions. The company operates across multiple international markets and required modernized digital commerce infrastructure to support their growing business.</p>
-
-            <p style="margin-top: 20px;">NuLogic partnered with UPPAbaby as a Shopware Platinum Partner to implement a comprehensive platform migration from WooCommerce. This transformation consolidated 29 localized websites into 7 global sales channels, enabling single-step global launch and empowering internal teams to manage their international e-commerce operations more effectively.</p>
-
-            <div style="margin-top: 40px;">
-                <h3>The Challenge</h3>
-                <p>UPPAbaby faced several critical limitations with their existing WordPress-based WooCommerce platform:</p>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;"><strong>WooCommerce Limitations:</strong> The platform required excessive workarounds and custom solutions that slowed innovation</li>
-                    <li style="margin-bottom: 12px;"><strong>Scalability Constraints:</strong> Difficulty managing multi-market operations and growing international sales channels</li>
-                    <li style="margin-bottom: 12px;"><strong>Heavy Customization Costs:</strong> Continuous jerry-rigging increased expenses and maintenance burden</li>
-                    <li style="margin-bottom: 12px;"><strong>Payment Processing Restrictions:</strong> Limited flexibility in selecting global payment partners and supporting B2B transactions</li>
-                </ul>
+            <h2>Client Overview</h2>
+            <div class="highlight-box">
+                <p>This implementation delivered a <strong>modern, purpose-built ecommerce platform</strong> that leverages Shopware's native capabilities strategically positioning UPPAbaby for <strong>future growth, scalability, and international expansion.</strong></p>
             </div>
-
-            <div style="margin-top: 40px;">
-                <h3>The Solution</h3>
-                <p>After evaluating Salesforce Commerce Cloud, commercetools, and Shopify, UPPAbaby selected Shopware based on three critical criteria:</p>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;"><strong>Flexibility:</strong> Freedom to choose payment processors and integration partners without vendor lock-in</li>
-                    <li style="margin-bottom: 12px;"><strong>Partnership Model:</strong> Shopware's direct investment in platform enhancements at no additional cost</li>
-                    <li style="margin-bottom: 12px;"><strong>Cost-Effectiveness:</strong> Enterprise-grade capabilities without typical enterprise pricing</li>
-                </ul>
-                <p style="margin-top: 20px;">NuLogic designed and implemented a comprehensive Shopware architecture with custom development, ERP integrations, and BlueSnap payment integration to enable flexible B2B payments.</p>
-            </div>
-
-            <div style="margin-top: 40px;">
-                <h3>Results Achieved</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Consolidated 29 localized websites into 7 global sales channels</li>
-                    <li style="margin-bottom: 12px;">Executed single-step global launch avoiding market-by-market rollout</li>
-                    <li style="margin-bottom: 12px;">Empowered internal teams with minimal retraining required</li>
-                    <li style="margin-bottom: 12px;">Enabled flexible B2B payments through BlueSnap integration</li>
-                    <li style="margin-bottom: 12px;">Improved data collection and analysis for international operations</li>
-                    <li style="margin-bottom: 12px;"><strong>8-month go-live completion</strong></li>
-                </ul>
-            </div>
+            <p>UPPAbaby is a premium baby gear brand with global ambitions, specializing in innovative strollers, car seats, and parenting accessories. The company expanded internationally and required a scalable ecommerce solution to manage multiple markets, enhance global operations, and empower internal teams with flexibility and control.</p>
         </div>
     </section>
 
-    <!-- Technologies -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>Technologies & Services</h2>
-            <div style="margin-top: 24px;">
-                <h3 style="font-size: 18px; margin-bottom: 16px;">Technology Stack</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Shopware</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">PHP</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">BlueSnap</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">ERP Integration</span>
+    <!-- Challenge Section -->
+    <section class="bg-gray">
+        <div class="container">
+            <div class="two-column">
+                <div>
+                    <img src="../images/casestudies/uppababy-challenge.png" alt="UPPAbaby Challenge">
                 </div>
-                <h3 style="font-size: 18px; margin-bottom: 16px;">Services Delivered</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Architecture Design</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Custom Development</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Integrations</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">QA</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Managed Services</span>
+                <div>
+                    <h2>Challenge</h2>
+                    <p><strong>Key Problems Identified:</strong></p>
+                    <ul>
+                        <li>Excessive workarounds required for collecting, analyzing, and optimizing ecommerce data for international markets</li>
+                        <li>Lack of scalability made supporting multi-market operations and growing global sales channels difficult</li>
+                        <li>Heavy customization needs slowed innovation and increased maintenance costs</li>
+                        <li>Limited flexibility in payment processing restricted ability to choose global payment partners and support B2B/B2C transactions</li>
+                    </ul>
+                    <div class="quote">
+                        <p>"WooCommerce was never going to take us where we wanted to go. It required too much jerry-rigging."</p>
+                        <div class="quote-author">— Neil Gole, UPPAbaby</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
+    <!-- Solution Section -->
     <section>
-        <div class="container">
-            <div class="cta-banner">
-                <h2>Ready to migrate to Shopware?</h2>
-                <p>Let's discuss how we can consolidate your global operations and modernize your commerce platform.</p>
-                <a href="../contact.html" class="btn">Schedule a Call →</a>
+        <div class="container-narrow">
+            <h2>Solution</h2>
+            <p class="lead">Platform Evaluation:</p>
+            <p>UPPAbaby evaluated Salesforce Commerce Cloud, commercetools, Shopify, and Shopware before selecting Shopware based on three critical factors:</p>
+
+            <ul>
+                <li><strong>Flexibility & Control</strong> — Freedom to choose global payment processors, third-party integrations, and SI partners without vendor lock-in</li>
+                <li><strong>Partnership Model</strong> — Shopware demonstrated true partnership by investing in UPPAbaby's success and enhancing platform features at no additional cost</li>
+                <li><strong>Cost-effectiveness</strong> — Enterprise-grade ecommerce capabilities and multi-market scalability without high enterprise solution costs</li>
+            </ul>
+
+            <h3>Partnership Approach</h3>
+            <p>UPPAbaby partnered with NULogic (Shopware Platinum Partner) as trusted advisor and implementation partner. Shopware's PHP-based architecture enabled UPPAbaby's internal development team to adapt seamlessly, accelerating adoption and reducing retraining.</p>
+
+            <div class="quote">
+                <p>"Shopware felt like a partner who would grow with us. They invested up front in enhancements we needed."</p>
+                <div class="quote-author">— Neil Gole, UPPAbaby</div>
             </div>
         </div>
     </section>
 
+    <!-- Results Section -->
+    <section class="bg-gray">
+        <div class="container-narrow">
+            <h2>Results</h2>
+
+            <h3>Go-Live Achievement</h3>
+            <p>The WooCommerce-to-Shopware migration completed in <strong>8 months</strong>, described as "the smoothest I've experienced in 15+ years" by Neil Gole. Success credited to strong partnership between UPPAbaby developers, NULogic, and Shopware.</p>
+
+            <h3>Key Metrics</h3>
+            <ul>
+                <li>Consolidated <strong>29 localized websites into 7 global sales channels</strong></li>
+                <li>Executed <strong>one-step global ecommerce launch</strong> (avoided market-by-market approach)</li>
+                <li>Empowered internal teams to manage and customize platform with minimal retraining</li>
+                <li>Enabled <strong>flexible B2B payments</strong> through BlueSnap</li>
+                <li>Improved <strong>data collection and analysis</strong> for global operations</li>
+            </ul>
+
+            <h3>Future Initiatives</h3>
+            <ul>
+                <li>Optimize decoupled Shopware frontend for speed, performance, and mobile ecommerce</li>
+                <li>Expand BlueSnap integration across unified B2B and B2C ecommerce models</li>
+                <li>Rollout to new international markets</li>
+            </ul>
+
+            <div class="quote">
+                <p>"NULogic completed this very first headless implementation. UPPAbaby is one of the happiest clients."</p>
+                <div class="quote-author">— Jason Nyhus, President/GM North America, Shopware</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section>
+        <div class="container-narrow">
+            <h2>Services Delivered</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h4>Shopware Architecture Design</h4>
+                    <p>Planning scalable, high-performance ecommerce systems</p>
+                </div>
+                <div class="service-item">
+                    <h4>Shopware eCommerce Development</h4>
+                    <p>Custom frontend and backend solutions for B2C platform</p>
+                </div>
+                <div class="service-item">
+                    <h4>Integration Services</h4>
+                    <p>Seamless integration with payment gateways, ERP, and third-party tools</p>
+                </div>
+                <div class="service-item">
+                    <h4>Project Management</h4>
+                    <p>End-to-end management for smooth Shopware ecommerce migration</p>
+                </div>
+                <div class="service-item">
+                    <h4>Quality Assurance</h4>
+                    <p>Rigorous testing for reliable, high-quality ecommerce performance</p>
+                </div>
+                <div class="service-item">
+                    <h4>Managed Services</h4>
+                    <p>Ongoing platform monitoring, maintenance, and optimization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="bg-gray">
+        <div class="container-narrow">
+            <h2>Technologies</h2>
+
+            <div class="tech-section">
+                <h3>Engineering Stack</h3>
+                <div class="tech-grid">
+                    <img src="../images/casestudies/uppababy-tech-1.png" alt="Technology 1">
+                    <img src="../images/casestudies/uppababy-tech-2.png" alt="Technology 2">
+                    <img src="../images/casestudies/uppababy-tech-3.png" alt="Technology 3">
+                </div>
+            </div>
+
+            <div class="tech-section">
+                <h3>Partner Integrations</h3>
+                <div class="tech-grid">
+                    <img src="../images/casestudies/uppababy-partner-1.png" alt="Partner 1">
+                    <img src="../images/casestudies/uppababy-partner-2.png" alt="Partner 2">
+                    <img src="../images/casestudies/uppababy-partner-3.png" alt="Partner 3">
+                    <img src="../images/casestudies/uppababy-partner-4.png" alt="Partner 4">
+                    <img src="../images/casestudies/uppababy-partner-5.png" alt="Partner 5">
+                    <img src="../images/casestudies/uppababy-partner-6.png" alt="Partner 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Commerce Platform?</h2>
+            <p>Let's discuss how we can help you achieve similar results with Shopware.</p>
+            <a href="../contact.html" class="btn-white">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="../services.html">All Services</a></li>
+                        <li><a href="../services.html#commerce-build">Commerce Build & Modernize</a></li>
+                        <li><a href="../services.html#support">24/7 Run & Support</a></li>
+                        <li><a href="../services.html#cloud">Cloud, Performance & Reliability</a></li>
+                        <li><a href="../services.html#data-ai">Data, AI & Analytics</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4>Platforms</h4>
                     <ul>
-                        <li><a href="../platforms.html">All Platforms</a></li>
+                        <li><a href="../platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
+                        <li><a href="../platforms.html#shopify">Shopify Plus</a></li>
+                        <li><a href="../platforms.html#commercetools">commercetools</a></li>
+                        <li><a href="../platforms.html#shopware">Shopware</a></li>
+                        <li><a href="../platforms.html#magento">Magento / Adobe Commerce</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -160,6 +811,13 @@
                         <li><a href="../work.html">Work</a></li>
                         <li><a href="../partners.html">Partners</a></li>
                         <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/company/nulogic" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://twitter.com/nulogic" target="_blank" rel="noopener">Twitter</a></li>
                     </ul>
                 </div>
             </div>

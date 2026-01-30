@@ -8,6 +8,435 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        :root {
+            --color-text-dark: #2B2B2B;
+            --color-text-medium: #424242;
+            --color-text-headline: #141414;
+            --color-purple: #89389f;
+            --color-red: #ed2925;
+            --color-bg-light: #F9F9F9;
+            --color-bg-lighter: #F2F2F2;
+            --color-border-light: #D9D9D9;
+            --color-gold: #F2B948;
+        }
+
+        body {
+            color: var(--color-text-dark);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+
+        .case-study-hero {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .case-study-hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .case-study-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(96deg, rgba(137, 56, 159, 0.85) 0%, rgba(237, 41, 37, 0.85) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+        }
+
+        .case-study-hero-content {
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        .case-study-hero h1 {
+            font-size: 64px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            font-family: 'Barlow Condensed', sans-serif;
+            line-height: 1.1;
+        }
+
+        .case-study-hero p {
+            font-size: 24px;
+            line-height: 1.5;
+            max-width: 900px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        .client-info-section {
+            background: var(--color-bg-light);
+            padding: 80px 0;
+        }
+
+        .client-info-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .client-logo-wrapper {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .client-logo-wrapper img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .client-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+
+        .client-info-item h3 {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-text-medium);
+            margin-bottom: 12px;
+        }
+
+        .client-info-item p {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--color-text-headline);
+        }
+
+        .client-info-item a {
+            color: var(--color-purple);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .client-info-item a:hover {
+            text-decoration: underline;
+        }
+
+        .content-section {
+            padding: 80px 0;
+        }
+
+        .content-section.bg-light {
+            background: var(--color-bg-light);
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .content-container h2 {
+            font-size: 48px;
+            font-weight: 700;
+            font-family: 'Barlow Condensed', sans-serif;
+            color: var(--color-text-headline);
+            margin-bottom: 32px;
+        }
+
+        .content-container p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--color-text-dark);
+            margin-bottom: 20px;
+        }
+
+        .challenge-section-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .challenge-image {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .challenge-content h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--color-text-headline);
+            margin-bottom: 16px;
+            margin-top: 32px;
+        }
+
+        .challenge-content h3:first-child {
+            margin-top: 0;
+        }
+
+        .challenge-content p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--color-text-dark);
+        }
+
+        .solution-images-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .solution-images-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .solution-content h3 {
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--color-text-headline);
+            margin-bottom: 16px;
+            margin-top: 40px;
+        }
+
+        .solution-content h3:first-of-type {
+            margin-top: 32px;
+        }
+
+        .solution-content ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 16px;
+        }
+
+        .solution-content ul li {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--color-text-dark);
+            margin-bottom: 12px;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        .solution-content ul li:before {
+            content: "•";
+            position: absolute;
+            left: 8px;
+            color: var(--color-purple);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .results-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .results-image {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .results-content h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--color-text-headline);
+            margin-bottom: 12px;
+            margin-top: 32px;
+        }
+
+        .results-content h3:first-child {
+            margin-top: 0;
+        }
+
+        .results-content p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--color-text-dark);
+        }
+
+        .testimonial-section {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .testimonial-card {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 48px 60px;
+            border-left: 6px solid var(--color-purple);
+            background: #fafafa;
+        }
+
+        .testimonial-card p {
+            font-size: 24px;
+            line-height: 1.6;
+            color: var(--color-text-dark);
+            font-style: italic;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-author {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--color-text-headline);
+            font-style: normal;
+        }
+
+        .testimonial-role {
+            font-size: 14px;
+            color: var(--color-text-medium);
+            font-style: normal;
+            margin-top: 4px;
+        }
+
+        .services-tech-section {
+            background: var(--color-bg-light);
+            padding: 80px 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            margin-top: 48px;
+        }
+
+        .services-column h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--color-text-headline);
+            margin-bottom: 24px;
+        }
+
+        .services-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .services-list li {
+            font-size: 16px;
+            color: var(--color-text-dark);
+            margin-bottom: 12px;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        .services-list li:before {
+            content: "•";
+            position: absolute;
+            left: 8px;
+            color: var(--color-purple);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .tech-logos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            align-items: center;
+            margin-top: 24px;
+        }
+
+        .tech-logos img {
+            height: 40px;
+            width: auto;
+        }
+
+        .cta-section {
+            background: linear-gradient(96deg, var(--color-purple) 0%, var(--color-red) 100%);
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .cta-content h2 {
+            font-size: 48px;
+            font-weight: 700;
+            font-family: 'Barlow Condensed', sans-serif;
+            margin-bottom: 24px;
+        }
+
+        .cta-content p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 32px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--color-purple);
+            padding: 16px 40px;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .case-study-hero h1 {
+                font-size: 42px;
+            }
+
+            .case-study-hero p {
+                font-size: 18px;
+            }
+
+            .client-info-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .challenge-section-layout,
+            .results-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .solution-images-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content-container h2 {
+                font-size: 36px;
+            }
+
+            .cta-content h2 {
+                font-size: 36px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -50,158 +479,182 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="padding: 80px 0; background: linear-gradient(135deg, rgba(137, 56, 159, 0.9) 0%, rgba(237, 41, 37, 0.9) 100%);">
-        <div class="container">
-            <p style="color: rgba(255,255,255,0.9); margin-bottom: 16px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Case Study</p>
-            <h1 style="color: white; margin-bottom: 24px;">klllk</h1>
-            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 900px;">Powering klllk's breakthrough in social networking with feature-rich, custom-built iOS and Android apps</p>
+    <!-- Hero Section with Banner Image -->
+    <section class="case-study-hero">
+        <img src="../images/casestudies/klllk-hero.png" alt="klllk Case Study">
+        <div class="case-study-hero-overlay">
+            <div class="case-study-hero-content">
+                <h1>Powering klllk's breakthrough in social networking with feature-rich, custom-built iOS and Android apps</h1>
+            </div>
         </div>
     </section>
 
-    <!-- Overview -->
-    <section>
-        <div class="container-narrow">
-            <h2>Overview</h2>
-            <p>klllk facilitates friendships by connecting individuals and groups through shared events and interests. The platform emphasizes real-time connections around events rather than traditional swiping mechanics, offering tools like QR code networking and group collaboration.</p>
+    <!-- Client Info Section -->
+    <section class="client-info-section">
+        <div class="client-info-container">
+            <div class="client-logo-wrapper">
+                <img src="../images/casestudies/klllk-logo.png" alt="klllk">
+            </div>
+            <div class="client-info-grid">
+                <div class="client-info-item">
+                    <h3>Region</h3>
+                    <p>U.S.</p>
+                </div>
+                <div class="client-info-item">
+                    <h3>Website</h3>
+                    <p><a href="https://www.klllk.com" target="_blank" rel="noopener">www.klllk.com</a></p>
+                </div>
+                <div class="client-info-item">
+                    <h3>Client Since</h3>
+                    <p>2022</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <p style="margin-top: 16px;">NuLogic partnered with klllk to develop custom native mobile applications for iOS and Android platforms, delivering a feature-rich social networking platform that enables seamless event-based connections and community building.</p>
+    <!-- Client Overview Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <h2>Client Overview</h2>
+            <p>klllk is a social networking app connecting users through event-based experiences rather than traditional swiping. Features include QR code networking, group collaboration, and flexible host/participant roles around shared interests.</p>
+        </div>
+    </section>
 
-            <div style="margin-top: 40px;">
-                <h3>Client Details</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;"><strong>Region:</strong> U.S.</li>
-                    <li style="margin-bottom: 12px;"><strong>Website:</strong> <a href="https://www.klllk.com" target="_blank" rel="noopener">www.klllk.com</a></li>
-                    <li style="margin-bottom: 12px;"><strong>Client Since:</strong> 2022</li>
+    <!-- Challenge Section -->
+    <section class="content-section bg-light">
+        <div class="content-container">
+            <h2>Challenge</h2>
+            <div class="challenge-section-layout">
+                <div>
+                    <img src="../images/casestudies/klllk-challenge.png" alt="klllk Challenge" class="challenge-image">
+                </div>
+                <div class="challenge-content">
+                    <h3>Multi-Parameter Search Engine</h3>
+                    <p>Matching users by interests, location, age, and group size required sophisticated algorithms to ensure precise and relevant connections.</p>
+
+                    <h3>UI/UX Balance</h3>
+                    <p>Creating an interface appealing to diverse user types (hosts and participants) across different devices demanded careful design consideration.</p>
+
+                    <h3>Secure QR Code Integration</h3>
+                    <p>Implementing reliable QR-based user interactions added technical complexity while ensuring security and seamless in-person networking.</p>
+
+                    <h3>Subscription-Based Feature Access</h3>
+                    <p>Controlling feature access based on user subscription tiers required scalable architecture to manage different permission levels.</p>
+
+                    <h3>API Performance Optimization</h3>
+                    <p>Real-time features and API-heavy screens caused responsiveness bottlenecks that needed optimization for smooth user experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <h2>Solution</h2>
+            <p>NULogic implemented a comprehensive two-phase approach to deliver a robust, scalable social networking platform.</p>
+
+            <div class="solution-images-grid">
+                <img src="../images/casestudies/klllk-solution-1.png" alt="klllk Solution 1">
+                <img src="../images/casestudies/klllk-solution-2.png" alt="klllk Solution 2">
+                <img src="../images/casestudies/klllk-solution-3.png" alt="klllk Solution 3">
+            </div>
+
+            <div class="solution-content">
+                <h3>Phase 1: Discovery</h3>
+                <ul>
+                    <li>Discovery, requirements gathering, and analysis</li>
+                    <li>Wireframing and prototyping</li>
+                    <li>Database schema design</li>
+                </ul>
+
+                <h3>Phase 2: Implementation</h3>
+                <ul>
+                    <li>UI/UX implementation optimized for all user types</li>
+                    <li>Advanced search algorithms for precise matchmaking</li>
+                    <li>Code optimization and performance tuning</li>
+                    <li>User acceptance testing (UAT)</li>
+                    <li>Database integration</li>
+                    <li>Dynamic QR functionality with comprehensive testing</li>
+                    <li>Refactored and versioned API calls improving responsiveness</li>
+                    <li>App Store and Google Play deployment</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Challenges -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>Challenges</h2>
-            <p>Building klllk's social networking platform presented several complex technical and design challenges:</p>
-
-            <div style="margin-top: 32px;">
-                <h3 style="margin-bottom: 12px;">Advanced Search Requirements</h3>
-                <p>Matching users based on multiple parameters including interests, location, age, and group size demanded sophisticated matching algorithms.</p>
-            </div>
-
-            <div style="margin-top: 32px;">
-                <h3 style="margin-bottom: 12px;">Dual-Platform UI/UX Design</h3>
-                <p>Creating an interface appealing to both event hosts and attendees across diverse devices and user types required careful design consideration.</p>
-            </div>
-
-            <div style="margin-top: 32px;">
-                <h3 style="margin-bottom: 12px;">QR Code Integration</h3>
-                <p>Implementing secure, reliable QR-based user interactions added technical complexity to enable seamless in-person networking.</p>
-            </div>
-
-            <div style="margin-top: 32px;">
-                <h3 style="margin-bottom: 12px;">Subscription Model Management</h3>
-                <p>Controlling feature access based on user subscription tiers required scalable architecture to manage different permission levels.</p>
-            </div>
-
-            <div style="margin-top: 32px;">
-                <h3 style="margin-bottom: 12px;">Performance Issues</h3>
-                <p>API-heavy screens and real-time features caused responsiveness bottlenecks that needed optimization for smooth user experience.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solutions -->
-    <section>
-        <div class="container-narrow">
-            <h2>Solutions</h2>
-            <p>NuLogic implemented a comprehensive two-phase approach to deliver a robust, scalable social networking platform:</p>
-
-            <div style="margin-top: 32px;">
-                <h3 style="margin-bottom: 12px;">Phase 1: Discovery</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Comprehensive requirement gathering and analysis to understand user needs</li>
-                    <li style="margin-bottom: 12px;">Wireframing and interactive prototyping to validate design concepts</li>
-                    <li style="margin-bottom: 12px;">Database schema design optimized for complex matching and relationships</li>
-                </ul>
-            </div>
-
-            <div style="margin-top: 32px;">
-                <h3 style="margin-bottom: 12px;">Phase 2: Implementation</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Intuitive UI/UX optimized for all user types (hosts and attendees)</li>
-                    <li style="margin-bottom: 12px;">Advanced search algorithms for precise matching based on multiple parameters</li>
-                    <li style="margin-bottom: 12px;">Dynamic QR code technology with comprehensive testing</li>
-                    <li style="margin-bottom: 12px;">API refactoring and versioning for improved responsiveness</li>
-                    <li style="margin-bottom: 12px;">Rigorous user acceptance testing (UAT)</li>
-                    <li style="margin-bottom: 12px;">Deployment to Google Play and App Store</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Results -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
+    <!-- Results Section -->
+    <section class="content-section bg-light">
+        <div class="content-container">
             <h2>Results</h2>
+            <div class="results-layout">
+                <div class="results-content">
+                    <h3>Smooth, Intuitive Interface</h3>
+                    <p>Mobile-optimized experience from signup to social connections, making it easy for users to discover and engage with their community.</p>
 
-            <div style="margin-top: 32px;">
-                <h3 style="margin-bottom: 12px;">User Experience</h3>
-                <p>Smooth, intuitive mobile-optimized interface from signup to social connections, making it easy for users to discover and connect with others.</p>
-            </div>
+                    <h3>Active Community Engagement</h3>
+                    <p>Real-time chat, QR networking, and event hosting capabilities drive user participation and connections.</p>
 
-            <div style="margin-top: 32px;">
-                <h3 style="margin-bottom: 12px;">Community Engagement</h3>
-                <p>Active user participation through real-time chat, QR networking, and event hosting capabilities that bring people together.</p>
-            </div>
+                    <h3>Modular APIs & Cloud-Native Architecture</h3>
+                    <p>Scalable infrastructure enabling easy updates and future enhancements without disrupting the user experience.</p>
 
-            <div style="margin-top: 32px;">
-                <h3 style="margin-bottom: 12px;">Scalable Architecture</h3>
-                <p>Modular APIs and cloud-native systems enabling seamless updates and future enhancements without disrupting user experience.</p>
-            </div>
-
-            <div style="margin-top: 32px;">
-                <h3 style="margin-bottom: 12px;">Ongoing Partnership</h3>
-                <p>Continued support for hosting, enhancements, and technical evolution, ensuring the platform grows with user needs.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technologies -->
-    <section>
-        <div class="container-narrow">
-            <h2>Technologies & Services</h2>
-
-            <div style="margin-top: 32px;">
-                <h3 style="margin-bottom: 12px;">Services Delivered</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Mobile App Development</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Cloud & DevOps</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">QA & Testing Automation</span>
+                    <h3>Ongoing NULogic Partnership</h3>
+                    <p>Continued support for hosting and technical evolution, ensuring the platform grows with user needs.</p>
                 </div>
-            </div>
-
-            <div style="margin-top: 32px;">
-                <h3 style="margin-bottom: 12px;">Technology Stack</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">iOS</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Android</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">AWS</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">QR Code Technology</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Real-time Chat</span>
+                <div>
+                    <img src="../images/casestudies/klllk-results.png" alt="klllk Results" class="results-image">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section style="background: #fafafa;">
-        <div class="container">
-            <div class="cta-banner">
-                <h2>Ready to build your social networking platform?</h2>
-                <p>Let's discuss how we can create engaging mobile experiences that connect your users and build communities.</p>
-                <a href="../contact.html" class="btn">Schedule a Call →</a>
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+        <div class="content-container">
+            <div class="testimonial-card">
+                <p>"NULogic built our complicated mobile apps in 10 months! Their dedication resulted in a better app version than we envisioned."</p>
+                <div class="testimonial-author">Siobhan M. Knox</div>
+                <div class="testimonial-role">Co-Founder & CEO, klllk</div>
             </div>
+        </div>
+    </section>
+
+    <!-- Services & Technologies Section -->
+    <section class="services-tech-section">
+        <div class="content-container">
+            <h2>Services & Technologies</h2>
+            <div class="services-grid">
+                <div class="services-column">
+                    <h3>Services Provided</h3>
+                    <ul class="services-list">
+                        <li>Mobile App Development</li>
+                        <li>Cloud & DevOps</li>
+                        <li>QA & Testing Automation</li>
+                    </ul>
+                </div>
+                <div class="services-column">
+                    <h3>Engineering Stack</h3>
+                    <div class="tech-logos">
+                        <img src="../images/casestudies/aws-logo.png" alt="AWS">
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 48px;">
+                <h3 style="font-size: 24px; font-weight: 600; color: var(--color-text-headline); margin-bottom: 24px;">Partner Integrations</h3>
+                <div class="tech-logos">
+                    <img src="../images/casestudies/tech-integration-1.png" alt="Integration Partner">
+                    <img src="../images/casestudies/tech-integration-2.png" alt="Integration Partner">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to transform your mobile app idea?</h2>
+            <p>Let's discuss how we can create engaging mobile experiences that connect your users and build communities.</p>
+            <a href="../contact.html" class="cta-button">Schedule a Call</a>
         </div>
     </section>
 

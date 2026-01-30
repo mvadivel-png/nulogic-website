@@ -4,12 +4,436 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leslie's Case Study | NULogic Boosts Leslie's Digital Experience | NuLogic</title>
+    <meta name="description" content="NULogic transformed Leslie's digital experience by boosting website speed from 48 to 85+ Lighthouse score, optimizing mobile performance, and driving 150% YoY growth in service bookings.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        :root {
+            --color-text-primary: #2B2B2B;
+            --color-text-secondary: #424242;
+            --color-purple: #89389f;
+            --color-red: #ed2925;
+            --color-bg-gray: #F9F9F9;
+            --color-border-gray: #D9D9D9;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--color-text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .case-study-hero {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .case-study-hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .case-study-title {
+            padding: 60px 0 40px;
+            background: white;
+        }
+
+        .case-study-title h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--color-text-primary);
+            margin: 0 0 24px 0;
+            max-width: 1000px;
+        }
+
+        .client-logo {
+            margin-bottom: 32px;
+        }
+
+        .client-logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .client-info-grid {
+            background: var(--color-bg-gray);
+            padding: 48px 0;
+        }
+
+        .client-info-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .client-info-item {
+            text-align: left;
+        }
+
+        .client-info-label {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--color-text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .client-info-value {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+
+        .client-info-value a {
+            color: var(--color-purple);
+            text-decoration: none;
+        }
+
+        .client-info-value a:hover {
+            text-decoration: underline;
+        }
+
+        .content-section {
+            padding: 80px 0;
+        }
+
+        .content-section.gray-bg {
+            background: var(--color-bg-gray);
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .content-container h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin: 0 0 24px 0;
+            line-height: 1.2;
+        }
+
+        .content-container h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin: 48px 0 24px 0;
+            line-height: 1.2;
+        }
+
+        .content-container h4 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin: 32px 0 16px 0;
+            line-height: 1.2;
+        }
+
+        .content-container p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--color-text-primary);
+            margin: 0 0 20px 0;
+        }
+
+        .content-container ul {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0;
+        }
+
+        .content-container ul li {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--color-text-primary);
+            margin-bottom: 16px;
+            padding-left: 32px;
+            position: relative;
+        }
+
+        .content-container ul li:before {
+            content: "•";
+            color: var(--color-purple);
+            font-weight: bold;
+            font-size: 24px;
+            position: absolute;
+            left: 8px;
+            top: -2px;
+        }
+
+        .challenge-section {
+            padding: 80px 0;
+            background: var(--color-bg-gray);
+        }
+
+        .challenge-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .challenge-quote {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--color-text-primary);
+            margin: 0 0 48px 0;
+            max-width: 900px;
+        }
+
+        .challenge-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .challenge-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .challenge-text h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin: 0 0 24px 0;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .result-card {
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-purple);
+        }
+
+        .result-card h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--color-purple);
+            margin: 0 0 12px 0;
+            line-height: 1.1;
+        }
+
+        .result-card .result-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--color-text-primary);
+            margin: 0 0 8px 0;
+        }
+
+        .result-card .result-description {
+            font-size: 16px;
+            color: var(--color-text-secondary);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .testimonial-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .testimonial-card {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 48px;
+            background: white;
+            border-left: 4px solid var(--color-purple);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+
+        .testimonial-quote {
+            font-size: 22px;
+            line-height: 1.7;
+            font-style: italic;
+            color: var(--color-text-primary);
+            margin: 0 0 32px 0;
+        }
+
+        .testimonial-author {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--color-text-primary);
+            margin: 0 0 4px 0;
+        }
+
+        .testimonial-role {
+            font-size: 16px;
+            color: var(--color-text-secondary);
+            margin: 0;
+        }
+
+        .device-mockups {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 32px;
+            margin: 64px 0;
+            flex-wrap: wrap;
+        }
+
+        .device-mockups img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .device-mockups .desktop {
+            max-height: 300px;
+        }
+
+        .device-mockups .laptop {
+            max-height: 250px;
+        }
+
+        .device-mockups .mobile {
+            max-height: 350px;
+        }
+
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .service-item {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--color-text-primary);
+            padding: 16px 0;
+            border-bottom: 1px solid var(--color-border-gray);
+        }
+
+        .tech-category {
+            margin-top: 48px;
+        }
+
+        .tech-category h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin: 0 0 24px 0;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tech-tag {
+            background: white;
+            color: var(--color-text-primary);
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-size: 16px;
+            font-weight: 500;
+            border: 1px solid var(--color-border-gray);
+        }
+
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(96deg, var(--color-purple), var(--color-red));
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: white;
+            margin: 0 0 24px 0;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            color: rgba(255,255,255,0.95);
+            margin: 0 0 32px 0;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 48px;
+            background: white;
+            color: var(--color-purple);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: transform 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .case-study-title h1 {
+                font-size: 36px;
+            }
+
+            .client-info-container {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .challenge-content {
+                grid-template-columns: 1fr;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content-container h2 {
+                font-size: 36px;
+            }
+
+            .content-container h3 {
+                font-size: 28px;
+            }
+
+            .cta-section h2 {
+                font-size: 36px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header Navigation -->
     <header>
         <div class="container">
             <nav>
@@ -50,222 +474,232 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="padding: 80px 0; background: linear-gradient(135deg, rgba(137, 56, 159, 0.9) 0%, rgba(237, 41, 37, 0.9) 100%);">
-        <div class="container">
-            <p style="color: rgba(255,255,255,0.9); margin-bottom: 16px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Case Study</p>
-            <h1 style="color: white; margin-bottom: 24px;">NULogic Boosts Leslie's Digital Experience with Faster Site Speed, Stronger Customer Loyalty, and Mobile Optimization</h1>
-            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 900px;">NULogic transformed Leslie's digital experience by boosting website speed, optimizing mobile performance, enhancing customer loyalty, and driving higher engagement.</p>
+    <!-- Hero Banner -->
+    <section class="case-study-hero">
+        <img src="../images/casestudies/leslies-hero.png" alt="Leslie's Pool Supplies - Mobile Banner">
+    </section>
+
+    <!-- Title Section with Logo -->
+    <section class="case-study-title">
+        <div class="content-container">
+            <div class="client-logo">
+                <img src="../images/casestudies/leslies-logo.png" alt="Leslie's Pool Supplies Logo">
+            </div>
+            <h1>NULogic Boosts Leslie's Digital Experience with Faster Site Speed, Stronger Customer Loyalty, and Mobile Optimization</h1>
         </div>
     </section>
 
-    <!-- Client Info -->
-    <section style="background: #fafafa; padding: 40px 0;">
-        <div class="container-narrow">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; text-align: center;">
-                <div>
-                    <p style="font-size: 14px; color: var(--color-gray-dark); margin-bottom: 8px;">REGION</p>
-                    <p style="font-weight: 600;">U.S.</p>
-                </div>
-                <div>
-                    <p style="font-size: 14px; color: var(--color-gray-dark); margin-bottom: 8px;">WEBSITE</p>
-                    <p style="font-weight: 600;"><a href="https://www.lesliespool.com" target="_blank" style="color: var(--color-primary);">lesliespool.com</a></p>
-                </div>
-                <div>
-                    <p style="font-size: 14px; color: var(--color-gray-dark); margin-bottom: 8px;">CLIENT SINCE</p>
-                    <p style="font-weight: 600;">2023</p>
-                </div>
+    <!-- Client Info Grid -->
+    <section class="client-info-grid">
+        <div class="client-info-container">
+            <div class="client-info-item">
+                <div class="client-info-label">Region</div>
+                <div class="client-info-value">U.S.</div>
             </div>
-        </div>
-    </section>
-
-    <!-- Overview -->
-    <section>
-        <div class="container-narrow">
-            <h2>Company Overview</h2>
-            <p>Founded in 1963, Leslie's represents the largest and most trusted pool and spa care brand across the United States. The company operates over 1,000 retail locations and maintains a robust eCommerce platform, delivering an omnichannel experience that encompasses pool supplies, spa products, water treatment solutions, and expert services available through multiple channels.</p>
-
-            <div style="margin-top: 40px;">
-                <h3>The Challenge</h3>
-                <p>The engagement revealed seven critical obstacles:</p>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Misalignment among development, QA, and design teams slowing eCommerce delivery and increasing project risks</li>
-                    <li style="margin-bottom: 12px;">Scalability difficulties during peak shopping periods on the SFCC platform</li>
-                    <li style="margin-bottom: 12px;">Slow page load times stemming from oversized JavaScript and CSS bundles affecting Core Web Vitals</li>
-                    <li style="margin-bottom: 12px;">Elevated API latency reducing site responsiveness and customer satisfaction</li>
-                    <li style="margin-bottom: 12px;">Suboptimal mobile user experience requiring faster, optimized digital journeys</li>
-                    <li style="margin-bottom: 12px;">Unstable mobile workflows creating inconsistent performance</li>
-                    <li style="margin-bottom: 12px;">Fragmented loyalty program experience diminishing customer re-engagement</li>
-                </ul>
+            <div class="client-info-item">
+                <div class="client-info-label">Website</div>
+                <div class="client-info-value"><a href="https://www.lesliespool.com" target="_blank" rel="noopener">https://www.lesliespool.com</a></div>
             </div>
-
-            <div style="margin-top: 40px;">
-                <h3>The Solution</h3>
-
-                <h4 style="margin-top: 24px; font-size: 18px;">Backend Refactoring for Performance</h4>
-                <ul style="margin-top: 12px;">
-                    <li style="margin-bottom: 12px;">Refactored SFCC controllers using Salesforce Commerce Cloud best practices</li>
-                    <li style="margin-bottom: 12px;">Reduced API latency and improved backend responsiveness</li>
-                    <li style="margin-bottom: 12px;">Rebuilt modular integrations using Boomi middleware for stability</li>
-                </ul>
-
-                <h4 style="margin-top: 24px; font-size: 18px;">Frontend & Mobile Optimization</h4>
-                <ul style="margin-top: 12px;">
-                    <li style="margin-bottom: 12px;">Improved Lighthouse performance scores from sub-50s to mid-80s</li>
-                    <li style="margin-bottom: 12px;">Eliminated render-blocking resources and compressed JS/CSS bundles</li>
-                    <li style="margin-bottom: 12px;">Streamlined SFCC ⇄ Boomi ⇄ Mobile data flows</li>
-                    <li style="margin-bottom: 12px;">Optimized SFCC eCDN with advanced caching strategies</li>
-                </ul>
-
-                <h4 style="margin-top: 24px; font-size: 18px;">Figma-Led Product Engineering</h4>
-                <ul style="margin-top: 12px;">
-                    <li style="margin-bottom: 12px;">Designed UX flows in Figma, converted into JIRA sprint plans</li>
-                    <li style="margin-bottom: 12px;">Delivered cross-platform development with full-stack coverage</li>
-                    <li style="margin-bottom: 12px;">Applied engineering processes used by global leaders like Adidas and L'Oréal</li>
-                </ul>
-
-                <h4 style="margin-top: 24px; font-size: 18px;">Field Services Experience Redesign</h4>
-                <ul style="margin-top: 12px;">
-                    <li style="margin-bottom: 12px;">Rebuilt Service Appointment Portal with dynamic Q&A logic</li>
-                    <li style="margin-bottom: 12px;">Integrated custom SFCC objects with Accruent via Boomi APIs</li>
-                    <li style="margin-bottom: 12px;">Delivered seamless booking experience for customers and field staff</li>
-                </ul>
-
-                <h4 style="margin-top: 24px; font-size: 18px;">Loyalty 2.0: Pool Perks Go Tiered</h4>
-                <ul style="margin-top: 12px;">
-                    <li style="margin-bottom: 12px;">Transformed flat-point rewards system into tiered loyalty program</li>
-                    <li style="margin-bottom: 12px;">Integrated third-party rewards platforms via real-time APIs</li>
-                    <li style="margin-bottom: 12px;">Enabled live loyalty points tracking and redemption visibility</li>
-                </ul>
-
-                <h4 style="margin-top: 24px; font-size: 18px;">Checkout Overhaul + GA4 Integration</h4>
-                <ul style="margin-top: 12px;">
-                    <li style="margin-bottom: 12px;">Redesigned entire checkout experience for higher conversions</li>
-                    <li style="margin-bottom: 12px;">Embedded Google Analytics 4 for cookieless tracking</li>
-                    <li style="margin-bottom: 12px;">Positioned Leslie's for future-proof customer analytics</li>
-                </ul>
+            <div class="client-info-item">
+                <div class="client-info-label">Client Since</div>
+                <div class="client-info-value">2023</div>
             </div>
         </div>
     </section>
 
-    <!-- Results -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>Results - Key Metrics</h2>
+    <!-- Client Overview -->
+    <section class="content-section">
+        <div class="content-container">
+            <h2>Client Overview</h2>
+            <p>Founded in 1963, Leslie's operates 1,000+ retail stores and an eCommerce platform serving residential and professional pool/spa customers nationwide.</p>
+        </div>
+    </section>
 
-            <div style="margin-top: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
-                <div style="background: white; padding: 24px; border-radius: 12px; border-left: 4px solid var(--color-accent-purple);">
-                    <h3 style="color: var(--color-accent-purple); font-size: 36px; margin-bottom: 8px;">48 to 85+</h3>
-                    <p style="font-weight: 600; margin-bottom: 8px;">Lighthouse Mobile Performance</p>
-                    <p style="font-size: 14px; color: var(--color-gray-dark);">Improved from 48 to 85+</p>
+    <!-- Challenge Section -->
+    <section class="challenge-section">
+        <div class="challenge-container">
+            <div class="challenge-quote">
+                "Misalignment between development, QA, and design teams, slowing eCommerce delivery cycles and increasing project risks."
+            </div>
+            <div class="challenge-content">
+                <div>
+                    <img src="../images/casestudies/leslies-challenge.png" alt="Leslie's Challenge" class="challenge-image">
                 </div>
-
-                <div style="background: white; padding: 24px; border-radius: 12px; border-left: 4px solid var(--color-accent-purple);">
-                    <h3 style="color: var(--color-accent-purple); font-size: 36px; margin-bottom: 8px;">Surged</h3>
-                    <p style="font-weight: 600; margin-bottom: 8px;">Loyalty Program Engagement</p>
-                    <p style="font-size: 14px; color: var(--color-gray-dark);">Surged immediately with tiered system</p>
+                <div class="challenge-text">
+                    <h3>Key Challenges Identified:</h3>
+                    <ul>
+                        <li>Scalability issues during peak traffic on SFCC platform</li>
+                        <li>Slow page load times from bloated JavaScript and CSS bundles</li>
+                        <li>High API latency reducing responsiveness</li>
+                        <li>Mobile UX challenges requiring optimization</li>
+                        <li>Fragile mobile workflows causing instability</li>
+                        <li>Fragmented loyalty program experience lowering retention</li>
+                    </ul>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div style="background: white; padding: 24px; border-radius: 12px; border-left: 4px solid var(--color-accent-purple);">
-                    <h3 style="color: var(--color-accent-purple); font-size: 36px; margin-bottom: 8px;">Reduced</h3>
-                    <p style="font-weight: 600; margin-bottom: 8px;">Checkout Bounce Rate</p>
-                    <p style="font-size: 14px; color: var(--color-gray-dark);">Significantly reduced, improving conversions</p>
+    <!-- Solution Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <h2>The Solution</h2>
+            <p>NULogic assembled performance specialists, SFCC experts, and product leaders using Agile execution and continuous delivery.</p>
+
+            <h4>Backend Refactoring</h4>
+            <ul>
+                <li>Refactored SFCC controllers following best practices</li>
+                <li>Reduced API latency and improved responsiveness</li>
+                <li>Rebuilt modular Boomi integrations for stability</li>
+            </ul>
+
+            <h4>Frontend & Mobile Optimization</h4>
+            <ul>
+                <li>Improved Lighthouse performance scores from sub-50s to mid-80s</li>
+                <li>Eliminated render-blocking resources and compressed bundles</li>
+                <li>Streamlined SFCC-Boomi-Mobile data flows</li>
+                <li>Optimized eCDN with advanced caching</li>
+            </ul>
+
+            <h4>Figma-Led Product Engineering</h4>
+            <ul>
+                <li>Designed UX flows converted to JIRA sprints</li>
+                <li>Applied engineering processes from Adidas and L'Oréal</li>
+                <li>Full-stack development across QA, UAT, and production</li>
+            </ul>
+
+            <h4>Field Services Portal</h4>
+            <ul>
+                <li>Rebuilt Service Appointment Portal with dynamic Q&A logic</li>
+                <li>Integrated SFCC objects with Accruent via Boomi APIs</li>
+            </ul>
+
+            <h4>Loyalty Program 2.0</h4>
+            <ul>
+                <li>Transformed flat-point system into tiered rewards structure</li>
+                <li>Integrated third-party platforms via real-time APIs</li>
+                <li>Enabled live points tracking and redemption visibility</li>
+            </ul>
+
+            <h4>Checkout Overhaul</h4>
+            <ul>
+                <li>Redesigned entire checkout experience (frontend + backend)</li>
+                <li>Embedded Google Analytics 4 for cookieless tracking</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="content-section gray-bg">
+        <div class="content-container">
+            <h2>Results</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>48 → 85+</h3>
+                    <div class="result-title">Lighthouse Mobile Score</div>
+                    <div class="result-description">Improved from sub-50s to mid-80s, dramatically enhancing user experience</div>
                 </div>
-
-                <div style="background: white; padding: 24px; border-radius: 12px; border-left: 4px solid var(--color-accent-purple);">
-                    <h3 style="color: var(--color-accent-purple); font-size: 36px; margin-bottom: 8px;">+150%</h3>
-                    <p style="font-weight: 600; margin-bottom: 8px;">Service Bookings YoY Growth</p>
-                    <p style="font-size: 14px; color: var(--color-gray-dark);">Increased from baseline to +150%</p>
+                <div class="result-card">
+                    <h3>+150%</h3>
+                    <div class="result-title">Service Bookings YoY Growth</div>
+                    <div class="result-description">Increased from baseline to +150% year-over-year</div>
                 </div>
-
-                <div style="background: white; padding: 24px; border-radius: 12px; border-left: 4px solid var(--color-accent-purple);">
-                    <h3 style="color: var(--color-accent-purple); font-size: 36px; margin-bottom: 8px;">Zero</h3>
-                    <p style="font-weight: 600; margin-bottom: 8px;">Platform Outages During Peak Season</p>
-                    <p style="font-size: 14px; color: var(--color-gray-dark);">Reduced from recurring incidents to zero downtime in 2024</p>
+                <div class="result-card">
+                    <h3>Zero</h3>
+                    <div class="result-title">Peak Season Outages</div>
+                    <div class="result-description">Reduced from recurring issues to zero outages in 2024</div>
+                </div>
+                <div class="result-card">
+                    <h3>Reduced</h3>
+                    <div class="result-title">Checkout Bounce Rate</div>
+                    <div class="result-description">Significantly reduced, improving conversion rates</div>
                 </div>
             </div>
 
-            <div style="margin-top: 48px;">
-                <h3>Support & Monitoring Infrastructure</h3>
-                <p style="margin-top: 16px;">NULogic embedded continuous monitoring and DevOps automation:</p>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;"><strong>Dynatrace Real User Monitoring (RUM):</strong> Real-time behavioral mapping of customer journeys</li>
-                    <li style="margin-bottom: 12px;"><strong>Opsgenie Alerts:</strong> Instant escalation to engineering teams, cutting downtime risk</li>
-                    <li style="margin-bottom: 12px;"><strong>SLA-Driven JIRA Workflows:</strong> High-priority incident resolution under 15 minutes</li>
-                    <li style="margin-bottom: 12px;"><strong>Cross-Platform Database Monitoring:</strong> Unified visibility across SFCC, Boomi, and Manhattan OMS</li>
-                </ul>
+            <h3>Monitoring & Support Infrastructure</h3>
+            <ul>
+                <li><strong>Dynatrace Real User Monitoring (RUM):</strong> Real-time behavioral mapping of customer journeys</li>
+                <li><strong>Opsgenie Alerts:</strong> Instant engineering escalation</li>
+                <li><strong>SLA-driven JIRA workflows:</strong> &lt;15-min priority resolution</li>
+                <li><strong>Cross-platform database monitoring:</strong> SFCC, Boomi, Manhattan OMS</li>
+            </ul>
+
+            <!-- Device Mockups -->
+            <div class="device-mockups">
+                <img src="../images/casestudies/leslies-desktop.png" alt="Leslie's Desktop View" class="desktop">
+                <img src="../images/casestudies/leslies-laptop.png" alt="Leslie's Laptop View" class="laptop">
+                <img src="../images/casestudies/leslies-mobile.png" alt="Leslie's Mobile View" class="mobile">
             </div>
         </div>
     </section>
 
     <!-- Testimonial -->
-    <section>
-        <div class="container-narrow">
-            <div style="background: linear-gradient(135deg, rgba(137, 56, 159, 0.05) 0%, rgba(237, 41, 37, 0.05) 100%); padding: 40px; border-radius: 12px; border-left: 4px solid var(--color-accent-purple);">
-                <p style="font-size: 18px; line-height: 1.8; font-style: italic; margin-bottom: 24px;">"Partnering with NULogic has been a game changer for Leslie's. They have optimized multiple Salesforce platforms internally and are a true extension of our team – always responsive, collaborative, and invested in our success. Their ongoing support has ensured smooth and on time delivery as we continue to enhance our tools. In addition to support, they provide valuable insights to help drive improvement."</p>
-                <p style="font-weight: 600;">Mike Africa</p>
-                <p style="color: var(--color-gray-dark); font-size: 14px;">Chief Digital Officer at Leslie's</p>
+    <section class="testimonial-section">
+        <div class="content-container">
+            <div class="testimonial-card">
+                <div class="testimonial-quote">
+                    "Partnering with NULogic has been transformative. They optimized multiple Salesforce platforms and function as a true team extension—responsive, collaborative, and invested in our success."
+                </div>
+                <div class="testimonial-author">Mike Africa</div>
+                <div class="testimonial-role">Chief Digital Officer, Leslie's</div>
             </div>
         </div>
     </section>
 
     <!-- Services Delivered -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
+    <section class="content-section gray-bg">
+        <div class="content-container">
             <h2>Services Delivered</h2>
-            <div style="margin-top: 24px;">
-                <ul>
-                    <li style="margin-bottom: 12px;">eCommerce Development (SFCC)</li>
-                    <li style="margin-bottom: 12px;">Performance Engineering</li>
-                    <li style="margin-bottom: 12px;">Integration Services</li>
-                    <li style="margin-bottom: 12px;">User Experience and Design</li>
-                    <li style="margin-bottom: 12px;">QA & Testing Automation</li>
-                    <li style="margin-bottom: 12px;">Monitoring and Support Operations</li>
-                </ul>
+            <div class="services-list">
+                <div class="service-item">eCommerce Development (SFCC)</div>
+                <div class="service-item">Performance Engineering</div>
+                <div class="service-item">Integration Services</div>
+                <div class="service-item">User Experience and Design</div>
+                <div class="service-item">QA & Testing Automation</div>
+                <div class="service-item">Monitoring and Support Operations</div>
             </div>
         </div>
     </section>
 
     <!-- Technologies -->
-    <section>
-        <div class="container-narrow">
-            <h2>Technologies Used</h2>
+    <section class="content-section">
+        <div class="content-container">
+            <h2>Technology Stack</h2>
 
-            <h3 style="margin-top: 32px; font-size: 20px;">Engineering Stack</h3>
-            <div style="margin-top: 16px;">
-                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">HTML5</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">JavaScript</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">CSS3</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">jQuery</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Dynatrace</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Elastic</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Opsgenie</span>
+            <div class="tech-category">
+                <h3>Engineering Stack</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">jQuery</span>
+                    <span class="tech-tag">Dynatrace</span>
+                    <span class="tech-tag">Elastic</span>
+                    <span class="tech-tag">Opsgenie</span>
                 </div>
             </div>
 
-            <h3 style="margin-top: 32px; font-size: 20px;">Partner Integrations</h3>
-            <div style="margin-top: 16px;">
-                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Salesforce Commerce Cloud</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Boomi</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Manhattan OMS</span>
+            <div class="tech-category">
+                <h3>Partner Integrations</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">Salesforce Commerce Cloud</span>
+                    <span class="tech-tag">Boomi</span>
+                    <span class="tech-tag">Manhattan OMS</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section style="background: #fafafa;">
-        <div class="container">
-            <div class="cta-banner">
-                <h2>Ready to Transform Your Digital Experience?</h2>
-                <p>Discover how NULogic can optimize your eCommerce platform, boost performance, and drive customer engagement.</p>
-                <a href="../contact.html" class="btn">Book a Call →</a>
-            </div>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="content-container">
+            <h2>Ready to Transform Your Digital Experience?</h2>
+            <p>Discover how NULogic can optimize your eCommerce platform, boost performance, and drive customer engagement.</p>
+            <a href="../contact.html" class="cta-button">Book a Call</a>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">

@@ -4,10 +4,278 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ally Bank Case Study | Snowflake Native Extraction Framework | NuLogic</title>
+    <meta name="description" content="Ally Bank boosts data agility with a scalable Snowflake Native Extraction Framework, eliminating licensing costs and accelerating extract onboarding.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .case-study-hero {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background-image: url('../images/casestudies/ally-hero.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .case-study-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(137, 56, 159, 0.75) 0%, rgba(237, 41, 37, 0.75) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 120px 0 80px;
+        }
+
+        .hero-content h1 {
+            color: white;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            max-width: 900px;
+        }
+
+        .client-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            background: #F9F9F9;
+            padding: 48px 0;
+        }
+
+        .client-info-item {
+            text-align: left;
+        }
+
+        .client-info-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #89389f;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .client-info-value {
+            font-size: 18px;
+            color: #2B2B2B;
+            font-weight: 500;
+        }
+
+        .client-info-value a {
+            color: #2B2B2B;
+            text-decoration: none;
+        }
+
+        .client-info-value a:hover {
+            color: #89389f;
+        }
+
+        .client-logo {
+            margin-bottom: 32px;
+        }
+
+        .client-logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .section-white {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .section-gray {
+            background: #F9F9F9;
+            padding: 80px 0;
+        }
+
+        .challenge-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .challenge-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .result-card {
+            background: white;
+            border-radius: 8px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .result-card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 16px;
+        }
+
+        .result-card h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2B2B2B;
+            margin-bottom: 12px;
+        }
+
+        .result-card p {
+            font-size: 14px;
+            color: #424242;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background: white;
+            border-left: 4px solid #89389f;
+            padding: 32px;
+            margin-top: 48px;
+            border-radius: 4px;
+        }
+
+        .highlight-box p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #2B2B2B;
+            font-style: italic;
+        }
+
+        .services-tech-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 48px;
+        }
+
+        .tech-logos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .tech-logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 16px;
+            color: #2B2B2B;
+        }
+
+        .service-list li:last-child {
+            border-bottom: none;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: white;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 18px;
+            margin-bottom: 32px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #89389f;
+            padding: 16px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .summary-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .summary-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .client-info-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .challenge-layout {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-tech-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .summary-images {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -51,106 +319,247 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="padding: 80px 0; background: linear-gradient(135deg, rgba(137, 56, 159, 0.9) 0%, rgba(237, 41, 37, 0.9) 100%);">
+    <section class="case-study-hero">
+        <div class="hero-content">
+            <div class="container">
+                <h1>Ally Bank Boosts Data Agility with a Scalable Snowflake Native Extraction Framework</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logo & Info Grid -->
+    <section class="section-white" style="padding-bottom: 0;">
         <div class="container">
-            <p style="color: rgba(255,255,255,0.9); margin-bottom: 16px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Case Study</p>
-            <h1 style="color: white; margin-bottom: 24px;">Ally Bank</h1>
-            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 900px;">Snowflake Native Extraction Framework replacing Matillion ETL, eliminating licensing costs while delivering automated extracts and enhanced operational visibility.</p>
+            <div class="client-logo">
+                <img src="../images/casestudies/ally-logo.png" alt="Ally Financial">
+            </div>
+        </div>
+    </section>
+
+    <section class="client-info-grid">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+                <div class="client-info-item">
+                    <div class="client-info-label">Region</div>
+                    <div class="client-info-value">U.S.</div>
+                </div>
+                <div class="client-info-item">
+                    <div class="client-info-label">Website</div>
+                    <div class="client-info-value"><a href="https://www.ally.com" target="_blank" rel="noopener">https://www.ally.com</a></div>
+                </div>
+                <div class="client-info-item">
+                    <div class="client-info-label">Client Since</div>
+                    <div class="client-info-value">2023</div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Client Overview -->
-    <section>
-        <div class="container-narrow">
-            <h2>Client Overview</h2>
-            <p><strong>Ally Financial Inc.</strong> is the nation's largest all-digital bank and a leader in auto financing, with expertise in deposits, securities, investment advisory, and insurance. Operating across the U.S., Ally has been a NuLogic client since 2023.</p>
-            <p style="margin-top: 16px;"><strong>Website:</strong> <a href="https://www.ally.com" target="_blank" style="color: var(--color-primary);">www.ally.com</a></p>
+    <section class="section-white">
+        <div class="container">
+            <h2 style="font-size: 36px; font-weight: 700; color: #2B2B2B; margin-bottom: 24px;">Client Overview</h2>
+            <p style="font-size: 18px; line-height: 1.7; color: #424242; max-width: 900px;">Ally Financial Inc. operates the nation's largest all-digital bank and leader in auto financing. The organization offers deposits, securities, investment advisory, and insurance services, leveraging Snowflake Native Extraction Framework for automation, real-time analytics, and reliability.</p>
         </div>
     </section>
 
-    <!-- The Challenge -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>The Challenge</h2>
-            <p>Ally Bank's data engineering teams confronted three primary obstacles:</p>
-            <ul style="margin-top: 20px;">
-                <li style="margin-bottom: 16px;"><strong>High licensing costs and infrastructure overhead</strong> from Matillion ETL on EC2</li>
-                <li style="margin-bottom: 16px;"><strong>Limited flexibility</strong> requiring additional coding for each new extract, delaying delivery and consuming developer capacity</li>
-                <li style="margin-bottom: 16px;"><strong>Absence of centralized monitoring</strong>, complicating troubleshooting of critical data flows and raising operational risk</li>
-            </ul>
+    <!-- Challenge Section -->
+    <section class="section-gray">
+        <div class="container">
+            <div class="challenge-layout">
+                <div class="challenge-image">
+                    <img src="../images/casestudies/ally-challenge.png" alt="Ally Bank Challenge">
+                </div>
+                <div class="challenge-content">
+                    <h2 style="font-size: 36px; font-weight: 700; color: #2B2B2B; margin-bottom: 24px;">Challenge</h2>
+                    <p style="font-size: 16px; line-height: 1.7; color: #424242; margin-bottom: 20px;">Ally Bank's data engineering teams confronted significant obstacles:</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 12px 0; padding-left: 24px; position: relative; font-size: 16px; line-height: 1.7; color: #424242;">
+                            <span style="position: absolute; left: 0; color: #89389f; font-weight: 700;">•</span>
+                            <strong>High licensing costs</strong> with Matillion ETL on EC2
+                        </li>
+                        <li style="padding: 12px 0; padding-left: 24px; position: relative; font-size: 16px; line-height: 1.7; color: #424242;">
+                            <span style="position: absolute; left: 0; color: #89389f; font-weight: 700;">•</span>
+                            <strong>Infrastructure overhead</strong> and limited flexibility
+                        </li>
+                        <li style="padding: 12px 0; padding-left: 24px; position: relative; font-size: 16px; line-height: 1.7; color: #424242;">
+                            <span style="position: absolute; left: 0; color: #89389f; font-weight: 700;">•</span>
+                            Each new extract required additional coding, <strong>delaying delivery</strong>
+                        </li>
+                        <li style="padding: 12px 0; padding-left: 24px; position: relative; font-size: 16px; line-height: 1.7; color: #424242;">
+                            <span style="position: absolute; left: 0; color: #89389f; font-weight: 700;">•</span>
+                            <strong>Limited developer capacity</strong>
+                        </li>
+                        <li style="padding: 12px 0; padding-left: 24px; position: relative; font-size: 16px; line-height: 1.7; color: #424242;">
+                            <span style="position: absolute; left: 0; color: #89389f; font-weight: 700;">•</span>
+                            <strong>Complex troubleshooting</strong> without centralized monitoring
+                        </li>
+                        <li style="padding: 12px 0; padding-left: 24px; position: relative; font-size: 16px; line-height: 1.7; color: #424242;">
+                            <span style="position: absolute; left: 0; color: #89389f; font-weight: 700;">•</span>
+                            <strong>Increased operational risk</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- The Solution -->
-    <section>
-        <div class="container-narrow">
-            <h2>The Solution</h2>
-            <p>NuLogic implemented a fully Snowflake Native Extraction Framework replacing Matillion, featuring:</p>
+    <!-- Solution Section -->
+    <section class="section-white">
+        <div class="container">
+            <h2 style="font-size: 36px; font-weight: 700; color: #2B2B2B; margin-bottom: 24px;">Solution</h2>
+            <p style="font-size: 18px; line-height: 1.7; color: #424242; margin-bottom: 40px; max-width: 900px;">Replace Matillion with fully Snowflake Native Extraction Framework focused on scalability, transparency, automation, and real-time analytics.</p>
 
-            <div style="margin-top: 32px;">
-                <h3>Key Components</h3>
-                <ul style="margin-top: 20px;">
-                    <li style="margin-bottom: 16px;"><strong>Config-Driven Extract Automation:</strong> Reusable Python procedures and Snowflake logic dynamically handle extractions, writing results directly to S3</li>
-                    <li style="margin-bottom: 16px;"><strong>Centralized Audit & Monitoring:</strong> Detailed logs at every stage with audit and summary tables for governance and real-time visibility</li>
-                    <li style="margin-bottom: 16px;"><strong>Dependency & Error Handling:</strong> Extracts trigger only when upstream data is ready, with proactive alerts and rapid failure recovery</li>
-                    <li style="margin-bottom: 16px;"><strong>Snowflake Task Scheduling:</strong> Native task scheduling replaced Matillion jobs, minimizing external dependencies</li>
-                    <li style="margin-bottom: 16px;"><strong>Config-Based Flexibility:</strong> New extracts onboarded instantly without new code—only configuration table updates required</li>
+            <h3 style="font-size: 24px; font-weight: 600; color: #2B2B2B; margin-bottom: 24px; margin-top: 48px;">Key Implementation Elements</h3>
+
+            <div style="display: grid; gap: 24px;">
+                <div style="padding: 24px; background: #F9F9F9; border-radius: 8px; border-left: 4px solid #89389f;">
+                    <h4 style="font-size: 18px; font-weight: 600; color: #2B2B2B; margin-bottom: 12px;">Config-Driven Extract Automation</h4>
+                    <p style="font-size: 16px; line-height: 1.7; color: #424242;">Reusable Python procedures and Snowflake logic handling extractions with direct S3 results writing</p>
+                </div>
+
+                <div style="padding: 24px; background: #F9F9F9; border-radius: 8px; border-left: 4px solid #89389f;">
+                    <h4 style="font-size: 18px; font-weight: 600; color: #2B2B2B; margin-bottom: 12px;">Centralized Audit & Monitoring</h4>
+                    <p style="font-size: 16px; line-height: 1.7; color: #424242;">Detailed staging logs with audit and summary tables providing governance and real-time visibility</p>
+                </div>
+
+                <div style="padding: 24px; background: #F9F9F9; border-radius: 8px; border-left: 4px solid #89389f;">
+                    <h4 style="font-size: 18px; font-weight: 600; color: #2B2B2B; margin-bottom: 12px;">Dependency & Error Handling</h4>
+                    <p style="font-size: 16px; line-height: 1.7; color: #424242;">Extract triggering contingent on upstream data readiness with proactive alerts and rapid recovery</p>
+                </div>
+
+                <div style="padding: 24px; background: #F9F9F9; border-radius: 8px; border-left: 4px solid #89389f;">
+                    <h4 style="font-size: 18px; font-weight: 600; color: #2B2B2B; margin-bottom: 12px;">Snowflake Task Scheduling</h4>
+                    <p style="font-size: 16px; line-height: 1.7; color: #424242;">Native task scheduling replacing Matillion jobs, reducing external tool dependencies</p>
+                </div>
+
+                <div style="padding: 24px; background: #F9F9F9; border-radius: 8px; border-left: 4px solid #89389f;">
+                    <h4 style="font-size: 18px; font-weight: 600; color: #2B2B2B; margin-bottom: 12px;">Config-Based Flexibility</h4>
+                    <p style="font-size: 16px; line-height: 1.7; color: #424242;">New extracts onboarded instantly via configuration table updates without code changes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="section-gray">
+        <div class="container">
+            <h2 style="font-size: 36px; font-weight: 700; color: #2B2B2B; margin-bottom: 24px;">Results</h2>
+            <p style="font-size: 18px; line-height: 1.7; color: #424242; margin-bottom: 40px; max-width: 900px;">Measurable outcomes delivered through the Snowflake Native Extraction Framework:</p>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <img src="../images/casestudies/ally-result-1.png" alt="Cost Savings">
+                    <h4>Matillion Fully Retired</h4>
+                    <p>Eliminated license and infrastructure costs completely</p>
+                </div>
+
+                <div class="result-card">
+                    <img src="../images/casestudies/ally-result-2.png" alt="Time Savings">
+                    <h4>Expense Savings Redirected</h4>
+                    <p>Significant savings reinvested to analytics and personalization</p>
+                </div>
+
+                <div class="result-card">
+                    <img src="../images/casestudies/ally-result-3.png" alt="Developer Efficiency">
+                    <h4>Accelerated Onboarding</h4>
+                    <p>New extract onboarding from days to minutes without new code</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 48px;">
+                <h3 style="font-size: 24px; font-weight: 600; color: #2B2B2B; margin-bottom: 24px;">Additional Benefits</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 12px 0; padding-left: 24px; position: relative; font-size: 16px; line-height: 1.7; color: #424242;">
+                        <span style="position: absolute; left: 0; color: #89389f; font-weight: 700;">✓</span>
+                        Freed developer resources for innovation and AI-driven personalization
+                    </li>
+                    <li style="padding: 12px 0; padding-left: 24px; position: relative; font-size: 16px; line-height: 1.7; color: #424242;">
+                        <span style="position: absolute; left: 0; color: #89389f; font-weight: 700;">✓</span>
+                        Enhanced observability through centralized monitoring and logging
+                    </li>
+                    <li style="padding: 12px 0; padding-left: 24px; position: relative; font-size: 16px; line-height: 1.7; color: #424242;">
+                        <span style="position: absolute; left: 0; color: #89389f; font-weight: 700;">✓</span>
+                        Scalable framework supporting new vendors, formats, and transformations
+                    </li>
                 </ul>
             </div>
-        </div>
-    </section>
 
-    <!-- Results -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>Results Achieved</h2>
-            <h3 style="margin-top: 32px;">Business Outcomes</h3>
-            <ul style="margin-top: 20px;">
-                <li style="margin-bottom: 16px;"><strong>Matillion fully retired</strong>, eliminating license fees and infrastructure costs</li>
-                <li style="margin-bottom: 16px;"><strong>Significant expense savings</strong> reinvested in analytics and customer experience optimization</li>
-                <li style="margin-bottom: 16px;"><strong>Faster onboarding</strong> of new extracts completed in minutes instead of days with zero new code required</li>
-                <li style="margin-bottom: 16px;"><strong>Onshore developer time freed</strong> for innovation and AI-driven personalization</li>
-                <li style="margin-bottom: 16px;"><strong>Improved observability</strong> through centralized monitoring and logging</li>
-                <li style="margin-bottom: 16px;"><strong>Future scalability</strong> supporting new vendors, formats, and advanced transformations</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Technologies -->
-    <section>
-        <div class="container-narrow">
-            <h2>Technologies & Services</h2>
-
-            <div style="margin-top: 32px;">
-                <h3>Engineering Stack</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Amazon Web Services (AWS)</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Snowflake</span>
+            <div class="summary-images">
+                <div class="summary-image">
+                    <img src="../images/casestudies/ally-summary-1.png" alt="Data Pipeline Architecture">
+                </div>
+                <div class="summary-image">
+                    <img src="../images/casestudies/ally-summary-2.png" alt="Monitoring Dashboard">
+                </div>
+                <div class="summary-image">
+                    <img src="../images/casestudies/ally-summary-3.png" alt="Performance Metrics">
                 </div>
             </div>
-
-            <div style="margin-top: 32px;">
-                <h3>Services Delivered</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Data Engineering</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Cloud Services</span>
-                </div>
-            </div>
-
-            <div style="margin-top: 32px;">
-                <h3>Key Highlights</h3>
-                <p style="margin-top: 16px;">The framework delivers automated Snowflake-native data extracts, reduces developer workload through config-driven onboarding, enhances operational visibility via centralized logging, and scales for omnichannel retail and AI-driven insights.</p>
-            </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section style="background: #fafafa;">
+    <!-- Highlights Section -->
+    <section class="section-white">
         <div class="container">
-            <div class="cta-banner">
-                <h2>Ready to modernize your data infrastructure?</h2>
-                <p>Let's discuss how we can build a Snowflake-native framework that reduces costs and accelerates your data operations.</p>
-                <a href="../contact.html" class="btn">Schedule a Call →</a>
+            <div class="highlight-box">
+                <p>"Automated data extracts natively in Snowflake with Python procedures and Tasks—accelerating e-commerce data integration and real-time analytics."</p>
+            </div>
+
+            <div style="margin-top: 48px;">
+                <p style="font-size: 16px; line-height: 1.7; color: #424242;">Benefits include reduced developer workload through config-driven onboarding, enhanced operational visibility via centralized logging, and future-ready scalability.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Technologies Section -->
+    <section class="section-gray">
+        <div class="container">
+            <h2 style="font-size: 36px; font-weight: 700; color: #2B2B2B; margin-bottom: 48px;">Services & Technologies</h2>
+
+            <div class="services-tech-grid">
+                <div>
+                    <h3 style="font-size: 24px; font-weight: 600; color: #2B2B2B; margin-bottom: 24px;">Services</h3>
+                    <ul class="service-list">
+                        <li style="padding: 16px 0; border-bottom: 1px solid #d7d7d7; font-size: 16px; color: #2B2B2B;">Data Engineering</li>
+                        <li style="padding: 16px 0; font-size: 16px; color: #2B2B2B;">Cloud Services</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 style="font-size: 24px; font-weight: 600; color: #2B2B2B; margin-bottom: 24px;">Technologies</h3>
+                    <div class="tech-logos">
+                        <div class="tech-logo">
+                            <img src="../images/casestudies/ally-aws-logo.png" alt="AWS">
+                        </div>
+                        <div class="tech-logo">
+                            <img src="../images/casestudies/ally-tech-1.png" alt="Snowflake">
+                        </div>
+                        <div class="tech-logo">
+                            <img src="../images/casestudies/ally-tech-2.png" alt="Python">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Let's Work Together</h2>
+            <p>Our services drive clients' seamless growth and success. Fill out the form and a team member will contact you shortly.</p>
+            <a href="../contact.html" class="cta-button">Contact Us</a>
+
+            <div style="margin-top: 48px; display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;">
+                <div style="color: white;">
+                    <p style="font-size: 14px; opacity: 0.9; margin-bottom: 8px;">Email</p>
+                    <a href="mailto:sales@nulogic.io" style="color: white; text-decoration: none; font-size: 16px; font-weight: 600;">sales@nulogic.io</a>
+                </div>
+                <div style="color: white;">
+                    <p style="font-size: 14px; opacity: 0.9; margin-bottom: 8px;">Phone</p>
+                    <a href="tel:+14699226985" style="color: white; text-decoration: none; font-size: 16px; font-weight: 600;">+1 (469) 922-6985</a>
+                </div>
             </div>
         </div>
     </section>
@@ -162,12 +571,21 @@
                     <h4>Services</h4>
                     <ul>
                         <li><a href="../services.html">All Services</a></li>
+                        <li><a href="../services.html#commerce-build">Commerce Build & Modernize</a></li>
+                        <li><a href="../services.html#support">24/7 Run & Support</a></li>
+                        <li><a href="../services.html#cloud">Cloud, Performance & Reliability</a></li>
+                        <li><a href="../services.html#data-ai">Data, AI & Analytics</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4>Platforms</h4>
                     <ul>
                         <li><a href="../platforms.html">All Platforms</a></li>
+                        <li><a href="../platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
+                        <li><a href="../platforms.html#shopify">Shopify Plus</a></li>
+                        <li><a href="../platforms.html#commercetools">commercetools</a></li>
+                        <li><a href="../platforms.html#shopware">Shopware</a></li>
+                        <li><a href="../platforms.html#magento">Magento / Adobe Commerce</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -177,6 +595,13 @@
                         <li><a href="../work.html">Work</a></li>
                         <li><a href="../partners.html">Partners</a></li>
                         <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:sales@nulogic.io">sales@nulogic.io</a></li>
+                        <li><a href="tel:+14699226985">+1 (469) 922-6985</a></li>
                     </ul>
                 </div>
             </div>

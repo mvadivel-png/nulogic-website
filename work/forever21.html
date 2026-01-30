@@ -9,6 +9,361 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Case Study Specific Styles */
+        .case-study-hero {
+            position: relative;
+            background-image: url('../images/casestudies/forever21-hero.png');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0 80px;
+            overflow: hidden;
+        }
+
+        .case-study-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(137, 56, 159, 0.85) 0%, rgba(237, 41, 37, 0.85) 100%);
+        }
+
+        .case-study-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .case-study-hero h1 {
+            color: white;
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 32px;
+            max-width: 900px;
+        }
+
+        .client-logo-section {
+            background: white;
+            padding: 48px 0;
+            text-align: center;
+        }
+
+        .client-logo-section img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .client-info-grid {
+            background: #F9F9F9;
+            padding: 48px 0;
+        }
+
+        .client-info-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .client-info-item {
+            text-align: center;
+        }
+
+        .client-info-label {
+            color: #424242;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .client-info-value {
+            color: #2B2B2B;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .client-info-value a {
+            color: #89389f;
+            text-decoration: none;
+        }
+
+        .client-info-value a:hover {
+            text-decoration: underline;
+        }
+
+        .section-white {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .section-gray {
+            background: #F9F9F9;
+            padding: 80px 0;
+        }
+
+        .container-narrow {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .container-narrow h2 {
+            color: #2B2B2B;
+            font-size: 36px;
+            margin-bottom: 24px;
+            font-weight: 800;
+        }
+
+        .container-narrow h3 {
+            color: #2B2B2B;
+            font-size: 24px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .container-narrow h4 {
+            color: #89389f;
+            font-size: 20px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .container-narrow p {
+            color: #424242;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .container-narrow ul {
+            margin-left: 20px;
+        }
+
+        .container-narrow ul li {
+            color: #424242;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .challenge-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .solution-pillars {
+            margin-top: 48px;
+        }
+
+        .solution-pillar {
+            margin-bottom: 40px;
+        }
+
+        .solution-pillar h3 {
+            color: #89389f;
+            margin-bottom: 16px;
+        }
+
+        .solution-initiatives {
+            margin-top: 48px;
+        }
+
+        .initiative {
+            margin-bottom: 32px;
+        }
+
+        .device-mockups {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin: 60px 0;
+        }
+
+        .device-mockup img {
+            width: 100%;
+            height: auto;
+        }
+
+        .results-intro {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #2B2B2B;
+            margin-bottom: 48px;
+        }
+
+        .results-metrics {
+            margin: 48px 0;
+        }
+
+        .results-metrics img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .results-list {
+            margin-top: 48px;
+        }
+
+        .results-list h3 {
+            margin-bottom: 24px;
+        }
+
+        .testimonial-box {
+            background: white;
+            padding: 48px;
+            border-radius: 8px;
+            border-left: 6px solid #89389f;
+            margin: 0 auto;
+            max-width: 900px;
+        }
+
+        .testimonial-quote {
+            font-size: 22px;
+            line-height: 1.6;
+            font-style: italic;
+            color: #2B2B2B;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: #89389f;
+            margin-bottom: 4px;
+        }
+
+        .testimonial-role {
+            color: #424242;
+            font-size: 14px;
+        }
+
+        .technologies-section {
+            margin-top: 32px;
+        }
+
+        .tech-category {
+            margin-bottom: 40px;
+        }
+
+        .tech-category h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #2B2B2B;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tech-tag {
+            background: white;
+            color: #89389f;
+            padding: 12px 20px;
+            font-size: 14px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+            font-weight: 600;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: white;
+            font-size: 42px;
+            margin-bottom: 24px;
+            font-weight: 800;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 20px;
+            margin-bottom: 32px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #89389f;
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: transform 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 991px) {
+            .case-study-hero h1 {
+                font-size: 36px;
+            }
+
+            .client-info-container {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .challenge-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .device-mockups {
+                grid-template-columns: 1fr;
+            }
+
+            .container-narrow h2 {
+                font-size: 28px;
+            }
+
+            .cta-section h2 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .case-study-hero {
+                padding: 80px 0 60px;
+            }
+
+            .case-study-hero h1 {
+                font-size: 28px;
+            }
+
+            .testimonial-box {
+                padding: 32px 24px;
+            }
+
+            .testimonial-quote {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -52,194 +407,212 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="padding: 80px 0; background: linear-gradient(135deg, rgba(137, 56, 159, 0.9) 0%, rgba(237, 41, 37, 0.9) 100%);">
+    <section class="case-study-hero">
         <div class="container">
-            <p style="color: rgba(255,255,255,0.9); margin-bottom: 16px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Case Study</p>
-            <h1 style="color: white; margin-bottom: 24px;">Forever 21 Delivers Flawless Peak Experiences with Proactive Performance Optimization</h1>
-            <div style="margin-top: 32px; display: flex; gap: 32px; flex-wrap: wrap;">
+            <h1>Forever 21 Delivers Flawless Peak Experiences with Proactive Performance Optimization</h1>
+        </div>
+    </section>
+
+    <!-- Client Logo Section -->
+    <section class="client-logo-section">
+        <div class="container">
+            <img src="../images/casestudies/forever21-logo.png" alt="Forever 21 Logo">
+        </div>
+    </section>
+
+    <!-- Client Info Grid -->
+    <section class="client-info-grid">
+        <div class="client-info-container">
+            <div class="client-info-item">
+                <div class="client-info-label">Region</div>
+                <div class="client-info-value">U.S.</div>
+            </div>
+            <div class="client-info-item">
+                <div class="client-info-label">Website</div>
+                <div class="client-info-value"><a href="https://www.forever21.com" target="_blank">forever21.com</a></div>
+            </div>
+            <div class="client-info-item">
+                <div class="client-info-label">Client Since</div>
+                <div class="client-info-value">2022</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Overview -->
+    <section class="section-white">
+        <div class="container-narrow">
+            <h2>Client Overview</h2>
+            <p>Forever 21, a leading global fashion retailer, operates a high-traffic e-commerce platform on Salesforce Commerce Cloud (SFCC) to serve millions of shoppers worldwide.</p>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="section-gray">
+        <div class="container-narrow">
+            <h2>The Challenge</h2>
+            <div class="challenge-grid">
                 <div>
-                    <p style="color: rgba(255,255,255,0.8); font-size: 14px; margin-bottom: 4px;">Region</p>
-                    <p style="color: white; font-weight: 600;">U.S.</p>
+                    <img src="../images/casestudies/forever21-challenge.png" alt="Forever 21 Challenge" class="challenge-image">
                 </div>
                 <div>
-                    <p style="color: rgba(255,255,255,0.8); font-size: 14px; margin-bottom: 4px;">Website</p>
-                    <p style="color: white; font-weight: 600;"><a href="https://www.forever21.com" target="_blank" style="color: white;">forever21.com</a></p>
-                </div>
-                <div>
-                    <p style="color: rgba(255,255,255,0.8); font-size: 14px; margin-bottom: 4px;">Client Since</p>
-                    <p style="color: white; font-weight: 600;">2022</p>
+                    <p>Forever 21 faced mounting pressure to deliver fast, flawless digital experiences on Salesforce Commerce Cloud (SFCC). Seasonal surges like Black Friday and Cyber Monday routinely pushed the limits of their infrastructure, threatening page load speed, checkout reliability, and customer satisfaction.</p>
+                    <p>Without proactive monitoring and rigorous performance testing, even minor disruptions risked revenue loss, customer churn, and damage to brand reputation.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Overview -->
-    <section>
+    <!-- Solution Section -->
+    <section class="section-white">
         <div class="container-narrow">
-            <h2>Overview</h2>
-            <p style="font-size: 18px; line-height: 1.7;">By partnering with NULogic, Forever 21 successfully transformed their Salesforce Commerce Cloud operations, ensuring stability, scalability, and superior customer experiences.</p>
-
-            <p style="margin-top: 24px;">Forever 21, a leading global fashion retailer, operates a high-traffic e-commerce platform on Salesforce Commerce Cloud (SFCC) to serve millions of shoppers worldwide. With major sales events like Black Friday, Cyber Monday, and seasonal promotions, ensuring high performance, system stability, and seamless customer experience was critical. Forever 21 needed a specialized SFCC monitoring and support partner with expertise in performance optimization, load testing, and 24/7 stabilization to ensure uptime and seamless shopping experiences.</p>
-        </div>
-    </section>
-
-    <!-- Challenge -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>Challenge</h2>
-            <p>Forever 21 faced mounting pressure to deliver fast, flawless digital experiences on Salesforce Commerce Cloud (SFCC). Seasonal surges like Black Friday and Cyber Monday routinely pushed the limits of their infrastructure, threatening page load speed, checkout reliability, and customer satisfaction. Without proactive monitoring and rigorous performance testing, even minor disruptions risked revenue loss, customer churn, and damage to brand reputation.</p>
-        </div>
-    </section>
-
-    <!-- Solution -->
-    <section>
-        <div class="container-narrow">
-            <h2>Solution</h2>
+            <h2>The Solution</h2>
             <p>NULogic partnered with Forever 21 to design and implement a comprehensive performance framework built on our Modern Commerce, Manage Commerce, and Maximize Commerce pillars.</p>
 
-            <div style="margin-top: 40px;">
-                <h3 style="color: var(--color-primary); margin-bottom: 16px;">Modern Commerce:</h3>
-                <ul style="margin-bottom: 32px;">
-                    <li style="margin-bottom: 12px;">Stress-tested storefronts with simulated Black Friday loads</li>
-                    <li style="margin-bottom: 12px;">Validated scalability before go-live with proactive load testing</li>
-                    <li style="margin-bottom: 12px;">Ensured stable launches with automated test coverage</li>
-                </ul>
+            <div class="solution-pillars">
+                <div class="solution-pillar">
+                    <h3>Modern Commerce:</h3>
+                    <ul>
+                        <li>Stress-tested storefronts with simulated Black Friday loads</li>
+                        <li>Validated scalability before go-live with proactive load testing</li>
+                        <li>Ensured stable launches with automated test coverage</li>
+                    </ul>
+                </div>
 
-                <h3 style="color: var(--color-primary); margin-bottom: 16px;">Manage Commerce:</h3>
-                <ul style="margin-bottom: 32px;">
-                    <li style="margin-bottom: 12px;">24/7 real-time monitoring with Splunk, New Relic, SFCC logs</li>
-                    <li style="margin-bottom: 12px;">SLA-driven support and rapid-response incident management</li>
-                    <li style="margin-bottom: 12px;">Proactive anomaly detection and automated failover strategies</li>
-                </ul>
+                <div class="solution-pillar">
+                    <h3>Manage Commerce:</h3>
+                    <ul>
+                        <li>24/7 real-time monitoring with Splunk, New Relic, SFCC logs</li>
+                        <li>SLA-driven support and rapid-response incident management</li>
+                        <li>Proactive anomaly detection and automated failover strategies</li>
+                    </ul>
+                </div>
 
-                <h3 style="color: var(--color-primary); margin-bottom: 16px;">Maximize Commerce:</h3>
-                <ul style="margin-bottom: 32px;">
-                    <li style="margin-bottom: 12px;">Continuous optimization of speed, scalability, and reliability</li>
-                    <li style="margin-bottom: 12px;">Seasonal readiness and capacity planning for high-traffic events</li>
-                    <li style="margin-bottom: 12px;">Infrastructure cost savings through caching, auto-scaling, and tuning</li>
-                </ul>
+                <div class="solution-pillar">
+                    <h3>Maximize Commerce:</h3>
+                    <ul>
+                        <li>Continuous optimization of speed, scalability, and reliability</li>
+                        <li>Seasonal readiness and capacity planning for high-traffic events</li>
+                        <li>Infrastructure cost savings through caching, auto-scaling, and tuning</li>
+                    </ul>
+                </div>
             </div>
 
-            <div style="margin-top: 48px;">
-                <h3 style="margin-bottom: 24px;">Key initiatives included:</h3>
+            <div class="solution-initiatives">
+                <h3>Key initiatives included:</h3>
 
-                <div style="margin-bottom: 32px;">
-                    <h4 style="color: var(--color-primary); margin-bottom: 12px;">24/7 Monitoring & Rapid Response</h4>
+                <div class="initiative">
+                    <h4>24/7 Monitoring & Rapid Response</h4>
                     <p>Integrated Splunk, New Relic, and SFCC logs with automated alerts, ensuring issues were detected and resolved before impacting users.</p>
                 </div>
 
-                <div style="margin-bottom: 32px;">
-                    <h4 style="color: var(--color-primary); margin-bottom: 12px;">High-Traffic Load & Stress Testing</h4>
+                <div class="initiative">
+                    <h4>High-Traffic Load & Stress Testing</h4>
                     <p>Simulated Black Friday/Cyber Monday traffic patterns to uncover breaking points and fine-tune scaling and CDN strategies.</p>
                 </div>
 
-                <div style="margin-bottom: 32px;">
-                    <h4 style="color: var(--color-primary); margin-bottom: 12px;">System Stabilization & Optimization</h4>
+                <div class="initiative">
+                    <h4>System Stabilization & Optimization</h4>
                     <p>Refactored SFCC pipelines, reduced database query loads, and optimized API calls to OMS, CRM, and payments.</p>
                 </div>
 
-                <div style="margin-bottom: 32px;">
-                    <h4 style="color: var(--color-primary); margin-bottom: 12px;">Proactive, SLA-Driven Support</h4>
+                <div class="initiative">
+                    <h4>Proactive, SLA-Driven Support</h4>
                     <p>Introduced weekly audits, knowledge bases, and automated failover strategies to drive uptime and resilience.</p>
+                </div>
+            </div>
+
+            <div class="device-mockups">
+                <div class="device-mockup">
+                    <img src="../images/casestudies/forever21-desktop.png" alt="Forever 21 Desktop View">
+                </div>
+                <div class="device-mockup">
+                    <img src="../images/casestudies/forever21-laptop.png" alt="Forever 21 Laptop View">
+                </div>
+                <div class="device-mockup">
+                    <img src="../images/casestudies/forever21-mobile.png" alt="Forever 21 Mobile View">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Results -->
-    <section style="background: #fafafa;">
+    <!-- Results Section -->
+    <section class="section-gray">
         <div class="container-narrow">
-            <h2>Results</h2>
-            <p style="font-size: 18px; line-height: 1.7; margin-bottom: 40px;">With continuous performance monitoring, proactive optimizations, and real-world load testing, Forever 21 can confidently handle seasonal peaks and unexpected traffic surges while delivering an exceptional digital commerce experience.</p>
+            <h2>The Results</h2>
+            <p class="results-intro">With continuous performance monitoring, proactive optimizations, and real-world load testing, Forever 21 can confidently handle seasonal peaks and unexpected traffic surges while delivering an exceptional digital commerce experience.</p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-top: 40px;">
-                <div style="background: white; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <div style="font-size: 48px; font-weight: 800; color: var(--color-primary); margin-bottom: 12px;">40%</div>
-                    <p style="font-size: 16px; font-weight: 600; color: #333;">Faster page load speeds</p>
-                </div>
-
-                <div style="background: white; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <div style="font-size: 48px; font-weight: 800; color: var(--color-primary); margin-bottom: 12px;">80%</div>
-                    <p style="font-size: 16px; font-weight: 600; color: #333;">Reduction in checkout failures</p>
-                </div>
-
-                <div style="background: white; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <div style="font-size: 48px; font-weight: 800; color: var(--color-primary); margin-bottom: 12px;">25%</div>
-                    <p style="font-size: 16px; font-weight: 600; color: #333;">Reduction in annual OPEX</p>
-                </div>
-
-                <div style="background: white; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <div style="font-size: 48px; font-weight: 800; color: var(--color-primary); margin-bottom: 12px;">3x</div>
-                    <p style="font-size: 16px; font-weight: 600; color: #333;">Less incident tickets submitted</p>
-                </div>
+            <div class="results-metrics">
+                <img src="../images/casestudies/forever21-highlights.png" alt="Forever 21 Results Highlights">
             </div>
 
-            <div style="margin-top: 48px;">
-                <h3 style="margin-bottom: 24px;">Key Results:</h3>
+            <div class="results-list">
+                <h3>Key Results:</h3>
                 <ul>
-                    <li style="margin-bottom: 12px;">Zero downtime migrations and flawless site stability during peak sales events</li>
-                    <li style="margin-bottom: 12px;">Weekly production releases with no disruption to customer experience</li>
-                    <li style="margin-bottom: 12px;">Increase in system visibility and performance metrics</li>
-                    <li style="margin-bottom: 12px;">Freed up onshore developers by offloading monitoring, testing, and issue resolution</li>
-                    <li style="margin-bottom: 12px;">Significant expense savings overall, enabling reinvestment into customer experience and growth</li>
+                    <li>Zero downtime migrations and flawless site stability during peak sales events</li>
+                    <li>Weekly production releases with no disruption to customer experience</li>
+                    <li>Increased system visibility and performance metrics</li>
+                    <li>Freed up onshore developers by offloading monitoring, testing, and issue resolution</li>
+                    <li>Significant expense savings overall, enabling reinvestment into customer experience and growth</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <!-- Testimonial -->
-    <section>
-        <div class="container-narrow">
-            <div style="background: linear-gradient(135deg, rgba(137, 56, 159, 0.1) 0%, rgba(237, 41, 37, 0.1) 100%); padding: 48px; border-radius: 12px; border-left: 4px solid var(--color-primary);">
-                <p style="font-size: 24px; line-height: 1.6; font-style: italic; margin-bottom: 24px;">"NULogic has been a true partner in helping us stabilize, scale, and optimize our Salesforce Commerce Cloud platform – creating a more responsive and resilient system for our customers."</p>
-                <p style="font-weight: 700; color: var(--color-primary);">Sunil Kumar</p>
-                <p style="color: #666; font-size: 14px;">Senior Director of Engineering, Digital Forever 21</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technologies -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>Technologies</h2>
-
-            <div style="margin-top: 32px;">
-                <h3 style="margin-bottom: 20px; font-size: 18px;">Engineering Stack:</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px;">
-                    <span class="tag" style="background: white; color: var(--color-primary); padding: 12px 20px; font-size: 14px; border-radius: 6px; border: 1px solid #e0e0e0;">AWS</span>
-                    <span class="tag" style="background: white; color: var(--color-primary); padding: 12px 20px; font-size: 14px; border-radius: 6px; border: 1px solid #e0e0e0;">Splunk</span>
-                    <span class="tag" style="background: white; color: var(--color-primary); padding: 12px 20px; font-size: 14px; border-radius: 6px; border: 1px solid #e0e0e0;">Grafana</span>
-                    <span class="tag" style="background: white; color: var(--color-primary); padding: 12px 20px; font-size: 14px; border-radius: 6px; border: 1px solid #e0e0e0;">New Relic</span>
-                    <span class="tag" style="background: white; color: var(--color-primary); padding: 12px 20px; font-size: 14px; border-radius: 6px; border: 1px solid #e0e0e0;">Prometheus</span>
-                </div>
-
-                <h3 style="margin-bottom: 20px; font-size: 18px;">Partner Integrations:</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <span class="tag" style="background: white; color: var(--color-primary); padding: 12px 20px; font-size: 14px; border-radius: 6px; border: 1px solid #e0e0e0;">Salesforce Commerce Cloud</span>
-                    <span class="tag" style="background: white; color: var(--color-primary); padding: 12px 20px; font-size: 14px; border-radius: 6px; border: 1px solid #e0e0e0;">Bloomreach</span>
-                </div>
-            </div>
-
-            <div style="margin-top: 48px;">
-                <h3 style="margin-bottom: 20px; font-size: 18px;">Services:</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <span class="tag" style="background: white; color: var(--color-primary); padding: 12px 20px; font-size: 14px; border-radius: 6px; border: 1px solid #e0e0e0;">Monitoring and Support</span>
-                    <span class="tag" style="background: white; color: var(--color-primary); padding: 12px 20px; font-size: 14px; border-radius: 6px; border: 1px solid #e0e0e0;">Performance Engineering</span>
-                    <span class="tag" style="background: white; color: var(--color-primary); padding: 12px 20px; font-size: 14px; border-radius: 6px; border: 1px solid #e0e0e0;">Quality Assurance</span>
-                    <span class="tag" style="background: white; color: var(--color-primary); padding: 12px 20px; font-size: 14px; border-radius: 6px; border: 1px solid #e0e0e0;">Dashboarding and Alerting</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section>
+    <section class="section-white">
         <div class="container">
-            <div class="cta-banner">
-                <h2>Ready to deliver flawless peak experiences?</h2>
-                <p>Let's discuss how proactive monitoring and performance optimization can transform your commerce platform.</p>
-                <a href="../contact.html" class="btn">Schedule a Call →</a>
+            <div class="testimonial-box">
+                <p class="testimonial-quote">"NULogic has been a true partner in helping us stabilize, scale, and optimize our Salesforce Commerce Cloud platform – creating a more responsive and resilient system for our customers."</p>
+                <p class="testimonial-author">Sunil Kumar</p>
+                <p class="testimonial-role">Senior Director of Engineering, Digital Forever 21</p>
             </div>
+        </div>
+    </section>
+
+    <!-- Services & Technologies -->
+    <section class="section-gray">
+        <div class="container-narrow">
+            <h2>Services & Technologies</h2>
+
+            <div class="technologies-section">
+                <div class="tech-category">
+                    <h3>Services:</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Monitoring and Support</span>
+                        <span class="tech-tag">Performance Engineering</span>
+                        <span class="tech-tag">Quality Assurance</span>
+                        <span class="tech-tag">Dashboarding and Alerting</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>Engineering Stack:</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Splunk</span>
+                        <span class="tech-tag">Grafana</span>
+                        <span class="tech-tag">New Relic</span>
+                        <span class="tech-tag">Prometheus</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>Partner Integrations:</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Salesforce Commerce Cloud</span>
+                        <span class="tech-tag">Bloomreach</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to deliver flawless peak experiences?</h2>
+            <p>Let's discuss how proactive monitoring and performance optimization can transform your commerce platform.</p>
+            <a href="../contact.html" class="cta-button">Schedule a Call →</a>
         </div>
     </section>
 

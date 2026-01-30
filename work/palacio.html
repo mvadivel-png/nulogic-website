@@ -8,6 +8,318 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .case-study-hero {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(137, 56, 159, 0.1) 0%, rgba(237, 41, 37, 0.1) 100%);
+        }
+
+        .case-study-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .client-logo-section {
+            background: white;
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .client-logo-section img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        .client-info-grid {
+            background: #F9F9F9;
+            padding: 60px 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .info-item {
+            text-align: center;
+        }
+
+        .info-label {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #89389f;
+            margin-bottom: 12px;
+        }
+
+        .info-value {
+            font-size: 18px;
+            font-weight: 500;
+            color: #2B2B2B;
+        }
+
+        .info-value a {
+            color: #2B2B2B;
+            text-decoration: none;
+        }
+
+        .info-value a:hover {
+            color: #89389f;
+        }
+
+        .section-white {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .section-gray {
+            background: #F9F9F9;
+            padding: 80px 0;
+        }
+
+        .two-column-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .two-column-layout img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .content-box {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .content-box h2 {
+            font-size: 42px;
+            font-weight: 700;
+            color: #2B2B2B;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .content-box h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2B2B2B;
+            margin-top: 40px;
+            margin-bottom: 16px;
+        }
+
+        .content-box p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #424242;
+            margin-bottom: 20px;
+        }
+
+        .content-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .content-box ul li {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #424242;
+            margin-bottom: 16px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .content-box ul li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #89389f;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 1.8;
+        }
+
+        .numbered-list {
+            counter-reset: item;
+            list-style: none;
+            padding: 0;
+        }
+
+        .numbered-list li {
+            counter-increment: item;
+            margin-bottom: 32px;
+        }
+
+        .numbered-list li:before {
+            content: counter(item) ". ";
+            color: #89389f;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .result-card {
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+            border-left: 4px solid #89389f;
+        }
+
+        .result-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #89389f;
+            margin: 0 0 16px 0;
+        }
+
+        .result-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #424242;
+            margin: 0;
+        }
+
+        .highlight-box {
+            background: white;
+            border-left: 4px solid #89389f;
+            padding: 32px;
+            margin: 40px 0;
+            font-size: 20px;
+            line-height: 1.8;
+            color: #424242;
+            font-style: italic;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .service-item h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2B2B2B;
+            margin: 0 0 12px 0;
+        }
+
+        .service-item p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #424242;
+            margin: 0;
+        }
+
+        .tech-logos {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tech-logos img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .solution-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .solution-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: white;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 20px;
+            margin-bottom: 32px;
+        }
+
+        .cta-section .btn {
+            background: white;
+            color: #89389f;
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .cta-section .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .two-column-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .solution-images {
+                grid-template-columns: 1fr;
+            }
+
+            .content-box h2 {
+                font-size: 32px;
+            }
+
+            .cta-section h2 {
+                font-size: 36px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -50,218 +362,221 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="padding: 80px 0; background: linear-gradient(135deg, rgba(137, 56, 159, 0.9) 0%, rgba(237, 41, 37, 0.9) 100%);">
+    <!-- Hero Banner -->
+    <section class="case-study-hero">
+        <img src="../images/casestudies/palacio-hero.png" alt="El Palacio de Hierro Marketplace">
+    </section>
+
+    <!-- Client Logo Section -->
+    <section class="client-logo-section">
         <div class="container">
-            <p style="color: rgba(255,255,255,0.9); margin-bottom: 16px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Case Study</p>
-            <h1 style="color: white; margin-bottom: 24px;">El Palacio de Hierro</h1>
-            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 900px;">Accelerating Marketplace Success with Mirakl Marketplace Integration and Salesforce Commerce Cloud (SFCC)</p>
+            <img src="../images/casestudies/palacio-logo.png" alt="El Palacio de Hierro Logo">
+            <h1 style="font-size: 48px; font-weight: 700; color: #2B2B2B; margin-top: 32px; margin-bottom: 20px;">Accelerating Marketplace Success with Mirakl Marketplace Integration and Salesforce Commerce Cloud (SFCC)</h1>
         </div>
     </section>
 
-    <!-- Overview -->
-    <section>
-        <div class="container-narrow">
-            <h2>Overview</h2>
-            <p>NuLogic transformed El Palacio de Hierro's digital commerce through Mirakl Marketplace Platform integration with Salesforce Commerce Cloud (SFCC), modernizing operations and enabling third-party seller expansion. This prestigious Mexican luxury department store, with over 135 years in premium retail, sought to blend traditional heritage with modern eCommerce innovation while attracting a younger, digitally-focused audience.</p>
-
-            <div style="margin-top: 40px;">
-                <h3>Client Background</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;"><strong>Industry:</strong> Luxury Retail / Department Store</li>
-                    <li style="margin-bottom: 12px;"><strong>Location:</strong> Mexico City, Latin America</li>
-                    <li style="margin-bottom: 12px;"><strong>Heritage:</strong> Over 135 years in premium retail, recognized as a leader in Latin American digital commerce</li>
-                    <li style="margin-bottom: 12px;"><strong>Website:</strong> www.elpalaciodehierro.com</li>
-                </ul>
+    <!-- Client Info Grid -->
+    <section class="client-info-grid">
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-label">Region</div>
+                <div class="info-value">Latam</div>
             </div>
-        </div>
-    </section>
-
-    <!-- Business Challenges -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>Business Challenges</h2>
-            <p>El Palacio de Hierro faced several critical challenges in their digital transformation journey:</p>
-
-            <div style="margin-top: 24px;">
-                <h3 style="font-size: 20px; margin-bottom: 16px;">Primary Issues</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Need for rapid evolution beyond traditional eCommerce</li>
-                    <li style="margin-bottom: 12px;">Requirement to launch a robust, scalable third-party marketplace</li>
-                    <li style="margin-bottom: 12px;">Complex integration of Mirakl with SFCC using Storefront Reference Architecture (SFRA)</li>
-                    <li style="margin-bottom: 12px;">Risk of data synchronization failures between platforms</li>
-                    <li style="margin-bottom: 12px;">Manual overhead from import/export processes</li>
-                    <li style="margin-bottom: 12px;">Scalability concerns for growing seller networks</li>
-                </ul>
+            <div class="info-item">
+                <div class="info-label">Website</div>
+                <div class="info-value"><a href="https://www.elpalaciodehierro.com" target="_blank">www.elpalaciodehierro.com</a></div>
             </div>
-
-            <div style="margin-top: 32px;">
-                <h3 style="font-size: 20px; margin-bottom: 16px;">Key Pain Points</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Product category, attribute, inventory, and pricing mismatches</li>
-                    <li style="margin-bottom: 12px;">Manual workflow inefficiencies</li>
-                    <li style="margin-bottom: 12px;">Performance risks with storefront stability</li>
-                </ul>
+            <div class="info-item">
+                <div class="info-label">Client Since</div>
+                <div class="info-value">2024</div>
             </div>
         </div>
     </section>
 
-    <!-- Solution -->
-    <section>
-        <div class="container-narrow">
-            <h2>Solution Implemented</h2>
-            <p>NuLogic deployed prebuilt connector cartridges (bm_mirakl, int_mirakl, int_mirakl_sfra) creating seamless Mirakl-SFCC connectivity through a comprehensive multi-phase strategy:</p>
+    <!-- Client Overview Section -->
+    <section class="section-white">
+        <div class="content-box">
+            <h2>About the Client</h2>
+            <p>El Palacio de Hierro is the oldest and most innovative luxury department store in Mexico City, with a legacy of over 135 years in premium retail and customer service. The brand operates as a luxury retailer combining traditional excellence with digital-first marketplace strategy across five generations.</p>
+        </div>
+    </section>
 
-            <div style="margin-top: 32px;">
-                <h3 style="font-size: 20px; margin-bottom: 16px;">1. Cloud Integration for Real-Time Sync</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Automated API orchestration</li>
-                    <li style="margin-bottom: 12px;">Continuous data exchange across product catalogs, pricing, inventory</li>
-                    <li style="margin-bottom: 12px;">Accuracy assurance across platforms</li>
-                </ul>
+    <!-- Challenge Section -->
+    <section class="section-gray">
+        <div class="two-column-layout">
+            <div>
+                <img src="../images/casestudies/palacio-challenge.png" alt="The Challenge">
             </div>
+            <div>
+                <h2 style="font-size: 42px; font-weight: 700; color: #2B2B2B; margin-bottom: 24px;">The Challenge</h2>
+                <p style="font-size: 18px; line-height: 1.8; color: #424242; margin-bottom: 24px;">El Palacio de Hierro needed to evolve beyond traditional eCommerce and launch a robust, scalable third-party marketplace by integrating Mirakl Marketplace Platform with Salesforce Commerce Cloud (SFCC) leveraging Storefront Reference Architecture (SFRA).</p>
 
-            <div style="margin-top: 32px;">
-                <h3 style="font-size: 20px; margin-bottom: 16px;">2. Scalable Architecture Mapping</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Flexible catalog and attribute frameworks</li>
-                    <li style="margin-bottom: 12px;">Cross-platform alignment</li>
-                    <li style="margin-bottom: 12px;">Foundation for third-party marketplace growth</li>
-                </ul>
-            </div>
-
-            <div style="margin-top: 32px;">
-                <h3 style="font-size: 20px; margin-bottom: 16px;">3. Storefront Optimization with SFRA</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Seamless display of third-party product data</li>
-                    <li style="margin-bottom: 12px;">Accurate pricing and imagery</li>
-                    <li style="margin-bottom: 12px;">Superior customer experience enhancement</li>
-                </ul>
-            </div>
-
-            <div style="margin-top: 32px;">
-                <h3 style="font-size: 20px; margin-bottom: 16px;">4. Workflow Automation</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Robust job management</li>
-                    <li style="margin-bottom: 12px;">Automatic data synchronization</li>
-                    <li style="margin-bottom: 12px;">Reduced manual overhead and error minimization</li>
-                </ul>
-            </div>
-
-            <div style="margin-top: 32px;">
-                <h3 style="font-size: 20px; margin-bottom: 16px;">5. Performance Tuning</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">API refactoring</li>
-                    <li style="margin-bottom: 12px;">Optimized job execution</li>
-                    <li style="margin-bottom: 12px;">Site speed and reliability safeguarding</li>
+                <h3 style="font-size: 24px; font-weight: 600; color: #2B2B2B; margin-top: 32px; margin-bottom: 16px;">Three Primary Obstacles:</h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="font-size: 18px; line-height: 1.8; color: #424242; margin-bottom: 16px; padding-left: 30px; position: relative;">
+                        <span style="position: absolute; left: 0; color: #89389f; font-weight: bold; font-size: 24px;">•</span>
+                        <strong>Avoided Complex Data Pitfalls</strong> — synchronized product categories, attributes, inventory, and pricing
+                    </li>
+                    <li style="font-size: 18px; line-height: 1.8; color: #424242; margin-bottom: 16px; padding-left: 30px; position: relative;">
+                        <span style="position: absolute; left: 0; color: #89389f; font-weight: bold; font-size: 24px;">•</span>
+                        <strong>Eliminated Manual Overhead</strong> — automated workflows replaced manual import/export processes
+                    </li>
+                    <li style="font-size: 18px; line-height: 1.8; color: #424242; margin-bottom: 16px; padding-left: 30px; position: relative;">
+                        <span style="position: absolute; left: 0; color: #89389f; font-weight: bold; font-size: 24px;">•</span>
+                        <strong>Built for Scalability</strong> — designed architecture supporting growing third-party sellers without performance impact
+                    </li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Results -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>Results & Outcomes</h2>
-            <p>The implementation delivered significant measurable improvements and positioned El Palacio de Hierro as a digitally innovative luxury retailer:</p>
+    <!-- Solution Section -->
+    <section class="section-white">
+        <div class="content-box">
+            <h2>The Solution</h2>
+            <p>NULogic tightly connected the Mirakl Marketplace Platform with Salesforce Commerce Cloud (SFCC) using prebuilt connector cartridges (bm_mirakl, int_mirakl, and int_mirakl_sfra).</p>
 
-            <div style="margin-top: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
-                <div style="background: white; padding: 24px; border-radius: 8px; border-left: 4px solid var(--color-primary);">
-                    <h3 style="font-size: 18px; margin-bottom: 12px; color: var(--color-primary);">Time-to-Market</h3>
-                    <p>Accelerated marketplace launch through prebuilt e-commerce integrations and automation</p>
-                </div>
+            <h3 style="margin-top: 40px;">Multi-Phase Strategy:</h3>
 
-                <div style="background: white; padding: 24px; border-radius: 8px; border-left: 4px solid var(--color-primary);">
-                    <h3 style="font-size: 18px; margin-bottom: 12px; color: var(--color-primary);">Data Accuracy</h3>
-                    <p>Real-time synchronization of products, offers, and pricing across multiple sellers</p>
-                </div>
+            <ol class="numbered-list">
+                <li>
+                    <strong style="font-size: 20px; color: #2B2B2B;">Cloud Integration for Real-Time Sync</strong>
+                    <p style="font-size: 18px; line-height: 1.8; color: #424242; margin-top: 12px;">Automated API orchestration enabling continuous data exchange between platforms</p>
+                </li>
+                <li>
+                    <strong style="font-size: 20px; color: #2B2B2B;">Scalable Architecture Mapping</strong>
+                    <p style="font-size: 18px; line-height: 1.8; color: #424242; margin-top: 12px;">Flexible catalog and attribute frameworks supporting third-party scalability</p>
+                </li>
+                <li>
+                    <strong style="font-size: 20px; color: #2B2B2B;">Storefront Optimization with SFRA</strong>
+                    <p style="font-size: 18px; line-height: 1.8; color: #424242; margin-top: 12px;">Enhanced storefront accuracy for third-party product data and pricing</p>
+                </li>
+                <li>
+                    <strong style="font-size: 20px; color: #2B2B2B;">Workflow Automation</strong>
+                    <p style="font-size: 18px; line-height: 1.8; color: #424242; margin-top: 12px;">Robust job management reducing manual overhead</p>
+                </li>
+                <li>
+                    <strong style="font-size: 20px; color: #2B2B2B;">Performance Tuning</strong>
+                    <p style="font-size: 18px; line-height: 1.8; color: #424242; margin-top: 12px;">Refactored APIs optimizing job execution and site speed</p>
+                </li>
+            </ol>
 
-                <div style="background: white; padding: 24px; border-radius: 8px; border-left: 4px solid var(--color-primary);">
-                    <h3 style="font-size: 18px; margin-bottom: 12px; color: var(--color-primary);">Platform Scalability</h3>
-                    <p>Modular architecture supporting effortless expansion and long-term growth</p>
-                </div>
-
-                <div style="background: white; padding: 24px; border-radius: 8px; border-left: 4px solid var(--color-primary);">
-                    <h3 style="font-size: 18px; margin-bottom: 12px; color: var(--color-primary);">Customer Experience</h3>
-                    <p>Wider product selection, accurate availability, faster discovery driving engagement and conversions</p>
-                </div>
-
-                <div style="background: white; padding: 24px; border-radius: 8px; border-left: 4px solid var(--color-primary);">
-                    <h3 style="font-size: 18px; margin-bottom: 12px; color: var(--color-primary);">Market Position</h3>
-                    <p>Recognition as innovative e-commerce leader with robust, future-ready online marketplace</p>
-                </div>
-            </div>
-
-            <div style="margin-top: 40px;">
-                <h3>Strategic Impact</h3>
-                <p style="margin-top: 16px;">The implementation enabled El Palacio de Hierro to achieve marketplace scalability without operational disruption, enhanced competitive positioning in Latin American eCommerce, and established a foundation for sustainable revenue growth through third-party seller network expansion, all while maintaining their brand heritage.</p>
+            <div class="solution-images">
+                <img src="../images/casestudies/palacio-solution1.png" alt="Solution Architecture 1">
+                <img src="../images/casestudies/palacio-solution2.png" alt="Solution Architecture 2">
+                <img src="../images/casestudies/palacio-solution3.png" alt="Solution Architecture 3">
             </div>
         </div>
     </section>
 
-    <!-- Services Provided -->
-    <section>
-        <div class="container-narrow">
+    <!-- Results Section -->
+    <section class="section-gray">
+        <div class="content-box">
+            <h2>Results</h2>
+            <p>The implementation delivered significant measurable improvements and positioned El Palacio de Hierro as a digitally innovative luxury retailer.</p>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>Faster Marketplace Launch</h3>
+                    <p>Prebuilt integrations shortened delivery timelines</p>
+                </div>
+                <div class="result-card">
+                    <h3>Real-Time Product & Pricing Accuracy</h3>
+                    <p>Products and pricing sync instantly across multiple sellers</p>
+                </div>
+                <div class="result-card">
+                    <h3>Scalable, Future-Ready Architecture</h3>
+                    <p>Modular, API-first platform allowing effortless expansion</p>
+                </div>
+                <div class="result-card">
+                    <h3>Enhanced Customer Experience (CX)</h3>
+                    <p>Wider product selection and faster discovery boosting engagement</p>
+                </div>
+                <div class="result-card">
+                    <h3>Digital Commerce Leadership</h3>
+                    <p>Client recognized as innovative e-commerce leader</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 60px; text-align: center;">
+                <img src="../images/casestudies/palacio-results.png" alt="Results Overview" style="max-width: 100%; height: auto; border-radius: 8px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlight Section -->
+    <section class="section-white">
+        <div class="content-box">
+            <div class="highlight-box">
+                "NULogic was the clear partner for its Salesforce Commerce Cloud expertise, proven marketplace experience—not just with Mirakl but also custom-built platforms—and access to experienced Marketplace Growth Consultants focused on seller enablement and GMV acceleration."
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Provided Section -->
+    <section class="section-gray">
+        <div class="content-box">
             <h2>Services Provided</h2>
-            <div style="margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-                <div>
-                    <h3 style="font-size: 18px; margin-bottom: 12px;">eCommerce Development</h3>
-                    <p>Custom Mirakl connector configuration and SFCC cartridge setup</p>
-                </div>
 
-                <div>
-                    <h3 style="font-size: 18px; margin-bottom: 12px;">Cloud Integration</h3>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>eCommerce Development</h3>
+                    <p>Custom configuration of Mirakl connectors and SFCC cartridges</p>
+                </div>
+                <div class="service-item">
+                    <h3>Cloud Integration</h3>
                     <p>End-to-end API integration for automated data exchange</p>
                 </div>
-
-                <div>
-                    <h3 style="font-size: 18px; margin-bottom: 12px;">Data Engineering & Automation</h3>
-                    <p>Streamlined workflow automation for efficiency</p>
+                <div class="service-item">
+                    <h3>Data Engineering & Automation</h3>
+                    <p>Streamlined workflows through data automation</p>
                 </div>
-
-                <div>
-                    <h3 style="font-size: 18px; margin-bottom: 12px;">Monitoring & Support</h3>
-                    <p>Continuous system monitoring and dedicated platform support</p>
+                <div class="service-item">
+                    <h3>Monitoring & Support</h3>
+                    <p>Continuous system monitoring and dedicated support</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Technologies -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
+    <!-- Technologies Section -->
+    <section class="section-white">
+        <div class="content-box">
             <h2>Technologies & Architecture</h2>
 
-            <div style="margin-top: 24px;">
-                <h3 style="font-size: 20px; margin-bottom: 16px;">Core Technologies</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Salesforce Commerce Cloud (SFCC)</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Mirakl Marketplace Platform</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">SFRA</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">API Integration</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Cloud Architecture</span>
-                </div>
-
-                <h3 style="font-size: 20px; margin-bottom: 16px;">Integration Components</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Prebuilt connector cartridges (bm_mirakl, int_mirakl, int_mirakl_sfra)</li>
-                    <li style="margin-bottom: 12px;">API-driven real-time orchestration</li>
-                    <li style="margin-bottom: 12px;">Modular, API-first design</li>
-                    <li style="margin-bottom: 12px;">Real-time synchronization capabilities</li>
-                    <li style="margin-bottom: 12px;">Scalable cloud-based infrastructure</li>
-                </ul>
+            <div class="tech-logos">
+                <img src="../images/casestudies/salesforce-logo.png" alt="Salesforce Commerce Cloud">
             </div>
+
+            <h3>Engineering Stack</h3>
+            <div style="margin-top: 30px;">
+                <img src="../images/casestudies/palacio-engineering.png" alt="Engineering Stack" style="max-width: 100%; height: auto; border-radius: 8px;">
+            </div>
+
+            <h3>Integration Architecture</h3>
+            <div style="margin-top: 30px;">
+                <img src="../images/casestudies/palacio-integration.png" alt="Integration Architecture" style="max-width: 100%; height: auto; border-radius: 8px;">
+            </div>
+
+            <h3 style="margin-top: 40px;">Core Technologies</h3>
+            <ul>
+                <li>Salesforce Commerce Cloud (SFCC)</li>
+                <li>Mirakl Marketplace Platform</li>
+                <li>SFRA (Storefront Reference Architecture)</li>
+                <li>Prebuilt connector cartridges (bm_mirakl, int_mirakl, int_mirakl_sfra)</li>
+                <li>API-driven real-time orchestration</li>
+                <li>Modular, API-first design</li>
+                <li>Scalable cloud-based infrastructure</li>
+            </ul>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section>
+    <!-- CTA Section -->
+    <section class="cta-section">
         <div class="container">
-            <div class="cta-banner">
-                <h2>Ready to build a marketplace?</h2>
-                <p>Let's discuss how we can integrate Mirakl with your commerce platform.</p>
-                <a href="../contact.html" class="btn">Schedule a Call →</a>
-            </div>
+            <h2>Let's Work Together</h2>
+            <p>Ready to transform your marketplace strategy? Contact us to discuss how we can help.</p>
+            <a href="../contact.html" class="btn">Get in Touch</a>
         </div>
     </section>
 

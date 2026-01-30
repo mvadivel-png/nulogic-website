@@ -8,6 +8,282 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .case-study-hero {
+            background-image: url('../images/casestudies/wildfork-hero.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 120px 0;
+            position: relative;
+        }
+        .case-study-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(137, 56, 159, 0.85) 0%, rgba(237, 41, 37, 0.85) 100%);
+        }
+        .case-study-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+        .client-logo {
+            max-width: 200px;
+            margin-bottom: 32px;
+        }
+        .client-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            background: #F9F9F9;
+            padding: 48px 0;
+        }
+        .client-info-item h4 {
+            color: #89389f;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+        }
+        .client-info-item p {
+            color: #2B2B2B;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+        .client-info-item a {
+            color: #2B2B2B;
+            text-decoration: none;
+        }
+        .client-info-item a:hover {
+            color: #89389f;
+        }
+        .section-white {
+            background: #FFFFFF;
+            padding: 80px 0;
+        }
+        .section-gray {
+            background: #F9F9F9;
+            padding: 80px 0;
+        }
+        .container-narrow {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .section-title {
+            color: #2B2B2B;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+        .section-content {
+            color: #424242;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .challenge-image {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .solution-list {
+            margin-top: 32px;
+        }
+        .solution-item {
+            margin-bottom: 32px;
+        }
+        .solution-item h3 {
+            color: #2B2B2B;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .solution-item p {
+            color: #424242;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+        .solution-item ul {
+            margin-top: 12px;
+            padding-left: 24px;
+        }
+        .solution-item ul li {
+            color: #424242;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        .architecture-callout {
+            background: #F9F9F9;
+            border-left: 4px solid #89389f;
+            padding: 24px;
+            margin: 40px 0;
+            border-radius: 4px;
+        }
+        .architecture-callout p {
+            color: #2B2B2B;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+        }
+        .architecture-image {
+            width: 100%;
+            margin: 40px 0;
+            border-radius: 8px;
+        }
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .result-item {
+            background: #FFFFFF;
+            padding: 32px;
+            border-radius: 8px;
+            border-left: 4px solid #89389f;
+            text-align: center;
+        }
+        .result-item h3 {
+            color: #89389f;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .result-item p {
+            color: #424242;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .result-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .result-images img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .testimonial {
+            background: #FFFFFF;
+            padding: 48px;
+            border-left: 4px solid #89389f;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        .testimonial-quote {
+            color: #2B2B2B;
+            font-size: 22px;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
+        .testimonial-author {
+            color: #2B2B2B;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .testimonial-title {
+            color: #424242;
+            font-size: 15px;
+        }
+        .services-section {
+            margin-top: 40px;
+        }
+        .services-label {
+            color: #89389f;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 16px;
+        }
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+        .tag {
+            background: #FFFFFF;
+            color: #2B2B2B;
+            padding: 12px 20px;
+            border-radius: 24px;
+            font-size: 15px;
+            font-weight: 500;
+            border: 1px solid #E0E0E0;
+        }
+        .technology-logos {
+            display: flex;
+            gap: 32px;
+            margin-top: 24px;
+            align-items: center;
+        }
+        .technology-logos img {
+            height: 40px;
+        }
+        .cta-section {
+            background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            color: #FFFFFF;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 20px;
+            margin-bottom: 32px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #FFFFFF;
+            color: #89389f;
+            padding: 16px 40px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        @media (max-width: 768px) {
+            .client-info-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .challenge-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+            .result-images {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -51,183 +327,232 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="padding: 80px 0; background: linear-gradient(135deg, rgba(137, 56, 159, 0.9) 0%, rgba(237, 41, 37, 0.9) 100%);">
+    <section class="case-study-hero">
         <div class="container">
-            <p style="color: rgba(255,255,255,0.9); margin-bottom: 16px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Case Study</p>
-            <h1 style="color: white; margin-bottom: 24px;">Wild Fork Foods Scales Specialty Food Retail with commercetools Migration</h1>
-            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 900px;">NuLogic enabled Wild Fork Foods' transition from Shopify Plus to commercetools, delivering enterprise composable commerce capabilities that support complex inventory management, subscription services, and rapid multi-market expansion.</p>
+            <img src="../images/casestudies/wildfork-logo-new.png" alt="Wild Fork Foods" class="client-logo">
+            <h1 style="color: white; font-size: 48px; font-weight: 700; margin-bottom: 24px; line-height: 1.2; max-width: 900px;">Wild Fork Foods Scales Specialty Food Retail with commercetools Migration</h1>
+            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 800px;">NuLogic enabled Wild Fork Foods' transition from Shopify Plus to commercetools, delivering enterprise composable commerce capabilities that support complex inventory management, subscription services, and rapid multi-market expansion.</p>
         </div>
     </section>
 
-    <!-- Client Info -->
-    <section style="background: #fafafa; padding: 40px 0;">
+    <!-- Client Info Grid -->
+    <section class="client-info-grid">
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px;">
-                <div>
-                    <h4 style="color: var(--color-accent-purple); font-size: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Client</h4>
-                    <p style="font-size: 18px; font-weight: 600;">Wild Fork Foods</p>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px;">
+                <div class="client-info-item">
+                    <h4>Region</h4>
+                    <p>LATAM & North America</p>
                 </div>
-                <div>
-                    <h4 style="color: var(--color-accent-purple); font-size: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Region</h4>
-                    <p style="font-size: 18px; font-weight: 600;">LATAM & North America</p>
+                <div class="client-info-item">
+                    <h4>Website</h4>
+                    <p><a href="https://www.wildforkfoods.com" target="_blank">wildforkfoods.com</a></p>
                 </div>
-                <div>
-                    <h4 style="color: var(--color-accent-purple); font-size: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Industry</h4>
-                    <p style="font-size: 18px; font-weight: 600;">Specialty Food Retail</p>
-                </div>
-                <div>
-                    <h4 style="color: var(--color-accent-purple); font-size: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Services</h4>
-                    <p style="font-size: 18px; font-weight: 600;">Platform Migration & Build</p>
+                <div class="client-info-item">
+                    <h4>Client Since</h4>
+                    <p>2024</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Challenge -->
-    <section>
+    <!-- Client Overview -->
+    <section class="section-white">
         <div class="container-narrow">
-            <h2>The Challenge</h2>
-            <p>Wild Fork Foods, a rapidly growing specialty food retailer offering premium meats, seafood, and prepared foods, faced significant operational constraints with their Shopify Plus platform. As they expanded their retail footprint and e-commerce operations across multiple markets, they needed a more flexible, scalable solution. Key challenges included:</p>
-            <ul style="margin-top: 24px;">
-                <li style="margin-bottom: 16px;"><strong>Platform limitations:</strong> Shopify Plus couldn't support complex inventory management requirements for perishable goods with specific storage and handling needs</li>
-                <li style="margin-bottom: 16px;"><strong>Subscription complexity:</strong> Limited flexibility for managing recurring subscription orders with customizable delivery schedules and product variations</li>
-                <li style="margin-bottom: 16px;"><strong>Multi-market expansion:</strong> Needed to rapidly launch in new markets with localized pricing, payment methods, and fulfillment capabilities</li>
-                <li style="margin-bottom: 16px;"><strong>Integration constraints:</strong> Difficulty integrating with specialized cold-chain logistics providers and warehouse management systems</li>
-                <li style="margin-bottom: 16px;"><strong>Customization barriers:</strong> Limited ability to create unique shopping experiences and promotional mechanics for specialty food products</li>
-                <li style="margin-bottom: 16px;"><strong>Omnichannel requirements:</strong> Need to unify online ordering with in-store inventory and pickup/delivery options across growing store network</li>
-            </ul>
+            <h2 class="section-title">Client Overview</h2>
+            <p class="section-content">Wild Fork Foods is a rapidly growing specialty food retailer offering premium meats, seafood, and prepared foods through a hybrid retail model combining physical stores with robust e-commerce operations. With an expanding footprint across North America and LATAM markets, Wild Fork needed a commerce platform that could support complex inventory management for perishable goods, flexible subscription services, and rapid multi-market expansion while providing the customization capabilities required for their unique business model.</p>
         </div>
     </section>
 
-    <!-- Solution -->
-    <section style="background: #fafafa;">
+    <!-- The Challenge -->
+    <section class="section-gray">
         <div class="container-narrow">
-            <h2>The Solution</h2>
+            <h2 class="section-title">The Challenge</h2>
+            <p class="section-content">Wild Fork Foods faced significant operational constraints with their Shopify Plus platform as they scaled their retail footprint and e-commerce operations across multiple markets. The limitations of Shopify Plus were preventing them from executing their growth strategy and delivering the customer experience they envisioned.</p>
 
-            <h3 style="margin-top: 32px;">Strategic Migration Planning & Execution</h3>
-            <ul style="margin-top: 16px;">
-                <li style="margin-bottom: 12px;">Comprehensive assessment of existing Shopify Plus implementation and business requirements</li>
-                <li style="margin-bottom: 12px;">Detailed migration roadmap with phased approach to minimize business disruption</li>
-                <li style="margin-bottom: 12px;">Data migration strategy ensuring zero data loss for customer accounts, order history, and product catalogs</li>
-                <li style="margin-bottom: 12px;">Parallel environment testing and validation before cutover</li>
-                <li style="margin-bottom: 12px;">SEO preservation strategy maintaining search rankings and URL structures</li>
-            </ul>
+            <div class="solution-list">
+                <div class="solution-item">
+                    <h3>Platform Limitations</h3>
+                    <p>Shopify Plus couldn't support complex inventory management requirements for perishable goods with specific storage and handling needs, creating operational inefficiencies and limiting their ability to optimize stock management.</p>
+                </div>
 
-            <h3 style="margin-top: 32px;">commercetools Composable Commerce Architecture</h3>
-            <ul style="margin-top: 16px;">
-                <li style="margin-bottom: 12px;">API-first, headless architecture providing flexibility for custom frontend experiences</li>
-                <li style="margin-bottom: 12px;">Microservices-based design enabling independent scaling of critical commerce functions</li>
-                <li style="margin-bottom: 12px;">Custom product catalog structure supporting complex SKU variations, bundle configurations, and perishability tracking</li>
-                <li style="margin-bottom: 12px;">Advanced pricing engine with support for dynamic pricing, promotions, and customer-specific pricing tiers</li>
-                <li style="margin-bottom: 12px;">Multi-currency and multi-language capabilities for LATAM and North American markets</li>
-            </ul>
+                <div class="solution-item">
+                    <h3>Subscription Complexity</h3>
+                    <p>Limited flexibility for managing recurring subscription orders with customizable delivery schedules and product variations meant they couldn't fully capitalize on their subscription business model.</p>
+                </div>
 
-            <h3 style="margin-top: 32px;">Advanced Inventory & Fulfillment Integration</h3>
-            <ul style="margin-top: 16px;">
-                <li style="margin-bottom: 12px;">Real-time inventory synchronization across online and physical store locations</li>
-                <li style="margin-bottom: 12px;">Integration with warehouse management systems (WMS) for cold-chain logistics</li>
-                <li style="margin-bottom: 12px;">Custom fulfillment logic supporting delivery time windows and temperature-controlled shipping</li>
-                <li style="margin-bottom: 12px;">Store-level inventory visibility for buy-online-pickup-in-store (BOPIS) capabilities</li>
-                <li style="margin-bottom: 12px;">Automated inventory allocation and replenishment workflows</li>
-            </ul>
+                <div class="solution-item">
+                    <h3>Multi-Market Expansion</h3>
+                    <p>Needed to rapidly launch in new markets with localized pricing, payment methods, and fulfillment capabilities, but Shopify Plus made this process slow and resource-intensive.</p>
+                </div>
 
-            <h3 style="margin-top: 32px;">Subscription & Customer Experience Enhancement</h3>
-            <ul style="margin-top: 16px;">
-                <li style="margin-bottom: 12px;">Flexible subscription management with customizable delivery frequencies and product swaps</li>
-                <li style="margin-bottom: 12px;">Customer portal for subscription management, payment updates, and delivery preferences</li>
-                <li style="margin-bottom: 12px;">Personalized product recommendations based on purchase history and preferences</li>
-                <li style="margin-bottom: 12px;">Enhanced checkout experience with multiple payment options and saved payment methods</li>
-                <li style="margin-bottom: 12px;">Loyalty program integration with points accrual and redemption</li>
-            </ul>
+                <div class="solution-item">
+                    <h3>Integration Constraints</h3>
+                    <p>Difficulty integrating with specialized cold-chain logistics providers and warehouse management systems critical for their perishable food operations.</p>
+                </div>
+
+                <div class="solution-item">
+                    <h3>Customization Barriers</h3>
+                    <p>Limited ability to create unique shopping experiences and promotional mechanics specifically designed for specialty food products and their diverse customer segments.</p>
+                </div>
+
+                <div class="solution-item">
+                    <h3>Omnichannel Requirements</h3>
+                    <p>Need to unify online ordering with in-store inventory and pickup/delivery options across growing store network to provide seamless customer experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Solution -->
+    <section class="section-white">
+        <div class="container-narrow">
+            <h2 class="section-title">The Solution</h2>
+            <p class="section-content">NuLogic designed and executed a comprehensive migration from Shopify Plus to commercetools, implementing a modern composable commerce architecture that provides Wild Fork Foods with the flexibility, scalability, and capabilities needed to support their ambitious growth plans.</p>
+
+            <div class="solution-list">
+                <div class="solution-item">
+                    <h3>Strategic Migration Planning & Execution</h3>
+                    <ul>
+                        <li>Comprehensive assessment of existing Shopify Plus implementation and business requirements</li>
+                        <li>Detailed migration roadmap with phased approach to minimize business disruption</li>
+                        <li>Data migration strategy ensuring zero data loss for customer accounts, order history, and product catalogs</li>
+                        <li>Parallel environment testing and validation before cutover</li>
+                        <li>SEO preservation strategy maintaining search rankings and URL structures</li>
+                    </ul>
+                </div>
+
+                <div class="solution-item">
+                    <h3>commercetools Composable Commerce Architecture</h3>
+                    <ul>
+                        <li>API-first, headless architecture providing flexibility for custom frontend experiences</li>
+                        <li>Microservices-based design enabling independent scaling of critical commerce functions</li>
+                        <li>Custom product catalog structure supporting complex SKU variations, bundle configurations, and perishability tracking</li>
+                        <li>Advanced pricing engine with support for dynamic pricing, promotions, and customer-specific pricing tiers</li>
+                        <li>Multi-currency and multi-language capabilities for LATAM and North American markets</li>
+                    </ul>
+                </div>
+
+                <div class="solution-item">
+                    <h3>Advanced Inventory & Fulfillment Integration</h3>
+                    <ul>
+                        <li>Real-time inventory synchronization across online and physical store locations</li>
+                        <li>Integration with warehouse management systems (WMS) for cold-chain logistics</li>
+                        <li>Custom fulfillment logic supporting delivery time windows and temperature-controlled shipping</li>
+                        <li>Store-level inventory visibility for buy-online-pickup-in-store (BOPIS) capabilities</li>
+                        <li>Automated inventory allocation and replenishment workflows</li>
+                    </ul>
+                </div>
+
+                <div class="solution-item">
+                    <h3>Subscription & Customer Experience Enhancement</h3>
+                    <ul>
+                        <li>Flexible subscription management with customizable delivery frequencies and product swaps</li>
+                        <li>Customer portal for subscription management, payment updates, and delivery preferences</li>
+                        <li>Personalized product recommendations based on purchase history and preferences</li>
+                        <li>Enhanced checkout experience with multiple payment options and saved payment methods</li>
+                        <li>Loyalty program integration with points accrual and redemption</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Results -->
-    <section>
+    <section class="section-gray">
         <div class="container-narrow">
-            <h2>Results</h2>
-            <div class="cards-grid" style="margin-top: 32px;">
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">100%</h3>
+            <h2 class="section-title">Measurable Results</h2>
+            <p class="section-content">The migration to commercetools delivered immediate and significant benefits across Wild Fork Foods' operations:</p>
+
+            <div class="results-grid">
+                <div class="result-item">
+                    <h3>100%</h3>
                     <p>Successful data migration with zero loss</p>
                 </div>
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">45%</h3>
+
+                <div class="result-item">
+                    <h3>45%</h3>
                     <p>Faster time-to-market for new features</p>
                 </div>
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">3x</h3>
+
+                <div class="result-item">
+                    <h3>3x</h3>
                     <p>Increase in API performance and scalability</p>
                 </div>
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">60%</h3>
+
+                <div class="result-item">
+                    <h3>60%</h3>
                     <p>Reduction in subscription management overhead</p>
                 </div>
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">5 Markets</h3>
+
+                <div class="result-item">
+                    <h3>5 Markets</h3>
                     <p>Launched in first year post-migration</p>
                 </div>
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">35%</h3>
+
+                <div class="result-item">
+                    <h3>35%</h3>
                     <p>Improvement in checkout conversion rate</p>
                 </div>
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">99.9%</h3>
+
+                <div class="result-item">
+                    <h3>99.9%</h3>
                     <p>Platform uptime maintained</p>
                 </div>
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">50%</h3>
+
+                <div class="result-item">
+                    <h3>50%</h3>
                     <p>Reduction in integration development time</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Technologies -->
-    <section style="background: #fafafa;">
+    <!-- Services & Technologies -->
+    <section class="section-white">
         <div class="container-narrow">
-            <h2>Technologies & Services</h2>
-            <div style="margin-top: 24px;">
-                <h4 style="margin-bottom: 16px; color: var(--color-accent-purple);">Platform & Architecture</h4>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">commercetools</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Headless Commerce</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Microservices</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">API-First</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">React</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Node.js</span>
+            <div class="services-section">
+                <h4 class="services-label">Platform & Architecture</h4>
+                <div class="tags-container">
+                    <span class="tag">commercetools</span>
+                    <span class="tag">Headless Commerce</span>
+                    <span class="tag">Microservices</span>
+                    <span class="tag">API-First</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Node.js</span>
                 </div>
 
-                <h4 style="margin-top: 32px; margin-bottom: 16px; color: var(--color-accent-purple);">Integrations</h4>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">WMS Integration</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Payment Gateways</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Logistics Providers</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">CRM</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Marketing Automation</span>
+                <h4 class="services-label">Integrations</h4>
+                <div class="tags-container">
+                    <span class="tag">WMS Integration</span>
+                    <span class="tag">Payment Gateways</span>
+                    <span class="tag">Logistics Providers</span>
+                    <span class="tag">CRM</span>
+                    <span class="tag">Marketing Automation</span>
                 </div>
 
-                <h4 style="margin-top: 32px; margin-bottom: 16px; color: var(--color-accent-purple);">Services Delivered</h4>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Platform Migration</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Shopify Plus to commercetools</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Custom Development</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Architecture Design</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Data Migration</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">System Integration</span>
+                <h4 class="services-label">Services Delivered</h4>
+                <div class="tags-container">
+                    <span class="tag">Platform Migration</span>
+                    <span class="tag">Shopify Plus to commercetools</span>
+                    <span class="tag">Custom Development</span>
+                    <span class="tag">Architecture Design</span>
+                    <span class="tag">Data Migration</span>
+                    <span class="tag">System Integration</span>
+                </div>
+
+                <div class="technology-logos">
+                    <img src="../images/casestudies/commercetools-logo.png" alt="commercetools">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section>
+    <!-- CTA Section -->
+    <section class="cta-section">
         <div class="container">
-            <div class="cta-banner">
-                <h2>Ready to scale beyond platform limitations?</h2>
-                <p>Let's discuss how composable commerce with commercetools can enable your business growth.</p>
-                <a href="../contact.html" class="btn">Schedule a Call →</a>
-            </div>
+            <h2>Ready to scale beyond platform limitations?</h2>
+            <p>Let's discuss how composable commerce with commercetools can enable your business growth.</p>
+            <a href="../contact.html" class="cta-button">Schedule a Call</a>
         </div>
     </section>
 

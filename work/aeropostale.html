@@ -8,6 +8,380 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .case-study-hero {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .case-study-title-section {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .case-study-logo {
+            max-width: 250px;
+            margin-bottom: 24px;
+        }
+
+        .case-study-title {
+            font-size: 42px;
+            line-height: 1.2;
+            color: #2B2B2B;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .client-info-grid {
+            background: #F9F9F9;
+            padding: 48px 0;
+        }
+
+        .client-info-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .client-info-item h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #424242;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .client-info-item p {
+            font-size: 18px;
+            color: #2B2B2B;
+            font-weight: 500;
+        }
+
+        .client-overview-section {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .challenge-section {
+            background: #F9F9F9;
+            padding: 80px 0;
+        }
+
+        .challenge-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .challenge-image {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .challenge-text h2 {
+            font-size: 36px;
+            color: #2B2B2B;
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        .challenge-text p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #424242;
+        }
+
+        .solution-section {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .solution-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .solution-content h2 {
+            font-size: 36px;
+            color: #2B2B2B;
+            margin-bottom: 32px;
+            font-weight: 700;
+        }
+
+        .solution-content p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #424242;
+            margin-bottom: 24px;
+        }
+
+        .solution-list {
+            list-style: none;
+            padding: 0;
+            margin: 32px 0;
+        }
+
+        .solution-list li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #424242;
+        }
+
+        .solution-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #89389f;
+            font-size: 24px;
+            line-height: 1.5;
+        }
+
+        .results-section {
+            background: #F9F9F9;
+            padding: 80px 0;
+        }
+
+        .results-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .results-content h2 {
+            font-size: 36px;
+            color: #2B2B2B;
+            margin-bottom: 48px;
+            font-weight: 700;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+
+        .result-card {
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+        }
+
+        .result-icon {
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+        }
+
+        .result-text {
+            flex: 1;
+        }
+
+        .result-text h3 {
+            font-size: 20px;
+            color: #2B2B2B;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .result-text p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #424242;
+        }
+
+        .results-image {
+            width: 100%;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        .testimonial-section {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .testimonial-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .testimonial-quote {
+            border-left: 4px solid #89389f;
+            padding: 32px 0 32px 40px;
+            margin: 32px 0;
+        }
+
+        .testimonial-quote p {
+            font-size: 22px;
+            line-height: 1.6;
+            color: #2B2B2B;
+            font-style: italic;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-author {
+            font-size: 16px;
+            color: #424242;
+            font-style: normal;
+        }
+
+        .testimonial-author strong {
+            color: #2B2B2B;
+            font-weight: 600;
+        }
+
+        .services-section {
+            background: #F9F9F9;
+            padding: 80px 0;
+        }
+
+        .services-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .services-content h2 {
+            font-size: 36px;
+            color: #2B2B2B;
+            margin-bottom: 48px;
+            font-weight: 700;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 48px;
+        }
+
+        .service-category h3 {
+            font-size: 24px;
+            color: #2B2B2B;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-list li {
+            padding: 16px 0;
+            border-bottom: 1px solid #e5e5e5;
+            font-size: 16px;
+            color: #424242;
+        }
+
+        .service-list li:last-child {
+            border-bottom: none;
+        }
+
+        .technologies-grid {
+            display: flex;
+            gap: 32px;
+            margin-top: 32px;
+            align-items: center;
+        }
+
+        .tech-logo {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);
+            padding: 80px 0;
+        }
+
+        .cta-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: 42px;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .cta-content p {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 32px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #89389f;
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: transform 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .case-study-hero {
+                height: 250px;
+            }
+
+            .case-study-title {
+                font-size: 32px;
+            }
+
+            .client-info-container {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .challenge-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .technologies-grid {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -50,90 +424,152 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="padding: 80px 0; background: linear-gradient(135deg, rgba(137, 56, 159, 0.9) 0%, rgba(237, 41, 37, 0.9) 100%);">
-        <div class="container">
-            <p style="color: rgba(255,255,255,0.9); margin-bottom: 16px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Case Study</p>
-            <h1 style="color: white; margin-bottom: 24px;">Aeropostale</h1>
-            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 900px;">Continuous eCommerce support and 24/7 Salesforce Commerce Cloud monitoring for a specialty retailer with 500+ stores across the U.S. and Puerto Rico.</p>
+    <!-- Hero Banner -->
+    <img src="../images/casestudies/aeropostale-hero.png" alt="Aeropostale Case Study" class="case-study-hero">
+
+    <!-- Title Section with Logo -->
+    <section class="case-study-title-section">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <img src="../images/casestudies/aeropostale-logo.png" alt="Aeropostale" class="case-study-logo">
+            <h1 class="case-study-title">Aeropostale Boosts Uptime and Reliability with NULogic's 24/7 Monitoring Services</h1>
         </div>
     </section>
 
-    <!-- Overview -->
-    <section>
-        <div class="container-narrow">
-            <h2>Overview</h2>
-            <p>Aeropostale, a specialty retailer founded in 1987 with 500+ stores across the U.S. and Puerto Rico, partnered with NULogic to establish continuous eCommerce support for their Salesforce Commerce Cloud operations. The apparel retailer operates a 24/7 eCommerce presence at aeropostale.com while managing physical retail locations. Their digital operations depend on seamless integration across multiple platforms.</p>
-
-            <div style="margin-top: 40px;">
-                <h3>The Challenge</h3>
-                <p style="margin-top: 16px;">Aeropostale faced several critical challenges in maintaining their digital commerce operations:</p>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Risk of revenue loss and customer frustration from downtime, particularly during off-hours</li>
-                    <li style="margin-bottom: 12px;">Need for reliable oversight of Salesforce Commerce Cloud storefront</li>
-                    <li style="margin-bottom: 12px;">Requirement to monitor multiple integrations including payments, order management systems, CRM, and marketing platforms</li>
-                    <li style="margin-bottom: 12px;">Reputational vulnerability from digital commerce interruptions</li>
-                </ul>
+    <!-- Client Info Grid -->
+    <section class="client-info-grid">
+        <div class="client-info-container">
+            <div class="client-info-item">
+                <h3>Region</h3>
+                <p>U.S.</p>
             </div>
-
-            <div style="margin-top: 40px;">
-                <h3>The Solution</h3>
-                <p style="margin-top: 16px;">NULogic implemented managed commerce support services featuring:</p>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;"><strong>Proactive Monitoring:</strong> Continuous Salesforce Commerce Cloud oversight</li>
-                    <li style="margin-bottom: 12px;"><strong>Rapid Incident Response:</strong> Dedicated engineers available nights, weekends, and holidays</li>
-                    <li style="margin-bottom: 12px;"><strong>Integration Coverage:</strong> Full system monitoring across payment, OMS, CRM, and marketing platforms</li>
-                    <li style="margin-bottom: 12px;"><strong>Global Delivery Model:</strong> Nearshore and offshore teams from India and LATAM</li>
-                    <li style="margin-bottom: 12px;"><strong>Stability Focus:</strong> Preventive processes to detect and resolve issues before customer impact</li>
-                </ul>
+            <div class="client-info-item">
+                <h3>Website</h3>
+                <p><a href="https://www.aeropostale.com" target="_blank" style="color: #89389f; text-decoration: none;">www.aeropostale.com</a></p>
             </div>
-
-            <div style="margin-top: 40px;">
-                <h3>Services Delivered</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">CDN optimization</li>
-                    <li style="margin-bottom: 12px;">Real-time dashboarding and alerting</li>
-                    <li style="margin-bottom: 12px;">24/7 monitoring and incident management</li>
-                </ul>
-            </div>
-
-            <div style="margin-top: 40px;">
-                <h3>Results</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Always-on support with rapid off-hours incident resolution</li>
-                    <li style="margin-bottom: 12px;">Maintained peak performance through 24/7 monitoring</li>
-                    <li style="margin-bottom: 12px;">Reduced internal IT burden, freeing teams for strategic initiatives</li>
-                    <li style="margin-bottom: 12px;">Enhanced organizational confidence in digital infrastructure</li>
-                </ul>
+            <div class="client-info-item">
+                <h3>Client Since</h3>
+                <p>2023</p>
             </div>
         </div>
     </section>
 
-    <!-- Technologies -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>Technologies & Services</h2>
-            <div style="margin-top: 24px;">
-                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Salesforce Commerce Cloud</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Cloudflare</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">24/7 Support</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Monitoring & Alerting</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Incident Response</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">CDN Optimization</span>
+    <!-- Client Overview -->
+    <section class="client-overview-section">
+        <div class="solution-content">
+            <h2>Client Overview</h2>
+            <p>Founded in 1987, Aéropostale operates 500+ stores across the U.S. and Puerto Rico, offering apparel and fashion essentials through physical and digital channels at aeropostale.com.</p>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="challenge-section">
+        <div class="challenge-content">
+            <div>
+                <img src="../images/casestudies/aeropostale-challenge.png" alt="Aeropostale Challenge" class="challenge-image">
+            </div>
+            <div class="challenge-text">
+                <h2>The Challenge</h2>
+                <p>Aeropostale required ensuring its Salesforce Commerce Cloud storefront delivered seamless, always-on shopping experiences with multiple integrations powering payments, OMS, CRM, and marketing. Even brief downtime risked lost revenue and customer frustration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="solution-content">
+            <h2>The Solution</h2>
+            <p>NULogic delivered a comprehensive 24/7 monitoring and support solution to ensure Aeropostale's digital commerce operations remained stable and reliable:</p>
+            <ul class="solution-list">
+                <li>Proactive monitoring of Salesforce Commerce Cloud and integrations</li>
+                <li>Dedicated eCommerce support engineers for nights, weekends, holidays</li>
+                <li>Full monitoring across payments, OMS, CRM, marketing platforms</li>
+                <li>Nearshore/offshore teams in India and LATAM</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="results-content">
+            <h2>Results</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <img src="../images/casestudies/aeropostale-result-1.png" alt="Always-On Support" class="result-icon">
+                    <div class="result-text">
+                        <h3>Always-On Support</h3>
+                        <p>Rapid off-hours incident resolution</p>
+                    </div>
+                </div>
+                <div class="result-card">
+                    <img src="../images/casestudies/aeropostale-result-2.png" alt="24/7 Monitoring" class="result-icon">
+                    <div class="result-text">
+                        <h3>24/7 Monitoring</h3>
+                        <p>Maintaining storefront stability</p>
+                    </div>
+                </div>
+                <div class="result-card">
+                    <img src="../images/casestudies/aeropostale-result-3.png" alt="Reduced IT Burden" class="result-icon">
+                    <div class="result-text">
+                        <h3>Reduced Internal IT Burden</h3>
+                        <p>Enabling strategic focus</p>
+                    </div>
+                </div>
+                <div class="result-card">
+                    <img src="../images/casestudies/aeropostale-result-1.png" alt="Leadership Confidence" class="result-icon">
+                    <div class="result-text">
+                        <h3>Leadership Confidence</h3>
+                        <p>In operational continuity</p>
+                    </div>
+                </div>
+            </div>
+            <img src="../images/casestudies/aeropostale-result-4.png" alt="Aeropostale Results" class="results-image">
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+        <div class="testimonial-content">
+            <div class="testimonial-quote">
+                <p>"I am delighted to share my appreciation for the outstanding performance of our NULogic Support Engineers. Their dedication to maintaining peak performance reflects their deep commitment to our success."</p>
+                <p class="testimonial-author"><strong>Jeff Bodyl</strong><br>Manager, Digital Support, Aeropostale</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Technologies Section -->
+    <section class="services-section">
+        <div class="services-content">
+            <h2>Services & Technologies</h2>
+            <div class="services-grid">
+                <div class="service-category">
+                    <h3>Services Provided</h3>
+                    <ul class="service-list">
+                        <li>CDN Services</li>
+                        <li>Dashboarding and Alerting</li>
+                        <li>Monitoring and Support</li>
+                        <li>24/7 eCommerce Monitoring</li>
+                        <li>Incident Management</li>
+                        <li>Off-Hours Coverage</li>
+                    </ul>
+                </div>
+                <div class="service-category">
+                    <h3>Technologies</h3>
+                    <p style="margin-bottom: 24px; color: #424242; font-size: 16px;">Partner Integrations</p>
+                    <div class="technologies-grid">
+                        <img src="../images/partners/commerce/salesforce.png" alt="Salesforce Commerce Cloud" class="tech-logo">
+                        <img src="../images/casestudies/cloudflare-logo.png" alt="Cloudflare" class="tech-logo">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section>
-        <div class="container">
-            <div class="cta-banner">
-                <h2>Ready for 24/7 platform monitoring?</h2>
-                <p>Let's discuss how our monitoring services can ensure platform stability.</p>
-                <a href="../contact.html" class="btn">Schedule a Call →</a>
-            </div>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to ensure 24/7 platform uptime?</h2>
+            <p>Let's discuss how our monitoring services can keep your eCommerce operations running smoothly.</p>
+            <a href="../contact.html" class="cta-button">Schedule a Consultation</a>
         </div>
     </section>
 

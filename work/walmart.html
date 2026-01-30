@@ -8,6 +8,279 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        :root {
+            --color-primary: #2B2B2B;
+            --color-accent-purple: #89389f;
+            --color-accent-red: #ed2925;
+            --color-secondary: #424242;
+            --color-gray-bg: #F9F9F9;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--color-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container-narrow {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Barlow Condensed', sans-serif;
+        }
+
+        h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--color-primary);
+        }
+
+        .hero-banner {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .client-logo {
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 24px;
+        }
+
+        .client-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            background: var(--color-gray-bg);
+            padding: 60px 0;
+        }
+
+        .client-info-item h4 {
+            color: var(--color-accent-purple);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+        }
+
+        .client-info-item p {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin: 0;
+        }
+
+        .bg-white {
+            background: white;
+        }
+
+        .bg-gray {
+            background: var(--color-gray-bg);
+        }
+
+        .challenge-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .challenge-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .result-card {
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .result-card h3 {
+            font-size: 56px;
+            font-weight: 800;
+            color: var(--color-accent-purple);
+            margin: 0 0 16px 0;
+            line-height: 1;
+        }
+
+        .result-card p {
+            font-size: 16px;
+            color: var(--color-secondary);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .devices-section {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .device-laptop {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+        }
+
+        .device-mobile {
+            max-width: 150px;
+            width: 100%;
+            height: auto;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 48px;
+            border-left: 6px solid var(--color-accent-purple);
+            border-radius: 0;
+            margin-top: 40px;
+        }
+
+        .testimonial p {
+            font-size: 22px;
+            line-height: 1.7;
+            color: var(--color-primary);
+            font-style: italic;
+            margin: 0;
+        }
+
+        .services-tech-section h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin: 40px 0 24px 0;
+        }
+
+        .services-tech-section h3:first-of-type {
+            margin-top: 0;
+        }
+
+        .tags-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tag {
+            background: white;
+            color: var(--color-primary);
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 500;
+            border: 1px solid #e5e5e5;
+        }
+
+        .tech-logos {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .tech-logo {
+            max-height: 40px;
+            width: auto;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--color-accent-purple) 0%, var(--color-accent-red) 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: white;
+            font-size: 48px;
+            margin-bottom: 24px;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 20px;
+            margin-bottom: 32px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--color-accent-purple);
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+            color: var(--color-secondary);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .client-info-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .challenge-section {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .devices-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            .cta-section h2 {
+                font-size: 36px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -50,165 +323,166 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="padding: 80px 0; background: linear-gradient(135deg, rgba(137, 56, 159, 0.9) 0%, rgba(237, 41, 37, 0.9) 100%);">
-        <div class="container">
-            <p style="color: rgba(255,255,255,0.9); margin-bottom: 16px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Case Study</p>
-            <h1 style="color: white; margin-bottom: 24px;">From Incidents to Insights: How NULogic's 24/7 L2/L3 Support Drives Retail Success for Walmart Chile</h1>
-            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 900px;"></p>
+    <!-- Hero Banner -->
+    <section style="padding: 0; margin: 0;">
+        <img src="../images/casestudies/walmart-hero.png" alt="Walmart Chile Case Study" class="hero-banner">
+    </section>
+
+    <!-- Title Section -->
+    <section class="bg-white">
+        <div class="container-narrow" style="text-align: center;">
+            <img src="../images/casestudies/walmart-logo.png" alt="Walmart Chile" class="client-logo">
+            <h1 style="font-size: 48px; font-weight: 700; line-height: 1.2; margin: 0;">From Incidents to Insights: How NULogic's 24/7 L2/L3 Support Drives Retail Success for Walmart Chile</h1>
         </div>
     </section>
 
-    <!-- Client Info -->
-    <section style="background: #fafafa; padding: 40px 0;">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px;">
-                <div>
-                    <h4 style="color: var(--color-accent-purple); font-size: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Client</h4>
-                    <p style="font-size: 18px; font-weight: 600;">Walmart Chile (Lider)</p>
-                </div>
-                <div>
-                    <h4 style="color: var(--color-accent-purple); font-size: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Region</h4>
-                    <p style="font-size: 18px; font-weight: 600;">LATAM</p>
-                </div>
-                <div>
-                    <h4 style="color: var(--color-accent-purple); font-size: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Website</h4>
-                    <p style="font-size: 18px; font-weight: 600;">https://www.lider.cl</p>
-                </div>
-                <div>
-                    <h4 style="color: var(--color-accent-purple); font-size: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Client Since</h4>
-                    <p style="font-size: 18px; font-weight: 600;">2018</p>
+    <!-- Client Info Grid -->
+    <section style="padding: 0;">
+        <div class="client-info-grid">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px;">
+                    <div class="client-info-item">
+                        <h4>Region</h4>
+                        <p>LATAM</p>
+                    </div>
+                    <div class="client-info-item">
+                        <h4>Website</h4>
+                        <p><a href="https://www.lider.cl" target="_blank" style="color: var(--color-accent-purple); text-decoration: none;">https://www.lider.cl</a></p>
+                    </div>
+                    <div class="client-info-item">
+                        <h4>Client Since</h4>
+                        <p>2018</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Overview -->
-    <section>
+    <!-- Client Overview -->
+    <section class="bg-white">
         <div class="container-narrow">
-            <h2>Overview</h2>
-            <p>Walmart Chile operates 375+ stores across multiple brands including Lider, Express de Lider, Lider.cl, Ekono, SuperBodega aCuenta, and Central Mayorista. The company has established itself as a leader in AI-powered retail innovation and omnichannel commerce throughout LATAM, combining personalized shopping experiences with scalable technology solutions.</p>
+            <h2>Client Overview</h2>
+            <p style="font-size: 18px; line-height: 1.8; color: var(--color-secondary);">
+                Walmart Chile operates 375+ stores across multiple brands (Lider, Express de Lider, Lider.cl, Ekono, SuperBodega aCuenta, Central Mayorista). The company leads in retail and e-commerce with AI-powered personalization and omnichannel commerce capabilities spanning grocery, digital transformation, and retail growth across Latin America.
+            </p>
         </div>
     </section>
 
     <!-- Challenge -->
-    <section style="background: #fafafa;">
+    <section class="bg-gray">
         <div class="container-narrow">
-            <h2>The Challenge</h2>
-            <p>Lider faces pressure to maintain uninterrupted digital commerce availability while managing:</p>
-            <ul style="margin-top: 24px;">
-                <li style="margin-bottom: 16px;">375+ stores with complex legacy systems</li>
-                <li style="margin-bottom: 16px;">High-volume transaction spikes during peak retail periods</li>
-                <li style="margin-bottom: 16px;">Multiple brands requiring coordinated technical support</li>
-                <li style="margin-bottom: 16px;">Outdated infrastructure competing with rising customer expectations</li>
-                <li style="margin-bottom: 16px;">Need for strategic modernization beyond traditional IT staffing</li>
-            </ul>
+            <div class="challenge-section">
+                <div>
+                    <img src="../images/casestudies/walmart-challenge.png" alt="Challenge" class="challenge-image">
+                </div>
+                <div>
+                    <h2>The Challenge</h2>
+                    <p style="font-size: 18px; line-height: 1.8; color: var(--color-secondary);">
+                        Lider's digital ecosystem requires uninterrupted availability. With 375+ stores, multiple brands, complex legacy systems, and high-volume transaction spikes, traditional IT support proves insufficient. Outdated infrastructure and rising customer expectations demand strategic partnership beyond extra manpower.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Solution -->
-    <section>
+    <section class="bg-white">
         <div class="container-narrow">
             <h2>The Solution</h2>
-            <p>NULogic provides dedicated Level 2 and Level 3 support services operating from Chile, Mexico, and India. Services include:</p>
-
-            <ul style="margin-top: 24px;">
-                <li style="margin-bottom: 16px;"><strong>24/7 monitoring and troubleshooting</strong> of infrastructure and applications</li>
-                <li style="margin-bottom: 16px;">Cloud security, compliance, and performance optimization</li>
-                <li style="margin-bottom: 16px;">Root cause analysis and prevention of recurring issues</li>
-                <li style="margin-bottom: 16px;">Legacy system upgrades, patches, and modernization</li>
-                <li style="margin-bottom: 16px;">Bug fixes, optimizations, and performance tuning</li>
-                <li style="margin-bottom: 16px;">Holiday sales readiness to handle traffic spikes</li>
+            <p style="font-size: 18px; line-height: 1.8; color: var(--color-secondary); margin-bottom: 32px;">
+                NULogic provides dedicated Level 2 and Level 3 support services operating from Chile, Mexico, and India. The dedicated support model includes:
+            </p>
+            <ul style="font-size: 17px;">
+                <li><strong>24/7 monitoring and troubleshooting</strong> of infrastructure and applications</li>
+                <li><strong>Best practices implementation</strong> for cloud security, compliance, high performance</li>
+                <li><strong>Root cause analysis</strong> to prevent recurring issues</li>
+                <li><strong>Regular upgrades, patches, and legacy system modernization</strong></li>
+                <li><strong>Bug fixes, optimizations, and performance tuning</strong></li>
+                <li><strong>Holiday sales readiness</strong> ensuring high-traffic spike resilience</li>
             </ul>
         </div>
     </section>
 
     <!-- Results -->
-    <section style="background: #fafafa;">
+    <section class="bg-gray">
         <div class="container-narrow">
-            <h2>Results & Metrics</h2>
-            <div class="cards-grid" style="margin-top: 32px;">
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">95%</h3>
-                    <p>Ticket Resolution Speed<br>resolved within 24 hours</p>
+            <h2>Results</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>95%</h3>
+                    <p>of tickets resolved within 24 hours</p>
                 </div>
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">140+</h3>
-                    <p>Real-time Dashboards<br>deployed</p>
+                <div class="result-card">
+                    <h3>140+</h3>
+                    <p>real-time dashboards and 700+ automated threshold alerts enabled</p>
                 </div>
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">700+</h3>
-                    <p>Automated Alerts<br>threshold alerts</p>
+                <div class="result-card">
+                    <h3>10 min</h3>
+                    <p>Catalog price update time reduced from 1 hour to under 10 minutes</p>
                 </div>
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">10 min</h3>
-                    <p>Catalog Update Time<br>Reduced from 1 hour to under 10 minutes</p>
+                <div class="result-card">
+                    <h3>15%</h3>
+                    <p>year-over-year incident reduction (multiple consecutive years)</p>
                 </div>
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">15%</h3>
-                    <p>Incident Reduction<br>year-over-year decrease</p>
+                <div class="result-card">
+                    <h3>20%</h3>
+                    <p>support cost reduction via knowledge base and self-service solutions</p>
                 </div>
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">20%</h3>
-                    <p>Support Cost Savings<br>reduction</p>
+                <div class="result-card">
+                    <h3>30%</h3>
+                    <p>site maintenance downtime reduction</p>
                 </div>
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">30%</h3>
-                    <p>Site Downtime Reduction<br>improvement</p>
+                <div class="result-card">
+                    <h3>90%</h3>
+                    <p>reduction in data-related issues</p>
                 </div>
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">90%</h3>
-                    <p>Data-Related Issues<br>reduction</p>
+            </div>
+
+            <!-- Device Screenshots -->
+            <div class="devices-section">
+                <img src="../images/casestudies/walmart-laptop.png" alt="Lider.cl on Desktop" class="device-laptop">
+                <img src="../images/casestudies/walmart-mobile.png" alt="Lider.cl on Mobile" class="device-mobile">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Technologies -->
+    <section class="bg-gray" style="padding-top: 0;">
+        <div class="container-narrow">
+            <div class="services-tech-section">
+                <h3>Services</h3>
+                <div class="tags-grid">
+                    <span class="tag">24/7 Monitoring and Support</span>
+                    <span class="tag">L2 and L3 Resolution</span>
+                    <span class="tag">Microservices Assessments</span>
+                    <span class="tag">Dashboarding and Alerting</span>
+                </div>
+
+                <h3>Technologies</h3>
+                <div class="tech-logos">
+                    <img src="../images/casestudies/walmart-grafana.png" alt="Grafana" class="tech-logo">
+                    <img src="../images/casestudies/walmart-partner1.png" alt="Partner Technology" class="tech-logo">
+                    <img src="../images/casestudies/walmart-cloudflare.png" alt="Cloudflare" class="tech-logo">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Technologies -->
-    <section>
+    <!-- Testimonial -->
+    <section class="bg-white">
         <div class="container-narrow">
-            <h2>Technologies Used</h2>
-            <div style="margin-top: 24px;">
-                <h4 style="margin-bottom: 16px; color: var(--color-accent-purple);">Engineering Stack</h4>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Grafana (monitoring and visualization)</span>
-                </div>
-
-                <h4 style="margin-top: 32px; margin-bottom: 16px; color: var(--color-accent-purple);">Partner Integrations</h4>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Cloudflare</span>
-                </div>
-
-                <h4 style="margin-top: 32px; margin-bottom: 16px; color: var(--color-accent-purple);">Services Highlighted</h4>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">24/7 Monitoring and Support</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">L2 and L3 Resolution</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Microservices Assessments</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Dashboarding and Alerting</span>
-                </div>
+            <div class="testimonial">
+                <p>"The engagement demonstrates that timely, accurate, and proactive L2/L3 support combined with strategic performance engineering creates measurable competitive advantages in digital retail operations."</p>
             </div>
         </div>
     </section>
 
-    <!-- Key Quote -->
-    <section style="background: #fafafa;">
+    <!-- CTA Section -->
+    <section class="cta-section">
         <div class="container-narrow">
-            <div style="background: white; padding: 40px; border-left: 4px solid var(--color-accent-purple); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-                <p style="font-size: 20px; line-height: 1.6; font-style: italic; color: var(--color-primary);">
-                    The engagement demonstrates that "timely, accurate, and proactive L2/L3 support" combined with strategic performance engineering creates measurable competitive advantages in digital retail operations.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section>
-        <div class="container">
-            <div class="cta-banner">
-                <h2>Need reliable 24/7 support for your commerce platform?</h2>
-                <p>Let's discuss how our managed services can ensure your platform stability.</p>
-                <a href="../contact.html" class="btn">Schedule a Call →</a>
-            </div>
+            <h2>Ready to Transform Your Commerce Operations?</h2>
+            <p>Let's discuss how our 24/7 support services can drive results for your business.</p>
+            <a href="../contact.html" class="cta-button">Get Started</a>
         </div>
     </section>
 

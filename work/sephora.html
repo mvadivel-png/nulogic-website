@@ -8,6 +8,369 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Case Study Specific Styles */
+        .case-study-hero {
+            background: linear-gradient(135deg, rgba(137, 56, 159, 0.95) 0%, rgba(237, 41, 37, 0.95) 100%);
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .case-study-label {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        .case-study-title {
+            color: #ffffff;
+            font-size: 48px;
+            line-height: 1.2;
+            font-weight: 700;
+            margin-bottom: 24px;
+            max-width: 900px;
+        }
+
+        .case-study-intro {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 800px;
+        }
+
+        /* Client Info Grid */
+        .client-info-section {
+            background: #F9F9F9;
+            padding: 60px 40px;
+        }
+
+        .client-info-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            flex-wrap: wrap;
+        }
+
+        .client-logo-container {
+            flex: 0 0 auto;
+        }
+
+        .client-logo-container img {
+            height: 60px;
+            width: auto;
+        }
+
+        .client-info-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            min-width: 600px;
+        }
+
+        .client-info-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .client-info-label {
+            color: #89389f;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        .client-info-value {
+            color: #2B2B2B;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .client-info-value a {
+            color: #89389f;
+            text-decoration: none;
+        }
+
+        .client-info-value a:hover {
+            text-decoration: underline;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 80px 40px;
+        }
+
+        .content-section.gray-bg {
+            background: #F9F9F9;
+        }
+
+        .content-section.white-bg {
+            background: #ffffff;
+        }
+
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-wrapper-narrow {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            color: #2B2B2B;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+
+        .section-text {
+            color: #424242;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        /* Challenge Section - Two Column Layout */
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .challenge-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .challenge-content h2 {
+            color: #2B2B2B;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .challenge-content p {
+            color: #424242;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        /* Solution Images Grid */
+        .solution-images {
+            display: flex;
+            gap: 24px;
+            margin-top: 40px;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .solution-images img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .solution-desktop {
+            width: 35%;
+        }
+
+        .solution-laptop {
+            width: 30%;
+        }
+
+        .solution-mobile {
+            width: 15%;
+        }
+
+        /* Results Section */
+        .results-image {
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            margin: 40px auto 0;
+            display: block;
+            border-radius: 8px;
+        }
+
+        /* Testimonial */
+        .testimonial {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            border-left: 4px solid #89389f;
+            margin-top: 40px;
+        }
+
+        .testimonial-quote {
+            color: #2B2B2B;
+            font-size: 20px;
+            line-height: 1.6;
+            font-style: italic;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-author {
+            color: #2B2B2B;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .testimonial-title {
+            color: #424242;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Services Section */
+        .services-content h3 {
+            color: #2B2B2B;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            margin-top: 32px;
+        }
+
+        .services-content h3:first-of-type {
+            margin-top: 0;
+        }
+
+        .services-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .service-tag {
+            background: #ffffff;
+            color: #2B2B2B;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid #e0e0e0;
+        }
+
+        .technology-logo {
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .technology-logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 32px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ffffff;
+            color: #89389f;
+            padding: 16px 32px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #f5f5f5;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .challenge-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .client-info-grid {
+                grid-template-columns: repeat(2, 1fr);
+                min-width: auto;
+            }
+
+            .solution-images {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .solution-desktop,
+            .solution-laptop,
+            .solution-mobile {
+                width: 80%;
+            }
+
+            .case-study-title {
+                font-size: 36px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .client-info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .case-study-title {
+                font-size: 28px;
+            }
+
+            .cta-section h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -51,152 +414,146 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="padding: 80px 0; background: linear-gradient(135deg, rgba(137, 56, 159, 0.9) 0%, rgba(237, 41, 37, 0.9) 100%);">
-        <div class="container">
-            <p style="color: rgba(255,255,255,0.9); margin-bottom: 16px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Case Study</p>
-            <h1 style="color: white; margin-bottom: 24px;">Sephora Accelerates Digital Transformation with NULogic's Integrated Commerce Technology Services</h1>
-            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 900px;">Sephora operates as a global beauty retailer spanning 2,700+ stores across 35 countries, including 500+ in the Americas. The company positions itself as a cultural icon blending luxury retail with digital commerce.</p>
+    <section class="case-study-hero">
+        <div class="hero-content-wrapper">
+            <div class="case-study-label">Case Study</div>
+            <h1 class="case-study-title">Sephora Accelerates Digital Transformation with NULogic's Integrated Commerce Technology Services</h1>
+            <p class="case-study-intro">Sephora operates as a prestige beauty retailer with 2,700+ stores across 35 countries, including 500+ locations in the Americas. The company blends luxury retail with digital commerce infrastructure.</p>
         </div>
     </section>
 
-    <!-- Client Info -->
-    <section style="background: #fafafa; padding: 40px 0;">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px;">
-                <div>
-                    <h4 style="color: var(--color-accent-purple); font-size: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Client</h4>
-                    <p style="font-size: 18px; font-weight: 600;">Sephora</p>
+    <!-- Client Info Section -->
+    <section class="client-info-section">
+        <div class="client-info-wrapper">
+            <div class="client-logo-container">
+                <img src="../images/casestudies/sephora-logo.svg" alt="Sephora">
+            </div>
+            <div class="client-info-grid">
+                <div class="client-info-item">
+                    <div class="client-info-label">Region</div>
+                    <div class="client-info-value">U.S.</div>
                 </div>
-                <div>
-                    <h4 style="color: var(--color-accent-purple); font-size: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Region</h4>
-                    <p style="font-size: 18px; font-weight: 600;">U.S.</p>
+                <div class="client-info-item">
+                    <div class="client-info-label">Website</div>
+                    <div class="client-info-value"><a href="https://www.sephora.com" target="_blank" rel="noopener">sephora.com</a></div>
                 </div>
-                <div>
-                    <h4 style="color: var(--color-accent-purple); font-size: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Website</h4>
-                    <p style="font-size: 18px; font-weight: 600;"><a href="https://www.sephora.com" target="_blank" style="color: var(--color-primary);">sephora.com</a></p>
-                </div>
-                <div>
-                    <h4 style="color: var(--color-accent-purple); font-size: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Client Since</h4>
-                    <p style="font-size: 18px; font-weight: 600;">2022</p>
+                <div class="client-info-item">
+                    <div class="client-info-label">Client Since</div>
+                    <div class="client-info-value">2022</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Overview -->
-    <section>
-        <div class="container-narrow">
-            <h2>Client Overview</h2>
-            <p>Sephora operates as a global beauty retailer spanning 2,700+ stores across 35 countries, including 500+ in the Americas. The company positions itself as a cultural icon blending luxury retail with digital commerce. Founded in France with a U.S. debut in 1998, Sephora emphasizes inclusivity and empowerment through both physical stores and digital platforms including ecommerce and mobile applications.</p>
+    <!-- Client Overview Section -->
+    <section class="content-section white-bg">
+        <div class="content-wrapper-narrow">
+            <h2 class="section-title">Client Overview</h2>
+            <p class="section-text">Sephora operates as a prestige beauty retailer with 2,700+ stores across 35 countries, including 500+ locations in the Americas. The company blends luxury retail with digital commerce infrastructure.</p>
         </div>
     </section>
 
-    <!-- Challenge -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>The Challenge</h2>
-            <p>Sephora's technology infrastructure faced fragmentation across multiple vendors:</p>
-            <ul style="margin-top: 24px;">
-                <li style="margin-bottom: 16px;">Commercetools platform powered digital commerce operations</li>
-                <li style="margin-bottom: 16px;">Separate Point-of-Sale (POS) systems managed retail locations</li>
-                <li style="margin-bottom: 16px;">Distinct mobile applications served iOS and Android users</li>
-            </ul>
-            <p style="margin-top: 24px;">The fragmentation created "bottlenecks," with complexity mounting, timelines extending, and costs increasing. The company required a partner offering "deep retail DNA" capable of consolidating vendors and unifying customer journeys.</p>
-        </div>
-    </section>
-
-    <!-- Solution -->
-    <section>
-        <div class="container-narrow">
-            <h2>The Solution</h2>
-            <p>NULogic implemented a multi-faceted approach:</p>
-
-            <h3 style="margin-top: 32px;">Foundation Work</h3>
-            <p>Re-architected enterprise commerce systems for scalability and resilience supporting global expansion</p>
-
-            <h3 style="margin-top: 32px;">Digital Storefront</h3>
-            <p>Enhanced commercetools through API optimization, integration streamlining, and feature refinement for improved shopping experiences</p>
-
-            <h3 style="margin-top: 32px;">Omnichannel Integration</h3>
-            <p>Unified POS-ecommerce systems to synchronize pricing, inventory, and fulfillment data across channels</p>
-
-            <h3 style="margin-top: 32px;">Mobile Enhancement</h3>
-            <p>Improved iOS and Android applications enabling personalized, high-performance mobile shopping</p>
-
-            <h3 style="margin-top: 32px;">Delivery Teams</h3>
-            <p>Integrated nearshore LATAM teams providing agile, cost-effective collaboration</p>
-        </div>
-    </section>
-
-    <!-- Results -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>Results & Metrics</h2>
-            <div class="cards-grid" style="margin-top: 32px;">
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">25%</h3>
-                    <p><strong>Faster Delivery</strong> through nearshore teams and API automation</p>
+    <!-- Challenge Section -->
+    <section class="content-section gray-bg">
+        <div class="content-wrapper">
+            <div class="challenge-grid">
+                <div class="challenge-image-container">
+                    <img src="../images/casestudies/sephora-challenge.png" alt="Sephora Challenge" class="challenge-image">
                 </div>
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">Optimized</h3>
-                    <p><strong>Cost Structure</strong> reducing operational expenses while maintaining quality standards</p>
-                </div>
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">Enhanced</h3>
-                    <p><strong>Omnichannel Experience</strong> creating seamless customer journeys</p>
-                </div>
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">Greater</h3>
-                    <p><strong>Team Collaboration</strong> improving cross-functional alignment</p>
-                </div>
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 48px; color: var(--color-accent-purple); margin-bottom: 8px;">Vendor</h3>
-                    <p><strong>Consolidation</strong> reducing complexity through single-partner reliance</p>
+                <div class="challenge-content">
+                    <h2>The Challenge</h2>
+                    <p>Sephora's technology landscape faced fragmentation across multiple vendors managing commercetools platforms, point-of-sale systems, and mobile applications separately, creating bottlenecks, extended timelines, and rising costs.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonial -->
-    <section>
-        <div class="container-narrow">
-            <div style="background: linear-gradient(135deg, rgba(137, 56, 159, 0.05) 0%, rgba(237, 41, 37, 0.05) 100%); padding: 40px; border-radius: var(--radius-card); border-left: 4px solid var(--color-accent-purple);">
-                <p style="font-size: 20px; line-height: 1.6; font-style: italic; margin-bottom: 24px;">"NULogic has been an invaluable partner in helping us accelerate delivery. Their retail expertise, combined with broad capabilities in architecture, POS, and mobile, allows us to consolidate vendors."</p>
-                <p style="font-weight: 600;">Rajesh Venkatesan</p>
-                <p style="color: var(--color-gray-medium); margin-top: 4px;">Vice President of eCommerce Engineering at Sephora</p>
+    <!-- Solution Section -->
+    <section class="content-section white-bg">
+        <div class="content-wrapper-narrow">
+            <h2 class="section-title">Solution Approach</h2>
+            <p class="section-text">NULogic implemented a comprehensive solution to consolidate Sephora's technology vendors and streamline their digital commerce operations:</p>
+
+            <div class="services-content">
+                <h3>Enterprise Commerce System Re-architecture</h3>
+                <p class="section-text">Re-architected enterprise commerce systems for scalability and resilience supporting global expansion.</p>
+
+                <h3>commercetools Optimization and API Enhancements</h3>
+                <p class="section-text">Enhanced commercetools through API optimization, integration streamlining, and feature refinement for improved shopping experiences.</p>
+
+                <h3>Unified POS-eCommerce Integration</h3>
+                <p class="section-text">Unified POS-ecommerce systems to synchronize pricing, inventory, and fulfillment data across channels.</p>
+
+                <h3>iOS and Android App Enhancement</h3>
+                <p class="section-text">Improved iOS and Android applications enabling personalized, high-performance mobile shopping.</p>
+
+                <h3>Nearshore LATAM Delivery Teams</h3>
+                <p class="section-text">Integrated nearshore LATAM teams providing agile, cost-effective collaboration.</p>
+            </div>
+
+            <div class="solution-images">
+                <img src="../images/casestudies/sephora-desktop.png" alt="Sephora Desktop" class="solution-desktop">
+                <img src="../images/casestudies/sephora-laptop.png" alt="Sephora Laptop" class="solution-laptop">
+                <img src="../images/casestudies/sephora-mobile.png" alt="Sephora Mobile" class="solution-mobile">
             </div>
         </div>
     </section>
 
-    <!-- Technologies -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>Services Provided</h2>
-            <div style="margin-top: 24px;">
-                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Enterprise Commerce Architecture Planning</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Mobile Commerce App Development</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Ecommerce Development & Integration</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Integration Services</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Point-of-Sale (POS) Systems Integrations & Support</span>
-                </div>
+    <!-- Results Section -->
+    <section class="content-section gray-bg">
+        <div class="content-wrapper-narrow">
+            <h2 class="section-title">Measurable Results</h2>
+            <p class="section-text">NULogic's integrated approach delivered significant improvements across Sephora's digital commerce operations:</p>
 
-                <h4 style="margin-top: 32px; margin-bottom: 16px; color: var(--color-accent-purple);">Technologies & Platforms</h4>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Commercetools</span>
-                </div>
+            <img src="../images/casestudies/sephora-highlights.png" alt="Sephora Results Highlights" class="results-image">
+
+            <div class="services-content" style="margin-top: 40px;">
+                <p class="section-text"><strong>25% faster delivery acceleration</strong> through nearshore teams and API automation</p>
+                <p class="section-text"><strong>Optimized cost structure</strong> reducing operational expenses while maintaining quality standards</p>
+                <p class="section-text"><strong>Enhanced omnichannel experience</strong> creating seamless customer journeys</p>
+                <p class="section-text"><strong>Improved cross-functional collaboration</strong> improving team alignment</p>
+                <p class="section-text"><strong>Vendor consolidation achieved</strong> reducing complexity through single-partner reliance</p>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section>
-        <div class="container">
-            <div class="cta-banner">
-                <h2>Ready to accelerate your digital transformation?</h2>
-                <p>Let's discuss how we can help consolidate your technology stack and unify your commerce operations.</p>
-                <a href="../contact.html" class="btn">Schedule a Call →</a>
+    <!-- Testimonial Section -->
+    <section class="content-section white-bg">
+        <div class="content-wrapper-narrow">
+            <div class="testimonial">
+                <p class="testimonial-quote">"NULogic has been invaluable in accelerating delivery with retail expertise and broad architectural capabilities, enabling vendor consolidation and seamless collaboration."</p>
+                <p class="testimonial-author">Rajesh Venkatesan</p>
+                <p class="testimonial-title">Vice President, eCommerce Engineering at Sephora</p>
             </div>
+        </div>
+    </section>
+
+    <!-- Services & Technologies Section -->
+    <section class="content-section gray-bg">
+        <div class="content-wrapper-narrow">
+            <h2 class="section-title">Services Delivered</h2>
+            <div class="services-list">
+                <span class="service-tag">Enterprise Commerce Architecture Planning</span>
+                <span class="service-tag">Mobile Commerce App Development</span>
+                <span class="service-tag">Ecommerce Development & Integration</span>
+                <span class="service-tag">Integration Services</span>
+                <span class="service-tag">Point-of-Sale (POS) Systems Integrations & Support</span>
+            </div>
+
+            <h2 class="section-title" style="margin-top: 60px;">Technologies</h2>
+            <p class="section-text">Partner Integration:</p>
+            <div class="technology-logo">
+                <img src="../images/casestudies/commercetools-logo.png" alt="commercetools">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="content-wrapper-narrow">
+            <h2>Ready to accelerate your digital transformation?</h2>
+            <p>Let's discuss how we can help consolidate your technology stack and unify your commerce operations.</p>
+            <a href="../contact.html" class="cta-button">Schedule a Call</a>
         </div>
     </section>
 

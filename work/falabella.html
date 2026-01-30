@@ -3,11 +3,388 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Falabella Case Study | ATG-to-Azure Modernization | NuLogic</title>
+    <title>Falabella Case Study - Cloud Commerce Modernization | NuLogic</title>
+    <meta name="description" content="How NULogic transformed Falabella's legacy Oracle ATG platform with modern cloud-native architecture on Azure, serving 36M+ customers across Latin America.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .case-study-hero {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .case-study-title-section {
+            background: white;
+            padding: 60px 0 40px;
+        }
+
+        .case-study-logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .case-study-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #2B2B2B;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .case-study-subtitle {
+            font-size: 20px;
+            color: #424242;
+            line-height: 1.6;
+            max-width: 800px;
+        }
+
+        .client-info-grid {
+            background: #F9F9F9;
+            padding: 50px 0;
+        }
+
+        .client-info-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .client-info-item {
+            text-align: center;
+        }
+
+        .client-info-label {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #89389f;
+            margin-bottom: 12px;
+        }
+
+        .client-info-value {
+            font-size: 18px;
+            color: #2B2B2B;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .client-info-value a {
+            color: #89389f;
+            text-decoration: none;
+        }
+
+        .client-info-value a:hover {
+            text-decoration: underline;
+        }
+
+        .section-white {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .section-gray {
+            background: #F9F9F9;
+            padding: 80px 0;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .content-narrow {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-heading {
+            font-size: 36px;
+            font-weight: 700;
+            color: #2B2B2B;
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+
+        .section-text {
+            font-size: 18px;
+            color: #424242;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .two-column-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .challenge-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .challenge-list {
+            margin-top: 32px;
+        }
+
+        .challenge-item {
+            margin-bottom: 32px;
+        }
+
+        .challenge-item h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2B2B2B;
+            margin-bottom: 12px;
+        }
+
+        .challenge-item p {
+            font-size: 16px;
+            color: #424242;
+            line-height: 1.7;
+        }
+
+        .solution-list {
+            margin-top: 32px;
+        }
+
+        .solution-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .solution-list li {
+            margin-bottom: 20px;
+            padding-left: 24px;
+            position: relative;
+            font-size: 16px;
+            color: #424242;
+            line-height: 1.7;
+        }
+
+        .solution-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #89389f;
+            font-weight: 700;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .result-item {
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+            border-left: 4px solid #89389f;
+        }
+
+        .result-item h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2B2B2B;
+            margin-bottom: 12px;
+        }
+
+        .result-item p {
+            font-size: 16px;
+            color: #424242;
+            line-height: 1.7;
+        }
+
+        .device-mockups {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .device-mockup img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .highlights-image {
+            width: 100%;
+            height: auto;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        .testimonial-section {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .testimonial-box {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px;
+            background: #F9F9F9;
+            border-left: 6px solid #89389f;
+            border-radius: 4px;
+        }
+
+        .testimonial-quote {
+            font-size: 22px;
+            font-style: italic;
+            color: #2B2B2B;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-author {
+            font-size: 16px;
+            font-weight: 600;
+            color: #424242;
+        }
+
+        .testimonial-title {
+            font-size: 14px;
+            color: #89389f;
+            margin-top: 4px;
+        }
+
+        .services-tech-section {
+            background: #F9F9F9;
+            padding: 80px 0;
+        }
+
+        .services-tech-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            margin-top: 40px;
+        }
+
+        .tech-category h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2B2B2B;
+            margin-bottom: 20px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tech-tag {
+            background: white;
+            color: #89389f;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid #e0e0e0;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);
+            padding: 80px 0;
+        }
+
+        .cta-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 42px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .cta-content p {
+            font-size: 20px;
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 32px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #89389f;
+            padding: 16px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 968px) {
+            .client-info-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .two-column-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .device-mockups {
+                grid-template-columns: 1fr;
+            }
+
+            .services-tech-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .case-study-hero {
+                height: 300px;
+            }
+
+            .case-study-title {
+                font-size: 36px;
+            }
+
+            .section-heading {
+                font-size: 28px;
+            }
+
+            .cta-content h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -50,123 +427,210 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="padding: 80px 0; background: linear-gradient(135deg, rgba(137, 56, 159, 0.9) 0%, rgba(237, 41, 37, 0.9) 100%);">
-        <div class="container">
-            <p style="color: rgba(255,255,255,0.9); margin-bottom: 16px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Case Study</p>
-            <h1 style="color: white; margin-bottom: 24px;">Falabella</h1>
-            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 900px;">Legacy Commerce Modernization - Transforming 135+ years of retail heritage with modern cloud-native architecture on Azure.</p>
+    <!-- Hero Banner -->
+    <div class="case-study-hero" style="background-image: url('../images/casestudies/falabella-hero.png');"></div>
+
+    <!-- Title Section -->
+    <section class="case-study-title-section">
+        <div class="content-narrow">
+            <img src="../images/casestudies/falabella-logo.png" alt="Falabella Logo" class="case-study-logo">
+            <h1 class="case-study-title">Modernizing Latin America's Retail Giant</h1>
+            <p class="case-study-subtitle">Transforming 135+ years of retail heritage with cloud-native architecture, enabling Falabella to serve 36M+ customers across 9 countries with modern, scalable e-commerce infrastructure.</p>
         </div>
     </section>
 
-    <!-- Overview -->
-    <section>
-        <div class="container-narrow">
-            <h2>Overview</h2>
-            <p>Falabella, a Latin American retail giant with 135+ years of history, partnered with NULogic to migrate from its outdated Oracle ATG platform to a modern, cloud-native architecture on Azure. This transformation enabled one of the region's largest department store chains to overcome critical infrastructure challenges and embrace the agility needed for contemporary e-commerce demands.</p>
+    <!-- Client Info Grid -->
+    <section class="client-info-grid">
+        <div class="client-info-container">
+            <div class="client-info-item">
+                <div class="client-info-label">Region</div>
+                <div class="client-info-value">LATAM</div>
+            </div>
+            <div class="client-info-item">
+                <div class="client-info-label">Website</div>
+                <div class="client-info-value"><a href="https://www.falabella.com" target="_blank" rel="noopener">falabella.com</a></div>
+            </div>
+            <div class="client-info-item">
+                <div class="client-info-label">Client Since</div>
+                <div class="client-info-value">2020</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Overview -->
+    <section class="section-white">
+        <div class="content-narrow">
+            <h2 class="section-heading">Client Overview</h2>
+            <p class="section-text">Falabella is one of Latin America's largest and most prestigious retail conglomerates, with a history spanning over 135 years. The company operates across 9 countries, serving more than 36 million customers and employing 90,000 people throughout the region.</p>
+            <p class="section-text">The Falabella portfolio includes leading retail brands such as Falabella department stores, Sodimac (home improvement), and Tottus (supermarkets). The company also operates Banco Falabella, Mallplaza shopping centers, and holds the exclusive partnership for IKEA in Latin America, making it a dominant force in retail innovation and customer experience.</p>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="section-gray">
+        <div class="content-container">
+            <div class="two-column-section">
+                <div>
+                    <img src="../images/casestudies/falabella-challenge.png" alt="Falabella Legacy System Challenges" class="challenge-image">
+                </div>
+                <div>
+                    <h2 class="section-heading">The Challenge</h2>
+                    <p class="section-text">Falabella's legacy Oracle ATG platform created significant obstacles that threatened the company's ability to compete in the rapidly evolving e-commerce landscape:</p>
+
+                    <div class="challenge-list">
+                        <div class="challenge-item">
+                            <h3>Outdated Tech Stack</h3>
+                            <p>The aging ATG framework lacked the flexibility and modern agility required for contemporary e-commerce demands, limiting innovation and slowing time-to-market for new features.</p>
+                        </div>
+
+                        <div class="challenge-item">
+                            <h3>Environment Management Issues</h3>
+                            <p>Critical configuration files lived on servers without version control, creating operational risks and making it difficult to track changes or roll back problematic deployments.</p>
+                        </div>
+
+                        <div class="challenge-item">
+                            <h3>Knowledge Silos</h3>
+                            <p>Core architectural knowledge was concentrated with few individuals, creating dependency risks and bottlenecks that hindered development velocity and operational resilience.</p>
+                        </div>
+
+                        <div class="challenge-item">
+                            <h3>Rising Costs</h3>
+                            <p>Expensive infrastructure maintenance compared to cloud-native alternatives resulted in high operational costs without delivering proportionate business value.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="section-white">
+        <div class="content-narrow">
+            <h2 class="section-heading">The Solution</h2>
+            <p class="section-text">NULogic implemented a comprehensive cloud-native transformation strategy that addressed each challenge while minimizing disruption to Falabella's ongoing operations:</p>
+
+            <div class="solution-list">
+                <ul>
+                    <li><strong>Scalable virtualized environments</strong> using Azure and Docker for lower environments, providing a reliable and flexible foundation for modern e-commerce operations.</li>
+                    <li><strong>Environment-as-Code approach</strong> enabling sprint-based development environment creation, eliminating configuration drift and dramatically improving developer productivity.</li>
+                    <li><strong>Iterative phased execution</strong> with frequent client validation and collaborative planning, ensuring alignment with business goals while minimizing risk throughout the transformation.</li>
+                    <li><strong>DevOps automation</strong> and continuous deployment pipelines, accelerating release cycles and improving code quality through automated testing and deployment processes.</li>
+                    <li><strong>Cloud-native security features</strong> with encryption and comprehensive auditing for compliance, protecting sensitive customer data and ensuring regulatory adherence.</li>
+                </ul>
+            </div>
+
+            <!-- Device Mockups -->
+            <div class="device-mockups">
+                <div class="device-mockup">
+                    <img src="../images/casestudies/falabella-desktop.png" alt="Falabella Desktop View">
+                </div>
+                <div class="device-mockup">
+                    <img src="../images/casestudies/falabella-laptop.png" alt="Falabella Laptop View">
+                </div>
+                <div class="device-mockup">
+                    <img src="../images/casestudies/falabella-mobile.png" alt="Falabella Mobile View">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="section-gray">
+        <div class="content-container">
+            <h2 class="section-heading">Results Achieved</h2>
+            <p class="section-text">The cloud-native transformation delivered measurable benefits across operations, costs, and customer experience:</p>
+
+            <div class="results-grid">
+                <div class="result-item">
+                    <h3>Accelerated Time-to-Market</h3>
+                    <p>Agile DevOps workflows enabled faster feature deployment and improved development velocity, allowing Falabella to respond quickly to market opportunities and customer needs.</p>
+                </div>
+
+                <div class="result-item">
+                    <h3>Reduced Total Cost of Ownership</h3>
+                    <p>Cloud-first architecture significantly lowered infrastructure costs while improving system reliability and reducing maintenance overhead.</p>
+                </div>
+
+                <div class="result-item">
+                    <h3>Improved Performance</h3>
+                    <p>Elastic scalability automatically matches business demand, ensuring optimal performance during peak shopping periods while optimizing resource utilization during normal operations.</p>
+                </div>
+
+                <div class="result-item">
+                    <h3>Eliminated Operational Bottlenecks</h3>
+                    <p>Decentralized ownership and improved documentation reduced dependency risks and enabled teams to work more independently and efficiently.</p>
+                </div>
+
+                <div class="result-item">
+                    <h3>Enhanced Customer Experience</h3>
+                    <p>Improved omnichannel capabilities deliver seamless shopping experiences across all devices, driving customer satisfaction and loyalty.</p>
+                </div>
+
+                <div class="result-item">
+                    <h3>Future-Ready Infrastructure</h3>
+                    <p>Modern cloud-native architecture positions Falabella to quickly adopt emerging technologies and scale to meet future business demands.</p>
+                </div>
+            </div>
+
+            <img src="../images/casestudies/falabella-highlights.png" alt="Falabella Transformation Highlights" class="highlights-image">
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+        <div class="content-narrow">
+            <div class="testimonial-box">
+                <p class="testimonial-quote">"Partnering with NULogic was transformational. Their cloud commerce expertise modernized our Oracle ATG platform with minimal disruption, enabling us to deliver better experiences to our millions of customers across Latin America."</p>
+                <div class="testimonial-author">Jesus Ruiz Martinez</div>
+                <div class="testimonial-title">VP Ecommerce IT, Falabella</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Technologies -->
+    <section class="services-tech-section">
+        <div class="content-narrow">
+            <h2 class="section-heading">Services & Technologies</h2>
+
+            <div class="services-tech-grid">
+                <div class="tech-category">
+                    <h3>Services Delivered</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Cloud Engineering and DevOps</span>
+                        <span class="tech-tag">Monitoring and Support</span>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>Engineering Stack</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Azure</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">DevOps</span>
+                    </div>
+                </div>
+            </div>
 
             <div style="margin-top: 40px;">
-                <h3>Services Delivered</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Cloud Engineering and DevOps</li>
-                    <li style="margin-bottom: 12px;">Monitoring and Support</li>
-                    <li style="margin-bottom: 12px;">Cloud-native infrastructure using Azure and Docker</li>
-                    <li style="margin-bottom: 12px;">"Environment as Code" approach for development workflows</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- The Challenge -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>The Challenge</h2>
-            <p>Falabella faced multiple critical obstacles with its aging ATG system that threatened its competitive position in the rapidly evolving e-commerce landscape:</p>
-
-            <div style="margin-top: 32px;">
-                <div style="margin-bottom: 24px;">
-                    <h3 style="font-size: 18px; margin-bottom: 12px;">Outdated Technology</h3>
-                    <p>The legacy framework lacked the flexibility and agility needed for contemporary e-commerce demands, limiting innovation and speed to market.</p>
-                </div>
-
-                <div style="margin-bottom: 24px;">
-                    <h3 style="font-size: 18px; margin-bottom: 12px;">Infrastructure Issues</h3>
-                    <p>Configuration files remained unversioned on servers, creating significant operational risks and making it difficult to track changes or roll back problematic deployments.</p>
-                </div>
-
-                <div style="margin-bottom: 24px;">
-                    <h3 style="font-size: 18px; margin-bottom: 12px;">Knowledge Silos</h3>
-                    <p>Critical architectural expertise was concentrated with few individuals, creating dependency risks and bottlenecks in development and operations.</p>
-                </div>
-
-                <div style="margin-bottom: 24px;">
-                    <h3 style="font-size: 18px; margin-bottom: 12px;">Rising Costs</h3>
-                    <p>Maintaining the old infrastructure proved expensive and resource-intensive compared to modern cloud alternatives, impacting the bottom line without delivering commensurate value.</p>
+                <div class="tech-category">
+                    <h3>Partner Integrations</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Oracle ATG</span>
+                        <span class="tech-tag">Oracle Endeca</span>
+                        <span class="tech-tag">Oracle Database</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- The Solution -->
-    <section>
-        <div class="container-narrow">
-            <h2>The Solution</h2>
-            <p>NULogic implemented a comprehensive modernization strategy that addressed each challenge while minimizing disruption to ongoing operations:</p>
-
-            <div style="margin-top: 32px;">
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 16px;"><strong>Cloud-native infrastructure</strong> using Azure and Docker for lower environments, providing scalable and reliable foundation for modern e-commerce operations</li>
-                    <li style="margin-bottom: 16px;"><strong>"Environment as Code" approach</strong> enabling teams to create development environments per sprint, eliminating configuration drift and improving developer productivity</li>
-                    <li style="margin-bottom: 16px;"><strong>Iterative execution</strong> with frequent validation and collaborative planning, ensuring alignment with business goals and minimizing risk</li>
-                    <li style="margin-bottom: 16px;"><strong>DevOps automation</strong> with continuous deployment pipelines, accelerating release cycles and improving code quality</li>
-                    <li style="margin-bottom: 16px;"><strong>Security features</strong> including encryption and auditing for compliance, protecting sensitive customer and business data</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Results -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>Results Achieved</h2>
-            <p>The migration delivered transformative benefits across operations, costs, and customer experience:</p>
-
-            <div style="margin-top: 32px; display: grid; grid-template-columns: 1fr; gap: 24px;">
-        </div>
-    </section>
-
-    <!-- Technologies -->
-    <section>
-        <div class="container-narrow">
-            <h2>Technologies & Integrations</h2>
-
-            <div style="margin-top: 32px;">
-                <h3 style="font-size: 18px; margin-bottom: 16px;">Engineering Stack</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Azure</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Docker</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">DevOps</span>
-                </div>
-            </div>
-
-            <div style="margin-top: 32px;">
-                <h3 style="font-size: 18px; margin-bottom: 16px;">Partner Integrations</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Oracle ATG</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Oracle Endeca</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Oracle Database</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section>
-        <div class="container">
-            <div class="cta-banner">
-                <h2>Ready to modernize your legacy platform?</h2>
-                <p>Let's discuss how we can migrate your platform to modern cloud infrastructure.</p>
-                <a href="../contact.html" class="btn">Schedule a Call →</a>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="content-narrow">
+            <div class="cta-content">
+                <h2>Ready to Modernize Your Legacy Platform?</h2>
+                <p>Let's discuss how we can transform your e-commerce infrastructure with cloud-native architecture.</p>
+                <a href="../contact.html" class="cta-button">Schedule a Consultation</a>
             </div>
         </div>
     </section>

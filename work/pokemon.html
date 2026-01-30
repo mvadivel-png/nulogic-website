@@ -8,6 +8,447 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Case Study Specific Styles */
+        .case-study-hero {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .case-study-hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .case-study-title {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .case-study-title h1 {
+            color: #2B2B2B;
+            font-size: 42px;
+            line-height: 1.3;
+            max-width: 1000px;
+            margin: 0 auto 32px;
+            font-weight: 700;
+        }
+
+        .client-logo {
+            margin-bottom: 32px;
+        }
+
+        .client-logo img {
+            height: 60px;
+            margin: 0 auto;
+        }
+
+        .client-info-grid {
+            background: #F9F9F9;
+            padding: 48px 0;
+        }
+
+        .client-info-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .client-info-item {
+            text-align: center;
+        }
+
+        .client-info-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #979797;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .client-info-value {
+            font-size: 18px;
+            color: #2B2B2B;
+            font-weight: 600;
+        }
+
+        .client-info-value a {
+            color: #89389f;
+            text-decoration: none;
+        }
+
+        .client-info-value a:hover {
+            text-decoration: underline;
+        }
+
+        .client-overview {
+            background: #FFFFFF;
+            padding: 64px 0;
+        }
+
+        .client-overview-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .client-overview h2 {
+            font-size: 32px;
+            color: #2B2B2B;
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        .client-overview p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #424242;
+            margin-bottom: 16px;
+        }
+
+        .challenge-section {
+            background: #F9F9F9;
+            padding: 64px 0;
+        }
+
+        .challenge-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .challenge-image {
+            width: 100%;
+        }
+
+        .challenge-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        .challenge-text h2 {
+            font-size: 32px;
+            color: #2B2B2B;
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        .challenge-text ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .challenge-text ul li {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #424242;
+            margin-bottom: 16px;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        .challenge-text ul li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #89389f;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 1.4;
+        }
+
+        .solution-section {
+            background: #FFFFFF;
+            padding: 64px 0;
+        }
+
+        .solution-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .solution-content h2 {
+            font-size: 32px;
+            color: #2B2B2B;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .solution-item {
+            margin-bottom: 32px;
+        }
+
+        .solution-item h3 {
+            font-size: 22px;
+            color: #2B2B2B;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .solution-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .solution-item ul li {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #424242;
+            margin-bottom: 12px;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        .solution-item ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #89389f;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .results-section {
+            background: #F9F9F9;
+            padding: 64px 0;
+        }
+
+        .results-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .results-content h2 {
+            font-size: 32px;
+            color: #2B2B2B;
+            margin-bottom: 32px;
+            font-weight: 700;
+        }
+
+        .results-image {
+            margin-bottom: 40px;
+        }
+
+        .results-image img {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+            border-radius: 12px;
+        }
+
+        .results-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .results-content ul li {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #424242;
+            margin-bottom: 16px;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        .results-content ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #89389f;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .testimonial-section {
+            background: #FFFFFF;
+            padding: 64px 0;
+        }
+
+        .testimonial-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .testimonial-quote {
+            border-left: 4px solid #89389f;
+            padding-left: 32px;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-quote p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #2B2B2B;
+            font-style: italic;
+            margin-bottom: 0;
+        }
+
+        .testimonial-author {
+            padding-left: 32px;
+            font-size: 16px;
+            color: #424242;
+            font-weight: 600;
+        }
+
+        .services-section {
+            background: #F9F9F9;
+            padding: 64px 0;
+        }
+
+        .services-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .services-content h2 {
+            font-size: 32px;
+            color: #2B2B2B;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .services-group {
+            margin-bottom: 40px;
+        }
+
+        .services-group h3 {
+            font-size: 22px;
+            color: #2B2B2B;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .services-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 24px;
+        }
+
+        .services-list li {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #424242;
+            margin-bottom: 12px;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        .services-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #89389f;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 1.4;
+        }
+
+        .tech-logos {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+
+        .tech-logos img {
+            height: 40px;
+            width: auto;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: #FFFFFF;
+            font-size: 36px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .cta-section p {
+            color: #FFFFFF;
+            font-size: 18px;
+            margin-bottom: 32px;
+            opacity: 0.95;
+        }
+
+        .cta-section .btn {
+            background: #FFFFFF;
+            color: #89389f;
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 12px;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-section .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .case-study-title h1 {
+                font-size: 28px;
+                padding: 0 20px;
+            }
+
+            .client-info-container {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .challenge-content {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .challenge-image {
+                order: -1;
+            }
+
+            .client-overview h2,
+            .challenge-text h2,
+            .solution-content h2,
+            .results-content h2,
+            .services-content h2 {
+                font-size: 26px;
+            }
+
+            .solution-item h3,
+            .services-group h3 {
+                font-size: 20px;
+            }
+
+            .cta-section h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -50,149 +491,187 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="padding: 80px 0; background: linear-gradient(135deg, rgba(137, 56, 159, 0.9) 0%, rgba(237, 41, 37, 0.9) 100%);">
+    <!-- Hero Banner -->
+    <section class="case-study-hero">
+        <img src="../images/casestudies/pokemon-hero.png" alt="Pokemon Case Study Hero">
+    </section>
+
+    <!-- Title Section -->
+    <section class="case-study-title">
         <div class="container">
-            <p style="color: rgba(255,255,255,0.9); margin-bottom: 16px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Case Study</p>
-            <h1 style="color: white; margin-bottom: 24px;">Pokemon Center</h1>
-            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 900px;">Modernizing digital commerce to support millions of fans globally with scalable AWS infrastructure and optimized React performance.</p>
+            <div class="client-logo">
+                <img src="../images/casestudies/pokemon-logo.png" alt="Pokemon Logo">
+            </div>
+            <h1>Pokémon Elevates Digital Commerce with AWS DevOps, Scalable eCommerce Architecture, React Performance Optimization, and Performance Engineering</h1>
         </div>
     </section>
 
-    <!-- Overview -->
-    <section>
-        <div class="container-narrow">
-            <h2>Overview</h2>
-            <p>Pokemon Center partnered with NULogic to modernize its digital commerce platform, addressing operational inefficiencies, cybersecurity risks, and scalability challenges to support millions of fans globally.</p>
-
-            <div style="margin-top: 40px;">
-                <h3>Client Background</h3>
-                <p><strong>Organization:</strong> Pokemon Center (The Pokemon Company)</p>
-                <p><strong>Region:</strong> U.S.</p>
-                <p><strong>Website:</strong> pokemoncenter.com</p>
-                <p><strong>Client Since:</strong> 2019</p>
-                <p><strong>Industry:</strong> Global entertainment and retail</p>
-                <p style="margin-top: 16px;">Pokemon Center serves as a key digital commerce destination for fans worldwide, originally launched in Japan and expanded internationally through its online platform.</p>
+    <!-- Client Info Grid -->
+    <section class="client-info-grid">
+        <div class="client-info-container">
+            <div class="client-info-item">
+                <div class="client-info-label">Region</div>
+                <div class="client-info-value">U.S.</div>
+            </div>
+            <div class="client-info-item">
+                <div class="client-info-label">Website</div>
+                <div class="client-info-value"><a href="https://www.pokemoncenter.com" target="_blank" rel="noopener">pokemoncenter.com</a></div>
+            </div>
+            <div class="client-info-item">
+                <div class="client-info-label">Client Since</div>
+                <div class="client-info-value">2019</div>
             </div>
         </div>
     </section>
 
-    <!-- The Challenge -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>The Challenge</h2>
-            <ul style="margin-top: 16px;">
-                <li style="margin-bottom: 12px;">Legacy eCommerce systems faced operational inefficiencies and outdated infrastructure</li>
-                <li style="margin-bottom: 12px;">Platform struggled with scalability during high-traffic events and major product launches</li>
-                <li style="margin-bottom: 12px;">Cybersecurity vulnerabilities and data management gaps hindered innovation</li>
-                <li style="margin-bottom: 12px;">System couldn't reliably handle millions of concurrent users during peak shopping periods</li>
-            </ul>
+    <!-- Client Overview -->
+    <section class="client-overview">
+        <div class="client-overview-content">
+            <h2>Client Overview</h2>
+            <p>NULogic's expert team performed comprehensive checkout performance engineering, load testing, and React-based optimization to ensure Pokémon's digital commerce platform scales seamlessly during high-traffic eCommerce events, delivering secure, resilient, and enterprise-ready online shopping experiences.</p>
+            <p>Pokémon Center serves global fans with a scalable, secure platform for online retail.</p>
         </div>
     </section>
 
-    <!-- Solutions -->
-    <section>
-        <div class="container-narrow">
-            <h2>Solutions Implemented</h2>
+    <!-- Challenge Section -->
+    <section class="challenge-section">
+        <div class="challenge-content">
+            <div class="challenge-image">
+                <img src="../images/casestudies/pokemon-challenge.png" alt="Pokemon Challenge">
+            </div>
+            <div class="challenge-text">
+                <h2>Challenge</h2>
+                <ul>
+                    <li>Legacy systems faced operational inefficiencies and outdated infrastructure</li>
+                    <li>Cybersecurity risks and data management gaps hindered scalability</li>
+                    <li>Required support during high-traffic events and major product launches</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-            <div style="margin-top: 32px;">
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="solution-content">
+            <h2>Solution</h2>
+
+            <div class="solution-item">
                 <h3>AWS DevOps & Cloud Automation</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Infrastructure as Code (IaC) using AWS CloudFormation</li>
-                    <li style="margin-bottom: 12px;">Built CI/CD pipelines with automated deployment workflows</li>
-                    <li style="margin-bottom: 12px;">Enhanced security, compliance, and operational efficiency</li>
+                <ul>
+                    <li>Infrastructure as Code (IaC) for automated provisioning</li>
+                    <li>CI/CD pipelines for streamlined deployment</li>
+                    <li>Enhanced security and compliance measures</li>
                 </ul>
             </div>
 
-            <div style="margin-top: 32px;">
+            <div class="solution-item">
+                <h3>Collaboration & Monitoring</h3>
+                <ul>
+                    <li>Cross-functional team alignment</li>
+                    <li>Real-time system monitoring and alerting</li>
+                    <li>Proactive incident response</li>
+                </ul>
+            </div>
+
+            <div class="solution-item">
                 <h3>Performance Engineering</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Deep checkout testing and load analysis</li>
-                    <li style="margin-bottom: 12px;">React-based front-end optimization</li>
-                    <li style="margin-bottom: 12px;">Ensured scalability during major product drops</li>
+                <ul>
+                    <li>Comprehensive checkout testing and optimization</li>
+                    <li>Load analysis for high-traffic scenarios</li>
+                    <li>Performance benchmarking and tuning</li>
                 </ul>
             </div>
 
-            <div style="margin-top: 32px;">
+            <div class="solution-item">
                 <h3>Front-End Modernization</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Dynamic, responsive React-based user interfaces</li>
-                    <li style="margin-bottom: 12px;">Mobile-friendly shopping experiences across all devices</li>
+                <ul>
+                    <li>React-based UI development</li>
+                    <li>Component optimization for faster rendering</li>
+                    <li>Improved user experience across all devices</li>
                 </ul>
             </div>
 
-            <div style="margin-top: 32px;">
+            <div class="solution-item">
                 <h3>Security Integration</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Embedded security best practices into deployment pipelines</li>
-                    <li style="margin-bottom: 12px;">Access management and cybersecurity vulnerability mitigation</li>
+                <ul>
+                    <li>Identity and access management</li>
+                    <li>Vulnerability scanning and prevention</li>
+                    <li>Security best practices embedded in deployment pipelines</li>
                 </ul>
             </div>
 
-            <div style="margin-top: 32px;">
+            <div class="solution-item">
                 <h3>Additional Support</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Release management and QA/testing</li>
-                    <li style="margin-bottom: 12px;">Mobile development and headless CMS integration</li>
-                    <li style="margin-bottom: 12px;">Continuous monitoring and platform support</li>
+                <ul>
+                    <li>Release management and QA testing</li>
+                    <li>Mobile development support</li>
+                    <li>Headless CMS integration</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Results -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>Results Achieved</h2>
-            <ul style="margin-top: 16px;">
-                <li style="margin-bottom: 12px;"><strong>Operational Efficiency:</strong> Automated infrastructure provisioning reduced manual errors and accelerated time-to-market</li>
-                <li style="margin-bottom: 12px;"><strong>Scalability:</strong> Platform now handles high-traffic eCommerce events seamlessly with enterprise-level reliability</li>
-                <li style="margin-bottom: 12px;"><strong>Performance Gains:</strong> Optimized checkout processes and React front-end improvements enhanced transaction speed</li>
-                <li style="margin-bottom: 12px;"><strong>Security:</strong> Robust monitoring and integrated security practices reduced cybersecurity risks</li>
-                <li style="margin-bottom: 12px;"><strong>Cost Optimization:</strong> Strategic AWS implementation lowered infrastructure costs</li>
-                <li style="margin-bottom: 12px;"><strong>Innovation:</strong> Modern DevOps foundation enables rapid feature delivery and continuous platform enhancement</li>
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="results-content">
+            <h2>Results</h2>
+
+            <div class="results-image">
+                <img src="../images/casestudies/pokemon-results.png" alt="Pokemon Results">
+            </div>
+
+            <ul>
+                <li>Automated infrastructure reduced manual errors and accelerated time-to-market</li>
+                <li>Seamless scaling during high-traffic events with maintained availability</li>
+                <li>Optimized checkout processes improving transaction speed</li>
+                <li>Robust security monitoring reduced cybersecurity risks</li>
+                <li>Strategic AWS implementation lowered operational costs</li>
+                <li>Foundation enabled rapid feature delivery and innovation</li>
             </ul>
         </div>
     </section>
 
-    <!-- Testimonial -->
-    <section>
-        <div class="container-narrow">
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+        <div class="testimonial-content">
+            <div class="testimonial-quote">
+                <p>"NULogic has been an essential partner in modernizing our commerce platforms. With their support, we've been able to scale seamlessly during high-traffic events while continuing to innovate at speed."</p>
+            </div>
+            <div class="testimonial-author">
+                Alphonse Giltus, Manager, Enterprise eCommerce Architect at Pokémon
+            </div>
         </div>
     </section>
 
-    <!-- Technologies -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>Technologies & Services</h2>
-            <div style="margin-top: 24px;">
-                <h3>Engineering Stack</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">AWS</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">AWS CloudFormation</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">React.js</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">DevOps</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">CI/CD</span>
-                </div>
-                <h3 style="margin-top: 32px;">Services Provided</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Performance engineering and optimization</li>
-                    <li style="margin-bottom: 12px;">Monitoring and support operations</li>
-                    <li style="margin-bottom: 12px;">Cloud infrastructure management</li>
-                    <li style="margin-bottom: 12px;">DevOps pipeline development</li>
+    <!-- Services & Technologies Section -->
+    <section class="services-section">
+        <div class="services-content">
+            <h2>Services & Technologies</h2>
+
+            <div class="services-group">
+                <h3>Services Delivered</h3>
+                <ul class="services-list">
+                    <li>Performance Engineering (checkout testing, load analysis, React optimization)</li>
+                    <li>Monitoring and Support Operations (system monitoring, security management)</li>
                 </ul>
             </div>
+
+            <div class="services-group">
+                <h3>Engineering Stack</h3>
+                <div class="tech-logos">
+                    <img src="../images/casestudies/pokemon-aws-logo.png" alt="AWS">
+                    <img src="../images/casestudies/pokemon-tech1.png" alt="Technology Partner">
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section>
+    <!-- CTA Section -->
+    <section class="cta-section">
         <div class="container">
-            <div class="cta-banner">
-                <h2>Ready to modernize your commerce platform?</h2>
-                <p>Let's discuss how we can build scalable, secure infrastructure to support your growth.</p>
-                <a href="../contact.html" class="btn">Schedule a Call →</a>
-            </div>
+            <h2>Ready to modernize your commerce platform?</h2>
+            <p>Let's discuss how we can build scalable, secure infrastructure to support your growth.</p>
+            <a href="../contact.html" class="btn">Schedule a Call</a>
         </div>
     </section>
 

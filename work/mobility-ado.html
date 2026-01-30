@@ -4,10 +4,347 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobility ADO Case Study | Custom Mobile App Modernization | NuLogic</title>
+    <meta name="description" content="How NuLogic modernized Mobility ADO's ticketing systems with custom, high-performance mobile apps generating up to $4M USD per month.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        :root {
+            --color-text: #2B2B2B;
+            --color-text-secondary: #424242;
+            --color-purple: #89389f;
+            --color-red: #ed2925;
+            --color-gray-bg: #F9F9F9;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        /* Hero Banner */
+        .case-study-hero {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-study-hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Title Section */
+        .title-section {
+            background: white;
+            padding: 60px 0 40px;
+        }
+
+        .title-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .client-logo {
+            margin-bottom: 30px;
+        }
+
+        .client-logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .title-section h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--color-text);
+            margin: 0 0 20px 0;
+            line-height: 1.2;
+        }
+
+        .title-section .subtitle {
+            font-size: 20px;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+            max-width: 900px;
+        }
+
+        /* Client Info Grid */
+        .client-info-grid {
+            background: var(--color-gray-bg);
+            padding: 50px 0;
+        }
+
+        .client-info-grid .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .info-item h3 {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-text-secondary);
+            margin: 0 0 10px 0;
+        }
+
+        .info-item p {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--color-text);
+            margin: 0;
+        }
+
+        .info-item a {
+            color: var(--color-purple);
+            text-decoration: none;
+        }
+
+        .info-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+        }
+
+        .content-section.gray-bg {
+            background: var(--color-gray-bg);
+        }
+
+        .content-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .content-section h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--color-text);
+            margin: 0 0 30px 0;
+        }
+
+        .content-section h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--color-text);
+            margin: 0 0 15px 0;
+        }
+
+        .content-section p {
+            font-size: 18px;
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+            margin: 0 0 20px 0;
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .two-column img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Solution Items */
+        .solution-item {
+            margin-bottom: 40px;
+        }
+
+        .solution-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .solution-item h3 {
+            margin-bottom: 12px;
+        }
+
+        .solution-item p {
+            margin-bottom: 0;
+        }
+
+        .solution-item ul {
+            margin: 12px 0 0 0;
+            padding-left: 20px;
+        }
+
+        .solution-item li {
+            font-size: 18px;
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+
+        /* Results Grid */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .result-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Results List */
+        .results-list {
+            margin-top: 30px;
+        }
+
+        .results-list ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .results-list li {
+            font-size: 18px;
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .results-list li strong {
+            color: var(--color-text);
+        }
+
+        /* Services & Technologies */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .tech-item img {
+            width: 100%;
+            height: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #E5E5E5;
+        }
+
+        .services-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .service-tag {
+            background: white;
+            border: 2px solid var(--color-purple);
+            color: var(--color-purple);
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--color-purple) 0%, var(--color-red) 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .cta-section h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: white;
+            margin: 0 0 20px 0;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.95);
+            margin: 0 0 30px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--color-purple);
+            padding: 16px 40px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .title-section h1 {
+                font-size: 36px;
+            }
+
+            .content-section h2 {
+                font-size: 28px;
+            }
+
+            .cta-section h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -50,144 +387,190 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="padding: 80px 0; background: linear-gradient(135deg, rgba(137, 56, 159, 0.9) 0%, rgba(237, 41, 37, 0.9) 100%);">
+    <!-- Hero Banner -->
+    <section class="case-study-hero">
+        <img src="../images/casestudies/mobility-ado-hero.png" alt="Mobility ADO - Mobile App Modernization" />
+    </section>
+
+    <!-- Title Section -->
+    <section class="title-section">
         <div class="container">
-            <p style="color: rgba(255,255,255,0.9); margin-bottom: 16px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Case Study</p>
-            <h1 style="color: white; margin-bottom: 24px;">Mobility ADO</h1>
-            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 900px;">High-performance native mobile applications enabling digital bus ticket purchases and reducing queues at Mexico's busiest transportation terminals.</p>
+            <div class="client-logo">
+                <img src="../images/casestudies/mobility-ado-logo.png" alt="Mobility ADO Logo" />
+            </div>
+            <h1>Modernizing Mobility ADO's ticketing systems with custom, high performance mobile apps</h1>
+            <p class="subtitle">One of Mexico's largest transportation companies seeking digital transformation with mobile ticketing capabilities to reduce physical terminal congestion.</p>
         </div>
     </section>
 
-    <!-- Overview -->
-    <section>
-        <div class="container-narrow">
-            <h2>Overview</h2>
-            <p>NULogic modernized Mobility ADO's ticketing systems by developing high-performance native mobile applications for Android and iOS, enabling customers to purchase digital bus tickets via mobile devices and reducing queues at Mexico's busiest transportation terminals.</p>
-
-            <div style="margin-top: 40px;">
-                <h3>Client Background</h3>
-                <p><strong>Company:</strong> Mobility ADO (one of Mexico's largest transportation companies)</p>
-                <p><strong>Region:</strong> LATAM</p>
-                <p><strong>Client Since:</strong> 2021</p>
-                <p><strong>Website:</strong> <a href="https://www.mobilityado.com" target="_blank" style="color: var(--color-primary);">www.mobilityado.com</a></p>
-                <p style="margin-top: 16px;">Mobility ADO sought to accelerate its digital transformation journey through innovative mobile solutions for passenger engagement and operational efficiency.</p>
+    <!-- Client Info Grid -->
+    <section class="client-info-grid">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>Region</h3>
+                    <p>Latam</p>
+                </div>
+                <div class="info-item">
+                    <h3>Website</h3>
+                    <p><a href="https://www.mobilityado.com" target="_blank" rel="noopener">www.mobilityado.com</a></p>
+                </div>
+                <div class="info-item">
+                    <h3>Client Since</h3>
+                    <p>2021</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Challenge -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>The Challenge</h2>
-            <ul style="margin-top: 16px;">
-                <li style="margin-bottom: 12px;">Implement a mobile bus ticket booking solution for digital ticket purchases</li>
-                <li style="margin-bottom: 12px;">Improve passenger experience and reduce long queues at major terminals</li>
-                <li style="margin-bottom: 12px;">Create a middleware layer to expose internal services to external enterprise applications</li>
-                <li style="margin-bottom: 12px;">Enable analytics capabilities</li>
-                <li style="margin-bottom: 12px;">Support remote sales through new user roles</li>
-                <li style="margin-bottom: 12px;">Handle high transaction volumes during peak travel times</li>
-            </ul>
+    <!-- Client Overview -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Client Overview</h2>
+            <p>Mobility ADO aimed to implement a mobile bus ticket booking solution, enable digital purchases via mobile devices, improve passenger experience, reduce queue lines at major terminals, establish middleware integration with internal services, enable analytics, and support remote sales through affiliate user roles.</p>
         </div>
     </section>
 
-    <!-- Solution -->
-    <section>
-        <div class="container-narrow">
-            <h2>Solutions Implemented</h2>
+    <!-- The Challenge -->
+    <section class="content-section gray-bg">
+        <div class="container">
+            <div class="two-column">
+                <div>
+                    <img src="../images/casestudies/mobility-ado-challenge.png" alt="The Challenge" />
+                </div>
+                <div>
+                    <h2>The Challenge</h2>
+                    <p>Mobility ADO aimed to implement a mobile bus ticket booking solution, enable digital purchases via mobile devices, improve passenger experience, reduce queue lines at major terminals, establish middleware integration with internal services, enable analytics, and support remote sales through affiliate user roles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div style="margin-top: 32px;">
-                <h3>Native Mobile App Development</h3>
-                <p>Built high-performance Android and iOS applications for streamlined online bus ticket booking</p>
+    <!-- The Solution -->
+    <section class="content-section">
+        <div class="container">
+            <h2>The Solution</h2>
+
+            <div class="solution-item">
+                <h3>Native Mobile Apps (iOS & Android)</h3>
+                <p>High-performance, user-friendly apps to streamline online bus ticket booking and improve the passenger experience</p>
             </div>
 
-            <div style="margin-top: 32px;">
+            <div class="solution-item">
                 <h3>Scalable Architecture</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Designed systems handling 280 concurrent users per minute during peak periods</li>
-                    <li style="margin-bottom: 12px;">Implemented microservices architecture for modular, cloud-native approach</li>
-                </ul>
+                <p>Applications designed to handle up to 280 concurrent users per minute</p>
             </div>
 
-            <div style="margin-top: 32px;">
+            <div class="solution-item">
                 <h3>Backend Integration</h3>
-                <p>Connected with critical systems: APCD, Oracle Cloud, ERPCO, and Huawei Cloud Services</p>
+                <p>Connected with APCD, Oracle Cloud, ERPCO, and Huawei Cloud Services</p>
             </div>
 
-            <div style="margin-top: 32px;">
-                <h3>Data & Analytics</h3>
-                <p>Integrated Firebase Analytics for real-time reporting and data-driven decision-making</p>
+            <div class="solution-item">
+                <h3>Analytics</h3>
+                <p>Firebase Analytics implementation for real-time reporting</p>
             </div>
 
-            <div style="margin-top: 32px;">
-                <h3>New Features</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;">Introduced affiliate user role enabling agents to sell tickets from remote locations</li>
-                    <li style="margin-bottom: 12px;">Ongoing support, QA testing, maintenance, and project management</li>
-                </ul>
+            <div class="solution-item">
+                <h3>Affiliate Features</h3>
+                <p>New user roles enabling remote ticket sales</p>
+            </div>
+
+            <div class="solution-item">
+                <h3>Microservices</h3>
+                <p>Cloud-native microservices approach to improve scalability, flexibility, and faster time-to-market</p>
+            </div>
+
+            <div class="solution-item">
+                <h3>Ongoing Support</h3>
+                <p>Project management, QA testing, and maintenance services</p>
             </div>
         </div>
     </section>
 
     <!-- Results -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>Results Achieved</h2>
-            <ul style="margin-top: 16px;">
-                <li style="margin-bottom: 12px;">High-volume transaction capacity without downtime</li>
-                <li style="margin-bottom: 12px;">Reduced saturation in physical terminals</li>
-                <li style="margin-bottom: 12px;">Generated up to <strong>$4 million USD per month</strong> through the platform</li>
-                <li style="margin-bottom: 12px;">Accelerated decision-making via integrated analytics</li>
-                <li style="margin-bottom: 12px;">Expanded commercial reach through remote sales points</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section>
-        <div class="container-narrow">
-            <h2>Services Provided</h2>
-            <div style="margin-top: 24px;">
-                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Mobile App Development</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Integration Services</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Project Management</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Quality Assurance</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technologies -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>Technologies & Stack</h2>
-            <div style="margin-top: 24px;">
-                <h3>Engineering Stack</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Android</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">iOS</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Firebase</span>
-                </div>
-            </div>
-            <div style="margin-top: 32px;">
-                <h3>Partner Integrations</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Oracle Cloud</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Huawei Cloud Services</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section>
+    <section class="content-section gray-bg">
         <div class="container">
-            <div class="cta-banner">
-                <h2>Ready to modernize your mobile app?</h2>
-                <p>Let's discuss how we can transform your mobile experiences.</p>
-                <a href="../contact.html" class="btn">Schedule a Call →</a>
+            <h2>Results</h2>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <img src="../images/casestudies/mobility-ado-result1.png" alt="Result 1" />
+                </div>
+                <div class="result-card">
+                    <img src="../images/casestudies/mobility-ado-result2.png" alt="Result 2" />
+                </div>
+                <div class="result-card">
+                    <img src="../images/casestudies/mobility-ado-result3.png" alt="Result 3" />
+                </div>
             </div>
+
+            <div class="results-list">
+                <ul>
+                    <li>High-volume transaction capacity without downtime achieved</li>
+                    <li>Saturation reduction in physical terminals</li>
+                    <li>Generated up to <strong>$4 million USD per month</strong> through the platform</li>
+                    <li>Accelerated decision-making via integrated analytics</li>
+                    <li>Expanded commercial reach through remote sales points</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section class="content-section">
+        <div class="container">
+            <div class="two-column">
+                <div>
+                    <h2>Next Steps</h2>
+                    <p>Mobility ADO now possesses a robust, scalable, and connected e-commerce and mobile app platform positioned to advance passenger mobility leadership while establishing new industry benchmarks.</p>
+                </div>
+                <div>
+                    <img src="../images/casestudies/mobility-ado-nextsteps.png" alt="Next Steps" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Technologies -->
+    <section class="content-section gray-bg">
+        <div class="container">
+            <h2>Services</h2>
+            <div class="services-list">
+                <span class="service-tag">Mobile App Development</span>
+                <span class="service-tag">Integration Services</span>
+                <span class="service-tag">Project Management</span>
+                <span class="service-tag">Quality Assurance</span>
+            </div>
+
+            <h2 style="margin-top: 60px;">Engineering Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <img src="../images/casestudies/mobility-ado-tech1.png" alt="Technology 1" />
+                </div>
+                <div class="tech-item">
+                    <img src="../images/casestudies/mobility-ado-tech2.png" alt="Technology 2" />
+                </div>
+            </div>
+
+            <h2 style="margin-top: 60px;">Partner Integrations</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <img src="../images/casestudies/mobility-ado-partner1.png" alt="Partner 1" />
+                </div>
+                <div class="tech-item">
+                    <img src="../images/casestudies/mobility-ado-partner2.png" alt="Partner 2" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to transform your mobile experience?</h2>
+            <p>Let's discuss how we can modernize your digital platforms.</p>
+            <a href="../contact.html" class="cta-button">Schedule a Call</a>
         </div>
     </section>
 
