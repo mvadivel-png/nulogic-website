@@ -9,227 +9,17 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        /* Modern Leadership Section */
-        .leadership-modern {
-            background: linear-gradient(180deg, #fafafa 0%, #ffffff 50%, #fafafa 100%);
-        }
-
-        .leadership-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 32px;
-            margin-top: 40px;
-        }
-
-        .leader-card-modern {
-            position: relative;
-            background: white;
-            padding: 32px 24px;
-            border-radius: 20px;
-            border: 1px solid #f0f0f0;
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            overflow: hidden;
-        }
-
-        .leader-card-modern::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--color-accent-purple), var(--color-accent-red));
-            transform: scaleX(0);
-            transform-origin: center;
-            transition: transform 0.4s ease;
-        }
-
-        .leader-card-modern:hover::before {
-            transform: scaleX(1);
-        }
-
-        .leader-card-modern:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(137, 56, 159, 0.15);
-            border-color: rgba(137, 56, 159, 0.2);
-        }
-
-        .leader-avatar {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            object-fit: cover;
-            border: 4px solid white;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s ease;
-        }
-
-        .leader-card-modern:hover .leader-avatar {
-            transform: scale(1.05);
-            box-shadow: 0 12px 32px rgba(137, 56, 159, 0.2);
-            border-color: rgba(137, 56, 159, 0.1);
-        }
-
-        .leader-card-modern h4 {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: var(--color-primary);
-            font-family: var(--font-heading);
-        }
-
-        .leader-card-modern p {
-            font-size: 15px;
-            color: var(--color-accent-purple);
-            font-weight: 500;
-            margin: 0;
-        }
-
-        .leadership-section-header {
-            text-align: center;
-            margin-bottom: 48px;
-        }
-
-        .leadership-section-header h2 {
-            font-size: 42px;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-red));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0;
-        }
-
-        .team-category-header {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--color-primary);
-            margin: 64px 0 24px 0;
-            font-family: var(--font-heading);
-            position: relative;
-            padding-bottom: 12px;
-        }
-
-        .team-category-header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--color-accent-purple), var(--color-accent-red));
-            border-radius: 2px;
-        }
-
-        .team-category-header:first-of-type {
-            margin-top: 0;
-        }
-
-        @media (max-width: 768px) {
-            .leadership-section-header h2 {
-                font-size: 32px;
-            }
-
-            .team-category-header {
-                font-size: 24px;
-            }
-
-            .leadership-grid {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-                gap: 24px;
-            }
-        }
-        .client-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 16px;
-            margin-top: 32px;
-        }
-        .client-item {
-            background: var(--color-white);
-            padding: 20px;
-            border-radius: var(--radius-input);
-            border: 1px solid var(--color-gray-light);
-            text-align: center;
-            font-weight: 600;
-            font-size: 14px;
-            color: var(--color-gray-dark);
-            transition: var(--transition-standard);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 80px;
-        }
-        .client-item:hover {
-            border-color: var(--color-accent-purple);
-            transform: translateY(-2px);
-        }
-        .client-item img {
-            max-height: 50px;
-            width: auto;
-            object-fit: contain;
-        }
-        .job-listing {
-            background: var(--color-white);
-            border: 1px solid var(--color-gray-light);
-            border-radius: var(--radius-card);
-            padding: 24px;
-            margin-bottom: 16px;
-            transition: var(--transition-standard);
-        }
-        .job-listing:hover {
-            border-color: var(--color-accent-purple);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 12px;
-        }
-        .job-header h4 {
-            margin: 0;
-            font-size: 20px;
-        }
-        .job-meta {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 8px;
-        }
-        .job-meta span {
-            font-size: 14px;
-            color: var(--color-gray-medium);
-        }
-        .mission-vision-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
-            margin-top: 32px;
-        }
-        .mission-vision-card {
-            background: linear-gradient(135deg, rgba(137, 56, 159, 0.05) 0%, rgba(237, 41, 37, 0.05) 100%);
-            padding: 32px;
-            border-radius: var(--radius-card);
-            border-left: 4px solid var(--color-accent-purple);
-        }
-        .mission-vision-card h3 {
-            margin-bottom: 16px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css?v=5">
 </head>
 <body>
     <!-- Header & Navigation -->
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo"><img src="images/nulogic-logo.svg" alt="NuLogic" style="height: 32px;"></a>
+                <a href="index.html" class="logo"><img src="images/nulogic-logo.svg" alt="NuLogic" style="height: 50px;"></a>
                 <ul class="nav-links">
                     <li class="nav-item-with-dropdown">
                         <a href="services.html">Services</a>
@@ -256,12 +46,17 @@
                     <li class="nav-item-with-dropdown">
                         <a href="#">EN</a>
                         <ul class="dropdown-menu">
-                            <li><a href="about.html">English</a></li>
-                            <li><a href="es/about.html">Español</a></li>
+                            <li><a href="index.html">English</a></li>
+                            <li><a href="es/index.html">Español</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html" class="btn btn-primary">Book a Call</a></li>
+                    <li><a href="contact.html" class="btn btn-primary bookcall">Book a Call</a></li>
                 </ul>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
             </nav>
         </div>
     </header>
@@ -269,8 +64,8 @@
     <!-- Hero Section -->
     <section class="hero" style="padding: 80px 0;">
         <div class="container">
-            <h1>Building the Future of Digital Commerce Today</h1>
-            <p>Founded in 2008, NuLogic has evolved into a trusted digital commerce partner with over 250 skilled professionals distributed across the US, Canada, Mexico, Chile, and India.</p>
+            <h1>We're Building the Future of Commerce Starting Today</h1>
+            <p>Since 2008, NuLogic has grown from a small team of engineers into a 250+ person commerce partner you can count on, with teammates across the US, Canada, Mexico, Chile, and India.</p>
         </div>
     </section>
 
@@ -278,12 +73,11 @@
     <section>
         <div class="container-narrow">
             <h2>Who We Are</h2>
-            <p>NuLogic is a commerce engineering and managed services firm focused exclusively on retail and e-commerce. We provide engineering expertise and strategic guidance to retail and eCommerce companies pursuing digital transformation.</p>
-
-            <p>Founded by engineers and commerce platform experts, NuLogic was built on a simple belief: retailers need partners who understand both the technology and the business of commerce. We've spent years building and running commerce platforms for major retailers, and we bring that expertise to every engagement.</p>
-
-            <p>Today, we work with enterprise retailers, DTC brands, and multi-brand retail organizations across the globe, delivering implementations, 24/7 managed support, performance engineering, and data/AI capabilities. We're trusted by companies like Walmart and other leading retailers to run mission-critical commerce platforms and deliver results that matter.</p>
-
+            <p>We're a commerce engineering and managed services firm that does one thing and we do it well: retail and e-commerce. That focus matters. It means we bring real-world expertise, not just theory, to every project helping retailers run platforms that actually work.</p>
+            <p>Here's how we started: our founders were engineers and commerce platform experts who saw too many retailers struggling with partners who didn't truly understand the business of commerce. They knew retailers needed someone who got both the technology and the business side so they built NuLogic.</p>
+            <p>Years in the trenches taught us what really works. We've built and run commerce platforms for major retailers, and today we bring that hard-earned experience to every project.</p>
+            <p>We work with enterprise retailers, DTC brands, and multi-brand organizations around the world. What we do is simple, but critical: implement platforms that launch on time, provide 24/7 managed support when issues arise, engineer for high performance, and leverage data and AI to give businesses a competitive edge.</p>
+            <p>Retailers like Walmart trust us with their mission-critical commerce platforms and that trust is something we earn <strong>every single day</strong>.</p>
             <div style="margin-top: 48px; text-align: center; width: 100%;">
                 <img src="images/leadership/team-about.png" alt="NuLogic Team" style="width: 100%; max-width: 100%; height: auto; display: block; border-radius: var(--radius-card);">
             </div>
@@ -297,12 +91,12 @@
                 <div class="mission-vision-card">
                     <img src="images/icons/mission.png" alt="Mission" style="width: 60px; height: 60px; margin-bottom: 16px;">
                     <h3>Our Mission</h3>
-                    <p>Delivering cutting-edge, scalable, and customer-centric solutions that drive digital transformation, enhance operational efficiency, and create exceptional value.</p>
+                    <p>Deliver scalable, customer-focused solutions that drive real digital transformation, make operations smoother, and create genuine value for your business.</p>
                 </div>
                 <div class="mission-vision-card" style="border-left-color: var(--color-accent-red);">
                     <img src="images/icons/vision.png" alt="Vision" style="width: 60px; height: 60px; margin-bottom: 16px;">
                     <h3>Our Vision</h3>
-                    <p>To be a global leader in delivering innovative, technology-driven solutions that empower businesses to thrive in a rapidly evolving digital world.</p>
+                    <p>Become a global leader in delivering technology solutions that help businesses thrive in a digital world that never stops changing.</p>
                 </div>
             </div>
         </div>
@@ -312,45 +106,45 @@
     <section>
         <div class="container">
             <div class="section-header">
-                <h2>Our Core Strengths</h2>
-                <p>Built on innovation, collaboration, and unwavering commitment to excellence</p>
+                <h2>What Sets Us Apart</h2>
+                <p>Here's what we're built on:</p>
             </div>
 
             <div class="cards-grid">
                 <div class="card">
                     <img src="images/icons/engineering.png" alt="Engineering" style="width: 60px; height: 60px; margin-bottom: 16px;">
-                    <h3>Engineering Experts</h3>
-                    <p>Leveraging decades of experience while adapting to emerging technologies, delivering robust technical solutions for complex commerce challenges.</p>
+                    <h3>We're Engineering Experts</h3>
+                    <p>We've got decades of combined experience, but we're not stuck in the past. We stay on top of emerging technologies so we can deliver robust solutions for your toughest commerce challenges.</p>
                 </div>
 
                 <div class="card">
                     <img src="images/icons/delivery.png" alt="Delivery" style="width: 60px; height: 60px; margin-bottom: 16px;">
-                    <h3>Delivery Obsessed</h3>
-                    <p>Exceeding expectations through ROI-focused implementation. We're committed to delivering results that drive your business forward.</p>
+                    <h3>We're Obsessed with Delivery</h3>
+                    <p>ROI isn't a buzzword for us-it's how we measure success. We're committed to exceeding your expectations and delivering results that actually drive your business forward, not just check boxes.</p>
                 </div>
 
                 <div class="card">
                     <img src="images/icons/quality.png" alt="Quality" style="width: 60px; height: 60px; margin-bottom: 16px;">
-                    <h3>Quality Fanatics</h3>
-                    <p>Ensuring robust, scalable digital presence. We hold ourselves to the highest standards of engineering quality, performance, and security.</p>
+                    <h3>We're Quality Fanatics</h3>
+                    <p>Your commerce platform is your revenue engine. We hold ourselves to the highest standards for engineering quality, performance, and security because anything less puts your business at risk.</p>
                 </div>
 
                 <div class="card">
                     <img src="images/icons/communication.png" alt="Communication" style="width: 60px; height: 60px; margin-bottom: 16px;">
-                    <h3>Communication Champs</h3>
-                    <p>Prioritizing open dialogue and direct challenge resolution. We communicate clearly, honestly, and proactively.</p>
+                    <h3>We're Communication Champs</h3>
+                    <p>No jargon. No hiding from tough conversations. We communicate clearly, honestly, and proactively. When there's a problem, you'll hear about it from us first—along with how we're fixing it.</p>
                 </div>
 
                 <div class="card">
                     <img src="images/icons/agility.png" alt="Agility" style="width: 60px; height: 60px; margin-bottom: 16px;">
-                    <h3>Agility Drivers</h3>
-                    <p>Maintaining flexibility and responsiveness for sustained success in a rapidly changing commerce landscape.</p>
+                    <h3>We're Agility Drivers</h3>
+                    <p>Commerce moves fast. Consumer expectations shift. Technology evolves. We stay flexible and responsive so you can succeed even when everything around you is changing.</p>
                 </div>
 
                 <div class="card">
                     <img src="images/icons/innovation.png" alt="Innovation" style="width: 60px; height: 60px; margin-bottom: 16px;">
-                    <h3>Innovative Thinkers</h3>
-                    <p>Valuing diverse ideas and varied experiences. We're always learning, optimizing, and pushing ourselves to deliver better results.</p>
+                    <h3>We're Innovative Thinkers</h3>
+                    <p>We value diverse perspectives and experiences because that's where the best ideas come from. We're always learning, always optimizing, always pushing ourselves to deliver better results.</p>
                 </div>
             </div>
         </div>
@@ -650,10 +444,15 @@
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NuLogic. All rights reserved.</p>
+           <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> NuLogic. All rights reserved.</p>
             </div>
         </div>
     </footer>
+     <script src="js/script.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

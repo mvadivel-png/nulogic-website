@@ -9,17 +9,17 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=5">
 </head>
 <body>
     <!-- Header & Navigation -->
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo"><img src="images/nulogic-logo.svg" alt="NuLogic" style="height: 32px;"></a>
+                <a href="index.html" class="logo"><img src="images/nulogic-logo.svg" alt="NuLogic" style="height: 50px;"></a>
                 <ul class="nav-links">
                     <li class="nav-item-with-dropdown">
                         <a href="services.html">Services</a>
@@ -46,12 +46,17 @@
                     <li class="nav-item-with-dropdown">
                         <a href="#">EN</a>
                         <ul class="dropdown-menu">
-                            <li><a href="contact.html">English</a></li>
-                            <li><a href="es/contact.html">Español</a></li>
+                            <li><a href="index.html">English</a></li>
+                            <li><a href="es/index.html">Español</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html" class="btn btn-primary">Book a Call</a></li>
+                    <li><a href="contact.html" class="btn btn-primary bookcall">Book a Call</a></li>
                 </ul>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
             </nav>
         </div>
     </header>
@@ -244,10 +249,16 @@
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NuLogic. All rights reserved.</p>
+               <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> NuLogic. All rights reserved.</p>
             </div>
         </div>
     </footer>
+     <script src="js/script.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
+
