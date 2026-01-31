@@ -1000,10 +1000,13 @@
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NuLogic. Todos los derechos reservados.</p>
+             <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> NuLogic. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
