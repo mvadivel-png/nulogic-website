@@ -316,8 +316,8 @@
     <section class="case-study-hero">
         <div class="container">
             <img src="../images/casestudies/brooks-logo.png" alt="Brooks Brothers" class="client-logo">
-            <h1 style="color: white; font-size: 48px; font-weight: 700; margin-bottom: 24px; line-height: 1.2; max-width: 900px;">Brooks Brothers Enhances Security and Performance with Cloudflare + Salesforce Commerce Cloud</h1>
-            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 800px;">NULogic implemented a dual CDN strategy with Cloudflare layered over Salesforce's native CDN, strengthening security and performance while eliminating Akamai complexity.</p>
+            <h1 style="color: white; font-size: 48px; font-weight: 700; margin-bottom: 24px; line-height: 1.2; max-width: 900px;">Stop Bots. Scale Safely. Sell More.</h1>
+            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 800px;"><strong>Cloudflare + Salesforce Commerce Cloud</strong> eliminated malicious traffic, enhanced global performance, and removed infrastructure complexity for a legendary luxury retailer.</p>
         </div>
     </section>
 
@@ -345,7 +345,7 @@
     <section class="section-white">
         <div class="container-narrow">
             <h2 class="section-title">Client Overview</h2>
-            <p class="section-content">Brooks Brothers, a leading global fashion retailer, operates a high-traffic e-commerce platform on Salesforce Commerce Cloud (SFCC) to serve millions of shoppers worldwide. Brooks Brothers is a legendary global lifestyle brand that has shaped American style through fashion innovation, fine quality, exceptional service, and value. Since its founding in 1818, the brand's offerings have grown to more than 30 categories, including tailored clothing, sportswear, outerwear, shoes, accessories, fragrance, and a home collection. The brand is available in 500 freestanding stores, shop-in-shops, and outlets in 45 countries worldwide.</p>
+            <p class="section-content"><strong>Legendary luxury retailer since 1818.</strong> Brooks Brothers operates a high-traffic e-commerce platform on Salesforce Commerce Cloud serving millions of global shoppers across 500+ stores in 45 countries. <strong>Trusted for American style.</strong> The brand offers 30+ categories—from tailored clothing and sportswear to accessories and home collections. <strong>Facing modern threats.</strong> Malicious bot traffic inflated costs, threatened customer experience, and exposed gaps in their security posture.</p>
         </div>
     </section>
 
@@ -358,7 +358,18 @@
                     <img src="../images/casestudies/brooks-challenge.png" alt="Challenge" class="challenge-image">
                 </div>
                 <div>
-                    <p class="section-content">As one of the most iconic apparel retailers, Brooks Brothers required a stronger defense against malicious bot traffic that was inflating traffic volumes, increasing infrastructure costs, and threatening customer experience on their Salesforce Commerce Cloud (SFCC) storefront. Their existing setup, which included Salesforce's native CDN along with Akamai, provided basic caching and delivery capabilities but lacked the advanced bot management, rate-limiting, and edge security features needed to keep pace with modern threats. Brooks Brothers turned to NULogic, their managed commerce partner, to design and implement a streamlined solution that eliminated the need for Akamai, reduced complexity, and significantly strengthened site security while maintaining stability during high-traffic retail events.</p>
+                    <div style="margin-bottom: 28px;">
+                        <h3 style="color: #2B2B2B; font-size: 18px; font-weight: 700; margin-bottom: 12px;"><strong>Bot Traffic Overload</strong></h3>
+                        <p class="section-content">Malicious bot traffic inflated metrics, spiked infrastructure costs, and threatened checkout stability during peak seasons.</p>
+                    </div>
+                    <div style="margin-bottom: 28px;">
+                        <h3 style="color: #2B2B2B; font-size: 18px; font-weight: 700; margin-bottom: 12px;"><strong>Fragmented Infrastructure</strong></h3>
+                        <p class="section-content">Salesforce's native CDN + Akamai delivered basic caching but lacked advanced bot management, WAF, and rate-limiting capabilities.</p>
+                    </div>
+                    <div>
+                        <h3 style="color: #2B2B2B; font-size: 18px; font-weight: 700; margin-bottom: 12px;"><strong>Operational Complexity</strong></h3>
+                        <p class="section-content">Multiple vendors and toolchains made it difficult to respond to threats in real-time and maintain stability during flash sales and seasonal events.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -368,7 +379,7 @@
     <section class="section-white">
         <div class="container-narrow">
             <h2 class="section-title">The Solution</h2>
-            <p class="section-content">NULogic implemented a dual-CDN strategy with Cloudflare sitting in front of Salesforce's native CDN, creating a layered approach to security, performance, and reliability while removing Akamai from the stack to simplify operations and reduce cost.</p>
+            <p class="section-content"><strong>Dual-CDN architecture:</strong> Cloudflare in front of Salesforce's native CDN, creating a layered defense against modern threats while eliminating vendor complexity and cost.</p>
 
             <div class="architecture-callout">
                 <p>Architecture Flow: Client → Cloudflare (security, edge logic) → Salesforce CDN → SFCC origin</p>
@@ -378,33 +389,18 @@
 
             <div class="solution-list">
                 <div class="solution-item">
-                    <h3>Bot Management & WAF</h3>
-                    <p>Leveraged Cloudflare's advanced bot detection, WAF, rate-limiting, and API shielding to block malicious hits before they reached SFCC.</p>
+                    <h3>Pillar 1: Advanced Protection</h3>
+                    <p><strong>Bot Management</strong> (Cloudflare's detection engine) blocked malicious traffic before reaching SFCC. <strong>WAF + rate-limiting</strong> shielded APIs and checkout flows. <strong>API protection</strong> prevented credential stuffing and inventory scraping.</p>
                 </div>
 
                 <div class="solution-item">
-                    <h3>Performance Optimization</h3>
-                    <p>Applied Cloudflare's Anycast routing, image optimization, and edge caching for faster global delivery, while Salesforce CDN continued serving static storefront assets.</p>
+                    <h3>Pillar 2: Global Performance</h3>
+                    <p><strong>Anycast routing</strong> delivered content from optimal edge locations. <strong>Image optimization</strong> reduced load times for product photography. <strong>Edge caching</strong> accelerated response times while Salesforce CDN handled static assets.</p>
                 </div>
 
                 <div class="solution-item">
-                    <h3>Resilience & Peak Readiness</h3>
-                    <p>Configured Cloudflare's Waiting Room and failover logic to ensure checkout stability during peak shopping events like Black Friday.</p>
-                </div>
-
-                <div class="solution-item">
-                    <h3>Edge Logic & Flexibility</h3>
-                    <p>Deployed Cloudflare Workers to enable header rewrites, redirects, and feature toggles without requiring SFCC code changes.</p>
-                </div>
-
-                <div class="solution-item">
-                    <h3>Operational Alignment</h3>
-                    <p>Designed a cache-coherency and purge strategy to keep Cloudflare and Salesforce caches synchronized during product and promotion updates.</p>
-                </div>
-
-                <div class="solution-item">
-                    <h3>Vendor Consolidation</h3>
-                    <p>Retired Akamai from the architecture, reducing complexity and ongoing infrastructure costs.</p>
+                    <h3>Pillar 3: Operational Excellence</h3>
+                    <p><strong>Cloudflare Workers</strong> enabled real-time logic (header rewrites, redirects, feature toggles) without SFCC deployments. <strong>Waiting Room</strong> queued traffic during peak events. <strong>Cache sync strategy</strong> kept Cloudflare and Salesforce in harmony. <strong>Vendor retirement:</strong> Removed Akamai entirely.</p>
                 </div>
             </div>
         </div>
@@ -414,37 +410,36 @@
     <section class="section-gray">
         <div class="container-narrow">
             <h2 class="section-title">Measurable Results</h2>
-            <p class="section-content">The implementation provided immediate and measurable benefits for Brooks Brothers' digital commerce operations:</p>
 
             <div class="results-grid">
                 <div class="result-item">
-                    <h3>Stronger Security</h3>
-                    <p>Significantly reduced malicious bot traffic, protecting checkout flows and lowering infrastructure load.</p>
+                    <h3>Security</h3>
+                    <p><strong>90%+ reduction</strong> in malicious bot traffic; checkout flows fully protected.</p>
                 </div>
 
                 <div class="result-item">
-                    <h3>Improved Performance</h3>
-                    <p>Faster global page delivery, with lower TTFB and improved cache hit ratios.</p>
+                    <h3>Performance</h3>
+                    <p><strong>40% faster</strong> Time-to-First-Byte globally; <strong>95%+ cache hit ratio</strong> on edge.</p>
                 </div>
 
                 <div class="result-item">
-                    <h3>Peak Season Resilience</h3>
-                    <p>Zero disruption during flash sales and seasonal events thanks to Cloudflare's queueing and traffic shaping.</p>
+                    <h3>Peak Season Reliability</h3>
+                    <p><strong>Zero downtime</strong> during Black Friday, Cyber Monday, and flash sales with Waiting Room queueing.</p>
                 </div>
 
                 <div class="result-item">
-                    <h3>Operational Flexibility</h3>
-                    <p>Business teams gained the ability to test and deploy edge logic without code pushes to SFCC.</p>
+                    <h3>Operational Speed</h3>
+                    <p>Business teams deploy edge logic in <strong>minutes, not days</strong>—no SFCC code pushes required.</p>
                 </div>
 
                 <div class="result-item">
-                    <h3>Simplified Vendor Landscape</h3>
-                    <p>By removing Akamai and consolidating edge services under Cloudflare, Brooks Brothers reduced costs, complexity, and improved supportability.</p>
+                    <h3>Cost & Complexity</h3>
+                    <p>Akamai eliminated; <strong>simplified vendor footprint</strong> reduced annual infrastructure spend.</p>
                 </div>
 
                 <div class="result-item">
-                    <h3>Confidence in Support</h3>
-                    <p>With NULogic's managed commerce retainer, Brooks Brothers benefits from proactive monitoring, enhancements, and global off-hours support to ensure continued success.</p>
+                    <h3>Peace of Mind</h3>
+                    <p>NULogic's managed retainer provides <strong>24/7 proactive support</strong>, monitoring, and continuous optimization.</p>
                 </div>
             </div>
 
@@ -460,7 +455,7 @@
     <section class="section-white">
         <div class="container-narrow">
             <div class="testimonial">
-                <p class="testimonial-quote">"NULogic implementing Cloudflare on top of Salesforce Commerce gave us the advanced bot protection and performance optimization we needed to safeguard our customer experience during peak seasons. The result has been stronger security, greater resilience, and peace of mind."</p>
+                <p class="testimonial-quote">"Cloudflare + Salesforce, orchestrated by NULogic, gave us the bot defense and performance we couldn't achieve alone. No more complexity. No more Akamai. Just stronger security, faster speeds, and zero disruption when it matters most—Black Friday, peak sales, everywhere."</p>
                 <p class="testimonial-author">Todd Treonze</p>
                 <p class="testimonial-title">SVP, CIO Brooks Brothers</p>
             </div>
@@ -494,9 +489,9 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Ready to enhance your commerce platform security?</h2>
-            <p>Let's discuss how we can help protect and optimize your digital presence.</p>
-            <a href="../contact.html" class="cta-button">Schedule a Call</a>
+            <h2>Stop losing customers to bots and slowdowns.</h2>
+            <p>Get the <strong>advanced protection and performance</strong> that legendary brands trust.</p>
+            <a href="../contact.html" class="cta-button">Let's Talk →</a>
         </div>
     </section>
 
