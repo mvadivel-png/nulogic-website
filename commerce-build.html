@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commerce Build & Modernize | Platform Implementation & Replatforming | NuLogic</title>
+    <meta name="description" content="Launch new platforms, replatform existing systems, or enhance your commerce stack with NuLogic's expert engineering team. Salesforce Commerce Cloud, Shopify Plus, commercetools, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .service-hero {
+            background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);
+            padding: 120px 0 80px;
+            color: white;
+        }
+
+        .service-hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: white;
+        }
+
+        .service-hero p {
+            font-size: 22px;
+            color: rgba(255,255,255,0.95);
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        .section-title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 48px;
+            text-align: center;
+        }
+
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .capability-card {
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+            border-left: 4px solid #89389f;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+
+        .capability-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #2B2B2B;
+        }
+
+        .capability-card p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #424242;
+            margin-bottom: 20px;
+        }
+
+        .capability-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .capability-card ul li {
+            font-size: 15px;
+            color: #424242;
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .capability-card ul li:before {
+            content: "✓";
+            color: #89389f;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .platforms-section {
+            background: #F9F9F9;
+            padding: 80px 0;
+        }
+
+        .platforms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .platform-card {
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .platform-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .platform-card h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2B2B2B;
+            margin-bottom: 12px;
+        }
+
+        .platform-card p {
+            font-size: 15px;
+            color: #424242;
+            line-height: 1.6;
+        }
+
+        .process-section {
+            padding: 80px 0;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 48px;
+        }
+
+        .process-step {
+            text-align: center;
+        }
+
+        .process-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .process-step h4 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #2B2B2B;
+        }
+
+        .process-step p {
+            font-size: 15px;
+            color: #424242;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .service-hero h1 {
+                font-size: 36px;
+            }
+
+            .service-hero p {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .capabilities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .platforms-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><img src="images/nulogic-logo.svg" alt="NuLogic" style="height: 32px;"></a>
+                <ul class="nav-links">
+                    <li class="nav-item-with-dropdown">
+                        <a href="services.html">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="commerce-build.html">Commerce Build & Modernize</a></li>
+                            <li><a href="services.html#support">24/7 Run & Support</a></li>
+                            <li><a href="services.html#cloud">Cloud, Performance & Reliability</a></li>
+                            <li><a href="services.html#data-ai">Data, AI & Analytics</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-with-dropdown">
+                        <a href="platforms.html">Platforms</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
+                            <li><a href="platforms.html#shopify">Shopify Plus</a></li>
+                            <li><a href="platforms.html#commercetools">commercetools</a></li>
+                            <li><a href="platforms.html#shopware">Shopware</a></li>
+                            <li><a href="platforms.html#magento">Magento / Adobe Commerce</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="partners.html">Partners</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="nav-item-with-dropdown">
+                        <a href="#">EN</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="commerce-build.html">English</a></li>
+                            <li><a href="es/commerce-build.html">Español</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="btn btn-primary">Book a Call</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>Commerce Build & Modernize</h1>
+            <p>Launch new platforms, replatform legacy systems, or enhance your commerce stack with engineering teams that ship. Fast, reliable, and built for scale.</p>
+        </div>
+    </section>
+
+    <!-- Core Capabilities -->
+    <section style="padding: 80px 0;">
+        <div class="container">
+            <h2 class="section-title">What We Build</h2>
+            <div class="capabilities-grid">
+                <div class="capability-card">
+                    <h3>Platform Implementation</h3>
+                    <p>Launch new commerce platforms from strategy to go-live with zero surprises.</p>
+                    <ul>
+                        <li>Architecture design & technical strategy</li>
+                        <li>Full-stack development & integration</li>
+                        <li>Data migration & legacy system cutover</li>
+                        <li>Performance optimization & testing</li>
+                        <li>Go-live support & post-launch stabilization</li>
+                    </ul>
+                </div>
+
+                <div class="capability-card">
+                    <h3>Replatforming & Migration</h3>
+                    <p>Move from legacy systems to modern platforms without business disruption.</p>
+                    <ul>
+                        <li>Platform assessment & selection</li>
+                        <li>Migration roadmap & risk mitigation</li>
+                        <li>Zero-downtime data migration</li>
+                        <li>Phased rollout strategies</li>
+                        <li>Performance benchmarking & optimization</li>
+                    </ul>
+                </div>
+
+                <div class="capability-card">
+                    <h3>Feature Development</h3>
+                    <p>Ship new capabilities fast with dedicated engineering teams.</p>
+                    <ul>
+                        <li>Custom feature development</li>
+                        <li>Third-party integrations (OMS, PIM, ERP)</li>
+                        <li>API development & headless commerce</li>
+                        <li>Mobile app development (iOS, Android)</li>
+                        <li>Checkout & payment optimization</li>
+                    </ul>
+                </div>
+
+                <div class="capability-card">
+                    <h3>Commerce Modernization</h3>
+                    <p>Transform legacy commerce stacks into modern, scalable architectures.</p>
+                    <ul>
+                        <li>Headless & composable commerce</li>
+                        <li>Microservices architecture</li>
+                        <li>Cloud-native infrastructure</li>
+                        <li>Frontend modernization (React, Next.js)</li>
+                        <li>Performance & scalability engineering</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms -->
+    <section class="platforms-section">
+        <div class="container">
+            <h2 class="section-title">Platforms We Master</h2>
+            <p style="text-align: center; font-size: 18px; color: #424242; max-width: 800px; margin: 0 auto;">Deep expertise across leading commerce platforms. We don't just implement—we architect, optimize, and scale.</p>
+            <div class="platforms-grid">
+                <div class="platform-card">
+                    <h4>Salesforce Commerce Cloud</h4>
+                    <p>SFCC implementation, SFRA development, Einstein AI, and enterprise-scale customization.</p>
+                </div>
+                <div class="platform-card">
+                    <h4>Shopify Plus</h4>
+                    <p>Custom Shopify Plus builds, headless implementations, and app development.</p>
+                </div>
+                <div class="platform-card">
+                    <h4>commercetools</h4>
+                    <p>Headless commerce architecture, API-first development, and composable solutions.</p>
+                </div>
+                <div class="platform-card">
+                    <h4>Shopware</h4>
+                    <p>Shopware 6 implementation, PWA development, and B2B commerce.</p>
+                </div>
+                <div class="platform-card">
+                    <h4>Adobe Commerce</h4>
+                    <p>Magento/Adobe Commerce development, cloud hosting, and performance optimization.</p>
+                </div>
+                <div class="platform-card">
+                    <h4>Custom Solutions</h4>
+                    <p>Build bespoke commerce platforms with Node.js, React, Next.js, and modern tech stacks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">How We Work</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <h4>Discovery & Strategy</h4>
+                    <p>Understand your business, map requirements, and design the right architecture.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <h4>Agile Development</h4>
+                    <p>Build in 2-week sprints with continuous delivery and stakeholder feedback.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <h4>Quality Assurance</h4>
+                    <p>Rigorous testing, performance validation, and security audits before launch.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">4</div>
+                    <h4>Launch & Optimize</h4>
+                    <p>Go live with confidence, monitor performance, and iterate based on data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Preview -->
+    <section style="padding: 80px 0; background: #F9F9F9;">
+        <div class="container">
+            <h2 class="section-title">Results That Speak</h2>
+            <p style="text-align: center; font-size: 18px; color: #424242; max-width: 800px; margin: 0 auto 48px;">We've built, migrated, and modernized commerce platforms for brands processing billions in annual revenue.</p>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Leslie's Pool Supplies</h3>
+                    <p>Lighthouse scores from 48 → 85+. 150% growth in service bookings. Zero peak season outages.</p>
+                    <a href="work/leslies.html" class="card-link">Read Case Study →</a>
+                </div>
+                <div class="card">
+                    <h3>Express</h3>
+                    <p>Zero-downtime AWS → Google Cloud migration. 40% faster releases with GitOps automation.</p>
+                    <a href="work/express.html" class="card-link">Read Case Study →</a>
+                </div>
+                <div class="card">
+                    <h3>Sephora</h3>
+                    <p>Omnichannel commerce transformation across 2,700+ stores in 35 countries.</p>
+                    <a href="work/sephora.html" class="card-link">Read Case Study →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding: 80px 0; background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);">
+        <div class="container">
+            <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: 42px; margin-bottom: 20px; color: white; font-weight: 700;">Ready to Build or Modernize?</h2>
+                <p style="font-size: 20px; color: rgba(255,255,255,0.95); margin-bottom: 32px;">Let's discuss your platform needs, timeline, and how we can help you ship faster.</p>
+                <a href="contact.html" class="btn" style="background: white; color: #89389f; padding: 16px 48px; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 18px; display: inline-block;">Let's Talk →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="commerce-build.html">Commerce Build & Modernize</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Platforms</h4>
+                    <ul>
+                        <li><a href="platforms.html">All Platforms</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="work.html">Work</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NuLogic. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
