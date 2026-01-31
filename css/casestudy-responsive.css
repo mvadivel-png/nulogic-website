@@ -1,5 +1,19 @@
 /* Case Study Responsive Styles */
 
+/* Hide testimonials/customer feedback sections */
+body section div[style*="border-left: 4px solid #89389f"],
+body section div[style*="border-left: 6px solid #89389f"],
+body section div[style*="border-left:4px solid #89389f"],
+body section div[style*="border-left:6px solid #89389f"] {
+    display: none !important;
+}
+
+/* Hide the entire testimonial section if it only contains the testimonial */
+body section:has(div[style*="border-left: 4px solid #89389f"]):not(:has(h2)),
+body section:has(div[style*="border-left: 6px solid #89389f"]):not(:has(h2)) {
+    display: none !important;
+}
+
 /* Base responsive image handling */
 body img {
     max-width: 100% !important;
