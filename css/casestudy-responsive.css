@@ -12,6 +12,36 @@ body img {
     padding-right: 24px !important;
 }
 
+/* Hero section constraints - remove full-width stretching */
+body section[style*="padding: 0"] {
+    background: #F9F9F9 !important;
+    padding: 60px 0 !important;
+}
+
+body section[style*="padding: 0"] div {
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+    padding: 0 24px !important;
+}
+
+body section[style*="padding: 0"] div img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Mobile: reduce hero padding */
+@media screen and (max-width: 768px) {
+    body section[style*="padding: 0"] {
+        padding: 40px 0 !important;
+    }
+
+    body section[style*="padding: 0"] div {
+        padding: 0 20px !important;
+    }
+}
+
 /* Tablet and below (max-width: 992px) */
 @media screen and (max-width: 992px) {
     /* Adjust section padding for tablets */
