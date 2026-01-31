@@ -1,6 +1,6 @@
-# NuLogic Website - Simple HTML Version
+# NULogic Website - Simple HTML Version
 
-A clean, professional website built with HTML and CSS using the NuLogic brand guidelines.
+A clean, professional website built with HTML and CSS using the NULogic brand guidelines.
 
 ## 🚀 Quick Deploy to Vercel
 
@@ -36,7 +36,7 @@ vercel --prod
    cd /Users/maniv-growth/ai/nulogic-website-html
    git init
    git add .
-   git commit -m "Initial NuLogic website"
+   git commit -m "Initial NULogic website"
    git branch -M main
    git remote add origin <your-github-repo-url>
    git push -u origin main
@@ -117,7 +117,7 @@ Alternatively, you can use:
 1. Add image files to the `images/` folder
 2. Update HTML to reference them:
    ```html
-   <img src="images/your-logo.svg" alt="NuLogic Logo">
+   <img src="images/your-logo.svg" alt="NULogic Logo">
    ```
 
 ### Update Content
