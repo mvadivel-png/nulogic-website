@@ -3,241 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de NULogic | Ingeniería de Comercio y Servicios Administrados para Minoristas</title>
-    <meta name="description" content="Fundada en 2008, NULogic cuenta con más de 250 profesionales que brindan ingeniería de comercio, soporte administrado 24/7 y experiencia en plataformas para minoristas empresariales a nivel mundial.">
+    <title>Acerca de NULogic | Ingeniería de Comercio y Servicios Gestionados para Retailers</title>
+    <meta name="description" content="Fundada en 2008, NULogic cuenta con más de 250 profesionales que entregan ingeniería de comercio, soporte gestionado 24/7 y experiencia en plataformas para retailers empresariales a nivel mundial.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <!-- Styles -->
-    <link rel="stylesheet" href="../css/styles.css">
-    <style>
-        /* Modern Leadership Section */
-        .leadership-modern {
-            background: linear-gradient(180deg, #fafafa 0%, #ffffff 50%, #fafafa 100%);
-        }
-
-        .leadership-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 32px;
-            margin-top: 40px;
-        }
-
-        .leader-card-modern {
-            position: relative;
-            background: white;
-            padding: 32px 24px;
-            border-radius: 20px;
-            border: 1px solid #f0f0f0;
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            overflow: hidden;
-        }
-
-        .leader-card-modern::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--color-accent-purple), var(--color-accent-red));
-            transform: scaleX(0);
-            transform-origin: center;
-            transition: transform 0.4s ease;
-        }
-
-        .leader-card-modern:hover::before {
-            transform: scaleX(1);
-        }
-
-        .leader-card-modern:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(137, 56, 159, 0.15);
-            border-color: rgba(137, 56, 159, 0.2);
-        }
-
-        .leader-avatar {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            object-fit: cover;
-            border: 4px solid white;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s ease;
-        }
-
-        .leader-card-modern:hover .leader-avatar {
-            transform: scale(1.05);
-            box-shadow: 0 12px 32px rgba(137, 56, 159, 0.2);
-            border-color: rgba(137, 56, 159, 0.1);
-        }
-
-        .leader-card-modern h4 {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: var(--color-primary);
-            font-family: var(--font-heading);
-        }
-
-        .leader-card-modern p {
-            font-size: 15px;
-            color: var(--color-accent-purple);
-            font-weight: 500;
-            margin: 0;
-        }
-
-        .leadership-section-header {
-            text-align: center;
-            margin-bottom: 48px;
-        }
-
-        .leadership-section-header h2 {
-            font-size: 42px;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-red));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0;
-        }
-
-        .team-category-header {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--color-primary);
-            margin: 64px 0 24px 0;
-            font-family: var(--font-heading);
-            position: relative;
-            padding-bottom: 12px;
-        }
-
-        .team-category-header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--color-accent-purple), var(--color-accent-red));
-            border-radius: 2px;
-        }
-
-        .team-category-header:first-of-type {
-            margin-top: 0;
-        }
-
-        @media (max-width: 768px) {
-            .leadership-section-header h2 {
-                font-size: 32px;
-            }
-
-            .team-category-header {
-                font-size: 24px;
-            }
-
-            .leadership-grid {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-                gap: 24px;
-            }
-        }
-        .client-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 16px;
-            margin-top: 32px;
-        }
-        .client-item {
-            background: var(--color-white);
-            padding: 20px;
-            border-radius: var(--radius-input);
-            border: 1px solid var(--color-gray-light);
-            text-align: center;
-            font-weight: 600;
-            font-size: 14px;
-            color: var(--color-gray-dark);
-            transition: var(--transition-standard);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 80px;
-        }
-        .client-item:hover {
-            border-color: var(--color-accent-purple);
-            transform: translateY(-2px);
-        }
-        .client-item img {
-            max-height: 50px;
-            width: auto;
-            object-fit: contain;
-        }
-        .job-listing {
-            background: var(--color-white);
-            border: 1px solid var(--color-gray-light);
-            border-radius: var(--radius-card);
-            padding: 24px;
-            margin-bottom: 16px;
-            transition: var(--transition-standard);
-        }
-        .job-listing:hover {
-            border-color: var(--color-accent-purple);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 12px;
-        }
-        .job-header h4 {
-            margin: 0;
-            font-size: 20px;
-        }
-        .job-meta {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 8px;
-        }
-        .job-meta span {
-            font-size: 14px;
-            color: var(--color-gray-medium);
-        }
-        .mission-vision-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
-            margin-top: 32px;
-        }
-        .mission-vision-card {
-            background: linear-gradient(135deg, rgba(137, 56, 159, 0.05) 0%, rgba(237, 41, 37, 0.05) 100%);
-            padding: 32px;
-            border-radius: var(--radius-card);
-            border-left: 4px solid var(--color-accent-purple);
-        }
-        .mission-vision-card h3 {
-            margin-bottom: 16px;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/styles.css?v=5">
 </head>
 <body>
     <!-- Header & Navigation -->
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic" style="height: 32px;"></a>
+                <a href="index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic" style="height: 50px;"></a>
                 <ul class="nav-links">
                     <li class="nav-item-with-dropdown">
                         <a href="services.html">Servicios</a>
                         <ul class="dropdown-menu">
-                            <li><a href="../commerce-build.html">Construcción y Modernización de Comercio</a></li>
-                            <li><a href="services.html#support">Operación y Soporte 24/7</a></li>
-                            <li><a href="services.html#cloud">Nube, Rendimiento y Confiabilidad</a></li>
-                            <li><a href="services.html#data-ai">Datos, IA y Análisis</a></li>
+                            <li><a href="commerce-build.html">Servicios de Comercio</a></li>
+                            <li><a href="services.html#cloud">Infraestructura en la Nube</a></li>
+                            <li><a href="services.html#data-ai">Orquestación de Datos e IA</a></li>
+                            <li><a href="services.html#enterprise">Integración Empresarial</a></li>
+                            <li><a href="services.html#experience">Diseño de Experiencia</a></li>
+                            <li><a href="services.html#support">Soporte 24/7</a></li>
                         </ul>
                     </li>
                     <li class="nav-item-with-dropdown">
@@ -256,12 +48,17 @@
                     <li class="nav-item-with-dropdown">
                         <a href="#">ES</a>
                         <ul class="dropdown-menu">
-                            <li><a href="../about.html">English</a></li>
-                            <li><a href="about.html">Español</a></li>
+                            <li><a href="../index.html">English</a></li>
+                            <li><a href="index.html">Español</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html" class="btn btn-primary">Agendar Llamada</a></li>
+                    <li><a href="contact.html" class="btn btn-primary bookcall">Contacto</a></li>
                 </ul>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
             </nav>
         </div>
     </header>
@@ -269,8 +66,8 @@
     <!-- Hero Section -->
     <section class="hero" style="padding: 80px 0;">
         <div class="container">
-            <h1>Construyendo el Futuro del Comercio Digital Hoy</h1>
-            <p>Fundada en 2008, NULogic ha evolucionado hasta convertirse en un socio confiable de comercio digital con más de 250 profesionales capacitados distribuidos en Estados Unidos, Canadá, México, Chile e India.</p>
+            <h1>Construyendo el Futuro del Comercio Desde Hoy</h1>
+            <p>Desde 2008, NULogic ha crecido de ser un pequeño equipo de ingenieros a un socio de comercio de más de 250 personas en el que puedes confiar, con miembros en Estados Unidos, Canadá, México, Chile e India.</p>
         </div>
     </section>
 
@@ -278,12 +75,11 @@
     <section>
         <div class="container-narrow">
             <h2>Quiénes Somos</h2>
-            <p>NULogic es una firma de ingeniería de comercio y servicios administrados enfocada exclusivamente en retail y e-commerce. Brindamos experiencia en ingeniería y orientación estratégica a empresas de retail y comercio electrónico que buscan la transformación digital.</p>
-
-            <p>Fundada por ingenieros y expertos en plataformas de comercio, NULogic se construyó sobre una creencia simple: los minoristas necesitan socios que comprendan tanto la tecnología como el negocio del comercio. Hemos pasado años construyendo y operando plataformas de comercio para importantes minoristas, y aportamos esa experiencia a cada proyecto.</p>
-
-            <p>Hoy, trabajamos con minoristas empresariales, marcas DTC y organizaciones de retail multimarca en todo el mundo, ofreciendo implementaciones, soporte administrado 24/7, ingeniería de rendimiento y capacidades de datos/IA. Empresas como Walmart y otros minoristas líderes confían en nosotros para operar plataformas de comercio críticas y entregar resultados que importan.</p>
-
+            <p>Somos una firma de ingeniería de comercio y servicios gestionados que hace una cosa y la hacemos bien: comercio minorista y electrónico. Ese enfoque importa. Significa que aportamos experiencia del mundo real, no solo teoría, a cada proyecto ayudando a los minoristas a ejecutar plataformas que realmente funcionan.</p>
+            <p>Así es como comenzamos: nuestros fundadores eran ingenieros y expertos en plataformas de comercio que vieron a demasiados minoristas luchando con socios que no entendían verdaderamente el negocio del comercio. Sabían que los minoristas necesitaban a alguien que comprendiera tanto la tecnología como el lado comercial, así que construyeron NULogic.</p>
+            <p>Años en las trincheras nos enseñaron qué funciona realmente. Hemos construido y operado plataformas de comercio para grandes minoristas, y hoy aportamos esa experiencia duramente ganada a cada proyecto.</p>
+            <p>Trabajamos con minoristas empresariales, marcas DTC y organizaciones multimarca en todo el mundo. Lo que hacemos es simple, pero crítico: implementar plataformas que se lanzan a tiempo, proporcionar soporte gestionado 24/7 cuando surgen problemas, diseñar para alto rendimiento y aprovechar datos e IA para dar a las empresas una ventaja competitiva.</p>
+            <p>Minoristas como Walmart confían en nosotros con sus plataformas de comercio críticas y esa confianza es algo que nos ganamos <strong>cada día</strong>.</p>
             <div style="margin-top: 48px; text-align: center; width: 100%;">
                 <img src="../images/leadership/team-about.png" alt="Equipo NULogic" style="width: 100%; max-width: 100%; height: auto; display: block; border-radius: var(--radius-card);">
             </div>
@@ -297,12 +93,12 @@
                 <div class="mission-vision-card">
                     <img src="../images/icons/mission.png" alt="Misión" style="width: 60px; height: 60px; margin-bottom: 16px;">
                     <h3>Nuestra Misión</h3>
-                    <p>Ofrecer soluciones de vanguardia, escalables y centradas en el cliente que impulsen la transformación digital, mejoren la eficiencia operativa y creen valor excepcional.</p>
+                    <p>Entregar soluciones escalables y centradas en el cliente que impulsen una transformación digital real, faciliten las operaciones y creen valor genuino para tu negocio.</p>
                 </div>
                 <div class="mission-vision-card" style="border-left-color: var(--color-accent-red);">
                     <img src="../images/icons/vision.png" alt="Visión" style="width: 60px; height: 60px; margin-bottom: 16px;">
                     <h3>Nuestra Visión</h3>
-                    <p>Ser líder global en la entrega de soluciones innovadoras impulsadas por tecnología que permitan a las empresas prosperar en un mundo digital en rápida evolución.</p>
+                    <p>Convertirnos en líderes globales en la entrega de soluciones tecnológicas que ayuden a las empresas a prosperar en un mundo digital que nunca deja de cambiar.</p>
                 </div>
             </div>
         </div>
@@ -312,45 +108,45 @@
     <section>
         <div class="container">
             <div class="section-header">
-                <h2>Nuestras Fortalezas Principales</h2>
-                <p>Construidas sobre innovación, colaboración y compromiso inquebrantable con la excelencia</p>
+                <h2>Lo Que Nos Diferencia</h2>
+                <p>Esto es sobre lo que estamos construidos:</p>
             </div>
 
             <div class="cards-grid">
                 <div class="card">
                     <img src="../images/icons/engineering.png" alt="Ingeniería" style="width: 60px; height: 60px; margin-bottom: 16px;">
-                    <h3>Expertos en Ingeniería</h3>
-                    <p>Aprovechando décadas de experiencia mientras nos adaptamos a tecnologías emergentes, entregando soluciones técnicas robustas para desafíos complejos de comercio.</p>
+                    <h3>Somos Expertos en Ingeniería</h3>
+                    <p>Tenemos décadas de experiencia combinada, pero no estamos atrapados en el pasado. Nos mantenemos al día con las tecnologías emergentes para poder entregar soluciones robustas para tus desafíos de comercio más difíciles.</p>
                 </div>
 
                 <div class="card">
                     <img src="../images/icons/delivery.png" alt="Entrega" style="width: 60px; height: 60px; margin-bottom: 16px;">
                     <h3>Obsesionados con la Entrega</h3>
-                    <p>Superando expectativas mediante implementación enfocada en ROI. Estamos comprometidos a entregar resultados que impulsen su negocio.</p>
+                    <p>El ROI no es una palabra de moda para nosotros, es cómo medimos el éxito. Estamos comprometidos a superar tus expectativas y entregar resultados que realmente impulsen tu negocio, no solo marcar casillas.</p>
                 </div>
 
                 <div class="card">
                     <img src="../images/icons/quality.png" alt="Calidad" style="width: 60px; height: 60px; margin-bottom: 16px;">
                     <h3>Fanáticos de la Calidad</h3>
-                    <p>Asegurando presencia digital robusta y escalable. Nos mantenemos a los más altos estándares de calidad de ingeniería, rendimiento y seguridad.</p>
+                    <p>Tu plataforma de comercio es tu motor de ingresos. Nos exigimos los más altos estándares en calidad de ingeniería, rendimiento y seguridad porque cualquier cosa menos pone en riesgo tu negocio.</p>
                 </div>
 
                 <div class="card">
                     <img src="../images/icons/communication.png" alt="Comunicación" style="width: 60px; height: 60px; margin-bottom: 16px;">
-                    <h3>Campeones de Comunicación</h3>
-                    <p>Priorizando el diálogo abierto y la resolución directa de desafíos. Nos comunicamos de manera clara, honesta y proactiva.</p>
+                    <h3>Campeones de la Comunicación</h3>
+                    <p>Sin jerga. Sin esconderse de conversaciones difíciles. Nos comunicamos de manera clara, honesta y proactiva. Cuando hay un problema, lo sabrás de nosotros primero, junto con cómo lo estamos resolviendo.</p>
                 </div>
 
                 <div class="card">
                     <img src="../images/icons/agility.png" alt="Agilidad" style="width: 60px; height: 60px; margin-bottom: 16px;">
                     <h3>Impulsores de Agilidad</h3>
-                    <p>Manteniendo flexibilidad y capacidad de respuesta para el éxito sostenido en un panorama de comercio que cambia rápidamente.</p>
+                    <p>El comercio se mueve rápido. Las expectativas del consumidor cambian. La tecnología evoluciona. Nos mantenemos flexibles y receptivos para que puedas tener éxito incluso cuando todo a tu alrededor está cambiando.</p>
                 </div>
 
                 <div class="card">
                     <img src="../images/icons/innovation.png" alt="Innovación" style="width: 60px; height: 60px; margin-bottom: 16px;">
                     <h3>Pensadores Innovadores</h3>
-                    <p>Valorando ideas diversas y experiencias variadas. Siempre estamos aprendiendo, optimizando y esforzándonos por entregar mejores resultados.</p>
+                    <p>Valoramos las perspectivas y experiencias diversas porque de ahí vienen las mejores ideas. Siempre estamos aprendiendo, siempre optimizando, siempre esforzándonos por entregar mejores resultados.</p>
                 </div>
             </div>
         </div>
@@ -378,7 +174,7 @@
                 <div class="leader-card-modern">
                     <img src="../images/leadership/jerrys-nesamoney.png" alt="Jerrys Nesamoney" class="leader-avatar">
                     <h4>Jerrys Nesamoney</h4>
-                    <p>Director de Alianzas</p>
+                    <p>Director de Asociaciones</p>
                 </div>
                 <div class="leader-card-modern">
                     <img src="../images/leadership/krishnamoorthi-ks.png" alt="Krishnamoorthi KS" class="leader-avatar">
@@ -403,26 +199,26 @@
                 <div class="leader-card-modern">
                     <img src="../images/leadership/sumit-saurabh.png" alt="Sumit Saurabh" class="leader-avatar">
                     <h4>Sumit Saurabh</h4>
-                    <p>Gerente Técnico de Programas</p>
+                    <p>Gerente de Programa Técnico</p>
                 </div>
             </div>
 
-            <h3 class="team-category-header">Junta Asesora</h3>
+            <h3 class="team-category-header">Consejo Asesor</h3>
             <div class="leadership-grid">
                 <div class="leader-card-modern">
                     <img src="../images/leadership/dan-kelly.png" alt="Dan Kelly" class="leader-avatar">
                     <h4>Dan Kelly</h4>
-                    <p>Miembro de Junta Asesora</p>
+                    <p>Miembro del Consejo Asesor</p>
                 </div>
                 <div class="leader-card-modern">
                     <img src="../images/leadership/mike-relich.png" alt="Mike Relich" class="leader-avatar">
                     <h4>Mike Relich</h4>
-                    <p>Miembro de Junta Asesora</p>
+                    <p>Miembro del Consejo Asesor</p>
                 </div>
                 <div class="leader-card-modern">
                     <img src="../images/leadership/vanessa-cartwright.png" alt="Vanessa Cartwright" class="leader-avatar">
                     <h4>Vanessa Cartwright</h4>
-                    <p>Miembro de Junta Asesora</p>
+                    <p>Miembro del Consejo Asesor</p>
                 </div>
             </div>
         </div>
@@ -492,7 +288,7 @@
 
             <div class="section-header">
                 <h2>Carreras en NULogic</h2>
-                <p>Únete a nuestro equipo de profesionales diversos y apasionados que impulsan la excelencia en comercio digital</p>
+                <p>Únete a nuestro equipo de profesionales diversos y apasionados que impulsan la excelencia en el comercio digital</p>
             </div>
 
             <div class="cards-grid">
@@ -503,16 +299,16 @@
 
                 <div class="card">
                     <h3>Crecimiento Profesional</h3>
-                    <p>Aprendizaje continuo, mentoría y caminos claros de avance para ayudarte a alcanzar tus metas profesionales.</p>
+                    <p>Aprendizaje continuo, mentoría y vías de avance claras para ayudarte a alcanzar tus objetivos profesionales.</p>
                 </div>
 
                 <div class="card">
                     <h3>Cultura Colaborativa</h3>
-                    <p>Un entorno de equipo solidario e inclusivo donde se valoran las perspectivas diversas y prospera la innovación.</p>
+                    <p>Un ambiente de equipo solidario e inclusivo donde se valoran las perspectivas diversas y prospera la innovación.</p>
                 </div>
 
                 <div class="card">
-                    <h3>Equilibrio Vida-Trabajo</h3>
+                    <h3>Balance Vida-Trabajo</h3>
                     <p>Arreglos de trabajo flexibles que apoyan tu vida personal y éxito profesional.</p>
                 </div>
 
@@ -523,7 +319,7 @@
 
                 <div class="card">
                     <h3>Impacto Global</h3>
-                    <p>Trabaja en proyectos con significancia mundial, apoyando a importantes minoristas en múltiples continentes.</p>
+                    <p>Trabaja en proyectos con importancia mundial, apoyando a grandes minoristas en múltiples continentes.</p>
                 </div>
             </div>
         </div>
@@ -533,7 +329,7 @@
     <section>
         <div class="container">
             <div class="section-header">
-                <h2>Vacantes Actuales</h2>
+                <h2>Oportunidades Actuales</h2>
                 <p>Explora oportunidades para unirte a nuestro equipo en crecimiento</p>
             </div>
 
@@ -545,7 +341,7 @@
                     <span><strong>Experiencia:</strong> 5+ años</span>
                     <span><strong>Ubicación:</strong> Remoto, EE.UU.</span>
                 </div>
-                <p>Buscamos desarrolladores experimentados de Shopify para construir y optimizar soluciones de e-commerce empresarial.</p>
+                <p>Buscamos desarrolladores experimentados de Shopify para construir y optimizar soluciones de comercio electrónico empresarial.</p>
             </div>
 
             <div class="job-listing">
@@ -578,7 +374,7 @@
                     <span><strong>Experiencia:</strong> 7-9 años</span>
                     <span><strong>Ubicación:</strong> Chennai, India</span>
                 </div>
-                <p>Desarrollar y mantener arquitectura de microservicios para plataformas de comercio empresarial.</p>
+                <p>Desarrolla y mantiene arquitecturas de microservicios para plataformas de comercio empresarial.</p>
             </div>
 
             <div class="job-listing">
@@ -589,7 +385,7 @@
                     <span><strong>Experiencia:</strong> 3-5 años</span>
                     <span><strong>Ubicación:</strong> Chennai, India</span>
                 </div>
-                <p>Construir pipelines de datos y soluciones de análisis para plataformas de comercio.</p>
+                <p>Construye pipelines de datos y soluciones de análisis para plataformas de comercio.</p>
             </div>
 
             <div class="job-listing">
@@ -600,13 +396,13 @@
                     <span><strong>Experiencia:</strong> 12-15 años</span>
                     <span><strong>Ubicación:</strong> Chennai, India</span>
                 </div>
-                <p>Liderar la entrega de proyectos y relaciones con clientes para implementaciones de comercio empresarial.</p>
+                <p>Lidera la entrega de proyectos y relaciones con clientes para implementaciones de comercio empresarial.</p>
             </div>
 
             <div style="text-align: center; margin-top: 48px;">
                 <p style="font-size: 18px; margin-bottom: 16px;">¿Interesado en unirte a nuestro equipo?</p>
                 <p style="margin-bottom: 24px;">Envía tu currículum a <a href="mailto:careers@nulogic.io" style="font-weight: 600;">careers@nulogic.io</a></p>
-                <a href="contact.html" class="btn btn-primary">Contáctanos</a>
+                <a href="contact.html" class="btn btn-primary">Ponte en Contacto</a>
             </div>
         </div>
     </section>
@@ -641,7 +437,7 @@
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h4>Empresa</h4>
+                    <h4>Compañía</h4>
                     <ul>
                         <li><a href="about.html">Acerca de</a></li>
                         <li><a href="work.html">Trabajo</a></li>
@@ -650,10 +446,15 @@
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NULogic. Todos los derechos reservados.</p>
+           <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> NULogic. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+     <script src="../js/script.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

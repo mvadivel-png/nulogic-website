@@ -3,395 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NULogic | Comercio Agéntico y Automatización Impulsada por IA para Minoristas Modernos</title>
+    <title>NULogic | Comercio Agéntico y Automatización con IA para Minoristas Modernos</title>
     <meta name="description" content="Transforme su comercio con agentes de IA autónomos. Automatización inteligente, experiencias personalizadas y análisis predictivo para minoristas empresariales. Impulsado por tecnología de IA agéntica de vanguardia.">
-
+    <!-- Deployment trigger -->
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="../css/styles.css?v=5">
-    <style>
-        .hero-rotating {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-slide {
-            opacity: 0;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            transition: opacity 1s ease-in-out;
-            pointer-events: none;
-        }
-
-        .hero-slide.active {
-            opacity: 1;
-            position: relative;
-            pointer-events: auto;
-        }
-
-        .hero-indicators {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 32px;
-        }
-
-        .hero-indicator {
-            width: 40px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 2px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .hero-indicator.active {
-            background: rgba(255, 255, 255, 0.9);
-        }
-
-        /* Animated Background */
-        .hero {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(
-                45deg,
-                rgba(137, 56, 159, 0.1) 0%,
-                rgba(237, 41, 37, 0.1) 25%,
-                rgba(137, 56, 159, 0.1) 50%,
-                rgba(237, 41, 37, 0.1) 75%,
-                rgba(137, 56, 159, 0.1) 100%
-            );
-            animation: gradient-shift 15s ease infinite;
-            z-index: 0;
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        @keyframes gradient-shift {
-            0%, 100% {
-                transform: translate(0, 0) rotate(0deg);
-            }
-            25% {
-                transform: translate(-5%, 5%) rotate(1deg);
-            }
-            50% {
-                transform: translate(5%, -5%) rotate(-1deg);
-            }
-            75% {
-                transform: translate(-5%, -5%) rotate(1deg);
-            }
-        }
-
-        /* Floating Commerce Icons */
-        .commerce-icon {
-            position: absolute;
-            opacity: 0.08;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .commerce-icon.icon-1 {
-            top: 10%;
-            left: 5%;
-            animation: float-1 20s ease-in-out infinite;
-        }
-
-        .commerce-icon.icon-2 {
-            top: 20%;
-            right: 10%;
-            animation: float-2 25s ease-in-out infinite;
-        }
-
-        .commerce-icon.icon-3 {
-            bottom: 15%;
-            left: 15%;
-            animation: float-3 22s ease-in-out infinite;
-        }
-
-        .commerce-icon.icon-4 {
-            bottom: 25%;
-            right: 8%;
-            animation: float-4 18s ease-in-out infinite;
-        }
-
-        .commerce-icon.icon-5 {
-            top: 50%;
-            left: 50%;
-            animation: float-5 30s ease-in-out infinite;
-        }
-
-        @keyframes float-1 {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            25% { transform: translate(20px, -30px) rotate(5deg); }
-            50% { transform: translate(-10px, -50px) rotate(-3deg); }
-            75% { transform: translate(30px, -20px) rotate(7deg); }
-        }
-
-        @keyframes float-2 {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            25% { transform: translate(-30px, 20px) rotate(-5deg); }
-            50% { transform: translate(10px, 40px) rotate(3deg); }
-            75% { transform: translate(-20px, 30px) rotate(-7deg); }
-        }
-
-        @keyframes float-3 {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            25% { transform: translate(25px, 15px) rotate(4deg); }
-            50% { transform: translate(-15px, 30px) rotate(-4deg); }
-            75% { transform: translate(35px, 10px) rotate(6deg); }
-        }
-
-        @keyframes float-4 {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            25% { transform: translate(-20px, -25px) rotate(-6deg); }
-            50% { transform: translate(15px, -40px) rotate(4deg); }
-            75% { transform: translate(-25px, -15px) rotate(-8deg); }
-        }
-
-        @keyframes float-5 {
-            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
-            25% { transform: translate(-40%, -60%) rotate(3deg); }
-            50% { transform: translate(-60%, -40%) rotate(-3deg); }
-            75% { transform: translate(-45%, -55%) rotate(5deg); }
-        }
-
-        /* Logo Carousel Styles */
-        .logo-carousel {
-            overflow: hidden;
-            position: relative;
-            width: 100%;
-            margin-top: 32px;
-        }
-
-        .logo-track {
-            display: flex;
-            gap: 64px;
-            animation: scroll 40s linear infinite;
-            width: max-content;
-        }
-
-        .logo-track:hover {
-            animation-play-state: paused;
-        }
-
-        .logo-item {
-            flex-shrink: 0;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            filter: grayscale(0%);
-            opacity: 1;
-            transition: all 0.3s ease;
-        }
-
-        .logo-item:hover {
-            transform: scale(1.05);
-        }
-
-        .logo-item img {
-            height: 100%;
-            width: auto;
-            max-width: 160px;
-            object-fit: contain;
-        }
-
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .logo-item {
-                height: 36px;
-            }
-            .logo-track {
-                gap: 48px;
-            }
-        }
-
-        /* Modern What We Deliver Section */
-        .services-modern {
-            background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
-        }
-
-        .services-modern .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .service-card-modern {
-            position: relative;
-            background: white;
-            border-radius: 16px;
-            padding: 32px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid #f0f0f0;
-            overflow: hidden;
-        }
-
-        .service-card-modern::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--color-accent-purple), var(--color-accent-red));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
-        }
-
-        .service-card-modern:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-card-modern:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(137, 56, 159, 0.15);
-            border-color: rgba(137, 56, 159, 0.2);
-        }
-
-        .service-card-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, rgba(137, 56, 159, 0.1), rgba(237, 41, 37, 0.1));
-            border-radius: 12px;
-            font-size: 20px;
-            font-weight: 800;
-            color: var(--color-accent-purple);
-            margin-bottom: 20px;
-            font-family: var(--font-heading);
-        }
-
-        .service-card-modern h3 {
-            color: var(--color-primary);
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            line-height: 1.3;
-        }
-
-        .service-card-modern > p {
-            color: var(--color-gray-dark);
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .service-card-modern ul {
-            list-style: none;
-            margin-bottom: 24px;
-        }
-
-        .service-card-modern ul li {
-            position: relative;
-            padding-left: 24px;
-            margin-bottom: 12px;
-            color: var(--color-gray-dark);
-            font-size: 15px;
-            line-height: 1.5;
-        }
-
-        .service-card-modern ul li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--color-accent-purple);
-            font-weight: 600;
-        }
-
-        .service-card-modern .card-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--color-accent-purple);
-            font-weight: 600;
-            text-decoration: none;
-            transition: gap 0.3s ease;
-        }
-
-        .service-card-modern .card-link:hover {
-            gap: 12px;
-            color: var(--color-accent-red);
-        }
-
-        .section-header-modern {
-            text-align: center;
-            margin-bottom: 48px;
-        }
-
-        .section-header-modern h2 {
-            font-size: 42px;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-red));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 16px;
-        }
-
-        .section-header-modern p {
-            font-size: 18px;
-            color: var(--color-gray-dark);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        @media (max-width: 768px) {
-            .services-modern .cards-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-header-modern h2 {
-                font-size: 32px;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Header & Navigation -->
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic" style="height: 32px;"></a>
+                <a href="index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic" style="height: 50px;"></a>
                 <ul class="nav-links">
                     <li class="nav-item-with-dropdown">
                         <a href="services.html">Servicios</a>
                         <ul class="dropdown-menu">
-                            <li><a href="../commerce-build.html">Construcción y Modernización de Comercio</a></li>
-                            <li><a href="services.html#support">Ejecución y Soporte 24/7</a></li>
-                            <li><a href="services.html#cloud">Nube, Rendimiento y Confiabilidad</a></li>
-                            <li><a href="services.html#data-ai">Datos, IA y Analítica</a></li>
+                            <li><a href="commerce-build.html">Servicios de Comercio</a></li>
+                            <li><a href="services.html#cloud">Infraestructura en la Nube</a></li>
+                            <li><a href="services.html#data-ai">Orquestación de Datos e IA</a></li>
+                            <li><a href="services.html#enterprise">Integración Empresarial</a></li>
+                            <li><a href="services.html#experience">Diseño de Experiencia</a></li>
+                            <li><a href="services.html#support">Soporte 24/7</a></li>
                         </ul>
                     </li>
                     <li class="nav-item-with-dropdown">
@@ -404,9 +42,9 @@
                             <li><a href="platforms.html#shopware">Shopware</a></li>
                         </ul>
                     </li>
-                    <li><a href="work.html">Trabajo</a></li>
+                    <li><a href="work.html">Proyectos</a></li>
                     <li><a href="partners.html">Socios</a></li>
-                    <li><a href="about.html">Acerca de</a></li>
+                    <li><a href="about.html">Nosotros</a></li>
                     <li class="nav-item-with-dropdown">
                         <a href="#">ES</a>
                         <ul class="dropdown-menu">
@@ -414,8 +52,13 @@
                             <li><a href="index.html">Español</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html" class="btn btn-primary">Reservar una Llamada</a></li>
+                    <li><a href="contact.html" class="btn btn-primary bookcall">Contáctenos</a></li>
                 </ul>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
             </nav>
         </div>
     </header>
@@ -423,7 +66,7 @@
     <!-- Proof Bar -->
     <div class="proof-bar">
         <div class="container">
-            Liderando el Futuro: NULogic es pionero en Comercio Agéntico con automatización impulsada por IA y agentes inteligentes para minoristas empresariales
+            "NRF 2026 - 5 Tendencias que Moldean el Futuro del Comercio Minorista" | <a target="_blank" href="https://drive.google.com/file/d/1O65NLZkJgkV37xkQhBtFJ93mQgClD2D4/view?usp=drive_link">Lea Nuestras Conclusiones</a>
         </div>
     </div>
 
@@ -454,41 +97,31 @@
         <div class="container">
             <!-- Slide 1: Agentic Commerce -->
             <div class="hero-slide active">
-                <h1>Transforme el Comercio con Automatización Inteligente y Agentes de IA</h1>
-                <p>Aproveche el poder de la IA agéntica para automatizar flujos de trabajo, personalizar experiencias y optimizar operaciones — desde recomendaciones inteligentes de productos hasta gestión autónoma de inventario y servicio al cliente impulsado por IA que funciona 24/7.</p>
+                <h1>Agentes de IA que Ejecutan Sus Operaciones de Comercio</h1>
+                <p>Agentes de IA que realmente hacen el trabajo: automatizando flujos de trabajo, personalizando experiencias en tiempo real y optimizando operaciones sin supervisión constante. Recomendaciones inteligentes de productos, inventario que responde a la demanda real y servicio al cliente que funciona 24/7 sin agotar a su equipo.</p>
                 <div class="hero-cta">
-                    <a href="contact.html" class="btn btn-primary">Explorar Comercio Agéntico</a>
-                    <a href="services.html#data-ai" class="btn btn-secondary">Conocer Capacidades de IA</a>
+                    <a href="contact.html" class="btn btn-primary">Explore el Comercio Agéntico</a>
+                    <a href="services.html#data-ai" class="btn btn-secondary">Conozca Nuestras Capacidades de IA</a>
                 </div>
             </div>
 
             <!-- Slide 2: AI-Powered Personalization -->
             <div class="hero-slide">
-                <h1>Ofrezca Experiencias Hiperpersonalizadas a Escala con IA</h1>
-                <p>Implemente agentes de IA autónomos que comprenden la intención del cliente, predicen el comportamiento y ofrecen experiencias personalizadas en cada punto de contacto — desde el descubrimiento inteligente de productos hasta precios dinámicos y campañas de marketing personalizadas.</p>
+                <h1>Las Experiencias Genéricas Ya No Convierten</h1>
+                <p>Implemente agentes de IA que realmente entienden lo que sus clientes quieren, predicen lo que harán después y ofrecen experiencias personalizadas en cada punto de contacto: desde descubrimiento de productos que se siente intuitivo hasta precios que responden a la demanda real y campañas de marketing que realmente resuenan.</p>
                 <div class="hero-cta">
-                    <a href="contact.html" class="btn btn-primary">Desbloquear Personalización con IA</a>
+                    <a href="contact.html" class="btn btn-primary">Desbloquee la Personalización con IA</a>
                     <a href="services.html#data-ai" class="btn btn-secondary">Ver Casos de Uso</a>
                 </div>
             </div>
 
             <!-- Slide 3: Autonomous Operations -->
             <div class="hero-slide">
-                <h1>Automatice sus Operaciones de Comercio con Agentes Inteligentes</h1>
-                <p>Deje que los agentes de IA manejen la optimización de inventario, pronósticos de demanda, estrategias de precios y flujos de trabajo operativos — reduciendo costos, mejorando la eficiencia y liberando a su equipo para enfocarse en estrategia y crecimiento.</p>
+                <h1>Escale Sus Operaciones de Comercio en Piloto Automático con Agentes de IA</h1>
+                <p>Deje que los agentes de IA manejen la optimización de inventario, pronóstico de demanda, estrategias de precios y flujos de trabajo operativos. Las operaciones se ejecutan solas. Su equipo se enfoca en estrategia y crecimiento en lugar de apagar incendios.</p>
                 <div class="hero-cta">
-                    <a href="contact.html" class="btn btn-primary">Automatizar con IA</a>
-                    <a href="services.html#data-ai" class="btn btn-secondary">Explorar Soluciones</a>
-                </div>
-            </div>
-
-            <!-- Slide 4: NRF Event -->
-            <div class="hero-slide">
-                <h1>Liderando el Futuro del Retail en NRF 2025</h1>
-                <p>Únase a nosotros en la conferencia de retail más grande del mundo presentando soluciones de IA agéntica de vanguardia que transforman el comercio. Descubra cómo los agentes autónomos están revolucionando la gestión de inventario, personalización y experiencias del cliente para minoristas empresariales en todo el mundo.</p>
-                <div class="hero-cta">
-                    <a href="contact.html" class="btn btn-primary">Encuéntrenos en NRF</a>
-                    <a href="about.html" class="btn btn-secondary">Conozca NULogic</a>
+                    <a href="contact.html" class="btn btn-primary">Automatice con IA</a>
+                    <a href="services.html#data-ai" class="btn btn-secondary">Explore Soluciones</a>
                 </div>
             </div>
 
@@ -497,7 +130,6 @@
                 <div class="hero-indicator active" data-slide="0"></div>
                 <div class="hero-indicator" data-slide="1"></div>
                 <div class="hero-indicator" data-slide="2"></div>
-                <div class="hero-indicator" data-slide="3"></div>
             </div>
         </div>
     </section>
@@ -543,7 +175,7 @@
     <!-- Client Logos -->
     <section class="client-logos">
         <div class="container">
-            <h3>Impulsando comercio impulsado por IA para minoristas empresariales en todo el mundo</h3>
+            <h3>Impulsando comercio con IA para minoristas empresariales en todo el mundo</h3>
             <div class="logo-carousel">
                 <div class="logo-track">
                     <!-- First set of logos -->
@@ -589,48 +221,48 @@
         <div class="container">
             <div class="section-header-modern">
                 <h2>Lo Que Entregamos</h2>
-                <p>Soluciones de comercio impulsadas por IA que automatizan operaciones, personalizan experiencias e impulsan la toma de decisiones inteligente en todo su ecosistema de comercio.</p>
+                <p>Soluciones de comercio con IA que hemos construido y probado con minoristas empresariales. Automatizan operaciones, personalizan a escala e impulsan decisiones inteligentes en toda su plataforma. No experimentamos con su negocio. Implementamos lo que funciona.</p>
             </div>
 
             <div class="cards-grid">
                 <!-- Card 1: Agentic Commerce -->
                 <div class="service-card-modern">
                     <div class="service-card-number">01</div>
-                    <h3>Comercio Agéntico</h3>
-                    <p>Implemente agentes de IA autónomos que piensan, aprenden y actúan — transformando cómo gestiona el inventario, involucra a los clientes y optimiza las operaciones.</p>
+                    <h3>Servicios de Comercio</h3>
+                    <p>Implemente agentes de IA que no esperan instrucciones: ven patrones, toman decisiones y actúan. Gestionando inventario basado en demanda real. Interactuando con clientes las 24 horas. Optimizando precios dinámicamente. Ejecutando campañas de forma autónoma.</p>
                     <ul>
-                        <li>Agentes de IA autónomos para servicio al cliente 24/7</li>
-                        <li>Descubrimiento inteligente de productos y recomendaciones</li>
-                        <li>Gestión auto-optimizada de precios e inventario</li>
-                        <li>Merchandising impulsado por IA y automatización de campañas</li>
+                        <li>Servicio al cliente funcionando 24/7 sin necesidad de humanos</li>
+                        <li>Descubrimiento de productos que sabe lo que los clientes quieren antes de que pregunten</li>
+                        <li>Inventario y precios que se ajustan automáticamente en tiempo real</li>
+                        <li>Campañas y merchandising en piloto automático</li>
                     </ul>
-                    <a href="services.html#data-ai" class="card-link">Explorar IA Agéntica →</a>
+                    <a href="services.html#data-ai" class="card-link">Explore IA Agéntica →</a>
                 </div>
 
                 <!-- Card 2: Data, AI & Analytics -->
                 <div class="service-card-modern">
                     <div class="service-card-number">02</div>
-                    <h3>Datos, IA y Analítica para Comercio</h3>
-                    <p>Construya plataformas de datos inteligentes que impulsen análisis predictivo, personalización basada en ML e inteligencia de negocio en tiempo real.</p>
+                    <h3>Orquestación de Datos e IA</h3>
+                    <p>Plataformas de datos que van más allá de tableros e informes. Construimos sistemas que procesan datos en tiempo real, ejecutan modelos de ML que predicen resultados, analizan comportamiento del cliente a escala y potencian personalización que se adapta automáticamente.</p>
                     <ul>
-                        <li>Pipelines de datos en tiempo real e ingeniería</li>
-                        <li>Análisis predictivo y modelos de ML</li>
-                        <li>Analítica de comportamiento del cliente y segmentación</li>
-                        <li>Motores de personalización impulsados por IA</li>
+                        <li>Pipelines de datos en vivo conectando cada sistema</li>
+                        <li>Análisis predictivo para pronóstico de demanda y detección de tendencias</li>
+                        <li>Segmentación conductual basada en acciones reales del cliente</li>
+                        <li>Personalización con IA que aprende de cada interacción</li>
                     </ul>
                     <a href="services.html#data-ai" class="card-link">Más Información →</a>
                 </div>
 
-                <!-- Card 3: AI-Enhanced Commerce Platforms -->
+                <!-- Card 3: Commerce Services -->
                 <div class="service-card-modern">
                     <div class="service-card-number">03</div>
                     <h3>Plataformas de Comercio Mejoradas con IA</h3>
-                    <p>Construya plataformas de comercio modernas listas para IA con características inteligentes integradas en la arquitectura desde el primer día.</p>
+                    <p>Construya plataformas de comercio donde la IA es parte de la arquitectura, no una idea posterior. Implementamos plataformas modernas (SFCC, Shopify Plus, commercetools) con capacidades de IA integradas correctamente, migramos sistemas legados mientras agregamos inteligencia y desarrollamos características impulsadas por ML que funcionan perfectamente dentro de la plataforma.</p>
                     <ul>
-                        <li>Implementación de plataformas integradas con IA (SFCC, Shopify Plus, commercetools)</li>
-                        <li>Replatformización y migración inteligente</li>
-                        <li>Desarrollo de características impulsadas por ML</li>
-                        <li>Arquitectura y estrategia técnica primero-IA</li>
+                        <li>Implementaciones de plataforma listas para IA desde cero</li>
+                        <li>Estrategias de migración que actualizan sistemas y agregan capacidades de ML</li>
+                        <li>Desarrollo de características personalizadas usando aprendizaje automático</li>
+                        <li>Arquitectura diseñada para extensibilidad y rendimiento de IA</li>
                     </ul>
                     <a href="services.html#commerce-build" class="card-link">Más Información →</a>
                 </div>
@@ -638,27 +270,27 @@
                 <!-- Card 4: 24/7 AI-Powered Support -->
                 <div class="service-card-modern">
                     <div class="service-card-number">04</div>
-                    <h3>Ejecución y Soporte Impulsado por IA 24/7</h3>
-                    <p>Combine experiencia humana con monitoreo impulsado por IA y respuesta a incidentes para una confiabilidad de plataforma inigualable.</p>
+                    <h3>Monitoreo y Soporte 24/7</h3>
+                    <p>Soporte que no espera a que algo se rompa. La IA monitorea su plataforma constantemente, detecta problemas antes de que se conviertan en incidentes y maneja respuestas rutinarias automáticamente. Cuando se necesita experiencia humana, nuestros equipos están listos 24/7.</p>
                     <ul>
-                        <li>Soporte gestionado mejorado con IA 24/7 (L2/L3)</li>
-                        <li>Detección y respuesta predictiva de incidentes</li>
-                        <li>Gestión automatizada de lanzamientos e implementación</li>
-                        <li>Monitoreo inteligente e ingeniería de confiabilidad</li>
+                        <li>Soporte las 24 horas respaldado por monitoreo de IA</li>
+                        <li>Problemas detectados y a menudo resueltos antes de que los clientes lo noten</li>
+                        <li>Lanzamientos y despliegues automatizados para consistencia</li>
+                        <li>Monitoreo que predice problemas en lugar de solo reportarlos</li>
                     </ul>
                     <a href="services.html#support" class="card-link">Más Información →</a>
                 </div>
 
-                <!-- Card 5: Intelligent Cloud & Performance -->
+                <!-- Card 5: Cloud, Performance & Reliability -->
                 <div class="service-card-modern">
                     <div class="service-card-number">05</div>
-                    <h3>Nube y Rendimiento Inteligente</h3>
-                    <p>Escale con confianza usando optimización de infraestructura impulsada por IA, auto-escalado e ingeniería de rendimiento predictivo.</p>
+                    <h3>Infraestructura en la Nube</h3>
+                    <p>La gestión manual de la nube no escala. Tampoco reaccionar a problemas de rendimiento después de que los clientes se quejen. Construimos infraestructura inteligente que se optimiza sola, predice problemas, detecta anomalías automáticamente y escala sin esperar a que alguien note que las cosas están lentas.</p>
                     <ul>
-                        <li>Infraestructura en la nube optimizada con IA (AWS, GCP)</li>
-                        <li>Ingeniería de rendimiento predictivo</li>
-                        <li>Observabilidad inteligente y detección de anomalías</li>
-                        <li>Sistemas de auto-escalado y auto-recuperación</li>
+                        <li>Infraestructura en la nube optimizada con IA en lugar de configuración manual</li>
+                        <li>Análisis predictivo de rendimiento que detecta problemas temprano</li>
+                        <li>Monitoreo inteligente que sabe cómo se ve lo normal</li>
+                        <li>Sistemas que auto-escalan y auto-reparan sin intervención humana</li>
                     </ul>
                     <a href="services.html#cloud" class="card-link">Más Información →</a>
                 </div>
@@ -670,47 +302,47 @@
     <section style="background: #fafafa;">
         <div class="container">
             <div class="section-header">
-                <h2>Por Qué NULogic para Comercio Agéntico</h2>
+                <h2>¿Por qué trabajar con NULogic?</h2>
             </div>
 
             <div class="benefits-list">
                 <div class="benefit-item">
                     <div class="benefit-item-icon">✓</div>
                     <div class="benefit-item-content">
-                        <h4>Pioneros en IA Agéntica para Comercio</h4>
-                        <p>Estamos construyendo el futuro del comercio minorista con agentes de IA autónomos que aprenden, se adaptan y optimizan — entregando resultados que las soluciones de comercio tradicionales no pueden igualar.</p>
+                        <h4>Construido para Comercio Digital. Trayectoria Comprobada.</h4>
+                        <p>Nuestros equipos construyen, escalan y operan comercio digital todos los días para marcas reales, compradores reales e ingresos reales.</p>
                     </div>
                 </div>
 
                 <div class="benefit-item">
                     <div class="benefit-item-icon">✓</div>
                     <div class="benefit-item-content">
-                        <h4>Enfoque Primero-IA, Nativo en Comercio</h4>
-                        <p>Cada solución que construimos integra automatización inteligente desde el principio — no agregada posteriormente, sino tejida en el tejido de sus operaciones de comercio.</p>
+                        <h4>Atención Boutique. Ejecución Empresarial.</h4>
+                        <p>Obtiene talento senior, decisiones rápidas y ejecución práctica, sin las capas, demoras o rigidez de las grandes consultoras.</p>
                     </div>
                 </div>
 
                 <div class="benefit-item">
                     <div class="benefit-item-icon">✓</div>
                     <div class="benefit-item-content">
-                        <h4>Implementaciones de IA Comprobadas a Escala</h4>
-                        <p>Hemos desplegado agentes de IA manejando millones de interacciones de clientes, gestionando inventario complejo en todas las regiones e impulsando personalización para minoristas empresariales.</p>
+                        <h4>Entrega Global, Optimizada en Costos.</h4>
+                        <p>Acceda a la combinación adecuada de equipos onshore, nearshore y offshore para mejorar la velocidad y reducir costos sin sacrificar calidad.</p>
                     </div>
                 </div>
 
                 <div class="benefit-item">
                     <div class="benefit-item-icon">✓</div>
                     <div class="benefit-item-content">
-                        <h4>De Estrategia a Operaciones Autónomas</h4>
-                        <p>Diseñamos estrategias de IA, construimos sistemas inteligentes y los operamos 24/7 — asegurando que sus soluciones de comercio agéntico entreguen valor continuo.</p>
+                        <h4>Agnóstico de Plataforma. Obsesionado con Resultados.</h4>
+                        <p>Resolvemos problemas de negocio. Nuestra amplitud de experiencia y servicios ayudan a simplificar su stack, proveedores y operaciones.</p>
                     </div>
                 </div>
 
                 <div class="benefit-item">
                     <div class="benefit-item-icon">✓</div>
                     <div class="benefit-item-content">
-                        <h4>IA de Nivel Empresarial con Experiencia en Comercio Minorista</h4>
-                        <p>Combinamos capacidades de IA de vanguardia con profundo conocimiento de plataformas de comercio en Salesforce, Shopify Plus, commercetools y más — confiados por minoristas globales.</p>
+                        <h4>Genuinamente Fácil para Hacer Negocios.</h4>
+                        <p>Equipos flexibles, contratos adaptables, responsivos</p>
                     </div>
                 </div>
             </div>
@@ -721,173 +353,25 @@
     <section style="background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);">
         <div class="container">
             <div class="section-header">
-                <h2>IA Agéntica en Acción</h2>
+                <h2 style="background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-red)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Nuestro Trabajo</h2>
                 <p>Resultados reales de automatización inteligente y comercio impulsado por IA</p>
             </div>
-
-            <style>
-                .case-study-card {
-                    position: relative;
-                    background: white;
-                    border-radius: 20px;
-                    padding: 40px 32px 32px;
-                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-                    border: 1px solid #f0f0f0;
-                    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                    overflow: hidden;
-                    display: flex;
-                    flex-direction: column;
-                    height: 100%;
-                }
-
-                .case-study-card:hover {
-                    transform: translateY(-8px);
-                    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-                    border-color: #4A90E2;
-                }
-
-                .case-study-logo {
-                    position: absolute;
-                    top: 24px;
-                    right: 24px;
-                    width: 80px;
-                    height: 80px;
-                    background: white;
-                    border-radius: 12px;
-                    padding: 12px;
-                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    opacity: 0.9;
-                    transition: all 0.3s ease;
-                }
-
-                .case-study-card:hover .case-study-logo {
-                    opacity: 1;
-                    transform: scale(1.05);
-                    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-                }
-
-                .case-study-logo img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                }
-
-                .case-study-tag {
-                    display: inline-block;
-                    background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
-                    color: white;
-                    padding: 6px 16px;
-                    border-radius: 20px;
-                    font-size: 12px;
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    letter-spacing: 0.5px;
-                    margin-bottom: 16px;
-                }
-
-                .case-study-title {
-                    font-size: 22px;
-                    font-weight: 700;
-                    color: #1a1a1a;
-                    margin-bottom: 24px;
-                    padding-right: 90px;
-                    line-height: 1.3;
-                }
-
-                .case-study-section {
-                    margin-bottom: 20px;
-                }
-
-                .case-study-section-label {
-                    font-size: 14px;
-                    font-weight: 700;
-                    color: #4A90E2;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                    margin-bottom: 8px;
-                }
-
-                .case-study-section-text {
-                    font-size: 15px;
-                    line-height: 1.6;
-                    color: #555;
-                    margin: 0;
-                }
-
-                .case-study-results {
-                    background: linear-gradient(135deg, #f8fbff 0%, #f0f7ff 100%);
-                    border-left: 4px solid #4A90E2;
-                    padding: 16px 20px;
-                    border-radius: 8px;
-                    margin-top: auto;
-                    margin-bottom: 20px;
-                }
-
-                .case-study-results .case-study-section-text {
-                    font-size: 15px;
-                    color: #333;
-                }
-
-                .case-study-results strong {
-                    color: #4A90E2;
-                    font-weight: 700;
-                }
-
-                .case-study-cta {
-                    display: inline-flex;
-                    align-items: center;
-                    color: #4A90E2;
-                    text-decoration: none;
-                    font-weight: 600;
-                    font-size: 15px;
-                    transition: all 0.3s ease;
-                    margin-top: auto;
-                }
-
-                .case-study-cta:hover {
-                    color: #357ABD;
-                    transform: translateX(4px);
-                }
-
-                @media (max-width: 768px) {
-                    .case-study-logo {
-                        width: 60px;
-                        height: 60px;
-                        top: 16px;
-                        right: 16px;
-                        padding: 8px;
-                    }
-
-                    .case-study-title {
-                        font-size: 18px;
-                        padding-right: 70px;
-                    }
-
-                    .case-study-card {
-                        padding: 32px 24px 24px;
-                    }
-                }
-            </style>
-
             <div class="cards-grid">
                 <div class="case-study-card">
                     <div class="case-study-logo">
                         <img src="../images/clients/leslie.svg" alt="Leslie's">
                     </div>
                     <span class="case-study-tag">IA Agéntica</span>
-                    <h3 class="case-study-title">Leslie's Pool Supplies | Gestión de Inventario Autónoma</h3>
+                    <h3 class="case-study-title">Leslie's Pool Supplies | Gestión Autónoma de Inventario</h3>
 
                     <div class="case-study-section">
                         <div class="case-study-section-label">Desafío</div>
-                        <p class="case-study-section-text">Volatilidad de demanda estacional, químicos perecederos y pronósticos manuales en más de 900 ubicaciones</p>
+                        <p class="case-study-section-text">El Problema: Gestionar inventario para más de 900 tiendas cuando la demanda fluctúa enormemente con las estaciones, los químicos caducan y su equipo toma decisiones de pronóstico manualmente.</p>
                     </div>
 
                     <div class="case-study-results">
                         <div class="case-study-section-label">Resultados</div>
-                        <p class="case-study-section-text">Agentes de IA redujeron agotamientos <strong>62%</strong>, cortaron exceso de inventario <strong>38%</strong>, lograron <strong>95%</strong> de precisión en pronósticos y entregaron <strong>$18M</strong> en ahorros anuales</p>
+                        <p class="case-study-section-text">Qué Sucedió: Los agentes de IA ahora manejan el pronóstico y reabastecimiento. Los faltantes de stock cayeron <strong>62%</strong>. Exceso de inventario bajó <strong>38%</strong>. Los pronósticos alcanzaron <strong>95%</strong> de precisión. Ahorros anuales: <strong>$18M</strong>.</p>
                     </div>
 
                     <a href="work/leslies.html" class="case-study-cta">Leer Caso de Estudio →</a>
@@ -897,17 +381,17 @@
                     <div class="case-study-logo">
                         <img src="../images/clients/express.png" alt="Express">
                     </div>
-                    <span class="case-study-tag">Búsqueda IA</span>
-                    <h3 class="case-study-title">Express | Búsqueda y Personalización Impulsada por IA</h3>
+                    <span class="case-study-tag">Búsqueda con IA</span>
+                    <h3 class="case-study-title">Express | Búsqueda y Personalización con IA</h3>
 
                     <div class="case-study-section">
                         <div class="case-study-section-label">Desafío</div>
-                        <p class="case-study-section-text">Necesitaba búsqueda inteligente y descubrimiento de productos personalizado para mejor participación del cliente</p>
+                        <p class="case-study-section-text">Búsqueda que no entendía la intención del cliente. Descubrimiento de productos que mostraba lo mismo a todos. Menor compromiso porque la experiencia no estaba adaptada a compradores individuales.</p>
                     </div>
 
                     <div class="case-study-results">
                         <div class="case-study-section-label">Resultados</div>
-                        <p class="case-study-section-text">Implementó <strong>Vertex AI</strong> para búsqueda semántica con migración sin tiempo de inactividad, entregando relevancia impulsada por IA y recomendaciones personalizadas</p>
+                        <p class="case-study-section-text">La Solución: Implementamos <strong>Vertex AI</strong> para búsqueda semántica y recomendaciones personalizadas. La migración ocurrió sin problemas: <strong>cero tiempo de inactividad</strong>. Ahora la búsqueda entiende contexto e intención. El descubrimiento de productos se adapta al comportamiento individual. Los resultados son relevantes, no solo coincidencias de palabras clave.</p>
                     </div>
 
                     <a href="work/express.html" class="case-study-cta">Leer Caso de Estudio →</a>
@@ -918,50 +402,23 @@
                         <img src="../images/clients/walmart.png" alt="Walmart">
                     </div>
                     <span class="case-study-tag">Soporte 24/7</span>
-                    <h3 class="case-study-title">Walmart Chile | Soporte Mejorado con IA 24/7</h3>
+                    <h3 class="case-study-title">Walmart Chile | Soporte 24/7 Mejorado con IA</h3>
 
                     <div class="case-study-section">
                         <div class="case-study-section-label">Desafío</div>
-                        <p class="case-study-section-text">Requería monitoreo continuo y resolución rápida de incidentes para plataforma crítica de comercio electrónico</p>
+                        <p class="case-study-section-text">El Problema: La plataforma de comercio electrónico de Walmart Chile no podía permitirse tiempo de inactividad, especialmente durante temporadas pico. Necesitaban monitoreo que nunca duerme y respuesta a incidentes inmediata, no eventual.</p>
                     </div>
 
                     <div class="case-study-results">
                         <div class="case-study-section-label">Resultados</div>
-                        <p class="case-study-section-text">Logró <strong>99.9%+</strong> de tiempo de actividad, <strong><15 min</strong> de tiempo de respuesta para incidentes críticos, y estabilidad continua de plataforma durante temporadas pico</p>
+                        <p class="case-study-section-text">Lo Que Entregamos: Monitoreo 24/7 mejorado con IA detectó problemas antes de que se convirtieran en caídas. Los incidentes críticos se atendieron en menos de <strong>15 minutos</strong>. El tiempo de actividad de la plataforma alcanzó <strong>99.9%+</strong>, incluso durante sus temporadas más ocupadas.</p>
                     </div>
 
                     <a href="work/walmart.html" class="case-study-cta">Leer Caso de Estudio →</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Platforms We Support -->
-    <section style="background: #fafafa;">
-        <div class="container">
-            <div class="section-header">
-                <h2>Plataformas de Comercio Mejoradas con IA</h2>
-            </div>
-            <div style="display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; align-items: center;">
-                <p style="font-size: 16px; font-weight: 600; color: #424242;">Salesforce Commerce Cloud</p>
-                <p style="font-size: 16px; font-weight: 600; color: #424242;">Shopify Plus</p>
-                <p style="font-size: 16px; font-weight: 600; color: #424242;">commercetools</p>
-                <p style="font-size: 16px; font-weight: 600; color: #424242;">Shopware</p>
-                <p style="font-size: 16px; font-weight: 600; color: #424242;">Magento</p>
-            </div>
             <div class="text-center mt-l">
-                <a href="platforms.html" class="btn btn-primary">Ver Todas las Plataformas →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section>
-        <div class="container">
-            <div class="cta-banner">
-                <h2>¿Listo para Transformar su Comercio con Agentes de IA?</h2>
-                <p>Descubra cómo el comercio agéntico puede automatizar operaciones, personalizar experiencias e impulsar un crecimiento sin precedentes para su negocio.</p>
-                <a href="contact.html" class="btn">Explorar Comercio Agéntico →</a>
+                <a href="work.html" class="btn btn-primary">Ver Todos →</a>
             </div>
         </div>
     </section>
@@ -974,9 +431,9 @@
                     <h4>Servicios</h4>
                     <ul>
                         <li><a href="services.html#data-ai">Comercio Agéntico</a></li>
-                        <li><a href="services.html#data-ai">Datos, IA y Analítica</a></li>
+                        <li><a href="services.html#data-ai">Datos, IA y Análisis</a></li>
                         <li><a href="services.html#commerce-build">Plataformas Mejoradas con IA</a></li>
-                        <li><a href="services.html#support">Soporte Impulsado por IA 24/7</a></li>
+                        <li><a href="services.html#support">Soporte 24/7 con IA</a></li>
                         <li><a href="services.html#cloud">Nube y Rendimiento Inteligente</a></li>
                     </ul>
                 </div>
@@ -991,10 +448,10 @@
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h4>Compañía</h4>
+                    <h4>Empresa</h4>
                     <ul>
-                        <li><a href="about.html">Acerca de</a></li>
-                        <li><a href="work.html">Trabajo</a></li>
+                        <li><a href="about.html">Nosotros</a></li>
+                        <li><a href="work.html">Proyectos</a></li>
                         <li><a href="partners.html">Socios</a></li>
                         <li><a href="contact.html">Contacto</a></li>
                     </ul>
@@ -1005,8 +462,10 @@
             </div>
         </div>
     </footer>
-<script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+     <script src="../js/script.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>

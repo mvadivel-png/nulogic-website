@@ -3,40 +3,431 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leslie's Caso de Estudio | Optimización de Inventario Impulsada por IA y Pronóstico de Demanda Autónomo | NULogic</title>
+    <title>Caso de Estudio Leslie's | NULogic Impulsa la Experiencia Digital de Leslie's | NULogic</title>
+    <meta name="description" content="NULogic transformó la experiencia digital de Leslie's al aumentar la velocidad del sitio web de 48 a más de 85 en Lighthouse, optimizar el rendimiento móvil e impulsar un crecimiento del 150% interanual en reservas de servicios.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/casestudy-responsive.css">
+    <style>
+        :root {
+            --color-text-primary: #2B2B2B;
+            --color-text-secondary: #424242;
+            --color-purple: #89389f;
+            --color-red: #ed2925;
+            --color-bg-gray: #F9F9F9;
+            --color-border-gray: #D9D9D9;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--color-text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .case-study-hero {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .case-study-hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .case-study-title {
+            padding: 60px 0 40px;
+            background: white;
+        }
+
+        .case-study-title h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--color-text-primary);
+            margin: 0 0 24px 0;
+            max-width: 1000px;
+        }
+
+        .client-logo {
+            margin-bottom: 32px;
+        }
+
+        .client-logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .client-info-grid {
+            background: var(--color-bg-gray);
+            padding: 48px 0;
+        }
+
+        .client-info-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .client-info-item {
+            text-align: left;
+        }
+
+        .client-info-label {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--color-text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .client-info-value {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+
+        .client-info-value a {
+            color: var(--color-purple);
+            text-decoration: none;
+        }
+
+        .client-info-value a:hover {
+            text-decoration: underline;
+        }
+
+        .content-section {
+            padding: 80px 0;
+        }
+
+        .content-section.gray-bg {
+            background: var(--color-bg-gray);
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .content-container h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin: 0 0 24px 0;
+            line-height: 1.2;
+        }
+
+        .content-container h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin: 48px 0 24px 0;
+            line-height: 1.2;
+        }
+
+        .content-container h4 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin: 32px 0 16px 0;
+            line-height: 1.2;
+        }
+
+        .content-container p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--color-text-primary);
+            margin: 0 0 20px 0;
+        }
+
+        .content-container ul {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0;
+        }
+
+        .content-container ul li {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--color-text-primary);
+            margin-bottom: 16px;
+            padding-left: 32px;
+            position: relative;
+        }
+
+        .content-container ul li:before {
+            content: "•";
+            color: var(--color-purple);
+            font-weight: bold;
+            font-size: 24px;
+            position: absolute;
+            left: 8px;
+            top: -2px;
+        }
+
+        .challenge-section {
+            padding: 80px 0;
+            background: var(--color-bg-gray);
+        }
+
+        .challenge-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .challenge-quote {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--color-text-primary);
+            margin: 0 0 48px 0;
+            max-width: 900px;
+        }
+
+        .challenge-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .challenge-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .challenge-text h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin: 0 0 24px 0;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .result-card {
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-purple);
+        }
+
+        .result-card h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--color-purple);
+            margin: 0 0 12px 0;
+            line-height: 1.1;
+        }
+
+        .result-card .result-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--color-text-primary);
+            margin: 0 0 8px 0;
+        }
+
+        .result-card .result-description {
+            font-size: 16px;
+            color: var(--color-text-secondary);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+
+        .device-mockups {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 32px;
+            margin: 64px 0;
+            flex-wrap: wrap;
+        }
+
+        .device-mockups img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .device-mockups .desktop {
+            max-height: 300px;
+        }
+
+        .device-mockups .laptop {
+            max-height: 250px;
+        }
+
+        .device-mockups .mobile {
+            max-height: 350px;
+        }
+
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .service-item {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--color-text-primary);
+            padding: 16px 0;
+            border-bottom: 1px solid var(--color-border-gray);
+        }
+
+        .tech-category {
+            margin-top: 48px;
+        }
+
+        .tech-category h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin: 0 0 24px 0;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tech-tag {
+            background: white;
+            color: var(--color-text-primary);
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-size: 16px;
+            font-weight: 500;
+            border: 1px solid var(--color-border-gray);
+        }
+
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(96deg, var(--color-purple), var(--color-red));
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: white;
+            margin: 0 0 24px 0;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            color: rgba(255,255,255,0.95);
+            margin: 0 0 32px 0;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 48px;
+            background: white;
+            color: var(--color-purple);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: transform 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .case-study-title h1 {
+                font-size: 36px;
+            }
+
+            .client-info-container {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .challenge-content {
+                grid-template-columns: 1fr;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content-container h2 {
+                font-size: 36px;
+            }
+
+            .content-container h3 {
+                font-size: 28px;
+            }
+
+            .cta-section h2 {
+                font-size: 36px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header Navigation -->
     <header>
         <div class="container">
             <nav>
-                <a href="../../es/index.html" class="logo"><img src="../../images/nulogic-logo.svg" alt="NULogic" style="height: 32px;"></a>
+                <a href="../../index.html" class="logo"><img src="../../images/nulogic-logo.svg" alt="NULogic" style="height: 32px;"></a>
                 <ul class="nav-links">
                     <li class="nav-item-with-dropdown">
-                        <a href="../../es/services.html">Servicios</a>
+                        <a href="../../services.html">Servicios</a>
                         <ul class="dropdown-menu">
-                            <li><a href="../../commerce-build.html">Construcción y Modernización de Comercio</a></li>
-                            <li><a href="../../es/services.html#support">Soporte 24/7</a></li>
-                            <li><a href="../../es/services.html#cloud">Nube, Rendimiento y Confiabilidad</a></li>
-                            <li><a href="../../es/services.html#data-ai">Datos, IA y Analítica</a></li>
+                            <li><a href="../../commerce-build.html">Servicios de Comercio</a></li>
+                            <li><a href="../../services.html#support">Soporte 24/7</a></li>
+                            <li><a href="../../services.html#cloud">Nube, Rendimiento y Confiabilidad</a></li>
+                            <li><a href="../../services.html#data-ai">Datos, IA y Analítica</a></li>
                         </ul>
                     </li>
                     <li class="nav-item-with-dropdown">
-                        <a href="../../es/platforms.html">Plataformas</a>
+                        <a href="../../platforms.html">Plataformas</a>
                         <ul class="dropdown-menu">
-                            <li><a href="../../es/platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
-                            <li><a href="../../es/platforms.html#shopify">Shopify Plus</a></li>
-                            <li><a href="../../es/platforms.html#commercetools">commercetools</a></li>
-                            <li><a href="../../es/platforms.html#shopware">Shopware</a></li>
-                            <li><a href="../../es/platforms.html#magento">Magento / Adobe Comercio</a></li>
+                            <li><a href="../../platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
+                            <li><a href="../../platforms.html#shopify">Shopify Plus</a></li>
+                            <li><a href="../../platforms.html#commercetools">commercetools</a></li>
+                            <li><a href="../../platforms.html#shopware">Shopware</a></li>
+                            <li><a href="../../platforms.html#magento">Magento / Adobe Commerce</a></li>
                         </ul>
                     </li>
-                    <li><a href="../../es/work.html">Trabajo</a></li>
-                    <li><a href="../../es/partners.html">Socios</a></li>
-                    <li><a href="../../es/about.html">Acerca de</a></li>
+                    <li><a href="../../work.html">Trabajo</a></li>
+                    <li><a href="../../partners.html">Socios</a></li>
+                    <li><a href="../../about.html">Nosotros</a></li>
                     <li class="nav-item-with-dropdown">
                         <a href="#">ES</a>
                         <ul class="dropdown-menu">
@@ -44,157 +435,221 @@
                             <li><a href="leslies.html">Español</a></li>
                         </ul>
                     </li>
-                    <li><a href="../../es/contact.html" class="btn btn-primary">Reservar una Llamada</a></li>
+                    <li><a href="../../contact.html" class="btn btn-primary">Contáctenos</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="padding: 80px 0; background: linear-gradient(135deg, rgba(137, 56, 159, 0.9) 0%, rgba(237, 41, 37, 0.9) 100%);">
-        <div class="container">
-            <p style="color: rgba(255,255,255,0.9); margin-bottom: 16px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Caso de Estudio de Comercio Agéntico</p>
-            <h1 style="color: white; margin-bottom: 24px;">Leslie's Pool Supplies</h1>
-            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 900px;">Implementando agentes de IA autónomos para optimizar inventario estacional, predecir patrones de demanda y automatizar el reabastecimiento de stock en más de 900 ubicaciones.</p>
+    <!-- Hero Banner -->
+    <section class="case-study-hero">
+        <img src="../../images/casestudies/leslies-hero.png" alt="Leslie's Pool Supplies - Banner Móvil">
+    </section>
+
+    <!-- Title Section with Logo -->
+    <section class="case-study-title">
+        <div class="content-container">
+            <div class="client-logo">
+                <img src="../../images/casestudies/leslies-logo.png" alt="Logo de Leslie's Pool Supplies">
+            </div>
+            <h1>Transformando el Ecosistema de Piscinas y Spa de Leslie's con Velocidad, Escala y Experiencia Sin Fricciones</h1>
         </div>
     </section>
 
-    <!-- Descripción General -->
-    <section>
-        <div class="container-narrow">
-            <h2>Descripción General</h2>
-            <p>Leslie's Pool Supplies, el minorista especializado en piscinas más grande de América del Norte con más de 900 ubicaciones, enfrentaba desafíos críticos de inventario debido a patrones de demanda altamente estacionales. Los químicos para piscinas, equipos y accesorios tienen una vida útil limitada y fluctuaciones estacionales dramáticas, lo que lleva a costosos agotamientos de stock durante los meses pico de verano y exceso de desperdicio de inventario durante las temporadas bajas.</p>
-
-            <p style="margin-top: 20px;">NULogic implementó agentes de IA autónomos para revolucionar la gestión de inventario, el pronóstico de demanda y las operaciones de la cadena de suministro de Leslie's. Nuestra solución de comercio agéntico aprende continuamente de patrones climáticos, temporadas regionales de piscinas, datos históricos de ventas y señales de demanda en tiempo real para optimizar automáticamente los niveles de stock en todas las ubicaciones.</p>
-
-            <div style="margin-top: 40px;">
-                <h3>El Desafío</h3>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;"><strong>Volatilidad de Demanda Estacional:</strong> La demanda de suministros para piscinas varía dramáticamente según la temporada, región y condiciones climáticas, haciendo que el pronóstico tradicional sea poco confiable</li>
-                    <li style="margin-bottom: 12px;"><strong>Inventario Perecedero:</strong> Los químicos para piscinas tienen fechas de vencimiento, requiriendo precisión en el tiempo de inventario para minimizar el desperdicio</li>
-                    <li style="margin-bottom: 12px;"><strong>Complejidad Multiubicación:</strong> Más de 900 tiendas en diferentes climas y temporadas de piscinas requerían estrategias de inventario localizadas</li>
-                    <li style="margin-bottom: 12px;"><strong>Desequilibrios de Stock:</strong> Agotamientos frecuentes durante la temporada alta y más del 30% de exceso de inventario durante la temporada baja</li>
-                    <li style="margin-bottom: 12px;"><strong>Procesos Manuales:</strong> Gerentes de inventario pasando más de 60 horas por semana en pronósticos y pedidos manuales</li>
-                </ul>
+    <!-- Client Info Grid -->
+    <section class="client-info-grid">
+        <div class="client-info-container">
+            <div class="client-info-item">
+                <div class="client-info-label">Región</div>
+                <div class="client-info-value">EE.UU.</div>
             </div>
-
-            <div style="margin-top: 40px;">
-                <h3>La Solución de Comercio Agéntico</h3>
-                <p>NULogic implementó un sistema de agentes de IA autónomos que opera 24/7 para gestionar todo el ciclo de vida del inventario de Leslie's:</p>
-                <ul style="margin-top: 16px;">
-                    <li style="margin-bottom: 12px;"><strong>Agentes de Demanda Predictiva:</strong> Agentes de IA analizan pronósticos del clima, patrones regionales de apertura/cierre de piscinas, datos históricos de ventas y eventos locales para predecir la demanda con más del 95% de precisión</li>
-                    <li style="margin-bottom: 12px;"><strong>Agentes de Reabastecimiento Autónomo:</strong> Los agentes generan automáticamente órdenes de compra, negocian con proveedores y coordinan entregas basadas en la demanda prevista</li>
-                    <li style="margin-bottom: 12px;"><strong>Agentes de Redistribución Inteligente:</strong> La IA identifica desequilibrios de inventario entre ubicaciones e inicia autónomamente transferencias entre tiendas para optimizar los niveles de stock</li>
-                    <li style="margin-bottom: 12px;"><strong>Agentes de Gestión de Vencimiento:</strong> Monitorea la vida útil de los químicos y activa automáticamente promociones o redistribución antes de que los productos expiren</li>
-                    <li style="margin-bottom: 12px;"><strong>Agentes de Precios Dinámicos:</strong> Ajusta los precios en tiempo real basándose en niveles de inventario, pronósticos de demanda y panorama competitivo</li>
-                </ul>
+            <div class="client-info-item">
+                <div class="client-info-label">Sitio Web</div>
+                <div class="client-info-value"><a href="https://www.lesliespool.com" target="_blank" rel="noopener">https://www.lesliespool.com</a></div>
+            </div>
+            <div class="client-info-item">
+                <div class="client-info-label">Cliente Desde</div>
+                <div class="client-info-value">2023</div>
             </div>
         </div>
     </section>
 
-    <!-- Results -->
-    <section style="background: #fafafa;">
-        <div class="container-narrow">
-            <h2>Resultados e Impacto</h2>
-            <p>El sistema de agentes de IA transformó las operaciones de inventario de Leslie's dentro de 6 meses de implementación:</p>
+    <!-- Client Overview -->
+    <section class="content-section">
+        <div class="content-container">
+            <h2>Resumen del Cliente</h2>
+            <p>El minorista de piscinas y spa más grande de Estados Unidos. Más de 1,000 tiendas. Más de 60 años de experiencia. Una plataforma digital que atiende a millones de clientes residenciales y comerciales.</p>
+        </div>
+    </section>
 
-            <div style="margin-top: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
-                <div style="background: white; padding: 24px; border-radius: 12px; border-left: 4px solid var(--color-accent-purple);">
-                    <h3 style="color: var(--color-accent-purple); font-size: 36px; margin-bottom: 8px;">62%</h3>
-                    <p style="font-weight: 600; margin-bottom: 8px;">Reducción en Agotamientos de Stock</p>
-                    <p style="font-size: 14px; color: var(--color-gray-dark);">Agentes de IA predijeron con precisión la demanda pico, eliminando la mayoría de escasez de stock durante los críticos meses de verano</p>
+    <!-- Challenge Section -->
+    <section class="challenge-section">
+        <div class="challenge-container">
+            <div class="challenge-quote">
+                El Desafío: Una plataforma heredada colapsando bajo el tráfico pico, tiempos de carga lentos matando conversiones y una experiencia de lealtad fragmentada perdiendo clientes.
+            </div>
+            <div class="challenge-content">
+                <div>
+                    <img src="../../images/casestudies/leslies-challenge.png" alt="Desafío de Leslie's" class="challenge-image">
                 </div>
-
-                <div style="background: white; padding: 24px; border-radius: 12px; border-left: 4px solid var(--color-accent-purple);">
-                    <h3 style="color: var(--color-accent-purple); font-size: 36px; margin-bottom: 8px;">38%</h3>
-                    <p style="font-weight: 600; margin-bottom: 8px;">Disminución en Exceso de Inventario</p>
-                    <p style="font-size: 14px; color: var(--color-gray-dark);">Pronóstico preciso de demanda redujo el exceso de stock y liberó $12M en capital de trabajo</p>
+                <div class="challenge-text">
+                    <h3>Lo que Resolvimos:</h3>
+                    <ul>
+                        <li><strong>Crisis de Rendimiento:</strong> Puntuaciones de Lighthouse por debajo de 50, paquetes de código inflados, latencia de API aplastando la experiencia móvil</li>
+                        <li><strong>Inestabilidad de Plataforma:</strong> Fallas de escalabilidad de Salesforce Commerce Cloud durante la temporada alta, integraciones frágiles causando tiempo de inactividad</li>
+                        <li><strong>Viaje del Cliente Roto:</strong> Programa de lealtad desarticulado, fricción en el pago, caos en las reservas de servicios</li>
+                    </ul>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div style="background: white; padding: 24px; border-radius: 12px; border-left: 4px solid var(--color-accent-purple);">
-                    <h3 style="color: var(--color-accent-purple); font-size: 36px; margin-bottom: 8px;">85%</h3>
-                    <p style="font-weight: 600; margin-bottom: 8px;">Ahorro de Tiempo para el Personal</p>
-                    <p style="font-size: 14px; color: var(--color-gray-dark);">Pedidos y pronósticos automatizados liberaron a los gerentes para enfocarse en servicio al cliente y estrategia</p>
+    <!-- Solution Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <h2>Cómo lo Hicimos</h2>
+
+            <h3>1. Ingeniería de Velocidad y Escalabilidad</h3>
+            <p>Reconstruimos la base para el rendimiento máximo.</p>
+            <ul>
+                <li>Refactorizamos controladores de Salesforce Commerce Cloud, redujimos la latencia de API, comprimimos paquetes</li>
+                <li>Las puntuaciones móviles de Lighthouse aumentaron de menos de 50 a más de 85 mediante optimización quirúrgica de código</li>
+                <li>Reconstruimos integraciones Boomi para estabilidad sin tiempo de inactividad durante picos de tráfico</li>
+                <li>Desplegamos caché avanzado de eCDN eliminando cuellos de botella de bloqueo de renderizado</li>
+            </ul>
+
+            <h3>2. Transformación de Experiencia del Cliente</h3>
+            <p>Rediseñamos cada punto de contacto para conversión y retención.</p>
+            <ul>
+                <li><strong>Lealtad 2.0:</strong> Puntos planos → recompensas escalonadas con seguimiento y redención en tiempo real</li>
+                <li><strong>Portal de Servicios:</strong> Reserva dinámica de citas con integración Accruent vía APIs Boomi</li>
+                <li><strong>Rediseño de Pago:</strong> Revisión completa de frontend/backend con seguimiento sin cookies GA4</li>
+                <li><strong>UX Mobile-First:</strong> Flujos de datos SFCC-Boomi-Mobile optimizados para experiencias multiplataforma sin fricciones</li>
+            </ul>
+
+            <h3>3. Operaciones de Nivel Empresarial</h3>
+            <p>Monitoreo 24/7 e infraestructura de respuesta rápida.</p>
+            <ul>
+                <li><strong>Dynatrace RUM:</strong> Mapeo conductual en tiempo real de cada viaje del cliente</li>
+                <li><strong>Opsgenie + JIRA:</strong> SLAs de resolución de menos de 15 minutos con escalamiento instantáneo de ingeniería</li>
+                <li><strong>Monitoreo Multiplataforma:</strong> Observabilidad unificada de SFCC, Boomi, Manhattan OMS</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="content-section gray-bg">
+        <div class="content-container">
+            <h2>El Impacto</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>85+</h3>
+                    <div class="result-title">Puntuación Lighthouse</div>
+                    <div class="result-description">De 48 a más de 85 — experiencia móvil ultrarrápida</div>
                 </div>
-
-                <div style="background: white; padding: 24px; border-radius: 12px; border-left: 4px solid var(--color-accent-purple);">
-                    <h3 style="color: var(--color-accent-purple); font-size: 36px; margin-bottom: 8px;">71%</h3>
-                    <p style="font-weight: 600; margin-bottom: 8px;">Reducción en Desperdicio de Químicos</p>
-                    <p style="font-size: 14px; color: var(--color-gray-dark);">Agentes de gestión de vencimiento minimizaron productos expirados mediante redistribución inteligente</p>
+                <div class="result-card">
+                    <h3>+150%</h3>
+                    <div class="result-title">Reservas de Servicios</div>
+                    <div class="result-description">Crecimiento interanual mediante portal optimizado</div>
                 </div>
-
-                <div style="background: white; padding: 24px; border-radius: 12px; border-left: 4px solid var(--color-accent-purple);">
-                    <h3 style="color: var(--color-accent-purple); font-size: 36px; margin-bottom: 8px;">$18M</h3>
-                    <p style="font-weight: 600; margin-bottom: 8px;">Ahorros de Costos Anuales</p>
-                    <p style="font-size: 14px; color: var(--color-gray-dark);">Ahorros combinados de desperdicio reducido, márgenes mejorados y eficiencia operativa</p>
+                <div class="result-card">
+                    <h3>0</h3>
+                    <div class="result-title">Interrupciones en Picos</div>
+                    <div class="result-description">Cero tiempo de inactividad durante la temporada de verano 2024</div>
                 </div>
-
-                <div style="background: white; padding: 24px; border-radius: 12px; border-left: 4px solid var(--color-accent-purple);">
-                    <h3 style="color: var(--color-accent-purple); font-size: 36px; margin-bottom: 8px;">95%</h3>
-                    <p style="font-weight: 600; margin-bottom: 8px;">Precisión de Pronóstico</p>
-                    <p style="font-size: 14px; color: var(--color-gray-dark);">Agentes de IA predicen la demanda con 5% de precisión, incluso teniendo en cuenta variaciones climáticas</p>
+                <div class="result-card">
+                    <h3>&lt;15min</h3>
+                    <div class="result-title">Resolución de Problemas</div>
+                    <div class="result-description">Respuesta rápida impulsada por SLA con monitoreo 24/7</div>
                 </div>
             </div>
 
-            <div style="margin-top: 40px; padding: 24px; background: linear-gradient(135deg, rgba(137, 56, 159, 0.05) 0%, rgba(237, 41, 37, 0.05) 100%); border-radius: 12px; border-left: 4px solid var(--color-accent-purple);">
-                <h3 style="color: var(--color-accent-purple); margin-bottom: 16px;">Impacto en el Cliente</h3>
-                <p>"Los agentes de IA han transformado completamente cómo gestionamos el inventario. Solíamos pasar fines de semana enteros pronosticando manualmente y realizando pedidos. Ahora, el sistema maneja todo de manera autónoma, y es mucho más preciso de lo que jamás fuimos. Nuestros clientes siempre encuentran lo que necesitan en stock, y hemos eliminado el desperdicio que solía afectar nuestros márgenes." — <strong>VP de Operaciones, Leslie's Pool Supplies</strong></p>
+            <!-- Device Mockups -->
+            <div class="device-mockups">
+                <img src="../../images/casestudies/leslies-desktop.png" alt="Vista de Escritorio de Leslie's" class="desktop">
+                <img src="../../images/casestudies/leslies-laptop.png" alt="Vista de Laptop de Leslie's" class="laptop">
+                <img src="../../images/casestudies/leslies-mobile.png" alt="Vista Móvil de Leslie's" class="mobile">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Delivered -->
+    <section class="content-section gray-bg">
+        <div class="content-container">
+            <h2>Servicios Prestados</h2>
+            <div class="services-list">
+                <div class="service-item">Desarrollo de eCommerce (SFCC)</div>
+                <div class="service-item">Ingeniería de Rendimiento</div>
+                <div class="service-item">Servicios de Integración</div>
+                <div class="service-item">Experiencia de Usuario y Diseño</div>
+                <div class="service-item">Automatización de QA y Pruebas</div>
+                <div class="service-item">Operaciones de Monitoreo y Soporte</div>
             </div>
         </div>
     </section>
 
     <!-- Technologies -->
-    <section>
-        <div class="container-narrow">
-            <h2>Tecnologías y Capacidades de IA</h2>
-            <div style="margin-top: 24px;">
-                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Agentes de IA Autónomos</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Analítica Predictiva</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Aprendizaje Automático</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Pronóstico de Demanda</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Automatización de Cadena de Suministro</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Precios Dinámicos</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Analítica en Tiempo Real</span>
-                    <span class="tag" style="background: var(--color-gray-light); color: var(--color-primary); padding: 8px 16px; font-size: 14px;">Integración Climática</span>
+    <section class="content-section">
+        <div class="content-container">
+            <h2>Tecnologías Utilizadas</h2>
+
+            <div class="tech-category">
+                <h3>Stack de Ingeniería</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">jQuery</span>
+                    <span class="tech-tag">Dynatrace</span>
+                    <span class="tech-tag">Elastic</span>
+                    <span class="tech-tag">Opsgenie</span>
+                </div>
+            </div>
+
+            <div class="tech-category">
+                <h3>Integraciones de Socios</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">Salesforce Commerce Cloud</span>
+                    <span class="tech-tag">Boomi</span>
+                    <span class="tech-tag">Manhattan OMS</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section style="background: #fafafa;">
-        <div class="container">
-            <div class="cta-banner">
-                <h2>¿Listo para Transformar su Inventario con Agentes de IA?</h2>
-                <p>Descubra cómo la IA autónoma puede optimizar su pronóstico de demanda, automatizar el reabastecimiento y eliminar agotamientos de stock mientras reduce el exceso de inventario.</p>
-                <a href="../../es/contact.html" class="btn">Explorar Comercio Agéntico →</a>
-            </div>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="content-container">
+            <h2>Su Plataforma Puede Rendir Mejor</h2>
+            <p>Puntuaciones Lighthouse de más de 85. Cero interrupciones en picos. Crecimiento de tres dígitos. Hagámoslo realidad.</p>
+            <a href="../../contact.html" class="cta-button">Hablemos →</a>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h4>Servicios</h4>
                     <ul>
-                        <li><a href="../../es/services.html">Todos los Servicios</a></li>
+                        <li><a href="../../services.html">Todos los Servicios</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4>Plataformas</h4>
                     <ul>
-                        <li><a href="../../es/platforms.html">Todas las Plataformas</a></li>
+                        <li><a href="../../platforms.html">Todas las Plataformas</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h4>Compañía</h4>
+                    <h4>Empresa</h4>
                     <ul>
-                        <li><a href="../../es/about.html">Acerca de</a></li>
-                        <li><a href="../../es/work.html">Trabajo</a></li>
-                        <li><a href="../../es/partners.html">Socios</a></li>
-                        <li><a href="../../es/contact.html">Contacto</a></li>
+                        <li><a href="../../about.html">Nosotros</a></li>
+                        <li><a href="../../work.html">Trabajo</a></li>
+                        <li><a href="../../partners.html">Socios</a></li>
+                        <li><a href="../../contact.html">Contacto</a></li>
                     </ul>
                 </div>
             </div>
