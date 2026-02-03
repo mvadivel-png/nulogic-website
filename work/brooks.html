@@ -1,257 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/icons/favicon.png">
     <title>Brooks Brothers Case Study | Cloudflare Security & SFCC Optimization | NULogic</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/casestudy-responsive.css">
-    <style>
-        .case-study-hero {
-            background-image: url('../images/casestudies/brooks-hero.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            padding: 120px 0;
-            position: relative;
-        }
-        .case-study-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(137, 56, 159, 0.85) 0%, rgba(237, 41, 37, 0.85) 100%);
-        }
-        .case-study-hero .container {
-            position: relative;
-            z-index: 1;
-        }
-        .client-logo {
-            max-width: 200px;
-            margin-bottom: 32px;
-        }
-        .client-info-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 48px;
-            background: #F9F9F9;
-            padding: 48px 0;
-        }
-        .client-info-item h4 {
-            color: #89389f;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 12px;
-        }
-        .client-info-item p {
-            color: #2B2B2B;
-            font-size: 18px;
-            font-weight: 600;
-            line-height: 1.5;
-        }
-        .client-info-item a {
-            color: #2B2B2B;
-            text-decoration: none;
-        }
-        .client-info-item a:hover {
-            color: #89389f;
-        }
-        .section-white {
-            background: #FFFFFF;
-            padding: 80px 0;
-        }
-        .section-gray {
-            background: #F9F9F9;
-            padding: 80px 0;
-        }
-        .container-narrow {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        .section-title {
-            color: #2B2B2B;
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 24px;
-            line-height: 1.2;
-        }
-        .section-content {
-            color: #424242;
-            font-size: 18px;
-            line-height: 1.7;
-        }
-        .challenge-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            margin-top: 40px;
-        }
-        .challenge-image {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .solution-list {
-            margin-top: 32px;
-        }
-        .solution-item {
-            margin-bottom: 32px;
-        }
-        .solution-item h3 {
-            color: #2B2B2B;
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-        .solution-item p {
-            color: #424242;
-            font-size: 17px;
-            line-height: 1.6;
-        }
-        .architecture-callout {
-            background: #F9F9F9;
-            border-left: 4px solid #89389f;
-            padding: 24px;
-            margin: 40px 0;
-            border-radius: 4px;
-        }
-        .architecture-callout p {
-            color: #2B2B2B;
-            font-size: 16px;
-            font-weight: 600;
-            margin: 0;
-        }
-        .architecture-image {
-            width: 100%;
-            margin: 40px 0;
-            border-radius: 8px;
-        }
-        .results-grid {
-            display: grid;
-            gap: 24px;
-            margin-top: 40px;
-        }
-        .result-item {
-            background: #FFFFFF;
-            padding: 28px;
-            border-radius: 8px;
-            border-left: 4px solid #89389f;
-        }
-        .result-item h3 {
-            color: #89389f;
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-        .result-item p {
-            color: #424242;
-            font-size: 16px;
-            line-height: 1.6;
-            margin: 0;
-        }
-        .result-images {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-top: 48px;
-        }
-        .result-images img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .services-section {
-            margin-top: 40px;
-        }
-        .services-label {
-            color: #89389f;
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            margin-bottom: 16px;
-        }
-        .tags-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 40px;
-        }
-        .tag {
-            background: #FFFFFF;
-            color: #2B2B2B;
-            padding: 12px 20px;
-            border-radius: 24px;
-            font-size: 15px;
-            font-weight: 500;
-            border: 1px solid #E0E0E0;
-        }
-        .technology-logos {
-            display: flex;
-            gap: 32px;
-            margin-top: 24px;
-            align-items: center;
-        }
-        .technology-logos img {
-            height: 40px;
-        }
-        .cta-section {
-            background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);
-            padding: 80px 0;
-            text-align: center;
-        }
-        .cta-section h2 {
-            color: #FFFFFF;
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        .cta-section p {
-            color: rgba(255, 255, 255, 0.95);
-            font-size: 20px;
-            margin-bottom: 32px;
-        }
-        .cta-button {
-            display: inline-block;
-            background: #FFFFFF;
-            color: #89389f;
-            padding: 16px 40px;
-            border-radius: 4px;
-            font-size: 16px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: transform 0.2s;
-        }
-        .cta-button:hover {
-            transform: translateY(-2px);
-        }
-        @media (max-width: 768px) {
-            .client-info-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-            .challenge-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-            .result-images {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/casestudy.css">
 </head>
+
 <body>
     <header>
         <div class="container">
             <nav>
-                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic" style="height: 32px;"></a>
+                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic"
+                        style="height: 32px;"></a>
                 <ul class="nav-links">
                     <li class="nav-item-with-dropdown">
                         <a href="../services.html">Services</a>
@@ -288,208 +58,278 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Split Layout -->
     <section class="case-study-hero">
-        <div class="container">
-            <img src="../images/casestudies/brooks-logo.png" alt="Brooks Brothers" class="client-logo">
-            <h1 style="color: white; font-size: 48px; font-weight: 700; margin-bottom: 24px; line-height: 1.2; max-width: 900px;">Stop Bots. Scale Safely. Sell More.</h1>
-            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 800px;"><strong>Cloudflare + Salesforce Commerce Cloud</strong> eliminated malicious traffic, enhanced global performance, and removed infrastructure complexity for a legendary luxury retailer.</p>
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <div class="case-study-label">Case Study</div>
+                <h1 class="case-study-title">Stop Bots. Scale Safely. Sell More.</h1>
+                <p class="case-study-intro">Cloudflare + Salesforce Commerce Cloud eliminated malicious traffic,
+                    enhanced
+                    global performance, and removed infrastructure complexity for a legendary luxury retailer.</p>
+                <div class="hero-logo-circle">
+                    <img src="../images/casestudies/brooks-logo.png" alt="Brooks Brothers">
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <img src="../images/casestudies/brooks-hero.png" alt="Brooks Brothers Products">
+            </div>
         </div>
     </section>
 
-    <!-- Client Info Grid -->
-    <section class="client-info-grid">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px;">
+    <!-- Client Info Section -->
+    <section class="client-info-section">
+        <div class="client-info-wrapper">
+            <div class="client-info-grid">
                 <div class="client-info-item">
-                    <h4>Region</h4>
-                    <p>U.S.</p>
+                    <div class="client-info-label">Region</div>
+                    <div class="client-info-value">U.S.</div>
                 </div>
                 <div class="client-info-item">
-                    <h4>Website</h4>
-                    <p><a href="https://www.brooksbrothers.com" target="_blank">brooksbrothers.com</a></p>
+                    <div class="client-info-label">Website</div>
+                    <div class="client-info-value"><a href="https://www.brooksbrothers.com" target="_blank"
+                            rel="noopener">www.brooksbrothers.com</a></div>
                 </div>
                 <div class="client-info-item">
-                    <h4>Client Since</h4>
-                    <p>2023</p>
+                    <div class="client-info-label">Client Since</div>
+                    <div class="client-info-value">2023</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Client Overview -->
-    <section class="section-white">
-        <div class="container-narrow">
-            <h2 class="section-title">Client Overview</h2>
-            <p class="section-content"><strong>Legendary luxury retailer since 1818.</strong> Brooks Brothers operates a high-traffic e-commerce platform on Salesforce Commerce Cloud serving millions of global shoppers across 500+ stores in 45 countries. <strong>Trusted for American style.</strong> The brand offers 30+ categories—from tailored clothing and sportswear to accessories and home collections. <strong>Facing modern threats.</strong> Malicious bot traffic inflated costs, threatened customer experience, and exposed gaps in their security posture.</p>
+    <!-- Challenge Section - Premium Redesign -->
+    <section class="challenge-section">
+        <div class="challenge-header">
+            <h2>The <span>Challenge</span></h2>
+            <p>Legendary luxury retailer since 1818. Brooks Brothers operates a high-traffic e-commerce platform on
+                Salesforce Commerce Cloud serving millions of global shoppers across 500+ stores in 45 countries.</p>
+        </div>
+        <div class="challenge-container">
+            <div class="challenge-image-wrapper">
+                <img src="../images/casestudies/brooks-challenge.png" alt="Brooks Brothers Challenge">
+                <div class="challenge-image-badge">Since 1818</div>
+            </div>
+            <div class="challenge-cards">
+                <div class="challenge-card">
+                    <h3><span class="card-number">1</span> Bot Traffic Overload</h3>
+                    <p>Malicious bot traffic inflated metrics, spiked infrastructure costs, and threatened checkout
+                        stability during peak seasons</p>
+                </div>
+                <div class="challenge-card">
+                    <h3><span class="card-number">2</span> Fragmented Infrastructure</h3>
+                    <p>Salesforce's native CDN + Akamai delivered basic caching but lacked advanced bot management, WAF,
+                        and rate-limiting capabilities</p>
+                </div>
+                <div class="challenge-card">
+                    <h3><span class="card-number">3</span> Operational Complexity</h3>
+                    <p>Multiple vendors and toolchains made it difficult to respond to threats in real-time and maintain
+                        stability during flash sales</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- The Challenge -->
-    <section class="section-gray">
-        <div class="container-narrow">
-            <h2 class="section-title">The Challenge</h2>
-            <div class="challenge-grid">
-                <div>
-                    <img src="../images/casestudies/brooks-challenge.png" alt="Challenge" class="challenge-image">
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="solution-container">
+            <div class="solution-header">
+                <h2>The Solution</h2>
+                <p>Dual-CDN architecture: Cloudflare in front of Salesforce's native CDN, creating a layered defense
+                    against modern threats while eliminating vendor complexity and cost.</p>
+            </div>
+
+            <div class="solution-pillars">
+                <div class="solution-pillar">
+                    <div class="pillar-number">1</div>
+                    <h3>Advanced Protection</h3>
+                    <p><strong>Bot Management</strong> (Cloudflare's detection engine) blocked malicious traffic before
+                        reaching SFCC. <strong>WAF + rate-limiting</strong> shielded APIs and checkout flows.
+                        <strong>API protection</strong> prevented credential stuffing and inventory scraping.</p>
                 </div>
-                <div>
-                    <div style="margin-bottom: 28px;">
-                        <h3 style="color: #2B2B2B; font-size: 18px; font-weight: 700; margin-bottom: 12px;"><strong>Bot Traffic Overload</strong></h3>
-                        <p class="section-content">Malicious bot traffic inflated metrics, spiked infrastructure costs, and threatened checkout stability during peak seasons.</p>
+                <div class="solution-pillar">
+                    <div class="pillar-number">2</div>
+                    <h3>Global Performance</h3>
+                    <p><strong>Anycast routing</strong> delivered content from optimal edge locations. <strong>Image
+                            optimization</strong> reduced load times for product photography. <strong>Edge
+                            caching</strong> accelerated response times while Salesforce CDN handled static assets.</p>
+                </div>
+                <div class="solution-pillar">
+                    <div class="pillar-number">3</div>
+                    <h3>Operational Excellence</h3>
+                    <p><strong>Cloudflare Workers</strong> enabled real-time logic (header rewrites, redirects, feature
+                        toggles) without SFCC deployments. <strong>Waiting Room</strong> queued traffic during peak
+                        events. <strong>Vendor retirement:</strong> Removed Akamai entirely.</p>
+                </div>
+            </div>
+
+            <!-- Architecture Diagram -->
+            <div class="devices-showcase">
+                <img src="../images/casestudies/brooks-architecture.png" alt="Brooks Brothers Architecture"
+                    class="device-laptop">
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="results-container">
+            <div class="results-header">
+                <h2>Results</h2>
+            </div>
+
+            <div class="results-list">
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
                     </div>
-                    <div style="margin-bottom: 28px;">
-                        <h3 style="color: #2B2B2B; font-size: 18px; font-weight: 700; margin-bottom: 12px;"><strong>Fragmented Infrastructure</strong></h3>
-                        <p class="section-content">Salesforce's native CDN + Akamai delivered basic caching but lacked advanced bot management, WAF, and rate-limiting capabilities.</p>
-                    </div>
-                    <div>
-                        <h3 style="color: #2B2B2B; font-size: 18px; font-weight: 700; margin-bottom: 12px;"><strong>Operational Complexity</strong></h3>
-                        <p class="section-content">Multiple vendors and toolchains made it difficult to respond to threats in real-time and maintain stability during flash sales and seasonal events.</p>
+                    <div class="result-content">
+                        <h3>90%+ Bot Traffic Reduction</h3>
+                        <p>Malicious bot traffic eliminated; checkout flows fully protected</p>
                     </div>
                 </div>
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>40% Faster TTFB</h3>
+                        <p>Time-to-First-Byte globally; 95%+ cache hit ratio on edge</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>Peak Season Reliability</h3>
+                        <p>Zero downtime during Black Friday, Cyber Monday, and flash sales with Waiting Room queueing
+                        </p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>Operational Speed</h3>
+                        <p>Business teams deploy edge logic in minutes, not days—no SFCC code pushes required</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>Cost & Complexity Reduction</h3>
+                        <p>Akamai eliminated; simplified vendor footprint reduced annual infrastructure spend</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>Peace of Mind</h3>
+                        <p>NULogic's managed retainer provides 24/7 proactive support, monitoring, and continuous
+                            optimization</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- The Solution -->
-    <section class="section-white">
-        <div class="container-narrow">
-            <h2 class="section-title">The Solution</h2>
-            <p class="section-content"><strong>Dual-CDN architecture:</strong> Cloudflare in front of Salesforce's native CDN, creating a layered defense against modern threats while eliminating vendor complexity and cost.</p>
-
-            <div class="architecture-callout">
-                <p>Architecture Flow: Client → Cloudflare (security, edge logic) → Salesforce CDN → SFCC origin</p>
+    <!-- Services Section - Enhanced -->
+    <section class="services-section">
+        <div class="services-container">
+            <div class="services-header">
+                <h2>Services Delivered</h2>
             </div>
-
-            <img src="../images/casestudies/brooks-architecture.png" alt="Architecture Diagram" class="architecture-image">
-
-            <div class="solution-list">
-                <div class="solution-item">
-                    <h3>Pillar 1: Advanced Protection</h3>
-                    <p><strong>Bot Management</strong> (Cloudflare's detection engine) blocked malicious traffic before reaching SFCC. <strong>WAF + rate-limiting</strong> shielded APIs and checkout flows. <strong>API protection</strong> prevented credential stuffing and inventory scraping.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" />
+                        </svg>
+                    </div>
+                    <h3>CDN Services</h3>
                 </div>
-
-                <div class="solution-item">
-                    <h3>Pillar 2: Global Performance</h3>
-                    <p><strong>Anycast routing</strong> delivered content from optimal edge locations. <strong>Image optimization</strong> reduced load times for product photography. <strong>Edge caching</strong> accelerated response times while Salesforce CDN handled static assets.</p>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
+                        </svg>
+                    </div>
+                    <h3>Dashboarding and Alerting</h3>
                 </div>
-
-                <div class="solution-item">
-                    <h3>Pillar 3: Operational Excellence</h3>
-                    <p><strong>Cloudflare Workers</strong> enabled real-time logic (header rewrites, redirects, feature toggles) without SFCC deployments. <strong>Waiting Room</strong> queued traffic during peak events. <strong>Cache sync strategy</strong> kept Cloudflare and Salesforce in harmony. <strong>Vendor retirement:</strong> Removed Akamai entirely.</p>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                        </svg>
+                    </div>
+                    <h3>Monitoring and Support</h3>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Results -->
-    <section class="section-gray">
-        <div class="container-narrow">
-            <h2 class="section-title">Measurable Results</h2>
-
-            <div class="results-grid">
-                <div class="result-item">
-                    <h3>Security</h3>
-                    <p><strong>90%+ reduction</strong> in malicious bot traffic; checkout flows fully protected.</p>
-                </div>
-
-                <div class="result-item">
-                    <h3>Performance</h3>
-                    <p><strong>40% faster</strong> Time-to-First-Byte globally; <strong>95%+ cache hit ratio</strong> on edge.</p>
-                </div>
-
-                <div class="result-item">
-                    <h3>Peak Season Reliability</h3>
-                    <p><strong>Zero downtime</strong> during Black Friday, Cyber Monday, and flash sales with Waiting Room queueing.</p>
-                </div>
-
-                <div class="result-item">
-                    <h3>Operational Speed</h3>
-                    <p>Business teams deploy edge logic in <strong>minutes, not days</strong>—no SFCC code pushes required.</p>
-                </div>
-
-                <div class="result-item">
-                    <h3>Cost & Complexity</h3>
-                    <p>Akamai eliminated; <strong>simplified vendor footprint</strong> reduced annual infrastructure spend.</p>
-                </div>
-
-                <div class="result-item">
-                    <h3>Peace of Mind</h3>
-                    <p>NULogic's managed retainer provides <strong>24/7 proactive support</strong>, monitoring, and continuous optimization.</p>
-                </div>
-            </div>
-
-            <div class="result-images">
-                <img src="../images/casestudies/brooks-result1.png" alt="Result Metric 1">
-                <img src="../images/casestudies/brooks-result2.png" alt="Result Metric 2">
-                <img src="../images/casestudies/brooks-result3.png" alt="Result Metric 3">
             </div>
         </div>
     </section>
 
+    <!-- Technologies Section -->
+    <section class="technologies-section">
+        <div class="technologies-container">
+            <div class="technologies-header">
+                <h2>Technologies</h2>
+            </div>
 
-    <!-- Services & Technologies -->
-    <section class="section-gray">
-        <div class="container-narrow">
-            <div class="services-section">
-                <h4 class="services-label">Services Delivered</h4>
-                <div class="tags-container">
-                    <span class="tag">CDN Services</span>
-                    <span class="tag">Dashboarding and Alerting</span>
-                    <span class="tag">Monitoring and Support</span>
+            <div class="tech-category">
+                <div class="tech-category-title">
+                    <h3>Partner Integrations</h3>
                 </div>
-
-                <h4 class="services-label">Technologies</h4>
-                <div class="tags-container">
-                    <span class="tag">Salesforce Commerce Cloud</span>
-                    <span class="tag">Cloudflare</span>
-                </div>
-
-                <div class="technology-logos">
-                    <img src="../images/casestudies/cloudflare-logo.png" alt="Cloudflare">
+                <div class="tech-partners-grid">
+                    <div class="tech-partner-card">
+                        <div class="partner-badge">S</div>
+                        <div class="partner-info">
+                            <span class="partner-name">Salesforce Commerce Cloud</span>
+                        </div>
+                    </div>
+                    <div class="tech-partner-card">
+                        <div class="partner-badge">C</div>
+                        <div class="partner-info">
+                            <span class="partner-name">Cloudflare</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="cs-cta">
         <div class="container">
             <h2>Stop losing customers to bots and slowdowns.</h2>
             <p>Get the <strong>advanced protection and performance</strong> that legendary brands trust.</p>
-            <a href="../contact.html" class="cta-button">Let's Talk →</a>
+            <a href="../contact.html" class="cs-cta-button">Let's Talk →</a>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="../services.html">All Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Platforms</h4>
-                    <ul>
-                        <li><a href="../platforms.html">All Platforms</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../work.html">Work</a></li>
-                        <li><a href="../partners.html">Partners</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NULogic. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer></footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/footer.js"></script>
 </body>
+
 </html>

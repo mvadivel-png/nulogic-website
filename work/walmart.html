@@ -1,278 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/icons/favicon.png">
     <title>Walmart Chile Case Study | 24/7 L2/L3 Support Services | NULogic</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/casestudy-responsive.css">
-    <style>
-        :root {
-            --color-primary: #2B2B2B;
-            --color-accent-purple: #89389f;
-            --color-accent-red: #ed2925;
-            --color-secondary: #424242;
-            --color-gray-bg: #F9F9F9;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--color-primary);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container-narrow {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        section {
-            padding: 80px 0;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Barlow Condensed', sans-serif;
-        }
-
-        h2 {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 24px;
-            color: var(--color-primary);
-        }
-
-        .hero-banner {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .client-logo {
-            max-width: 180px;
-            height: auto;
-            margin-bottom: 24px;
-        }
-
-        .client-info-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 48px;
-            background: var(--color-gray-bg);
-            padding: 60px 0;
-        }
-
-        .client-info-item h4 {
-            color: var(--color-accent-purple);
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 12px;
-        }
-
-        .client-info-item p {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--color-primary);
-            margin: 0;
-        }
-
-        .bg-white {
-            background: white;
-        }
-
-        .bg-gray {
-            background: var(--color-gray-bg);
-        }
-
-        .challenge-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .challenge-image {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 32px;
-            margin-top: 40px;
-        }
-
-        .result-card {
-            background: white;
-            padding: 32px;
-            border-radius: 8px;
-            text-align: left;
-        }
-
-        .result-card h3 {
-            font-size: 56px;
-            font-weight: 800;
-            color: var(--color-accent-purple);
-            margin: 0 0 16px 0;
-            line-height: 1;
-        }
-
-        .result-card p {
-            font-size: 16px;
-            color: var(--color-secondary);
-            margin: 0;
-            line-height: 1.5;
-        }
-
-        .devices-section {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .device-laptop {
-            max-width: 500px;
-            width: 100%;
-            height: auto;
-        }
-
-        .device-mobile {
-            max-width: 150px;
-            width: 100%;
-            height: auto;
-        }
-
-
-        .services-tech-section h3 {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--color-primary);
-            margin: 40px 0 24px 0;
-        }
-
-        .services-tech-section h3:first-of-type {
-            margin-top: 0;
-        }
-
-        .tags-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .tag {
-            background: white;
-            color: var(--color-primary);
-            padding: 12px 24px;
-            border-radius: 6px;
-            font-size: 15px;
-            font-weight: 500;
-            border: 1px solid #e5e5e5;
-        }
-
-        .tech-logos {
-            display: flex;
-            gap: 32px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .tech-logo {
-            max-height: 40px;
-            width: auto;
-        }
-
-        .cta-section {
-            background: linear-gradient(135deg, var(--color-accent-purple) 0%, var(--color-accent-red) 100%);
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            color: white;
-            font-size: 48px;
-            margin-bottom: 24px;
-        }
-
-        .cta-section p {
-            color: rgba(255, 255, 255, 0.95);
-            font-size: 20px;
-            margin-bottom: 32px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: var(--color-accent-purple);
-            padding: 16px 40px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 18px;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-        }
-
-        ul {
-            padding-left: 24px;
-        }
-
-        ul li {
-            margin-bottom: 12px;
-            color: var(--color-secondary);
-            line-height: 1.6;
-        }
-
-        @media (max-width: 768px) {
-            .client-info-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .challenge-section {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .results-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .devices-section {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            h2 {
-                font-size: 32px;
-            }
-
-            .cta-section h2 {
-                font-size: 36px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/casestudy.css">
 </head>
+
 <body>
     <header>
         <div class="container">
             <nav>
-                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic" style="height: 32px;"></a>
+                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic"
+                        style="height: 32px;"></a>
                 <ul class="nav-links">
                     <li class="nav-item-with-dropdown">
                         <a href="../services.html">Services</a>
@@ -309,198 +58,296 @@
         </div>
     </header>
 
-    <!-- Hero Banner -->
-    <section style="padding: 0; margin: 0;">
-        <img src="../images/casestudies/walmart-hero.png" alt="Walmart Chile Case Study" class="hero-banner">
-    </section>
-
-    <!-- Title Section -->
-    <section class="bg-white">
-        <div class="container-narrow" style="text-align: center;">
-            <img src="../images/casestudies/walmart-logo.png" alt="Walmart Chile" class="client-logo">
-            <h1 style="font-size: 48px; font-weight: 700; line-height: 1.2; margin: 0;">24/7 Support That Transforms Retail Operations at Scale</h1>
+    <!-- Hero Section - Split Layout -->
+    <section class="case-study-hero">
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <div class="case-study-label">Case Study</div>
+                <h1 class="case-study-title">24/7 Support That Transforms Retail Operations at Scale</h1>
+                <p class="case-study-intro">375+ stores across Latin America. 6 retail brands unified under one digital
+                    ecosystem. Millions of daily transactions.</p>
+                <div class="hero-logo-circle">
+                    <img src="../images/casestudies/walmart-logo.png" alt="Walmart Chile">
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <img src="../images/casestudies/walmart-hero.png" alt="Walmart Chile Products">
+            </div>
         </div>
     </section>
 
-    <!-- Client Info Grid -->
-    <section style="padding: 0;">
-        <div class="client-info-grid">
-            <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px;">
-                    <div class="client-info-item">
-                        <h4>Region</h4>
-                        <p>LATAM</p>
-                    </div>
-                    <div class="client-info-item">
-                        <h4>Website</h4>
-                        <p><a href="https://www.lider.cl" target="_blank" style="color: var(--color-accent-purple); text-decoration: none;">https://www.lider.cl</a></p>
-                    </div>
-                    <div class="client-info-item">
-                        <h4>Client Since</h4>
-                        <p>2018</p>
-                    </div>
+    <!-- Client Info Section -->
+    <section class="client-info-section">
+        <div class="client-info-wrapper">
+            <div class="client-info-grid">
+                <div class="client-info-item">
+                    <div class="client-info-label">Region</div>
+                    <div class="client-info-value">LATAM</div>
+                </div>
+                <div class="client-info-item">
+                    <div class="client-info-label">Website</div>
+                    <div class="client-info-value"><a href="https://www.lider.cl" target="_blank"
+                            rel="noopener">www.lider.cl</a></div>
+                </div>
+                <div class="client-info-item">
+                    <div class="client-info-label">Client Since</div>
+                    <div class="client-info-value">2018</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Client Overview -->
-    <section class="bg-white">
-        <div class="container-narrow">
-            <h2>Client Overview</h2>
-            <p style="font-size: 18px; line-height: 1.8; color: var(--color-secondary);">
-                <strong>375+ stores</strong> across Latin America. <strong>6 retail brands</strong> unified under one digital ecosystem. <strong>Millions of daily transactions</strong> powered by AI-driven personalization and omnichannel commerce. Walmart Chile's success depends on infrastructure that never fails.
-            </p>
+    <!-- Challenge Section - Premium Redesign -->
+    <section class="challenge-section">
+        <div class="challenge-header">
+            <h2>The <span>Challenge</span></h2>
+            <p>375+ stores across Latin America. 6 retail brands unified under one digital ecosystem. Millions of daily
+                transactions powered by AI-driven personalization and omnichannel commerce.</p>
         </div>
-    </section>
-
-    <!-- Challenge -->
-    <section class="bg-gray">
-        <div class="container-narrow">
-            <div class="challenge-section">
-                <div>
-                    <img src="../images/casestudies/walmart-challenge.png" alt="Challenge" class="challenge-image">
+        <div class="challenge-container">
+            <div class="challenge-image-wrapper">
+                <img src="../images/casestudies/walmart-challenge.png" alt="Walmart Challenge">
+                <div class="challenge-image-badge">375+ Stores</div>
+            </div>
+            <div class="challenge-cards">
+                <div class="challenge-card">
+                    <h3><span class="card-number">1</span> Legacy Complexity</h3>
+                    <p>Outdated infrastructure and disconnected systems struggling under scale. Incidents cascade across
+                        multiple brands and regions.</p>
                 </div>
-                <div>
-                    <h2>The Challenge</h2>
-                    <ul style="font-size: 17px; list-style: none; padding: 0;">
-                        <li style="margin-bottom: 20px;"><strong>Legacy Complexity</strong> - Outdated infrastructure and disconnected systems struggling under scale. Incidents cascade across multiple brands and regions.</li>
-                        <li style="margin-bottom: 20px;"><strong>Uninterrupted Operations</strong> - Zero tolerance for downtime. Transaction spikes during holidays demand infrastructure that anticipates demand, not reacts to it.</li>
-                        <li style="margin-bottom: 20px;"><strong>Strategic Gap</strong> - Traditional IT support delivers reactive fixes. Lider needed proactive partnerships focused on competitive advantage, not just incident response.</li>
-                    </ul>
+                <div class="challenge-card">
+                    <h3><span class="card-number">2</span> Uninterrupted Operations</h3>
+                    <p>Zero tolerance for downtime. Transaction spikes during holidays demand infrastructure that
+                        anticipates demand, not reacts to it.</p>
+                </div>
+                <div class="challenge-card">
+                    <h3><span class="card-number">3</span> Strategic Gap</h3>
+                    <p>Traditional IT support delivers reactive fixes. Lider needed proactive partnerships focused on
+                        competitive advantage, not just incident response.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solution -->
-    <section class="bg-white">
-        <div class="container-narrow">
-            <h2>The Solution</h2>
-            <p style="font-size: 18px; line-height: 1.8; color: var(--color-secondary); margin-bottom: 40px;">
-                Dedicated <strong>L2/L3 support operating 24/7</strong> from Chile, Mexico, and India. Three strategic pillars ensuring reliability at scale:
-            </p>
-            <div style="display: grid; grid-template-columns: 1fr; gap: 32px;">
-                <div style="padding: 24px; background: #F9F9F9; border-radius: 8px;">
-                    <h3 style="font-size: 20px; font-weight: 700; color: var(--color-accent-purple); margin: 0 0 12px 0;">Proactive Assurance</h3>
-                    <p style="font-size: 16px; color: var(--color-secondary); margin: 0;">Real-time <strong>monitoring and alerting</strong> powered by automated dashboards. <strong>Root cause analysis</strong> eliminates recurring issues before they impact customers. <strong>Best practices implementation</strong> hardens security, compliance, and performance.</p>
-                </div>
-                <div style="padding: 24px; background: #F9F9F9; border-radius: 8px;">
-                    <h3 style="font-size: 20px; font-weight: 700; color: var(--color-accent-purple); margin: 0 0 12px 0;">Strategic Modernization</h3>
-                    <p style="font-size: 16px; color: var(--color-secondary); margin: 0;"><strong>Legacy system modernization</strong> enables competitive advantage. <strong>Performance optimization</strong> and <strong>bug fixes</strong> drive reliability gains. <strong>Regular upgrades and patches</strong> keep infrastructure current without disruption.</p>
-                </div>
-                <div style="padding: 24px; background: #F9F9F9; border-radius: 8px;">
-                    <h3 style="font-size: 20px; font-weight: 700; color: var(--color-accent-purple); margin: 0 0 12px 0;">Demand-Ready Infrastructure</h3>
-                    <p style="font-size: 16px; color: var(--color-secondary); margin: 0;"><strong>Holiday sales readiness</strong> ensures platforms scale flawlessly during peak traffic. Capacity planning and <strong>spike resilience</strong> prevent revenue loss. Anticipation, not reaction.</p>
-                </div>
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="solution-container">
+            <div class="solution-header">
+                <h2>The Solution</h2>
+                <p>Dedicated L2/L3 support operating 24/7 from Chile, Mexico, and India. Three strategic pillars
+                    ensuring reliability at scale.</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Results -->
-    <section class="bg-gray">
-        <div class="container-narrow">
-            <h2>Results</h2>
-            <div class="results-grid">
-                <div class="result-card">
-                    <h3>95%</h3>
-                    <p>Tickets resolved within 24 hours</p>
+            <div class="solution-pillars">
+                <div class="solution-pillar">
+                    <div class="pillar-number">1</div>
+                    <h3>Proactive Assurance</h3>
+                    <p>Real-time <strong>monitoring and alerting</strong> powered by automated dashboards. <strong>Root
+                            cause analysis</strong> eliminates recurring issues before they impact customers.
+                        <strong>Best practices implementation</strong> hardens security, compliance, and performance.
+                    </p>
                 </div>
-                <div class="result-card">
-                    <h3>140+</h3>
-                    <p>Dashboards and 700+ automated alerts driving real-time visibility</p>
+                <div class="solution-pillar">
+                    <div class="pillar-number">2</div>
+                    <h3>Strategic Modernization</h3>
+                    <p><strong>Legacy system modernization</strong> enables competitive advantage. <strong>Performance
+                            optimization</strong> and <strong>bug fixes</strong> drive reliability gains.
+                        <strong>Regular upgrades and patches</strong> keep infrastructure current without disruption.
+                    </p>
                 </div>
-                <div class="result-card">
-                    <h3>10 min</h3>
-                    <p>Catalog updates cut from 1 hour to 10 minutes, enabling faster promotions</p>
-                </div>
-                <div class="result-card">
-                    <h3>15%</h3>
-                    <p>YoY incident reduction sustained across multiple consecutive years</p>
-                </div>
-                <div class="result-card">
-                    <h3>20%</h3>
-                    <p>Support costs reduced through knowledge base automation</p>
-                </div>
-                <div class="result-card">
-                    <h3>30%</h3>
-                    <p>Site maintenance downtime eliminated</p>
-                </div>
-                <div class="result-card">
-                    <h3>90%</h3>
-                    <p>Data-related issues reduced</p>
+                <div class="solution-pillar">
+                    <div class="pillar-number">3</div>
+                    <h3>Demand-Ready Infrastructure</h3>
+                    <p><strong>Holiday sales readiness</strong> ensures platforms scale flawlessly during peak traffic.
+                        Capacity planning and <strong>spike resilience</strong> prevent revenue loss. Anticipation, not
+                        reaction.</p>
                 </div>
             </div>
 
-            <!-- Device Screenshots -->
-            <div class="devices-section">
+            <!-- Device Mockups -->
+            <div class="devices-showcase">
                 <img src="../images/casestudies/walmart-laptop.png" alt="Lider.cl on Desktop" class="device-laptop">
                 <img src="../images/casestudies/walmart-mobile.png" alt="Lider.cl on Mobile" class="device-mobile">
             </div>
         </div>
     </section>
 
-    <!-- Services & Technologies -->
-    <section class="bg-gray" style="padding-top: 0;">
-        <div class="container-narrow">
-            <div class="services-tech-section">
-                <h3>Services</h3>
-                <div class="tags-grid">
-                    <span class="tag">24/7 Monitoring and Support</span>
-                    <span class="tag">L2 and L3 Resolution</span>
-                    <span class="tag">Microservices Assessments</span>
-                    <span class="tag">Dashboarding and Alerting</span>
-                </div>
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="results-container">
+            <div class="results-header">
+                <h2>Results</h2>
+            </div>
 
-                <h3>Technologies</h3>
-                <div class="tech-logos">
-                    <img src="../images/casestudies/walmart-grafana.png" alt="Grafana" class="tech-logo">
-                    <img src="../images/casestudies/walmart-partner1.png" alt="Partner Technology" class="tech-logo">
-                    <img src="../images/casestudies/walmart-cloudflare.png" alt="Cloudflare" class="tech-logo">
+            <div class="results-list">
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>95% Ticket Resolution</h3>
+                        <p>Tickets resolved within 24 hours</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>140+ Dashboards</h3>
+                        <p>700+ automated alerts driving real-time visibility</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>10 Min Catalog Updates</h3>
+                        <p>Cut from 1 hour to 10 minutes, enabling faster promotions</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>15% YoY Incident Reduction</h3>
+                        <p>Sustained across multiple consecutive years</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>20% Support Cost Reduction</h3>
+                        <p>Through knowledge base automation</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>30% Downtime Eliminated</h3>
+                        <p>Site maintenance downtime eliminated</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>90% Data Issues Reduced</h3>
+                        <p>Data-related issues significantly reduced</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Services Section - Enhanced -->
+    <section class="services-section">
+        <div class="services-container">
+            <div class="services-header">
+                <h2>Services Delivered</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
+                        </svg>
+                    </div>
+                    <h3>24/7 Monitoring and Support</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                        </svg>
+                    </div>
+                    <h3>L2 and L3 Resolution</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h3>Microservices Assessments</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
+                        </svg>
+                    </div>
+                    <h3>Dashboarding and Alerting</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="technologies-section">
+        <div class="technologies-container">
+            <div class="technologies-header">
+                <h2>Technologies</h2>
+            </div>
+
+            <div class="tech-category">
+                <div class="tech-category-title">
+                    <h3>Partner Integrations</h3>
+                </div>
+                <div class="tech-partners-grid">
+                    <div class="tech-partner-card">
+                        <div class="partner-badge">G</div>
+                        <div class="partner-info">
+                            <span class="partner-name">Grafana</span>
+                        </div>
+                    </div>
+                    <div class="tech-partner-card">
+                        <div class="partner-badge">C</div>
+                        <div class="partner-info">
+                            <span class="partner-name">Cloudflare</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container-narrow">
+    <section class="cs-cta">
+        <div class="container">
             <h2>Transform Your Retail Operations</h2>
-            <p>Join leaders like Walmart Chile. Unlock 24/7 strategic support that drives reliability, reduces costs, and powers growth.</p>
-            <a href="../contact.html" class="cta-button">Let's Talk →</a>
+            <p>Join leaders like Walmart Chile. Unlock 24/7 strategic support that drives reliability, reduces costs,
+                and powers growth.</p>
+            <a href="../contact.html" class="cs-cta-button">Let's Talk →</a>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="../services.html">All Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Platforms</h4>
-                    <ul>
-                        <li><a href="../platforms.html">All Platforms</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../work.html">Work</a></li>
-                        <li><a href="../partners.html">Partners</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NULogic. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer></footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/footer.js"></script>
 </body>
+
 </html>

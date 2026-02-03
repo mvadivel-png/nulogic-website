@@ -1,367 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Falabella Case Study - Cloud Commerce Modernization | NULogic</title>
-    <meta name="description" content="How NULogic transformed Falabella's legacy Oracle ATG platform with modern cloud-native architecture on Azure, serving 36M+ customers across Latin America.">
+    <title>Falabella Case Study | Cloud Commerce Modernization | NULogic</title>
+    <link rel="icon" type="image/png" href="../images/icons/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/casestudy-responsive.css">
-    <style>
-        .case-study-hero {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .case-study-title-section {
-            background: white;
-            padding: 60px 0 40px;
-        }
-
-        .case-study-logo {
-            max-width: 200px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        .case-study-title {
-            font-size: 48px;
-            font-weight: 700;
-            color: #2B2B2B;
-            margin-bottom: 24px;
-            line-height: 1.2;
-        }
-
-        .case-study-subtitle {
-            font-size: 20px;
-            color: #424242;
-            line-height: 1.6;
-            max-width: 800px;
-        }
-
-        .client-info-grid {
-            background: #F9F9F9;
-            padding: 50px 0;
-        }
-
-        .client-info-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .client-info-item {
-            text-align: center;
-        }
-
-        .client-info-label {
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #89389f;
-            margin-bottom: 12px;
-        }
-
-        .client-info-value {
-            font-size: 18px;
-            color: #2B2B2B;
-            font-weight: 500;
-            line-height: 1.4;
-        }
-
-        .client-info-value a {
-            color: #89389f;
-            text-decoration: none;
-        }
-
-        .client-info-value a:hover {
-            text-decoration: underline;
-        }
-
-        .section-white {
-            background: white;
-            padding: 80px 0;
-        }
-
-        .section-gray {
-            background: #F9F9F9;
-            padding: 80px 0;
-        }
-
-        .content-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .content-narrow {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section-heading {
-            font-size: 36px;
-            font-weight: 700;
-            color: #2B2B2B;
-            margin-bottom: 24px;
-            line-height: 1.3;
-        }
-
-        .section-text {
-            font-size: 18px;
-            color: #424242;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .two-column-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .challenge-image {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .challenge-list {
-            margin-top: 32px;
-        }
-
-        .challenge-item {
-            margin-bottom: 32px;
-        }
-
-        .challenge-item h3 {
-            font-size: 20px;
-            font-weight: 700;
-            color: #2B2B2B;
-            margin-bottom: 12px;
-        }
-
-        .challenge-item p {
-            font-size: 16px;
-            color: #424242;
-            line-height: 1.7;
-        }
-
-        .solution-list {
-            margin-top: 32px;
-        }
-
-        .solution-list ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .solution-list li {
-            margin-bottom: 20px;
-            padding-left: 24px;
-            position: relative;
-            font-size: 16px;
-            color: #424242;
-            line-height: 1.7;
-        }
-
-        .solution-list li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #89389f;
-            font-weight: 700;
-        }
-
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 32px;
-            margin-top: 40px;
-        }
-
-        .result-item {
-            background: white;
-            padding: 32px;
-            border-radius: 8px;
-            border-left: 4px solid #89389f;
-        }
-
-        .result-item h3 {
-            font-size: 20px;
-            font-weight: 700;
-            color: #2B2B2B;
-            margin-bottom: 12px;
-        }
-
-        .result-item p {
-            font-size: 16px;
-            color: #424242;
-            line-height: 1.7;
-        }
-
-        .device-mockups {
-            margin-top: 60px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .device-mockup img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        .highlights-image {
-            width: 100%;
-            height: auto;
-            margin-top: 40px;
-            border-radius: 8px;
-        }
-
-
-        .services-tech-section {
-            background: #F9F9F9;
-            padding: 80px 0;
-        }
-
-        .services-tech-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 60px;
-            margin-top: 40px;
-        }
-
-        .tech-category h3 {
-            font-size: 20px;
-            font-weight: 700;
-            color: #2B2B2B;
-            margin-bottom: 20px;
-        }
-
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .tech-tag {
-            background: white;
-            color: #89389f;
-            padding: 10px 20px;
-            border-radius: 4px;
-            font-size: 14px;
-            font-weight: 500;
-            border: 1px solid #e0e0e0;
-        }
-
-        .cta-section {
-            background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);
-            padding: 80px 0;
-        }
-
-        .cta-content {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .cta-content h2 {
-            font-size: 42px;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 20px;
-            line-height: 1.3;
-        }
-
-        .cta-content p {
-            font-size: 20px;
-            color: rgba(255,255,255,0.95);
-            margin-bottom: 32px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #89389f;
-            padding: 16px 40px;
-            font-size: 16px;
-            font-weight: 600;
-            border-radius: 4px;
-            text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-        }
-
-        @media (max-width: 968px) {
-            .client-info-container {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .two-column-section {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .results-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .device-mockups {
-                grid-template-columns: 1fr;
-            }
-
-            .services-tech-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .case-study-hero {
-                height: 300px;
-            }
-
-            .case-study-title {
-                font-size: 36px;
-            }
-
-            .section-heading {
-                font-size: 28px;
-            }
-
-            .cta-content h2 {
-                font-size: 32px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/casestudy.css">
 </head>
+
 <body>
     <header>
         <div class="container">
             <nav>
-                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic" style="height: 32px;"></a>
+                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic"
+                        style="height: 32px;"></a>
                 <ul class="nav-links">
-                    <li class="nav-item-with-dropdown">
-                        <a href="../services.html">Services</a>
+                    <li class="nav-item-with-dropdown"><a href="../services.html">Services</a>
                         <ul class="dropdown-menu">
                             <li><a href="../commerce-build.html">Commerce Services</a></li>
                             <li><a href="../services.html#support">24/7 Run & Support</a></li>
@@ -369,8 +31,7 @@
                             <li><a href="../services.html#data-ai">Data, AI & Analytics</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="../platforms.html">Platforms</a>
+                    <li class="nav-item-with-dropdown"><a href="../platforms.html">Platforms</a>
                         <ul class="dropdown-menu">
                             <li><a href="../platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
                             <li><a href="../platforms.html#shopify">Shopify Plus</a></li>
@@ -382,8 +43,7 @@
                     <li><a href="../work.html">Work</a></li>
                     <li><a href="../partners.html">Partners</a></li>
                     <li><a href="../about.html">About</a></li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="#">EN</a>
+                    <li class="nav-item-with-dropdown"><a href="#">EN</a>
                         <ul class="dropdown-menu">
                             <li><a href="falabella.html">English</a></li>
                             <li><a href="../es/work/falabella.html">Español</a></li>
@@ -395,232 +55,213 @@
         </div>
     </header>
 
-    <!-- Hero Banner -->
-    <div class="case-study-hero" style="background-image: url('../images/casestudies/falabella-hero.png');"></div>
-
-    <!-- Title Section -->
-    <section class="case-study-title-section">
-        <div class="content-narrow">
-            <img src="../images/casestudies/falabella-logo.png" alt="Falabella Logo" class="case-study-logo">
-            <h1 class="case-study-title">Cloud-Native Transformation for 36M+ Customers</h1>
-            <p class="case-study-subtitle">Legacy Oracle ATG platform modernized to cloud-native architecture, unlocking agility across LATAM's largest retail group.</p>
+    <section class="case-study-hero">
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <div class="case-study-label">Case Study</div>
+                <h1 class="case-study-title">Cloud-Native Transformation for 36M+ Customers</h1>
+                <p class="case-study-intro">Legacy Oracle ATG platform modernized to cloud-native architecture,
+                    unlocking agility across LATAM's largest retail group.</p>
+                <div class="hero-logo-circle"><img src="../images/casestudies/falabella-logo.png" alt="Falabella"></div>
+            </div>
+            <div class="hero-image-container"><img src="../images/casestudies/falabella-hero.png" alt="Falabella"></div>
         </div>
     </section>
 
-    <!-- Client Info Grid -->
-    <section class="client-info-grid">
-        <div class="client-info-container">
-            <div class="client-info-item">
-                <div class="client-info-label">Region</div>
-                <div class="client-info-value">LATAM</div>
-            </div>
-            <div class="client-info-item">
-                <div class="client-info-label">Website</div>
-                <div class="client-info-value"><a href="https://www.falabella.com" target="_blank" rel="noopener">falabella.com</a></div>
-            </div>
-            <div class="client-info-item">
-                <div class="client-info-label">Client Since</div>
-                <div class="client-info-value">2020</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Client Overview -->
-    <section class="section-white">
-        <div class="content-narrow">
-            <h2 class="section-heading">Client Overview</h2>
-            <p class="section-text"><strong>135+ years of retail leadership</strong> across 9 LATAM countries. Serves 36M+ customers through Falabella department stores, Sodimac, Tottus, Banco Falabella, and exclusive IKEA partnership.</p>
-            <p class="section-text"><strong>90,000 employees</strong> driving innovation in retail, financial services, and e-commerce. Market-leading omnichannel player facing pressure to modernize legacy infrastructure while maintaining operational continuity.</p>
-        </div>
-    </section>
-
-    <!-- Challenge Section -->
-    <section class="section-gray">
-        <div class="content-container">
-            <div class="two-column-section">
-                <div>
-                    <img src="../images/casestudies/falabella-challenge.png" alt="Falabella Legacy System Challenges" class="challenge-image">
+    <section class="client-info-section">
+        <div class="client-info-wrapper">
+            <div class="client-info-grid">
+                <div class="client-info-item">
+                    <div class="client-info-label">Region</div>
+                    <div class="client-info-value">LATAM</div>
                 </div>
-                <div>
-                    <h2 class="section-heading">The Challenge</h2>
+                <div class="client-info-item">
+                    <div class="client-info-label">Website</div>
+                    <div class="client-info-value"><a href="https://www.falabella.com" target="_blank"
+                            rel="noopener">www.falabella.com</a></div>
+                </div>
+                <div class="client-info-item">
+                    <div class="client-info-label">Client Since</div>
+                    <div class="client-info-value">2020</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="challenge-list">
-                        <div class="challenge-item">
-                            <h3><strong>Aging Architecture</strong></h3>
-                            <p>Legacy Oracle ATG framework lacked flexibility for modern e-commerce. Slow feature releases. No agility to compete.</p>
-                        </div>
+    <section class="challenge-section">
+        <div class="challenge-header">
+            <h2>The <span>Challenge</span></h2>
+            <p>135+ years of retail leadership across 9 LATAM countries. Serves 36M+ customers with 90,000 employees.
+            </p>
+        </div>
+        <div class="challenge-container">
+            <div class="challenge-image-wrapper">
+                <img src="../images/casestudies/falabella-challenge.png" alt="Falabella Challenge">
+                <div class="challenge-image-badge">36M+ Customers</div>
+            </div>
+            <div class="challenge-cards">
+                <div class="challenge-card">
+                    <h3><span class="card-number">1</span> Aging Architecture</h3>
+                    <p>Legacy Oracle ATG framework lacked flexibility for modern e-commerce</p>
+                </div>
+                <div class="challenge-card">
+                    <h3><span class="card-number">2</span> Infrastructure Chaos</h3>
+                    <p>Configuration files scattered across servers without version control</p>
+                </div>
+                <div class="challenge-card">
+                    <h3><span class="card-number">3</span> Knowledge & Cost Burdens</h3>
+                    <p>Critical expertise concentrated with few people and high infrastructure costs</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        <div class="challenge-item">
-                            <h3><strong>Infrastructure Chaos</strong></h3>
-                            <p>Configuration files scattered across servers without version control. No change tracking. Risky deployments. Operational bottlenecks.</p>
-                        </div>
+    <section class="solution-section">
+        <div class="solution-container">
+            <div class="solution-header">
+                <h2>The Solution</h2>
+                <p>Cloud-native infrastructure with DevOps automation and phased rollout.</p>
+            </div>
+            <div class="solution-pillars">
+                <div class="solution-pillar">
+                    <div class="pillar-number">1</div>
+                    <h3>Cloud-Native Infrastructure</h3>
+                    <p><strong>Azure & Docker</strong> virtualization for scalable, reliable environments with
+                        sprint-ready provisioning.</p>
+                </div>
+                <div class="solution-pillar">
+                    <div class="pillar-number">2</div>
+                    <h3>DevOps Automation</h3>
+                    <p>Continuous deployment pipelines with automated testing, fast release cycles, and enterprise-grade
+                        security.</p>
+                </div>
+                <div class="solution-pillar">
+                    <div class="pillar-number">3</div>
+                    <h3>Iterative & Low-Risk Execution</h3>
+                    <p>Phased rollout with frequent client validation ensuring business alignment and zero disruption.
+                    </p>
+                </div>
+            </div>
+            <div class="devices-showcase">
+                <img src="../images/casestudies/falabella-laptop.png" alt="Falabella Desktop" class="device-laptop">
+                <img src="../images/casestudies/falabella-mobile.png" alt="Falabella Mobile" class="device-mobile">
+            </div>
+        </div>
+    </section>
 
-                        <div class="challenge-item">
-                            <h3><strong>Knowledge & Cost Burdens</strong></h3>
-                            <p>Critical expertise concentrated with few people. High infrastructure costs. Maintenance overhead blocking innovation.</p>
-                        </div>
+    <section class="results-section">
+        <div class="results-container">
+            <div class="results-header">
+                <h2>Results</h2>
+            </div>
+            <div class="results-list">
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>50% Faster Time-to-Market</h3>
+                        <p>Agile DevOps enables rapid feature deployment</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>40% Cost Reduction</h3>
+                        <p>Cloud-first architecture cuts infrastructure costs</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>3x Performance Improvement</h3>
+                        <p>Elastic scalability handles peak demand seamlessly</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Zero Development Bottlenecks</h3>
+                        <p>Decentralized ownership eliminates dependency risks</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solution Section -->
-    <section class="section-white">
-        <div class="content-narrow">
-            <h2 class="section-heading">The Solution</h2>
-
-            <div class="solution-list">
-                <div class="challenge-item">
-                    <h3><strong>Pillar 1: Cloud-Native Infrastructure</strong></h3>
-                    <p><strong>Azure & Docker</strong> virtualization for scalable, reliable environments. Sprint-ready provisioning eliminates configuration drift and boosts developer velocity.</p>
-                </div>
-
-                <div class="challenge-item">
-                    <h3><strong>Pillar 2: DevOps Automation</strong></h3>
-                    <p>Continuous deployment pipelines with automated testing. Fast release cycles. Enterprise-grade security with encryption and comprehensive auditing for compliance.</p>
-                </div>
-
-                <div class="challenge-item">
-                    <h3><strong>Pillar 3: Iterative & Low-Risk Execution</strong></h3>
-                    <p>Phased rollout with frequent client validation. Collaborative planning ensures business alignment. Zero disruption to ongoing operations.</p>
-                </div>
+    <section class="services-section">
+        <div class="services-container">
+            <div class="services-header">
+                <h2>Services Delivered</h2>
             </div>
-
-            <!-- Device Mockups -->
-            <div class="device-mockups">
-                <div class="device-mockup">
-                    <img src="../images/casestudies/falabella-desktop.png" alt="Falabella Desktop View">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" />
+                        </svg></div>
+                    <h3>Cloud Engineering & DevOps</h3>
                 </div>
-                <div class="device-mockup">
-                    <img src="../images/casestudies/falabella-laptop.png" alt="Falabella Laptop View">
-                </div>
-                <div class="device-mockup">
-                    <img src="../images/casestudies/falabella-mobile.png" alt="Falabella Mobile View">
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                        </svg></div>
+                    <h3>Monitoring & Support</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Results Section -->
-    <section class="section-gray">
-        <div class="content-container">
-            <h2 class="section-heading">Results Achieved</h2>
-
-            <div class="results-grid">
-                <div class="result-item">
-                    <h3>50% Faster Time-to-Market</h3>
-                    <p>Agile DevOps enables rapid feature deployment and market responsiveness.</p>
-                </div>
-
-                <div class="result-item">
-                    <h3>40% Cost Reduction</h3>
-                    <p>Cloud-first architecture cuts infrastructure costs while improving reliability.</p>
-                </div>
-
-                <div class="result-item">
-                    <h3>3x Performance Improvement</h3>
-                    <p>Elastic scalability handles peak demand seamlessly across all LATAM markets.</p>
-                </div>
-
-                <div class="result-item">
-                    <h3>Zero Development Bottlenecks</h3>
-                    <p>Decentralized ownership and clear documentation eliminate dependency risks.</p>
-                </div>
-
-                <div class="result-item">
-                    <h3>Seamless Omnichannel</h3>
-                    <p>Unified platform delivers consistent experiences across all customer touchpoints.</p>
-                </div>
-
-                <div class="result-item">
-                    <h3>Future-Ready at Scale</h3>
-                    <p>Modern architecture ready for emerging tech adoption and rapid growth.</p>
-                </div>
+    <section class="technologies-section">
+        <div class="technologies-container">
+            <div class="technologies-header">
+                <h2>Technologies</h2>
             </div>
-
-            <img src="../images/casestudies/falabella-highlights.png" alt="Falabella Transformation Highlights" class="highlights-image">
-        </div>
-    </section>
-
-
-    <!-- Services & Technologies -->
-    <section class="services-tech-section">
-        <div class="content-narrow">
-            <h2 class="section-heading">Services & Technologies</h2>
-
-            <div class="services-tech-grid">
-                <div class="tech-category">
-                    <h3>Services Delivered</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Cloud Engineering and DevOps</span>
-                        <span class="tech-tag">Monitoring and Support</span>
-                    </div>
-                </div>
-
-                <div class="tech-category">
+            <div class="tech-category">
+                <div class="tech-category-title">
                     <h3>Engineering Stack</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Azure</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">DevOps</span>
-                    </div>
+                </div>
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-card"><span class="tech-name">Azure</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">Docker</span></div>
                 </div>
             </div>
-
-            <div style="margin-top: 40px;">
-                <div class="tech-category">
+            <div class="tech-category">
+                <div class="tech-category-title">
                     <h3>Partner Integrations</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Oracle ATG</span>
-                        <span class="tech-tag">Oracle Endeca</span>
-                        <span class="tech-tag">Oracle Database</span>
+                </div>
+                <div class="tech-partners-grid">
+                    <div class="tech-partner-card">
+                        <div class="partner-badge">O</div>
+                        <div class="partner-info"><span class="partner-name">Oracle ATG</span></div>
+                    </div>
+                    <div class="tech-partner-card">
+                        <div class="partner-badge">E</div>
+                        <div class="partner-info"><span class="partner-name">Oracle Endeca</span></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="content-narrow">
-            <div class="cta-content">
-                <h2>Ready to Transform Your E-Commerce Platform?</h2>
-                <p><strong>Modernize your legacy infrastructure and unlock growth across LATAM and beyond.</strong></p>
-                <a href="../contact.html" class="cta-button">Let's Talk →</a>
-            </div>
+    <section class="cs-cta">
+        <div class="container">
+            <h2>Ready to Transform Your E-Commerce Platform?</h2>
+            <p><strong>Modernize your legacy infrastructure and unlock growth across LATAM and beyond.</strong></p>
+            <a href="../contact.html" class="cs-cta-button">Let's Talk →</a>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="../services.html">All Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Platforms</h4>
-                    <ul>
-                        <li><a href="../platforms.html">All Platforms</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../work.html">Work</a></li>
-                        <li><a href="../partners.html">Partners</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NULogic. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer></footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/footer.js"></script>
 </body>
+
 </html>

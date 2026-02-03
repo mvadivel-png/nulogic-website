@@ -1,417 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/icons/favicon.png">
     <title>klllk Case Study | Custom iOS/Android Development | NULogic</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/casestudy-responsive.css">
-    <style>
-        :root {
-            --color-text-dark: #2B2B2B;
-            --color-text-medium: #424242;
-            --color-text-headline: #141414;
-            --color-purple: #89389f;
-            --color-red: #ed2925;
-            --color-bg-light: #F9F9F9;
-            --color-bg-lighter: #F2F2F2;
-            --color-border-light: #D9D9D9;
-            --color-gold: #F2B948;
-        }
-
-        body {
-            color: var(--color-text-dark);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-        }
-
-        .case-study-hero {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .case-study-hero img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .case-study-hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(96deg, rgba(137, 56, 159, 0.85) 0%, rgba(237, 41, 37, 0.85) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 60px 20px;
-        }
-
-        .case-study-hero-content {
-            max-width: 1200px;
-            width: 100%;
-            text-align: center;
-            color: white;
-        }
-
-        .case-study-hero h1 {
-            font-size: 64px;
-            font-weight: 700;
-            margin-bottom: 24px;
-            font-family: 'Barlow Condensed', sans-serif;
-            line-height: 1.1;
-        }
-
-        .case-study-hero p {
-            font-size: 24px;
-            line-height: 1.5;
-            max-width: 900px;
-            margin: 0 auto;
-            opacity: 0.95;
-        }
-
-        .client-info-section {
-            background: var(--color-bg-light);
-            padding: 80px 0;
-        }
-
-        .client-info-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .client-logo-wrapper {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .client-logo-wrapper img {
-            max-width: 200px;
-            height: auto;
-        }
-
-        .client-info-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            text-align: center;
-        }
-
-        .client-info-item h3 {
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--color-text-medium);
-            margin-bottom: 12px;
-        }
-
-        .client-info-item p {
-            font-size: 18px;
-            font-weight: 500;
-            color: var(--color-text-headline);
-        }
-
-        .client-info-item a {
-            color: var(--color-purple);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .client-info-item a:hover {
-            text-decoration: underline;
-        }
-
-        .content-section {
-            padding: 80px 0;
-        }
-
-        .content-section.bg-light {
-            background: var(--color-bg-light);
-        }
-
-        .content-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .content-container h2 {
-            font-size: 48px;
-            font-weight: 700;
-            font-family: 'Barlow Condensed', sans-serif;
-            color: var(--color-text-headline);
-            margin-bottom: 32px;
-        }
-
-        .content-container p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: var(--color-text-dark);
-            margin-bottom: 20px;
-        }
-
-        .challenge-section-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            margin-top: 40px;
-        }
-
-        .challenge-image {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        .challenge-content h3 {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--color-text-headline);
-            margin-bottom: 16px;
-            margin-top: 32px;
-        }
-
-        .challenge-content h3:first-child {
-            margin-top: 0;
-        }
-
-        .challenge-content p {
-            font-size: 16px;
-            line-height: 1.7;
-            color: var(--color-text-dark);
-        }
-
-        .solution-images-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-top: 40px;
-            margin-bottom: 40px;
-        }
-
-        .solution-images-grid img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .solution-content h3 {
-            font-size: 28px;
-            font-weight: 600;
-            color: var(--color-text-headline);
-            margin-bottom: 16px;
-            margin-top: 40px;
-        }
-
-        .solution-content h3:first-of-type {
-            margin-top: 32px;
-        }
-
-        .solution-content ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 16px;
-        }
-
-        .solution-content ul li {
-            font-size: 16px;
-            line-height: 1.7;
-            color: var(--color-text-dark);
-            margin-bottom: 12px;
-            padding-left: 28px;
-            position: relative;
-        }
-
-        .solution-content ul li:before {
-            content: "•";
-            position: absolute;
-            left: 8px;
-            color: var(--color-purple);
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        .results-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            margin-top: 40px;
-        }
-
-        .results-image {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        .results-content h3 {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--color-text-headline);
-            margin-bottom: 12px;
-            margin-top: 32px;
-        }
-
-        .results-content h3:first-child {
-            margin-top: 0;
-        }
-
-        .results-content p {
-            font-size: 16px;
-            line-height: 1.7;
-            color: var(--color-text-dark);
-        }
-
-        .services-tech-section {
-            background: var(--color-bg-light);
-            padding: 80px 0;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 60px;
-            margin-top: 48px;
-        }
-
-        .services-column h3 {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--color-text-headline);
-            margin-bottom: 24px;
-        }
-
-        .services-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .services-list li {
-            font-size: 16px;
-            color: var(--color-text-dark);
-            margin-bottom: 12px;
-            padding-left: 28px;
-            position: relative;
-        }
-
-        .services-list li:before {
-            content: "•";
-            position: absolute;
-            left: 8px;
-            color: var(--color-purple);
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        .tech-logos {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 24px;
-            align-items: center;
-            margin-top: 24px;
-        }
-
-        .tech-logos img {
-            height: 40px;
-            width: auto;
-        }
-
-        .cta-section {
-            background: linear-gradient(96deg, var(--color-purple) 0%, var(--color-red) 100%);
-            padding: 100px 0;
-            text-align: center;
-            color: white;
-        }
-
-        .cta-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .cta-content h2 {
-            font-size: 48px;
-            font-weight: 700;
-            font-family: 'Barlow Condensed', sans-serif;
-            margin-bottom: 24px;
-        }
-
-        .cta-content p {
-            font-size: 20px;
-            line-height: 1.6;
-            margin-bottom: 32px;
-            opacity: 0.95;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: var(--color-purple);
-            padding: 16px 40px;
-            border-radius: 4px;
-            font-size: 18px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.2s;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-        }
-
-        @media (max-width: 768px) {
-            .case-study-hero h1 {
-                font-size: 42px;
-            }
-
-            .case-study-hero p {
-                font-size: 18px;
-            }
-
-            .client-info-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .challenge-section-layout,
-            .results-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .solution-images-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .content-container h2 {
-                font-size: 36px;
-            }
-
-            .cta-content h2 {
-                font-size: 36px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/casestudy.css">
 </head>
+
 <body>
     <header>
         <div class="container">
             <nav>
-                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic" style="height: 32px;"></a>
+                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic"
+                        style="height: 32px;"></a>
                 <ul class="nav-links">
-                    <li class="nav-item-with-dropdown">
-                        <a href="../services.html">Services</a>
+                    <li class="nav-item-with-dropdown"><a href="../services.html">Services</a>
                         <ul class="dropdown-menu">
                             <li><a href="../commerce-build.html">Commerce Services</a></li>
                             <li><a href="../services.html#support">24/7 Run & Support</a></li>
@@ -419,8 +31,7 @@
                             <li><a href="../services.html#data-ai">Data, AI & Analytics</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="../platforms.html">Platforms</a>
+                    <li class="nav-item-with-dropdown"><a href="../platforms.html">Platforms</a>
                         <ul class="dropdown-menu">
                             <li><a href="../platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
                             <li><a href="../platforms.html#shopify">Shopify Plus</a></li>
@@ -432,8 +43,7 @@
                     <li><a href="../work.html">Work</a></li>
                     <li><a href="../partners.html">Partners</a></li>
                     <li><a href="../about.html">About</a></li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="#">EN</a>
+                    <li class="nav-item-with-dropdown"><a href="#">EN</a>
                         <ul class="dropdown-menu">
                             <li><a href="klllk.html">English</a></li>
                             <li><a href="../es/work/klllk.html">Español</a></li>
@@ -445,197 +55,207 @@
         </div>
     </header>
 
-    <!-- Hero Section with Banner Image -->
     <section class="case-study-hero">
-        <img src="../images/casestudies/klllk-hero.png" alt="klllk Case Study">
-        <div class="case-study-hero-overlay">
-            <div class="case-study-hero-content">
-                <h1>Custom iOS & Android Apps for Event-Based Social Networking</h1>
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <div class="case-study-label">Case Study</div>
+                <h1 class="case-study-title">Custom iOS & Android Apps for Event-Based Social Networking</h1>
+                <p class="case-study-intro">Event-based social networking connecting people around shared interests with
+                    QR code-powered networking.</p>
+                <div class="hero-logo-circle"><img src="../images/casestudies/klllk-logo.png" alt="klllk"></div>
             </div>
+            <div class="hero-image-container"><img src="../images/casestudies/klllk-hero.png" alt="klllk"></div>
         </div>
     </section>
 
-    <!-- Client Info Section -->
     <section class="client-info-section">
-        <div class="client-info-container">
-            <div class="client-logo-wrapper">
-                <img src="../images/casestudies/klllk-logo.png" alt="klllk">
-            </div>
+        <div class="client-info-wrapper">
             <div class="client-info-grid">
                 <div class="client-info-item">
-                    <h3>Region</h3>
-                    <p>U.S.</p>
+                    <div class="client-info-label">Region</div>
+                    <div class="client-info-value">U.S.</div>
                 </div>
                 <div class="client-info-item">
-                    <h3>Website</h3>
-                    <p><a href="https://www.klllk.com" target="_blank" rel="noopener">www.klllk.com</a></p>
+                    <div class="client-info-label">Website</div>
+                    <div class="client-info-value"><a href="https://www.klllk.com" target="_blank"
+                            rel="noopener">www.klllk.com</a></div>
                 </div>
                 <div class="client-info-item">
-                    <h3>Client Since</h3>
-                    <p>2022</p>
+                    <div class="client-info-label">Client Since</div>
+                    <div class="client-info-value">2022</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Client Overview Section -->
-    <section class="content-section">
-        <div class="content-container">
-            <h2>Client Overview</h2>
-            <p><strong>Event-based social networking</strong> connecting people around shared interests. <strong>QR code-powered networking,</strong> group collaboration, and dual-role capabilities (host or participant) on iOS and Android.</p>
+    <section class="challenge-section">
+        <div class="challenge-header">
+            <h2>The <span>Challenge</span></h2>
+            <p>Event-based social networking connecting people with QR code-powered networking, group collaboration, and
+                dual-role capabilities.</p>
         </div>
-    </section>
-
-    <!-- Challenge Section -->
-    <section class="content-section bg-light">
-        <div class="content-container">
-            <h2>Challenge</h2>
-            <div class="challenge-section-layout">
-                <div>
-                    <img src="../images/casestudies/klllk-challenge.png" alt="klllk Challenge" class="challenge-image">
+        <div class="challenge-container">
+            <div class="challenge-image-wrapper">
+                <img src="../images/casestudies/klllk-challenge.png" alt="klllk Challenge">
+                <div class="challenge-image-badge">Social Networking</div>
+            </div>
+            <div class="challenge-cards">
+                <div class="challenge-card">
+                    <h3><span class="card-number">1</span> Intelligent Matchmaking</h3>
+                    <p>Sophisticated algorithms matching users by interests, location, age, and group size</p>
                 </div>
-                <div class="challenge-content">
-                    <h3><strong>Intelligent Matchmaking</strong></h3>
-                    <p>Sophisticated algorithms matching users by interests, location, age, and group size for precise, relevant connections.</p>
-
-                    <h3><strong>Multi-User Interface Design</strong></h3>
-                    <p>Intuitive design for both hosts and participants across iOS and Android with seamless role switching.</p>
-
-                    <h3><strong>Secure Real-Time Features</strong></h3>
-                    <p>QR code integration, subscription-based access control, and API optimization for smooth performance at scale.</p>
+                <div class="challenge-card">
+                    <h3><span class="card-number">2</span> Multi-User Interface</h3>
+                    <p>Intuitive design for both hosts and participants with seamless role switching</p>
+                </div>
+                <div class="challenge-card">
+                    <h3><span class="card-number">3</span> Secure Real-Time Features</h3>
+                    <p>QR code integration, subscription-based access, and API optimization for scale</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solution Section -->
-    <section class="content-section">
-        <div class="content-container">
-            <h2>Solution</h2>
-            <p>Two-phase approach delivering a <strong>robust, scalable platform</strong> optimized for real-time social interactions.</p>
-
-            <div class="solution-images-grid">
-                <img src="../images/casestudies/klllk-solution-1.png" alt="klllk Solution 1">
-                <img src="../images/casestudies/klllk-solution-2.png" alt="klllk Solution 2">
-                <img src="../images/casestudies/klllk-solution-3.png" alt="klllk Solution 3">
+    <section class="solution-section">
+        <div class="solution-container">
+            <div class="solution-header">
+                <h2>The Solution</h2>
+                <p>Two-phase approach delivering a robust, scalable platform optimized for real-time social
+                    interactions.</p>
             </div>
-
-            <div class="solution-content">
-                <h3><strong>Discovery & Strategy</strong></h3>
-                <ul>
-                    <li>Requirements gathering, wireframing, and <strong>database schema design</strong></li>
-                </ul>
-
-                <h3><strong>Engineering & Optimization</strong></h3>
-                <ul>
-                    <li><strong>Advanced matchmaking algorithms</strong> for precise user connections</li>
-                    <li><strong>Optimized APIs</strong> with versioning for improved responsiveness</li>
-                    <li><strong>Dynamic QR functionality</strong> with secure user interactions</li>
-                </ul>
-
-                <h3><strong>Deployment & Support</strong></h3>
-                <ul>
-                    <li>User acceptance testing and <strong>App Store/Google Play</strong> launch</li>
-                    <li>Comprehensive performance tuning and <strong>cloud-native architecture</strong></li>
-                    <li>Ongoing technical support and platform evolution</li>
-                </ul>
+            <div class="solution-pillars">
+                <div class="solution-pillar">
+                    <div class="pillar-number">1</div>
+                    <h3>Discovery & Strategy</h3>
+                    <p>Requirements gathering, wireframing, and <strong>database schema design</strong> for optimal
+                        performance.</p>
+                </div>
+                <div class="solution-pillar">
+                    <div class="pillar-number">2</div>
+                    <h3>Engineering & Optimization</h3>
+                    <p><strong>Advanced matchmaking algorithms</strong>, optimized APIs with versioning, and dynamic QR
+                        functionality.</p>
+                </div>
+                <div class="solution-pillar">
+                    <div class="pillar-number">3</div>
+                    <h3>Deployment & Support</h3>
+                    <p>User acceptance testing, <strong>App Store/Google Play launch</strong>, and ongoing technical
+                        support.</p>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Results Section -->
-    <section class="content-section bg-light">
-        <div class="content-container">
-            <h2>Results</h2>
-            <div class="results-layout">
-                <div class="results-content">
-                    <h3><strong>Optimized Mobile Experience</strong></h3>
-                    <p><strong>Seamless signup to engagement</strong> with intuitive navigation for discovering and connecting with communities.</p>
-
-                    <h3><strong>Real-Time Networking Features</strong></h3>
-                    <p><strong>QR-powered connections,</strong> live chat, and event hosting driving active participation.</p>
-
-                    <h3><strong>Scalable Cloud Architecture</strong></h3>
-                    <p><strong>Modular APIs</strong> enabling rapid updates and feature releases without user disruption.</p>
-
-                    <h3><strong>Ongoing Partnership</strong></h3>
-                    <p><strong>Continuous technical support</strong> and platform optimization as user needs evolve.</p>
-                </div>
-                <div>
-                    <img src="../images/casestudies/klllk-results.png" alt="klllk Results" class="results-image">
-                </div>
+            <div class="devices-showcase">
+                <img src="../images/casestudies/klllk-solution-1.png" alt="klllk App" class="device-mobile">
+                <img src="../images/casestudies/klllk-solution-2.png" alt="klllk App" class="device-mobile">
+                <img src="../images/casestudies/klllk-solution-3.png" alt="klllk App" class="device-mobile">
             </div>
         </div>
     </section>
 
-    <!-- Services & Technologies Section -->
-    <section class="services-tech-section">
-        <div class="content-container">
-            <h2>Services & Technologies</h2>
-            <div class="services-grid">
-                <div class="services-column">
-                    <h3>Services Provided</h3>
-                    <ul class="services-list">
-                        <li>Mobile App Development</li>
-                        <li>Cloud & DevOps</li>
-                        <li>QA & Testing Automation</li>
-                    </ul>
+    <section class="results-section">
+        <div class="results-container">
+            <div class="results-header">
+                <h2>Results</h2>
+            </div>
+            <div class="results-list">
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Optimized Mobile Experience</h3>
+                        <p>Seamless signup to engagement with intuitive navigation</p>
+                    </div>
                 </div>
-                <div class="services-column">
-                    <h3>Engineering Stack</h3>
-                    <div class="tech-logos">
-                        <img src="../images/casestudies/aws-logo.png" alt="AWS">
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Real-Time Networking Features</h3>
+                        <p>QR-powered connections, live chat, and event hosting</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Scalable Cloud Architecture</h3>
+                        <p>Modular APIs enabling rapid updates without disruption</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Ongoing Partnership</h3>
+                        <p>Continuous technical support and platform optimization</p>
                     </div>
                 </div>
             </div>
-            <div style="margin-top: 48px;">
-                <h3 style="font-size: 24px; font-weight: 600; color: var(--color-text-headline); margin-bottom: 24px;">Partner Integrations</h3>
-                <div class="tech-logos">
-                    <img src="../images/casestudies/tech-integration-1.png" alt="Integration Partner">
-                    <img src="../images/casestudies/tech-integration-2.png" alt="Integration Partner">
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="services-container">
+            <div class="services-header">
+                <h2>Services Delivered</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z" />
+                        </svg></div>
+                    <h3>Mobile App Development</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" />
+                        </svg></div>
+                    <h3>Cloud & DevOps</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                        </svg></div>
+                    <h3>QA & Testing Automation</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="cta-content">
+    <section class="technologies-section">
+        <div class="technologies-container">
+            <div class="technologies-header">
+                <h2>Technologies</h2>
+            </div>
+            <div class="tech-category">
+                <div class="tech-category-title">
+                    <h3>Engineering Stack</h3>
+                </div>
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-card"><span class="tech-name">AWS</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">iOS</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">Android</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cs-cta">
+        <div class="container">
             <h2>Build Your Next Mobile Platform</h2>
             <p><strong>Launch engaging apps</strong> that drive user engagement and build thriving communities.</p>
-            <a href="../contact.html" class="cta-button">Let's Talk →</a>
+            <a href="../contact.html" class="cs-cta-button">Let's Talk →</a>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="../services.html">All Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Platforms</h4>
-                    <ul>
-                        <li><a href="../platforms.html">All Platforms</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../work.html">Work</a></li>
-                        <li><a href="../partners.html">Partners</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NULogic. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer></footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/footer.js"></script>
 </body>
+
 </html>

@@ -1,345 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PacSun Case Study | Scalable Commerce Engineering | NULogic</title>
-    <meta name="description" content="How NULogic powers Pacsun's digital growth with scalable commerce engineering through staff augmentation, SFCC development, and Manhattan OMS support.">
+    <link rel="icon" type="image/png" href="../images/icons/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/casestudy-responsive.css">
-    <style>
-        :root {
-            --color-text-primary: #2B2B2B;
-            --color-text-secondary: #424242;
-            --color-purple: #89389f;
-            --color-red: #ed2925;
-            --color-bg-gray: #F9F9F9;
-            --color-white: #ffffff;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-            color: var(--color-text-primary);
-            line-height: 1.6;
-        }
-
-        /* Hero Banner Section */
-        .hero-banner {
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-banner img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Title Section with Logo */
-        .title-section {
-            padding: 60px 0;
-            background: var(--color-white);
-        }
-
-        .title-section .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .title-section .logo-container {
-            margin-bottom: 24px;
-        }
-
-        .title-section .logo-container img {
-            height: 60px;
-            width: auto;
-        }
-
-        .title-section h1 {
-            font-size: 48px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin: 0 0 24px 0;
-            color: var(--color-text-primary);
-        }
-
-        .title-section .subtitle {
-            font-size: 20px;
-            color: var(--color-text-secondary);
-            line-height: 1.6;
-            max-width: 900px;
-        }
-
-        /* Client Info Grid */
-        .client-info {
-            background: var(--color-bg-gray);
-            padding: 50px 0;
-        }
-
-        .client-info .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .client-info-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-        }
-
-        .client-info-item h4 {
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--color-text-secondary);
-            margin: 0 0 8px 0;
-        }
-
-        .client-info-item p {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--color-text-primary);
-            margin: 0;
-        }
-
-        .client-info-item a {
-            color: var(--color-purple);
-            text-decoration: none;
-        }
-
-        .client-info-item a:hover {
-            text-decoration: underline;
-        }
-
-        /* Section Containers */
-        .section {
-            padding: 80px 0;
-        }
-
-        .section.white {
-            background: var(--color-white);
-        }
-
-        .section.gray {
-            background: var(--color-bg-gray);
-        }
-
-        .section .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section h2 {
-            font-size: 40px;
-            font-weight: 700;
-            margin: 0 0 24px 0;
-            color: var(--color-text-primary);
-        }
-
-        .section h3 {
-            font-size: 24px;
-            font-weight: 700;
-            margin: 0 0 16px 0;
-            color: var(--color-text-primary);
-        }
-
-        .section p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: var(--color-text-secondary);
-            margin: 0 0 20px 0;
-        }
-
-        .section ul {
-            list-style: none;
-            padding: 0;
-            margin: 24px 0;
-        }
-
-        .section ul li {
-            font-size: 18px;
-            line-height: 1.8;
-            color: var(--color-text-secondary);
-            margin-bottom: 16px;
-            padding-left: 30px;
-            position: relative;
-        }
-
-        .section ul li:before {
-            content: "•";
-            color: var(--color-purple);
-            font-weight: bold;
-            font-size: 24px;
-            position: absolute;
-            left: 0;
-            top: -2px;
-        }
-
-        /* Challenge Section - 2 Column Layout */
-        .challenge-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .challenge-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        /* Device Images Section */
-        .device-images {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin: 40px 0;
-        }
-
-        .device-images img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-
-        /* Services Section */
-        .services-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 24px;
-        }
-
-        .tag {
-            background: var(--color-white);
-            color: var(--color-text-primary);
-            padding: 12px 24px;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: 500;
-            border: 1px solid #e0e0e0;
-        }
-
-        .services-section h4 {
-            font-size: 20px;
-            font-weight: 700;
-            margin: 40px 0 20px 0;
-            color: var(--color-text-primary);
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(96deg, #89389f, #ed2925);
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-size: 48px;
-            font-weight: 700;
-            color: var(--color-white);
-            margin: 0 0 20px 0;
-        }
-
-        .cta-section p {
-            font-size: 20px;
-            color: rgba(255, 255, 255, 0.95);
-            margin: 0 0 32px 0;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: var(--color-white);
-            color: var(--color-purple);
-            padding: 16px 40px;
-            border-radius: 6px;
-            font-size: 18px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: transform 0.2s;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 991px) {
-            .client-info-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .challenge-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .device-images {
-                grid-template-columns: 1fr;
-            }
-
-            .title-section h1 {
-                font-size: 36px;
-            }
-
-            .section h2 {
-                font-size: 32px;
-            }
-
-            .cta-section h2 {
-                font-size: 36px;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .client-info-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .title-section h1 {
-                font-size: 28px;
-            }
-
-            .section h2 {
-                font-size: 28px;
-            }
-
-            .testimonial {
-                padding: 30px;
-            }
-
-            .testimonial-quote {
-                font-size: 20px;
-            }
-
-            .cta-section h2 {
-                font-size: 28px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/casestudy.css">
 </head>
+
 <body>
-    <!-- Header Navigation -->
     <header>
         <div class="container">
             <nav>
-                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic" style="height: 32px;"></a>
+                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic"
+                        style="height: 32px;"></a>
                 <ul class="nav-links">
-                    <li class="nav-item-with-dropdown">
-                        <a href="../services.html">Services</a>
+                    <li class="nav-item-with-dropdown"><a href="../services.html">Services</a>
                         <ul class="dropdown-menu">
                             <li><a href="../commerce-build.html">Commerce Services</a></li>
                             <li><a href="../services.html#support">24/7 Run & Support</a></li>
@@ -347,8 +31,7 @@
                             <li><a href="../services.html#data-ai">Data, AI & Analytics</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="../platforms.html">Platforms</a>
+                    <li class="nav-item-with-dropdown"><a href="../platforms.html">Platforms</a>
                         <ul class="dropdown-menu">
                             <li><a href="../platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
                             <li><a href="../platforms.html#shopify">Shopify Plus</a></li>
@@ -360,8 +43,7 @@
                     <li><a href="../work.html">Work</a></li>
                     <li><a href="../partners.html">Partners</a></li>
                     <li><a href="../about.html">About</a></li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="#">EN</a>
+                    <li class="nav-item-with-dropdown"><a href="#">EN</a>
                         <ul class="dropdown-menu">
                             <li><a href="pacsun.html">English</a></li>
                             <li><a href="../es/work/pacsun.html">Español</a></li>
@@ -373,172 +55,219 @@
         </div>
     </header>
 
-    <!-- Hero Banner -->
-    <div class="hero-banner">
-        <img src="../images/casestudies/pacsun-mobile-banner.png" alt="PacSun Banner">
-    </div>
-
-    <!-- Title Section with Logo -->
-    <section class="title-section">
-        <div class="container">
-            <div class="logo-container">
-                <img src="../images/casestudies/pacsun-logo.png" alt="PacSun Logo">
+    <section class="case-study-hero">
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <div class="case-study-label">Case Study</div>
+                <h1 class="case-study-title">Accelerating PacSun's Commerce Platform</h1>
+                <p class="case-study-intro">Youth fashion leader needed to scale commerce velocity. NULogic delivered
+                    flexible engineering resources to unlock omnichannel growth.</p>
+                <div class="hero-logo-circle"><img src="../images/casestudies/pacsun-logo.png" alt="PacSun"></div>
             </div>
-            <h1>Accelerating PacSun's Commerce Platform</h1>
-            <p class="subtitle"><strong>Youth fashion leader</strong> needed to scale commerce velocity. NULogic delivered flexible engineering resources to unlock omnichannel growth.</p>
+            <div class="hero-image-container"><img src="../images/casestudies/pacsun-hero.png" alt="PacSun"></div>
         </div>
     </section>
 
-    <!-- Client Info Grid -->
-    <section class="client-info">
-        <div class="container">
+    <section class="client-info-section">
+        <div class="client-info-wrapper">
             <div class="client-info-grid">
                 <div class="client-info-item">
-                    <h4>REGION</h4>
-                    <p>U.S.</p>
+                    <div class="client-info-label">Region</div>
+                    <div class="client-info-value">U.S.</div>
                 </div>
                 <div class="client-info-item">
-                    <h4>WEBSITE</h4>
-                    <p><a href="https://www.pacsun.com" target="_blank">https://www.pacsun.com</a></p>
+                    <div class="client-info-label">Website</div>
+                    <div class="client-info-value"><a href="https://www.pacsun.com" target="_blank"
+                            rel="noopener">www.pacsun.com</a></div>
                 </div>
                 <div class="client-info-item">
-                    <h4>CLIENT SINCE</h4>
-                    <p>2024</p>
+                    <div class="client-info-label">Client Since</div>
+                    <div class="client-info-value">2024</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Client Overview Section -->
-    <section class="section white">
-        <div class="container">
-            <h2>Client Overview</h2>
-            <p><strong>Founded in 1980</strong>, PacSun is the destination for <strong>youth culture and streetwear</strong> enthusiasts. Operating across <strong>physical and digital channels</strong>, the brand curates emerging brands and contemporary fashion for a digitally-native customer base. They demanded <strong>faster innovation velocity</strong> to stay competitive in the rapidly evolving streetwear market.</p>
+    <section class="challenge-section">
+        <div class="challenge-header">
+            <h2>The <span>Challenge</span></h2>
+            <p>Founded in 1980, PacSun is the destination for youth culture and streetwear. They demanded faster
+                innovation velocity to stay competitive.</p>
         </div>
-    </section>
-
-    <!-- Challenge Section - 2 Column Layout -->
-    <section class="section gray">
-        <div class="container">
-            <div class="challenge-grid">
-                <div class="challenge-image">
-                    <img src="../images/casestudies/pacsun-challenge.png" alt="PacSun Challenge">
+        <div class="challenge-container">
+            <div class="challenge-image-wrapper">
+                <img src="../images/casestudies/pacsun-challenge.png" alt="PacSun Challenge">
+                <div class="challenge-image-badge">Youth Culture</div>
+            </div>
+            <div class="challenge-cards">
+                <div class="challenge-card">
+                    <h3><span class="card-number">1</span> Engineering Bottleneck</h3>
+                    <p>Limited development capacity slowing time-to-market for critical enhancements</p>
                 </div>
-                <div class="challenge-content">
-                    <h2>The Challenge</h2>
-                    <ul>
-                        <li><strong>Engineering Bottleneck:</strong> Limited development capacity slowing time-to-market for critical platform enhancements and payment integrations.</li>
-                        <li><strong>Cost Pressure:</strong> Rising onshore resource expenses eating into margins while business demanded faster delivery across SFCC and OMS ecosystems.</li>
-                        <li><strong>Competitive Urgency:</strong> Market velocity required immediate access to specialized Salesforce and order management expertise without lengthy hiring cycles.</li>
-                    </ul>
+                <div class="challenge-card">
+                    <h3><span class="card-number">2</span> Cost Pressure</h3>
+                    <p>Rising onshore resource expenses eating into margins</p>
+                </div>
+                <div class="challenge-card">
+                    <h3><span class="card-number">3</span> Competitive Urgency</h3>
+                    <p>Market velocity required immediate specialized Salesforce and OMS expertise</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solution Section -->
-    <section class="section white">
-        <div class="container">
-            <h2>The Solution</h2>
-            <ul>
-                <li><strong>Flexible Talent Model:</strong> Blended onshore-offshore engineers embedded directly into PacSun's development teams, scaling resources up and down with business demand.</li>
-                <li><strong>Commerce Cloud Expertise:</strong> Specialized engineers with deep SFCC and Manhattan OMS mastery delivered integration work, platform enhancements, and operational support simultaneously.</li>
-                <li><strong>High-Impact Delivery:</strong> Launched Klarna payment integration on schedule, enabling flexible checkout options and driving conversion lift across the platform.</li>
-            </ul>
-
-            <!-- Device Images -->
-            <div class="device-images">
-                <img src="../images/casestudies/pacsun-desktop.png" alt="PacSun Desktop View">
-                <img src="../images/casestudies/pacsun-laptop.png" alt="PacSun Laptop View">
-                <img src="../images/casestudies/pacsun-mobile.png" alt="PacSun Mobile View">
+    <section class="solution-section">
+        <div class="solution-container">
+            <div class="solution-header">
+                <h2>The Solution</h2>
+                <p>Flexible talent model with specialized Commerce Cloud expertise.</p>
+            </div>
+            <div class="solution-pillars">
+                <div class="solution-pillar">
+                    <div class="pillar-number">1</div>
+                    <h3>Flexible Talent Model</h3>
+                    <p>Blended onshore-offshore engineers embedded directly into PacSun's teams, scaling with business
+                        demand.</p>
+                </div>
+                <div class="solution-pillar">
+                    <div class="pillar-number">2</div>
+                    <h3>Commerce Cloud Expertise</h3>
+                    <p>Specialized engineers with deep SFCC and Manhattan OMS mastery for integration and enhancements.
+                    </p>
+                </div>
+                <div class="solution-pillar">
+                    <div class="pillar-number">3</div>
+                    <h3>High-Impact Delivery</h3>
+                    <p>Launched Klarna payment integration on schedule, driving conversion lift across the platform.</p>
+                </div>
+            </div>
+            <div class="devices-showcase">
+                <img src="../images/casestudies/pacsun-desktop.png" alt="PacSun Desktop" class="device-laptop">
+                <img src="../images/casestudies/pacsun-mobile.png" alt="PacSun Mobile" class="device-mobile">
             </div>
         </div>
     </section>
 
-    <!-- Results Section -->
-    <section class="section gray">
-        <div class="container">
-            <h2>The Results</h2>
-
-            <div style="margin-top: 40px;">
-                <h3>1. On-Schedule Platform Delivery</h3>
-                <p>Klarna integration launched on timeline, expanding payment flexibility and checkout conversion for PacSun customers.</p>
-
-                <h3>2. 24/7 Omnichannel Coverage</h3>
-                <p>Unified support across SFCC and Manhattan OMS eliminated handoffs, enabling seamless end-to-end commerce operations with <strong>zero platform downtime</strong>.</p>
-
-                <h3>3. 40% Lower Resource Costs</h3>
-                <p>Blended onshore-offshore model reduced engineering spend while maintaining enterprise-grade quality and development velocity.</p>
-
-                <h3>4. 50% Faster Feature Time-to-Market</h3>
-                <p>Flexible resource scaling enabled parallel initiative execution, accelerating innovation cycles for competitive streetwear market demands.</p>
+    <section class="results-section">
+        <div class="results-container">
+            <div class="results-header">
+                <h2>Results</h2>
+            </div>
+            <div class="results-list">
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>On-Schedule Delivery</h3>
+                        <p>Klarna integration launched on timeline expanding payment flexibility</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>24/7 Omnichannel</h3>
+                        <p>Unified support across SFCC and OMS enabled zero platform downtime</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>40% Lower Costs</h3>
+                        <p>Blended resource model reduced engineering spend</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>50% Faster Time-to-Market</h3>
+                        <p>Flexible scaling accelerated innovation cycles</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-
-    <!-- Services & Technologies Section -->
-    <section class="section gray services-section">
-        <div class="container">
-            <h2>Services & Technologies</h2>
-
-            <h4>Services Offered</h4>
-            <div class="services-tags">
-                <span class="tag">Staff Augmentation</span>
-                <span class="tag">eCommerce Development (Integration, Frontend)</span>
-                <span class="tag">OMS Configurations and Testing</span>
+    <section class="services-section">
+        <div class="services-container">
+            <div class="services-header">
+                <h2>Services Delivered</h2>
             </div>
-
-            <h4>Technology Stack</h4>
-            <div class="services-tags">
-                <span class="tag">Salesforce Commerce Cloud</span>
-                <span class="tag">Affirm</span>
-                <span class="tag">Klarna</span>
-                <span class="tag">Manhattan (OMS)</span>
-                <span class="tag">MuleSoft</span>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                        </svg></div>
+                    <h3>Staff Augmentation</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg></div>
+                    <h3>eCommerce Development</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M6 2v6h.01L6 8.01 10 12l-4 4 .01.01H6V22h12v-5.99h-.01L18 16l-4-4 4-3.99-.01-.01H18V2H6z" />
+                        </svg></div>
+                    <h3>OMS Configuration</h3>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="technologies-section">
+        <div class="technologies-container">
+            <div class="technologies-header">
+                <h2>Technologies</h2>
+            </div>
+            <div class="tech-category">
+                <div class="tech-category-title">
+                    <h3>Engineering Stack</h3>
+                </div>
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-card"><span class="tech-name">Salesforce Commerce Cloud</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">Manhattan OMS</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">MuleSoft</span></div>
+                </div>
+            </div>
+            <div class="tech-category">
+                <div class="tech-category-title">
+                    <h3>Partner Integrations</h3>
+                </div>
+                <div class="tech-partners-grid">
+                    <div class="tech-partner-card">
+                        <div class="partner-badge">K</div>
+                        <div class="partner-info"><span class="partner-name">Klarna</span></div>
+                    </div>
+                    <div class="tech-partner-card">
+                        <div class="partner-badge">A</div>
+                        <div class="partner-info"><span class="partner-name">Affirm</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cs-cta">
         <div class="container">
             <h2>Scale your commerce. Accelerate your growth.</h2>
-            <p>Get enterprise-grade engineering without the enterprise hiring burden. Let's build something fast.</p>
-            <a href="../contact.html" class="cta-button">Let's Talk →</a>
+            <p>Get enterprise-grade engineering without the enterprise hiring burden.</p>
+            <a href="../contact.html" class="cs-cta-button">Let's Talk →</a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="../services.html">All Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Platforms</h4>
-                    <ul>
-                        <li><a href="../platforms.html">All Platforms</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../work.html">Work</a></li>
-                        <li><a href="../partners.html">Partners</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NULogic. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer></footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/footer.js"></script>
 </body>
+
 </html>

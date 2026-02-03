@@ -1,326 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/icons/favicon.png">
     <title>Road Runner Sports Case Study | Bloomreach Discovery Implementation | NULogic</title>
-    <meta name="description" content="How NULogic transformed Road Runner Sports' search and boosted revenue using Bloomreach Discovery AI technology for intelligent product search and personalization.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/casestudy-responsive.css">
-    <style>
-        :root {
-            --color-text-primary: #2B2B2B;
-            --color-text-secondary: #424242;
-            --color-purple: #89389f;
-            --color-red: #ed2925;
-            --color-bg-gray: #F9F9F9;
-            --color-white: #ffffff;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-            color: var(--color-text-primary);
-            line-height: 1.6;
-        }
-
-        /* Hero Banner Section */
-        .hero-banner {
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-banner img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Title Section with Logo */
-        .title-section {
-            padding: 60px 0;
-            background: var(--color-white);
-        }
-
-        .title-section .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .title-section .logo-container {
-            margin-bottom: 24px;
-        }
-
-        .title-section .logo-container img {
-            height: 60px;
-            width: auto;
-        }
-
-        .title-section h1 {
-            font-size: 48px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin: 0 0 24px 0;
-            color: var(--color-text-primary);
-        }
-
-        .title-section .subtitle {
-            font-size: 20px;
-            color: var(--color-text-secondary);
-            line-height: 1.6;
-            max-width: 900px;
-        }
-
-        /* Client Info Grid */
-        .client-info {
-            background: var(--color-bg-gray);
-            padding: 50px 0;
-        }
-
-        .client-info .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .client-info-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-        }
-
-        .client-info-item h4 {
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--color-text-secondary);
-            margin: 0 0 8px 0;
-        }
-
-        .client-info-item p {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--color-text-primary);
-            margin: 0;
-        }
-
-        .client-info-item a {
-            color: var(--color-purple);
-            text-decoration: none;
-        }
-
-        .client-info-item a:hover {
-            text-decoration: underline;
-        }
-
-        /* Section Containers */
-        .section {
-            padding: 80px 0;
-        }
-
-        .section.white {
-            background: var(--color-white);
-        }
-
-        .section.gray {
-            background: var(--color-bg-gray);
-        }
-
-        .section .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section h2 {
-            font-size: 40px;
-            font-weight: 700;
-            margin: 0 0 24px 0;
-            color: var(--color-text-primary);
-        }
-
-        .section h3 {
-            font-size: 24px;
-            font-weight: 700;
-            margin: 0 0 16px 0;
-            color: var(--color-text-primary);
-        }
-
-        .section p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: var(--color-text-secondary);
-            margin: 0 0 20px 0;
-        }
-
-        .section ul {
-            list-style: none;
-            padding: 0;
-            margin: 24px 0;
-        }
-
-        .section ul li {
-            font-size: 18px;
-            line-height: 1.8;
-            color: var(--color-text-secondary);
-            margin-bottom: 16px;
-            padding-left: 30px;
-            position: relative;
-        }
-
-        .section ul li:before {
-            content: "•";
-            color: var(--color-purple);
-            font-weight: bold;
-            font-size: 24px;
-            position: absolute;
-            left: 0;
-            top: -2px;
-        }
-
-        /* Challenge Section - 2 Column Layout */
-        .challenge-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .challenge-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        /* Services Section */
-        .services-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 24px;
-        }
-
-        .tag {
-            background: var(--color-white);
-            color: var(--color-text-primary);
-            padding: 12px 24px;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: 500;
-            border: 1px solid #e0e0e0;
-        }
-
-        .services-section h4 {
-            font-size: 20px;
-            font-weight: 700;
-            margin: 40px 0 20px 0;
-            color: var(--color-text-primary);
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(96deg, #89389f, #ed2925);
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-size: 48px;
-            font-weight: 700;
-            color: var(--color-white);
-            margin: 0 0 20px 0;
-        }
-
-        .cta-section p {
-            font-size: 20px;
-            color: rgba(255, 255, 255, 0.95);
-            margin: 0 0 32px 0;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: var(--color-white);
-            color: var(--color-purple);
-            padding: 16px 40px;
-            border-radius: 6px;
-            font-size: 18px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: transform 0.2s;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 991px) {
-            .client-info-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .challenge-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .title-section h1 {
-                font-size: 36px;
-            }
-
-            .section h2 {
-                font-size: 32px;
-            }
-
-            .cta-section h2 {
-                font-size: 36px;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .client-info-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .title-section h1 {
-                font-size: 28px;
-            }
-
-            .section h2 {
-                font-size: 28px;
-            }
-
-            .testimonial {
-                padding: 30px;
-            }
-
-            .testimonial-quote {
-                font-size: 20px;
-            }
-
-            .cta-section h2 {
-                font-size: 28px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/casestudy.css">
 </head>
+
 <body>
-    <!-- Header Navigation -->
     <header>
         <div class="container">
             <nav>
-                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic" style="height: 32px;"></a>
+                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic"
+                        style="height: 32px;"></a>
                 <ul class="nav-links">
-                    <li class="nav-item-with-dropdown">
-                        <a href="../services.html">Services</a>
+                    <li class="nav-item-with-dropdown"><a href="../services.html">Services</a>
                         <ul class="dropdown-menu">
                             <li><a href="../commerce-build.html">Commerce Services</a></li>
                             <li><a href="../services.html#support">24/7 Run & Support</a></li>
@@ -328,8 +31,7 @@
                             <li><a href="../services.html#data-ai">Data, AI & Analytics</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="../platforms.html">Platforms</a>
+                    <li class="nav-item-with-dropdown"><a href="../platforms.html">Platforms</a>
                         <ul class="dropdown-menu">
                             <li><a href="../platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
                             <li><a href="../platforms.html#shopify">Shopify Plus</a></li>
@@ -341,8 +43,7 @@
                     <li><a href="../work.html">Work</a></li>
                     <li><a href="../partners.html">Partners</a></li>
                     <li><a href="../about.html">About</a></li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="#">EN</a>
+                    <li class="nav-item-with-dropdown"><a href="#">EN</a>
                         <ul class="dropdown-menu">
                             <li><a href="roadrunner.html">English</a></li>
                             <li><a href="../es/work/roadrunner.html">Español</a></li>
@@ -354,168 +55,218 @@
         </div>
     </header>
 
-    <!-- Hero Banner -->
-    <div class="hero-banner">
-        <img src="../images/casestudies/road-runner-sports-hero.png" alt="Road Runner Sports Banner">
-    </div>
-
-    <!-- Title Section with Logo -->
-    <section class="title-section">
-        <div class="container">
-            <div class="logo-container">
-                <img src="../images/casestudies/roadrunner-logo.png" alt="Road Runner Sports Logo">
+    <section class="case-study-hero">
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <div class="case-study-label">Case Study</div>
+                <h1 class="case-study-title">Supercharged Search Drives Revenue</h1>
+                <p class="case-study-intro">AI-powered discovery transformed customer experience and accelerated sales
+                    for America's leading running retailer.</p>
+                <div class="hero-logo-circle"><img src="../images/casestudies/roadrunner-logo.png"
+                        alt="Road Runner Sports"></div>
             </div>
-            <h1>Supercharged Search Drives Revenue for Road Runner Sports</h1>
-            <p class="subtitle"><strong>AI-powered discovery</strong> transformed customer experience and accelerated sales for America's leading running retailer.</p>
+            <div class="hero-image-container"><img src="../images/casestudies/roadrunner-hero.png"
+                    alt="Road Runner Sports"></div>
         </div>
     </section>
 
-    <!-- Client Info Grid -->
-    <section class="client-info">
-        <div class="container">
+    <section class="client-info-section">
+        <div class="client-info-wrapper">
             <div class="client-info-grid">
                 <div class="client-info-item">
-                    <h4>REGION</h4>
-                    <p>U.S.</p>
+                    <div class="client-info-label">Region</div>
+                    <div class="client-info-value">U.S.</div>
                 </div>
                 <div class="client-info-item">
-                    <h4>WEBSITE</h4>
-                    <p><a href="https://www.roadrunnersports.com" target="_blank">https://www.roadrunnersports.com</a></p>
+                    <div class="client-info-label">Website</div>
+                    <div class="client-info-value"><a href="https://www.roadrunnersports.com" target="_blank"
+                            rel="noopener">www.roadrunnersports.com</a></div>
                 </div>
                 <div class="client-info-item">
-                    <h4>CLIENT SINCE</h4>
-                    <p>2009</p>
+                    <div class="client-info-label">Client Since</div>
+                    <div class="client-info-value">2009</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Client Overview Section -->
-    <section class="section white">
-        <div class="container">
-            <h2>Client Overview</h2>
-            <p><strong>40 years</strong> serving runners nationwide. <strong>Industry-leading fit technology</strong> trusted by fitness enthusiasts. America's top specialty running retailer, recognized for expert product curation and personalized solutions.</p>
+    <section class="challenge-section">
+        <div class="challenge-header">
+            <h2>The <span>Challenge</span></h2>
+            <p>40 years serving runners nationwide. America's top specialty running retailer faced slow search and poor
+                relevance.</p>
         </div>
-    </section>
-
-    <!-- Challenge Section - 2 Column Layout -->
-    <section class="section gray">
-        <div class="container">
-            <div class="challenge-grid">
-                <div class="challenge-image">
-                    <img src="../images/casestudies/roadrunner-thumb.png" alt="Road Runner Sports Challenge">
+        <div class="challenge-container">
+            <div class="challenge-image-wrapper">
+                <img src="../images/casestudies/roadrunner-thumb.png" alt="Road Runner Sports Challenge">
+                <div class="challenge-image-badge">Running Specialist</div>
+            </div>
+            <div class="challenge-cards">
+                <div class="challenge-card">
+                    <h3><span class="card-number">1</span> Slow Search</h3>
+                    <p>Timeouts and slowdowns during peak traffic killed conversion rates</p>
                 </div>
-                <div class="challenge-content">
-                    <h2>The Challenge</h2>
-                    <ul>
-                        <li><strong>Slow Search:</strong> Timeouts and slowdowns during peak traffic killed conversion rates.</li>
-                        <li><strong>Poor Relevancy:</strong> Customers couldn't find what they needed; generic results frustrated shoppers.</li>
-                        <li><strong>No Personalization:</strong> Legacy system delivered one-size-fits-all experience, missing upsell and engagement opportunities.</li>
-                    </ul>
+                <div class="challenge-card">
+                    <h3><span class="card-number">2</span> Poor Relevancy</h3>
+                    <p>Customers couldn't find what they needed with generic results</p>
+                </div>
+                <div class="challenge-card">
+                    <h3><span class="card-number">3</span> No Personalization</h3>
+                    <p>Legacy system delivered one-size-fits-all experience missing upsell opportunities</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solution Section -->
-    <section class="section white">
-        <div class="container">
-            <h2>The Solution</h2>
-            <p>NULogic deployed <strong>Bloomreach Discovery AI</strong> on a composable commerce architecture. Three core pillars drove transformation:</p>
-            <ul>
-                <li><strong>AI-Powered Search Engine:</strong> Configured advanced algorithms and ranking optimization for lightning-fast, accurate product discovery—even with complex filters during peak traffic.</li>
-                <li><strong>Real-Time Personalization:</strong> Deployed dynamic recommendation engine that segments customers by behavior and preferences, delivering tailored experiences that drive conversions.</li>
-                <li><strong>Data & Infrastructure:</strong> Migrated and optimized the full product catalog, integrated with existing systems, and implemented rigorous testing (integration, regression, performance, load) with continuous monitoring post-launch.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Results Section -->
-    <section class="section gray">
-        <div class="container">
-            <h2>The Results</h2>
-
-            <div style="margin-top: 40px;">
-                <h3>Lightning-Fast Search</h3>
-                <p>Zero timeout issues. Complex filters execute in milliseconds, even during peak traffic surges.</p>
-
-                <h3>Precision Discovery</h3>
-                <p>AI-driven matching increased search accuracy and relevancy, helping customers find the right shoes first time.</p>
-
-                <h3>Revenue Growth</h3>
-                <p>Personalized recommendations and improved search relevancy boosted conversion rates and average order value across all customer segments.</p>
-
-                <h3>Reduced Support Load</h3>
-                <p>Streamlined product discovery cut customer service inquiries, improved satisfaction scores, and revealed high-value behavior insights.</p>
+    <section class="solution-section">
+        <div class="solution-container">
+            <div class="solution-header">
+                <h2>The Solution</h2>
+                <p>Bloomreach Discovery AI on a composable commerce architecture.</p>
+            </div>
+            <div class="solution-pillars">
+                <div class="solution-pillar">
+                    <div class="pillar-number">1</div>
+                    <h3>AI-Powered Search</h3>
+                    <p>Configured <strong>advanced algorithms</strong> and ranking optimization for lightning-fast
+                        product discovery even during peak traffic.</p>
+                </div>
+                <div class="solution-pillar">
+                    <div class="pillar-number">2</div>
+                    <h3>Real-Time Personalization</h3>
+                    <p><strong>Dynamic recommendation engine</strong> segmenting customers by behavior to drive
+                        conversions.</p>
+                </div>
+                <div class="solution-pillar">
+                    <div class="pillar-number">3</div>
+                    <h3>Data & Infrastructure</h3>
+                    <p>Migrated full product catalog, integrated systems, and implemented rigorous load testing.</p>
+                </div>
+            </div>
+            <div class="devices-showcase">
+                <img src="../images/casestudies/roadrunner-laptop.png" alt="Road Runner Desktop" class="device-laptop">
+                <img src="../images/casestudies/roadrunner-mobile.png" alt="Road Runner Mobile" class="device-mobile">
             </div>
         </div>
     </section>
 
-    <!-- Services & Technologies Section -->
-    <section class="section gray services-section">
-        <div class="container">
-            <h2>Services & Technologies</h2>
-
-            <h4>Services Delivered</h4>
-            <div class="services-tags">
-                <span class="tag">Architecture Design</span>
-                <span class="tag">eCommerce Development (Integration, Frontend)</span>
-                <span class="tag">Integration Services</span>
-                <span class="tag">DevOps</span>
-                <span class="tag">QA and Load Testing</span>
+    <section class="results-section">
+        <div class="results-container">
+            <div class="results-header">
+                <h2>Results</h2>
             </div>
-
-            <h4>Technology Stack</h4>
-            <div class="services-tags">
-                <span class="tag">Bloomreach Discovery</span>
-                <span class="tag">AWS</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">React</span>
-                <span class="tag">Spring Boot</span>
-                <span class="tag">Oracle</span>
+            <div class="results-list">
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Lightning-Fast Search</h3>
+                        <p>Zero timeout issues executing in milliseconds</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Precision Discovery</h3>
+                        <p>AI-driven matching increased search accuracy</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Revenue Growth</h3>
+                        <p>Personalized recommendations boosted conversion rates</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Reduced Support Load</h3>
+                        <p>Streamlined discovery cut service inquiries</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="services-section">
+        <div class="services-container">
+            <div class="services-header">
+                <h2>Services Delivered</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" />
+                        </svg></div>
+                    <h3>Architecture Design</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg></div>
+                    <h3>eCommerce Development</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                        </svg></div>
+                    <h3>DevOps</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="technologies-section">
+        <div class="technologies-container">
+            <div class="technologies-header">
+                <h2>Technologies</h2>
+            </div>
+            <div class="tech-category">
+                <div class="tech-category-title">
+                    <h3>Engineering Stack</h3>
+                </div>
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-card"><span class="tech-name">Bloomreach</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">AWS</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">Node.js</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">React</span></div>
+                </div>
+            </div>
+            <div class="tech-category">
+                <div class="tech-category-title">
+                    <h3>Platform</h3>
+                </div>
+                <div class="tech-partners-grid">
+                    <div class="tech-partner-card">
+                        <div class="partner-badge">O</div>
+                        <div class="partner-info"><span class="partner-name">Oracle</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cs-cta">
         <div class="container">
             <h2>Your search transformation starts here.</h2>
             <p><strong>AI-powered discovery.</strong> Faster conversions. Higher revenue.</p>
-            <a href="../contact.html" class="cta-button">Let's Talk →</a>
+            <a href="../contact.html" class="cs-cta-button">Let's Talk →</a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="../services.html">All Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Platforms</h4>
-                    <ul>
-                        <li><a href="../platforms.html">All Platforms</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../work.html">Work</a></li>
-                        <li><a href="../partners.html">Partners</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NULogic. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer></footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/footer.js"></script>
 </body>
+
 </html>

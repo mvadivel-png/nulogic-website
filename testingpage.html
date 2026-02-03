@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/icons/favicon.png">
+    <title>Sephora Case Study | Digital Transformation With NULogic | NULogic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/casestudy-responsive.css">
+    <style>
+        /* Case Study Specific Styles - Matching sephora.html */
+        .case-study-hero {
+            background-color: black;
+            background-image: url('images/casestudies/sephora-banner.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 0;
+            position: relative;
+            overflow: visible;
+        }
+
+        .hero-content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+            position: relative;
+        }
+
+        .case-study-label {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        .case-study-title {
+            color: #ffffff;
+            font-size: 32px;
+            line-height: 1.3;
+            font-weight: 600;
+            margin-bottom: 16px;
+            max-width: 450px;
+            font-family: 'Inter', sans-serif;
+            font-style: italic;
+        }
+
+        .case-study-intro {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 500px;
+        }
+
+        /* Rounded Logo positioned at bottom-left of banner, overlapping */
+        .hero-logo-circle {
+            position: absolute;
+            bottom: -50px;
+            left: 40px;
+            width: 120px;
+            height: 120px;
+            background: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            z-index: 10;
+        }
+
+        .hero-logo-circle img {
+            max-width: 80px;
+            height: auto;
+        }
+
+        /* Client Info Grid - adjusted for logo overlap */
+        .client-info-section {
+            background: #F9F9F9;
+            padding: 70px 40px 40px 40px;
+            margin-top: 0;
+        }
+
+        .client-info-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            flex-wrap: wrap;
+            padding-left: 160px;
+        }
+
+        .client-info-grid {
+            flex: 1;
+            display: flex;
+            gap: 40px;
+        }
+
+        .client-info-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .client-info-label {
+            color: #e53935;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .client-info-value {
+            color: #2B2B2B;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .client-info-value a {
+            color: #1976d2;
+            text-decoration: none;
+        }
+
+        .client-info-value a:hover {
+            text-decoration: underline;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 80px 40px;
+        }
+
+        .content-section.gray-bg {
+            background: #F9F9F9;
+        }
+
+        .content-section.white-bg {
+            background: #ffffff;
+        }
+
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-wrapper-narrow {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            color: #2B2B2B;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+
+        .section-text {
+            color: #424242;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Design - Tablet */
+        @media (max-width: 968px) {
+            .client-info-grid {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .client-info-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-left: 0;
+                padding-top: 80px;
+            }
+
+            .hero-logo-circle {
+                left: 20px;
+            }
+
+            .case-study-title {
+                font-size: 28px;
+            }
+        }
+
+        /* Mobile Design */
+        @media (max-width: 768px) {
+            .hero-content-wrapper {
+                padding: 60px 20px;
+            }
+
+            .case-study-title {
+                font-size: 24px;
+                max-width: 60%;
+            }
+
+            .case-study-intro {
+                font-size: 16px;
+                max-width: 60%;
+            }
+
+            .hero-logo-circle {
+                width: 100px;
+                height: 100px;
+                bottom: -40px;
+                left: 20px;
+            }
+
+            .hero-logo-circle img {
+                max-width: 65px;
+            }
+
+            .client-info-section {
+                padding: 60px 20px 30px 20px;
+            }
+
+            .client-info-wrapper {
+                padding-top: 60px;
+            }
+        }
+
+        /* Small mobile screens */
+        @media (max-width: 480px) {
+            .hero-content-wrapper {
+                padding: 50px 16px;
+            }
+
+            .case-study-title {
+                font-size: 20px;
+            }
+
+            .case-study-intro {
+                font-size: 14px;
+            }
+
+            .hero-logo-circle {
+                width: 80px;
+                height: 80px;
+                bottom: -35px;
+                left: 16px;
+            }
+
+            .hero-logo-circle img {
+                max-width: 55px;
+            }
+
+            .client-info-wrapper {
+                padding-top: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><img src="images/nulogic-logo.svg" alt="NULogic"
+                        style="height: 50px;"></a>
+                <ul class="nav-links">
+                    <li class="nav-item-with-dropdown">
+                        <a href="services.html">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="commerce-build.html">Commerce Services</a></li>
+                            <li><a href="services.html#cloud">Cloud Infrastructure</a></li>
+                            <li><a href="services.html#data-ai">Data and AI Orchestration</a></li>
+                            <li><a href="services.html#enterprise">Enterprise Integration</a></li>
+                            <li><a href="services.html#experience">Experience Design</a></li>
+                            <li><a href="services.html#support">24/7 Run & Support</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item-with-dropdown">
+                        <a href="platforms.html">Platforms</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="platforms.html#sfcc">Salesforce Commerce</a></li>
+                            <li><a href="platforms.html#commercetools">Commercetools</a></li>
+                            <li><a href="platforms.html#shopify">Shopify Plus</a></li>
+                            <li><a href="platforms.html#magento">Adobe Commerce (Magento)</a></li>
+                            <li><a href="platforms.html#shopware">Shopware</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="partners.html">Partners</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="nav-item-with-dropdown">
+                        <a href="#">EN</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html">English</a></li>
+                            <li><a href="es/index.html">Español</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="btn btn-primary bookcall">Contact Us</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Rounded Logo Overlay -->
+    <section class="case-study-hero">
+        <div class="hero-content-wrapper">
+            <div class="case-study-label">Case Study</div>
+            <h1 class="case-study-title">Beauty's Digital Powerhouse: Unified Commerce at Scale</h1>
+            <p class="case-study-intro">Leading prestige beauty retailer. 2,700+ global stores. One unified commerce
+                platform.</p>
+            <!-- Rounded Logo at bottom-left of banner -->
+            <div class="hero-logo-circle">
+                <img src="images/casestudies/sephora-logo.svg" alt="Sephora">
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Info Section -->
+    <section class="client-info-section">
+        <div class="client-info-wrapper">
+            <div class="client-info-grid">
+                <div class="client-info-item">
+                    <div class="client-info-label">Region:</div>
+                    <div class="client-info-value">U.S.</div>
+                </div>
+                <div class="client-info-item">
+                    <div class="client-info-label">Website:</div>
+                    <div class="client-info-value"><a href="https://www.sephora.com" target="_blank"
+                            rel="noopener">www.sephora.com</a></div>
+                </div>
+                <div class="client-info-item">
+                    <div class="client-info-label">Client Since:</div>
+                    <div class="client-info-value">2022</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placeholder Content Section -->
+    <section class="content-section white-bg">
+        <div class="content-wrapper-narrow">
+            <h2 class="section-title">Testing Page Content</h2>
+            <p class="section-text">This is a testing page with the top banner matching the provided screenshot design.
+                The banner features the rounded Sephora logo overlapping at the bottom-left of the hero section.</p>
+            <p class="section-text">The page uses the existing header and footer components from the NULogic website,
+                along with the standard CSS styling.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer></footer>
+    <script src="js/script.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+
+</html>

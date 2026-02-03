@@ -1,413 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leslie's Case Study | NULogic Boosts Leslie's Digital Experience | NULogic</title>
-    <meta name="description" content="NULogic transformed Leslie's digital experience by boosting website speed from 48 to 85+ Lighthouse score, optimizing mobile performance, and driving 150% YoY growth in service bookings.">
+    <link rel="icon" type="image/png" href="../images/icons/favicon.png">
+    <title>Leslie's Case Study | Digital Experience Transformation | NULogic</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/casestudy-responsive.css">
-    <style>
-        :root {
-            --color-text-primary: #2B2B2B;
-            --color-text-secondary: #424242;
-            --color-purple: #89389f;
-            --color-red: #ed2925;
-            --color-bg-gray: #F9F9F9;
-            --color-border-gray: #D9D9D9;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--color-text-primary);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-
-        .case-study-hero {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .case-study-hero img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .case-study-title {
-            padding: 60px 0 40px;
-            background: white;
-        }
-
-        .case-study-title h1 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 48px;
-            font-weight: 700;
-            line-height: 1.2;
-            color: var(--color-text-primary);
-            margin: 0 0 24px 0;
-            max-width: 1000px;
-        }
-
-        .client-logo {
-            margin-bottom: 32px;
-        }
-
-        .client-logo img {
-            height: 60px;
-            width: auto;
-        }
-
-        .client-info-grid {
-            background: var(--color-bg-gray);
-            padding: 48px 0;
-        }
-
-        .client-info-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 48px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .client-info-item {
-            text-align: left;
-        }
-
-        .client-info-label {
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: var(--color-text-secondary);
-            margin-bottom: 12px;
-        }
-
-        .client-info-value {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--color-text-primary);
-        }
-
-        .client-info-value a {
-            color: var(--color-purple);
-            text-decoration: none;
-        }
-
-        .client-info-value a:hover {
-            text-decoration: underline;
-        }
-
-        .content-section {
-            padding: 80px 0;
-        }
-
-        .content-section.gray-bg {
-            background: var(--color-bg-gray);
-        }
-
-        .content-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .content-container h2 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 42px;
-            font-weight: 700;
-            color: var(--color-text-primary);
-            margin: 0 0 24px 0;
-            line-height: 1.2;
-        }
-
-        .content-container h3 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--color-text-primary);
-            margin: 48px 0 24px 0;
-            line-height: 1.2;
-        }
-
-        .content-container h4 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--color-text-primary);
-            margin: 32px 0 16px 0;
-            line-height: 1.2;
-        }
-
-        .content-container p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: var(--color-text-primary);
-            margin: 0 0 20px 0;
-        }
-
-        .content-container ul {
-            list-style: none;
-            padding: 0;
-            margin: 24px 0;
-        }
-
-        .content-container ul li {
-            font-size: 18px;
-            line-height: 1.8;
-            color: var(--color-text-primary);
-            margin-bottom: 16px;
-            padding-left: 32px;
-            position: relative;
-        }
-
-        .content-container ul li:before {
-            content: "•";
-            color: var(--color-purple);
-            font-weight: bold;
-            font-size: 24px;
-            position: absolute;
-            left: 8px;
-            top: -2px;
-        }
-
-        .challenge-section {
-            padding: 80px 0;
-            background: var(--color-bg-gray);
-        }
-
-        .challenge-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .challenge-quote {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 36px;
-            font-weight: 700;
-            line-height: 1.3;
-            color: var(--color-text-primary);
-            margin: 0 0 48px 0;
-            max-width: 900px;
-        }
-
-        .challenge-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
-            align-items: center;
-        }
-
-        .challenge-image {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .challenge-text h3 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--color-text-primary);
-            margin: 0 0 24px 0;
-        }
-
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 32px;
-            margin-top: 48px;
-        }
-
-        .result-card {
-            background: white;
-            padding: 32px;
-            border-radius: 8px;
-            border-left: 4px solid var(--color-purple);
-        }
-
-        .result-card h3 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 48px;
-            font-weight: 700;
-            color: var(--color-purple);
-            margin: 0 0 12px 0;
-            line-height: 1.1;
-        }
-
-        .result-card .result-title {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--color-text-primary);
-            margin: 0 0 8px 0;
-        }
-
-        .result-card .result-description {
-            font-size: 16px;
-            color: var(--color-text-secondary);
-            margin: 0;
-            line-height: 1.6;
-        }
-
-
-        .device-mockups {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            gap: 32px;
-            margin: 64px 0;
-            flex-wrap: wrap;
-        }
-
-        .device-mockups img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .device-mockups .desktop {
-            max-height: 300px;
-        }
-
-        .device-mockups .laptop {
-            max-height: 250px;
-        }
-
-        .device-mockups .mobile {
-            max-height: 350px;
-        }
-
-        .services-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-            margin-top: 32px;
-        }
-
-        .service-item {
-            font-size: 18px;
-            font-weight: 500;
-            color: var(--color-text-primary);
-            padding: 16px 0;
-            border-bottom: 1px solid var(--color-border-gray);
-        }
-
-        .tech-category {
-            margin-top: 48px;
-        }
-
-        .tech-category h3 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--color-text-primary);
-            margin: 0 0 24px 0;
-        }
-
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .tech-tag {
-            background: white;
-            color: var(--color-text-primary);
-            padding: 12px 24px;
-            border-radius: 24px;
-            font-size: 16px;
-            font-weight: 500;
-            border: 1px solid var(--color-border-gray);
-        }
-
-        .cta-section {
-            padding: 80px 0;
-            background: linear-gradient(96deg, var(--color-purple), var(--color-red));
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 48px;
-            font-weight: 700;
-            color: white;
-            margin: 0 0 24px 0;
-        }
-
-        .cta-section p {
-            font-size: 20px;
-            color: rgba(255,255,255,0.95);
-            margin: 0 0 32px 0;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 16px 48px;
-            background: white;
-            color: var(--color-purple);
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 600;
-            border-radius: 4px;
-            transition: transform 0.2s;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-        }
-
-        @media (max-width: 768px) {
-            .case-study-title h1 {
-                font-size: 36px;
-            }
-
-            .client-info-container {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .challenge-content {
-                grid-template-columns: 1fr;
-            }
-
-            .results-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .content-container h2 {
-                font-size: 36px;
-            }
-
-            .content-container h3 {
-                font-size: 28px;
-            }
-
-            .cta-section h2 {
-                font-size: 36px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/casestudy.css">
 </head>
+
 <body>
-    <!-- Header Navigation -->
     <header>
         <div class="container">
             <nav>
-                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic" style="height: 32px;"></a>
+                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic"
+                        style="height: 32px;"></a>
                 <ul class="nav-links">
-                    <li class="nav-item-with-dropdown">
-                        <a href="../services.html">Services</a>
+                    <li class="nav-item-with-dropdown"><a href="../services.html">Services</a>
                         <ul class="dropdown-menu">
                             <li><a href="../commerce-build.html">Commerce Services</a></li>
                             <li><a href="../services.html#support">24/7 Run & Support</a></li>
@@ -415,8 +31,7 @@
                             <li><a href="../services.html#data-ai">Data, AI & Analytics</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="../platforms.html">Platforms</a>
+                    <li class="nav-item-with-dropdown"><a href="../platforms.html">Platforms</a>
                         <ul class="dropdown-menu">
                             <li><a href="../platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
                             <li><a href="../platforms.html#shopify">Shopify Plus</a></li>
@@ -428,8 +43,7 @@
                     <li><a href="../work.html">Work</a></li>
                     <li><a href="../partners.html">Partners</a></li>
                     <li><a href="../about.html">About</a></li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="#">EN</a>
+                    <li class="nav-item-with-dropdown"><a href="#">EN</a>
                         <ul class="dropdown-menu">
                             <li><a href="leslies.html">English</a></li>
                             <li><a href="../es/work/leslies.html">Español</a></li>
@@ -441,222 +55,228 @@
         </div>
     </header>
 
-    <!-- Hero Banner -->
     <section class="case-study-hero">
-        <img src="../images/casestudies/leslies-hero.png" alt="Leslie's Pool Supplies - Mobile Banner">
-    </section>
-
-    <!-- Title Section with Logo -->
-    <section class="case-study-title">
-        <div class="content-container">
-            <div class="client-logo">
-                <img src="../images/casestudies/leslies-logo.png" alt="Leslie's Pool Supplies Logo">
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <div class="case-study-label">Case Study</div>
+                <h1 class="case-study-title">Speed, Scale, and Seamless Experience</h1>
+                <p class="case-study-intro">America's largest pool and spa retailer. 1,000+ stores. One digital platform
+                    serving millions.</p>
+                <div class="hero-logo-circle"><img src="../images/casestudies/leslies-logo.png" alt="Leslie's"></div>
             </div>
-            <h1>Transforming Leslie's Pool & Spa Ecosystem with Speed, Scale, and Seamless Experience</h1>
+            <div class="hero-image-container"><img src="../images/casestudies/leslies-hero.png" alt="Leslie's"></div>
         </div>
     </section>
 
-    <!-- Client Info Grid -->
-    <section class="client-info-grid">
-        <div class="client-info-container">
-            <div class="client-info-item">
-                <div class="client-info-label">Region</div>
-                <div class="client-info-value">U.S.</div>
-            </div>
-            <div class="client-info-item">
-                <div class="client-info-label">Website</div>
-                <div class="client-info-value"><a href="https://www.lesliespool.com" target="_blank" rel="noopener">https://www.lesliespool.com</a></div>
-            </div>
-            <div class="client-info-item">
-                <div class="client-info-label">Client Since</div>
-                <div class="client-info-value">2023</div>
+    <section class="client-info-section">
+        <div class="client-info-wrapper">
+            <div class="client-info-grid">
+                <div class="client-info-item">
+                    <div class="client-info-label">Region</div>
+                    <div class="client-info-value">U.S.</div>
+                </div>
+                <div class="client-info-item">
+                    <div class="client-info-label">Website</div>
+                    <div class="client-info-value"><a href="https://www.lesliespool.com" target="_blank"
+                            rel="noopener">www.lesliespool.com</a></div>
+                </div>
+                <div class="client-info-item">
+                    <div class="client-info-label">Client Since</div>
+                    <div class="client-info-value">2023</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Client Overview -->
-    <section class="content-section">
-        <div class="content-container">
-            <h2>Client Overview</h2>
-            <p>America's largest pool and spa retailer. 1,000+ stores. 60+ years of expertise. One digital platform serving millions of residential and commercial customers.</p>
-        </div>
-    </section>
-
-    <!-- Challenge Section -->
     <section class="challenge-section">
+        <div class="challenge-header">
+            <h2>The <span>Challenge</span></h2>
+            <p>Legacy platform buckling under peak traffic. Slow load times killing conversions. Fragmented loyalty
+                experience.</p>
+        </div>
         <div class="challenge-container">
-            <div class="challenge-quote">
-                The Challenge: A legacy platform buckling under peak traffic, slow load times killing conversions, and a fragmented loyalty experience bleeding customers.
+            <div class="challenge-image-wrapper">
+                <img src="../images/casestudies/leslies-challenge.png" alt="Leslie's Challenge">
+                <div class="challenge-image-badge">1,000+ Stores</div>
             </div>
-            <div class="challenge-content">
-                <div>
-                    <img src="../images/casestudies/leslies-challenge.png" alt="Leslie's Challenge" class="challenge-image">
+            <div class="challenge-cards">
+                <div class="challenge-card">
+                    <h3><span class="card-number">1</span> Performance Crisis</h3>
+                    <p>Lighthouse scores below 50. API latency crushing mobile experience.</p>
                 </div>
-                <div class="challenge-text">
-                    <h3>What We Solved:</h3>
-                    <ul>
-                        <li><strong>Performance Crisis:</strong> Lighthouse scores below 50, bloated code bundles, API latency crushing mobile experience</li>
-                        <li><strong>Platform Instability:</strong> Salesforce Commerce Cloud scalability failures during peak season, fragile integrations causing downtime</li>
-                        <li><strong>Broken Customer Journey:</strong> Disjointed loyalty program, checkout friction, service booking chaos</li>
-                    </ul>
+                <div class="challenge-card">
+                    <h3><span class="card-number">2</span> Instability</h3>
+                    <p>Scalability failures during peak season and fragile integrations</p>
+                </div>
+                <div class="challenge-card">
+                    <h3><span class="card-number">3</span> Broken Journey</h3>
+                    <p>Disjointed loyalty program and friction in checkout flow</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solution-section">
+        <div class="solution-container">
+            <div class="solution-header">
+                <h2>The Solution</h2>
+                <p>Speed engineering and customer experience transformation.</p>
+            </div>
+            <div class="solution-pillars">
+                <div class="solution-pillar">
+                    <div class="pillar-number">1</div>
+                    <h3>Speed & Scale</h3>
+                    <p>Refactored SFCC controllers and slashed latency. lighthouse scores surged to 85+.</p>
+                </div>
+                <div class="solution-pillar">
+                    <div class="pillar-number">2</div>
+                    <h3>CX Transformation</h3>
+                    <p><strong>Loyalty 2.0</strong> with tiered rewards and dynamic service booking portal.</p>
+                </div>
+                <div class="solution-pillar">
+                    <div class="pillar-number">3</div>
+                    <h3>Ops Excellence</h3>
+                    <p><strong>24/7 monitoring</strong> with Dynatrace RUM and &lt;15-minute resolution SLAs.</p>
+                </div>
+            </div>
+            <div class="devices-showcase">
+                <img src="../images/casestudies/leslies-laptop.png" alt="Leslie's Desktop" class="device-laptop">
+                <img src="../images/casestudies/leslies-mobile.png" alt="Leslie's Mobile" class="device-mobile">
+            </div>
+        </div>
+    </section>
+
+    <section class="results-section">
+        <div class="results-container">
+            <div class="results-header">
+                <h2>Results</h2>
+            </div>
+            <div class="results-list">
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>85+ Lighthouse</h3>
+                        <p>Dramatically improved speed from 48 to 85+</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>+150% Bookings</h3>
+                        <p>Service bookings grew year-over-year</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>0 Peak Outages</h3>
+                        <p>Zero downtime during summer season</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>&lt;15min Resolution</h3>
+                        <p>Rapid response with 24/7 monitoring</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solution Section -->
-    <section class="content-section">
-        <div class="content-container">
-            <h2>How We Did It</h2>
-
-            <h3>1. Speed & Scalability Engineering</h3>
-            <p>Rebuilt the foundation for peak performance.</p>
-            <ul>
-                <li>Refactored Salesforce Commerce Cloud controllers, slashed API latency, compressed bundles</li>
-                <li>Lighthouse mobile scores surged from sub-50 to 85+ through surgical code optimization</li>
-                <li>Rebuilt Boomi integrations for zero-downtime stability during traffic spikes</li>
-                <li>Deployed advanced eCDN caching eliminating render-blocking bottlenecks</li>
-            </ul>
-
-            <h3>2. Customer Experience Transformation</h3>
-            <p>Redesigned every touchpoint for conversion and retention.</p>
-            <ul>
-                <li><strong>Loyalty 2.0:</strong> Flat points → tiered rewards with real-time tracking and redemption</li>
-                <li><strong>Service Portal:</strong> Dynamic appointment booking with Accruent integration via Boomi APIs</li>
-                <li><strong>Checkout Redesign:</strong> Complete frontend/backend overhaul with GA4 cookieless tracking</li>
-                <li><strong>Mobile-First UX:</strong> Streamlined SFCC-Boomi-Mobile data flows for seamless cross-platform experiences</li>
-            </ul>
-
-            <h3>3. Enterprise-Grade Operations</h3>
-            <p>24/7 monitoring and rapid-response infrastructure.</p>
-            <ul>
-                <li><strong>Dynatrace RUM:</strong> Real-time behavioral mapping of every customer journey</li>
-                <li><strong>Opsgenie + JIRA:</strong> &lt;15-minute resolution SLAs with instant engineering escalation</li>
-                <li><strong>Multi-Platform Monitoring:</strong> SFCC, Boomi, Manhattan OMS unified observability</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Results Section -->
-    <section class="content-section gray-bg">
-        <div class="content-container">
-            <h2>The Impact</h2>
-            <div class="results-grid">
-                <div class="result-card">
-                    <h3>85+</h3>
-                    <div class="result-title">Lighthouse Score</div>
-                    <div class="result-description">From 48 to 85+ — blazing fast mobile experience</div>
-                </div>
-                <div class="result-card">
-                    <h3>+150%</h3>
-                    <div class="result-title">Service Bookings</div>
-                    <div class="result-description">Year-over-year growth through optimized portal</div>
-                </div>
-                <div class="result-card">
-                    <h3>0</h3>
-                    <div class="result-title">Peak Outages</div>
-                    <div class="result-description">Zero downtime during 2024 summer season</div>
-                </div>
-                <div class="result-card">
-                    <h3>&lt;15min</h3>
-                    <div class="result-title">Issue Resolution</div>
-                    <div class="result-description">SLA-driven rapid response with 24/7 monitoring</div>
-                </div>
+    <section class="services-section">
+        <div class="services-container">
+            <div class="services-header">
+                <h2>Services Delivered</h2>
             </div>
-
-            <!-- Device Mockups -->
-            <div class="device-mockups">
-                <img src="../images/casestudies/leslies-desktop.png" alt="Leslie's Desktop View" class="desktop">
-                <img src="../images/casestudies/leslies-laptop.png" alt="Leslie's Laptop View" class="laptop">
-                <img src="../images/casestudies/leslies-mobile.png" alt="Leslie's Mobile View" class="mobile">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg></div>
+                    <h3>eCommerce Development</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" />
+                        </svg></div>
+                    <h3>Performance Engineering</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M6 2v6h.01L6 8.01 10 12l-4 4 .01.01H6V22h12v-5.99h-.01L18 16l-4-4 4-3.99-.01-.01H18V2H6z" />
+                        </svg></div>
+                    <h3>Integration Services</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
+                        </svg></div>
+                    <h3>Monitoring & Support</h3>
+                </div>
             </div>
         </div>
     </section>
 
-
-    <!-- Services Delivered -->
-    <section class="content-section gray-bg">
-        <div class="content-container">
-            <h2>Services Delivered</h2>
-            <div class="services-list">
-                <div class="service-item">eCommerce Development (SFCC)</div>
-                <div class="service-item">Performance Engineering</div>
-                <div class="service-item">Integration Services</div>
-                <div class="service-item">User Experience and Design</div>
-                <div class="service-item">QA & Testing Automation</div>
-                <div class="service-item">Monitoring and Support Operations</div>
+    <section class="technologies-section">
+        <div class="technologies-container">
+            <div class="technologies-header">
+                <h2>Technologies</h2>
             </div>
-        </div>
-    </section>
-
-    <!-- Technologies -->
-    <section class="content-section">
-        <div class="content-container">
-            <h2>Technology Stack</h2>
-
             <div class="tech-category">
-                <h3>Engineering Stack</h3>
-                <div class="tech-tags">
-                    <span class="tech-tag">HTML5</span>
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">CSS3</span>
-                    <span class="tech-tag">jQuery</span>
-                    <span class="tech-tag">Dynatrace</span>
-                    <span class="tech-tag">Elastic</span>
-                    <span class="tech-tag">Opsgenie</span>
+                <div class="tech-category-title">
+                    <h3>Engineering Stack</h3>
+                </div>
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-card"><span class="tech-name">Dynatrace</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">Elastic</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">Opsgenie</span></div>
                 </div>
             </div>
-
             <div class="tech-category">
-                <h3>Partner Integrations</h3>
-                <div class="tech-tags">
-                    <span class="tech-tag">Salesforce Commerce Cloud</span>
-                    <span class="tech-tag">Boomi</span>
-                    <span class="tech-tag">Manhattan OMS</span>
+                <div class="tech-category-title">
+                    <h3>Partners</h3>
+                </div>
+                <div class="tech-partners-grid">
+                    <div class="tech-partner-card">
+                        <div class="partner-badge">S</div>
+                        <div class="partner-info"><span class="partner-name">Salesforce Commerce</span></div>
+                    </div>
+                    <div class="tech-partner-card">
+                        <div class="partner-badge">B</div>
+                        <div class="partner-info"><span class="partner-name">Boomi</span></div>
+                    </div>
+                    <div class="tech-partner-card">
+                        <div class="partner-badge">M</div>
+                        <div class="partner-info"><span class="partner-name">Manhattan OMS</span></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="content-container">
-            <h2>Your Platform Can Do Better</h2>
-            <p>85+ Lighthouse scores. Zero peak outages. Triple-digit growth. Let's make it happen.</p>
-            <a href="../contact.html" class="cta-button">Let's Talk →</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
+    <section class="cs-cta">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="../services.html">All Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Platforms</h4>
-                    <ul>
-                        <li><a href="../platforms.html">All Platforms</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../work.html">Work</a></li>
-                        <li><a href="../partners.html">Partners</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NULogic. All rights reserved.</p>
-            </div>
+            <h2>Your Platform Can Do Better</h2>
+            <p><strong>85+ Lighthouse scores. Zero peak outages.</strong> Let's make it happen for your business.</p>
+            <a href="../contact.html" class="cs-cta-button">Let's Talk →</a>
         </div>
-    </footer>
+    </section>
+
+    <footer></footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/footer.js"></script>
 </body>
+
 </html>

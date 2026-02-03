@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact NULogic | Commerce Engineering & Managed Services</title>
     <meta name="description" content="Get in touch with NULogic to discuss commerce implementation, 24/7 support, performance engineering, or platform strategy. Schedule a call or request an assessment.">
-
+    <link rel="icon" type="image/png" href="images/icons/favicon.png">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,7 +79,16 @@
                 <p>Fill out the form below and we'll get back to you within 24 hours.</p>
             </div>
 
-            <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div id="form-success" style="display:none; padding: 32px; background: #e8f5e9; border-radius: 8px; text-align: center; margin-bottom: 24px;">
+                <h3 style="color: #2e7d32; margin-bottom: 8px;">Thank you!</h3>
+                <p style="color: #2e7d32;">Your message has been sent successfully. We'll get back to you within 24 hours.</p>
+            </div>
+
+            <div id="form-error" style="display:none; padding: 16px; background: #fbe9e7; border-radius: 8px; text-align: center; margin-bottom: 24px;">
+                <p style="color: #c62828; margin: 0;">Something went wrong. Please try again or email us directly.</p>
+            </div>
+
+            <form id="contact-form" action="https://formspree.io/f/mdadpgzy" method="POST">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="firstName">First Name *</label>
@@ -219,48 +228,43 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="services-commerce.html">Commerce Services</a></li>
-                        <li><a href="services-24x7.html">24/7 Run & Support</a></li>
-                        <li><a href="services-cloud.html">Cloud, Performance & Reliability</a></li>
-                        <li><a href="services-data.html">Data, AI & Analytics</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Platforms</h4>
-                    <ul>
-                        <li><a href="platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
-                        <li><a href="platforms.html#shopify">Shopify Plus</a></li>
-                        <li><a href="platforms.html#commercetools">commercetools</a></li>
-                        <li><a href="platforms.html#shopware">Shopware</a></li>
-                        <li><a href="platforms.html#magento">Magento</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="work.html">Work</a></li>
-                        <li><a href="partners.html">Partners</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-               <div class="footer-bottom">
-                <p>&copy; <span id="year"></span> NULogic. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer></footer>
      <script src="js/script.js"></script>
-    <script>
-        // Set current year in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+     <script src="js/footer.js"></script>
+     <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var form = this;
+            var submitBtn = form.querySelector('button[type="submit"]');
+            var successMsg = document.getElementById('form-success');
+            var errorMsg = document.getElementById('form-error');
+
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            }).then(function(response) {
+                if (response.ok) {
+                    successMsg.style.display = 'block';
+                    form.reset();
+                    form.style.display = 'none';
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            }).catch(function() {
+                errorMsg.style.display = 'block';
+            }).finally(function() {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit';
+            });
+        });
+     </script>
+
 </body>
 </html>
 

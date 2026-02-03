@@ -1,374 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/icons/favicon.png">
     <title>Rivoli Group Case Study | Managed Services for Commerce | NULogic</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/casestudy-responsive.css">
-    <style>
-        /* Case Study Specific Styles */
-        .case-study-hero {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            overflow: hidden;
-            background-color: #2B2B2B;
-        }
-
-        .case-study-hero img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .case-study-title {
-            padding: 60px 0 40px;
-            background: white;
-        }
-
-        .case-study-title .container-narrow {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .client-logo {
-            max-width: 200px;
-            height: auto;
-            margin-bottom: 32px;
-        }
-
-        .case-study-title h1 {
-            font-size: 48px;
-            font-weight: 700;
-            color: #2B2B2B;
-            margin-bottom: 24px;
-            line-height: 1.2;
-        }
-
-        .client-info-grid {
-            background: #F9F9F9;
-            padding: 48px 0;
-        }
-
-        .client-info-grid .grid-3col {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .info-item h3 {
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #89389f;
-            margin-bottom: 12px;
-        }
-
-        .info-item p {
-            font-size: 18px;
-            font-weight: 500;
-            color: #2B2B2B;
-            margin: 0;
-        }
-
-        .info-item a {
-            color: #2B2B2B;
-            text-decoration: none;
-        }
-
-        .info-item a:hover {
-            color: #89389f;
-        }
-
-        .section-white {
-            background: white;
-            padding: 80px 0;
-        }
-
-        .section-gray {
-            background: #F9F9F9;
-            padding: 80px 0;
-        }
-
-        .container-narrow {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            font-size: 36px;
-            font-weight: 700;
-            color: #2B2B2B;
-            margin-bottom: 24px;
-            line-height: 1.3;
-        }
-
-        .section-text {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #424242;
-            margin-bottom: 20px;
-        }
-
-        .challenge-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .challenge-image {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .challenge-text h2 {
-            font-size: 36px;
-            font-weight: 700;
-            color: #2B2B2B;
-            margin-bottom: 24px;
-        }
-
-        .challenge-quote {
-            font-size: 20px;
-            line-height: 1.6;
-            color: #424242;
-            font-style: italic;
-            margin-bottom: 24px;
-            padding-left: 24px;
-            border-left: 4px solid #89389f;
-        }
-
-        .solution-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-            margin-top: 48px;
-        }
-
-        .solution-item h3 {
-            font-size: 20px;
-            font-weight: 600;
-            color: #2B2B2B;
-            margin-bottom: 16px;
-        }
-
-        .solution-item ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .solution-item li {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #424242;
-            margin-bottom: 12px;
-            padding-left: 24px;
-            position: relative;
-        }
-
-        .solution-item li:before {
-            content: "•";
-            color: #89389f;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-            font-size: 20px;
-        }
-
-        .device-showcase {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            gap: 20px;
-            margin: 60px 0;
-            position: relative;
-        }
-
-        .device-showcase img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .device-desktop {
-            width: 40%;
-            z-index: 1;
-        }
-
-        .device-laptop {
-            width: 35%;
-            z-index: 2;
-        }
-
-        .device-mobile {
-            width: 15%;
-            z-index: 3;
-        }
-
-        .results-list {
-            list-style: none;
-            padding: 0;
-            margin: 40px 0;
-        }
-
-        .results-list li {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #424242;
-            margin-bottom: 24px;
-            padding-left: 32px;
-            position: relative;
-        }
-
-        .results-list li:before {
-            content: "✓";
-            color: #89389f;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-            font-size: 24px;
-        }
-
-        .results-list strong {
-            color: #2B2B2B;
-            font-weight: 600;
-        }
-
-        .highlights-image {
-            width: 100%;
-            max-width: 1000px;
-            height: auto;
-            margin: 48px auto;
-            display: block;
-            border-radius: 8px;
-        }
-
-        .services-tech-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            margin-top: 48px;
-        }
-
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 16px;
-        }
-
-        .tech-tag {
-            background: white;
-            color: #89389f;
-            padding: 10px 20px;
-            border-radius: 24px;
-            font-size: 14px;
-            font-weight: 500;
-            border: 2px solid #89389f;
-        }
-
-        .cta-section {
-            background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);
-            padding: 80px 0;
-            text-align: center;
-            color: white;
-        }
-
-        .cta-section h2 {
-            font-size: 42px;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 24px;
-        }
-
-        .cta-section p {
-            font-size: 20px;
-            color: rgba(255, 255, 255, 0.95);
-            margin-bottom: 32px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #89389f;
-            padding: 16px 40px;
-            border-radius: 6px;
-            font-size: 18px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        @media (max-width: 768px) {
-            .case-study-hero {
-                height: 300px;
-            }
-
-            .client-info-grid .grid-3col {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
-
-            .challenge-section {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .solution-grid,
-            .services-tech-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .device-showcase {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .device-desktop,
-            .device-laptop,
-            .device-mobile {
-                width: 80%;
-            }
-
-            .case-study-title h1 {
-                font-size: 36px;
-            }
-
-            .section-title {
-                font-size: 28px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/casestudy.css">
 </head>
+
 <body>
     <header>
         <div class="container">
             <nav>
-                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic" style="height: 32px;"></a>
+                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic"
+                        style="height: 32px;"></a>
                 <ul class="nav-links">
-                    <li class="nav-item-with-dropdown">
-                        <a href="../services.html">Services</a>
+                    <li class="nav-item-with-dropdown"><a href="../services.html">Services</a>
                         <ul class="dropdown-menu">
                             <li><a href="../commerce-build.html">Commerce Services</a></li>
                             <li><a href="../services.html#support">24/7 Run & Support</a></li>
@@ -376,8 +31,7 @@
                             <li><a href="../services.html#data-ai">Data, AI & Analytics</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="../platforms.html">Platforms</a>
+                    <li class="nav-item-with-dropdown"><a href="../platforms.html">Platforms</a>
                         <ul class="dropdown-menu">
                             <li><a href="../platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
                             <li><a href="../platforms.html#shopify">Shopify Plus</a></li>
@@ -389,8 +43,7 @@
                     <li><a href="../work.html">Work</a></li>
                     <li><a href="../partners.html">Partners</a></li>
                     <li><a href="../about.html">About</a></li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="#">EN</a>
+                    <li class="nav-item-with-dropdown"><a href="#">EN</a>
                         <ul class="dropdown-menu">
                             <li><a href="rivoli.html">English</a></li>
                             <li><a href="../es/work/rivoli.html">Español</a></li>
@@ -402,206 +55,223 @@
         </div>
     </header>
 
-    <!-- Hero Banner Image -->
-    <div class="case-study-hero">
-        <img src="../images/casestudies/rivoli-hero.png" alt="Rivoli Group - Luxury Retail Excellence">
-    </div>
-
-    <!-- Title Section with Client Logo -->
-    <section class="case-study-title">
-        <div class="container-narrow">
-            <img src="../images/casestudies/rivoli-logo.svg" alt="Rivoli Group Logo" class="client-logo">
-            <h1>Global Luxury Retail at Scale</h1>
+    <section class="case-study-hero">
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <div class="case-study-label">Case Study</div>
+                <h1 class="case-study-title">Global Luxury Retail at Scale</h1>
+                <p class="case-study-intro">EMEA's premier luxury retailer with 220+ stores across UAE, Oman, Qatar, and
+                    Bahrain. Representing 100+ international brands.</p>
+                <div class="hero-logo-circle"><img src="../images/casestudies/rivoli-logo.svg" alt="Rivoli Group"></div>
+            </div>
+            <div class="hero-image-container"><img src="../images/casestudies/rivoli-hero.png" alt="Rivoli Group"></div>
         </div>
     </section>
 
-    <!-- Client Info Grid (3 Columns) -->
-    <section class="client-info-grid">
-        <div class="grid-3col">
-            <div class="info-item">
-                <h3>Region</h3>
-                <p>EMEA</p>
-            </div>
-            <div class="info-item">
-                <h3>Website</h3>
-                <p><a href="https://www.rivoligroup.com" target="_blank">rivoligroup.com</a></p>
-            </div>
-            <div class="info-item">
-                <h3>Client Since</h3>
-                <p>2023</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Client Overview Section (White Background) -->
-    <section class="section-white">
-        <div class="container-narrow">
-            <h2 class="section-title">Client Overview</h2>
-            <p class="section-text"><strong>EMEA's premier luxury retailer</strong> with 220+ stores across UAE, Oman, Qatar, and Bahrain. Representing 100+ international brands. Operates retail and travel retail across major airports and airlines.</p>
-        </div>
-    </section>
-
-    <!-- The Challenge Section (Gray Background, 2-Column Layout) -->
-    <section class="section-gray">
-        <div class="container-narrow">
-            <div class="challenge-section">
-                <div class="challenge-image-wrapper">
-                    <img src="../images/casestudies/rivoli-hero.png" alt="Complex Commerce Platform" class="challenge-image">
+    <section class="client-info-section">
+        <div class="client-info-wrapper">
+            <div class="client-info-grid">
+                <div class="client-info-item">
+                    <div class="client-info-label">Region</div>
+                    <div class="client-info-value">EMEA</div>
                 </div>
-                <div class="challenge-text">
-                    <h2>The Challenge</h2>
-                    <p class="challenge-quote">"Managing a complex stack—including commercetools, Fluent Commerce OMS, and multiple supporting systems—required ongoing monitoring, enhancements, and seamless integrations."</p>
-                    <ul class="results-list" style="margin-top: 24px;">
-                        <li><strong>Platform Complexity:</strong> Diverse tech stack requiring expertise across multiple systems</li>
-                        <li><strong>24/7 Reliability Demands:</strong> Global operations across EMEA time zones with zero downtime tolerance</li>
-                        <li><strong>Integration Challenges:</strong> Order flow, inventory sync, and omnichannel coordination across retail and travel retail</li>
-                    </ul>
+                <div class="client-info-item">
+                    <div class="client-info-label">Website</div>
+                    <div class="client-info-value"><a href="https://www.rivoligroup.com" target="_blank"
+                            rel="noopener">www.rivoligroup.com</a></div>
+                </div>
+                <div class="client-info-item">
+                    <div class="client-info-label">Client Since</div>
+                    <div class="client-info-value">2023</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solution Section (White Background) -->
-    <section class="section-white">
-        <div class="container-narrow">
-            <h2 class="section-title">The Solution</h2>
-            <p class="section-text">Three pillars of managed services: <strong>Expert Platform Support</strong>, <strong>Customer-Centric Design</strong>, and <strong>Global Operations Coverage</strong>.</p>
+    <section class="challenge-section">
+        <div class="challenge-header">
+            <h2>The <span>Challenge</span></h2>
+            <p>Managing diverse tech stacks and ensuring 24/7 reliability for global luxury retail operations.</p>
+        </div>
+        <div class="challenge-container">
+            <div class="challenge-image-wrapper">
+                <img src="../images/casestudies/rivoli-hero.png" alt="Rivoli Challenge">
+                <div class="challenge-image-badge">Luxury Retail</div>
+            </div>
+            <div class="challenge-cards">
+                <div class="challenge-card">
+                    <h3><span class="card-number">1</span> Platform Complexity</h3>
+                    <p>Diverse tech stack including commercetools and Fluent Commerce OMS requiring specialized
+                        expertise</p>
+                </div>
+                <div class="challenge-card">
+                    <h3><span class="card-number">2</span> Reliability Demands</h3>
+                    <p>Global operations across EMEA time zones with zero downtime tolerance</p>
+                </div>
+                <div class="challenge-card">
+                    <h3><span class="card-number">3</span> Integration Challenges</h3>
+                    <p>Coordinating order flow and inventory sync across retail and travel retail channels</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="solution-grid">
-                <div class="solution-item">
+    <section class="solution-section">
+        <div class="solution-container">
+            <div class="solution-header">
+                <h2>The Solution</h2>
+                <p>Three pillars of managed services: Expert Support, Customer-Centric Design, and Global Coverage.</p>
+            </div>
+            <div class="solution-pillars">
+                <div class="solution-pillar">
+                    <div class="pillar-number">1</div>
                     <h3>Expert Platform Support</h3>
-                    <ul>
-                        <li><strong>commercetools Mastery:</strong> Real-time monitoring, incident resolution, and performance optimization</li>
-                        <li><strong>Fluent Commerce OMS:</strong> Order flow optimization, intelligent configuration, streamlined fulfillment</li>
-                        <li><strong>System Integration:</strong> Seamless connectivity across ancillary systems and upgrades</li>
-                    </ul>
+                    <p><strong>commercetools Mastery</strong> with real-time monitoring. Fluent Commerce OMS
+                        optimization and seamless system integration.</p>
                 </div>
-
-                <div class="solution-item">
+                <div class="solution-pillar">
+                    <div class="pillar-number">2</div>
                     <h3>Customer-Centric Design</h3>
-                    <ul>
-                        <li><strong>UI/UX Transformation:</strong> Personalized search, data-driven discovery, luxury-caliber interfaces</li>
-                        <li><strong>Conversion Optimization:</strong> Enhanced shopping experience across all touchpoints</li>
-                        <li><strong>Omnichannel Excellence:</strong> Seamless retail and travel retail experience</li>
-                    </ul>
+                    <p><strong>UI/UX Transformation</strong> with personalized search and luxury-caliber interfaces for
+                        enhanced conversion.</p>
                 </div>
-
-                <div class="solution-item">
-                    <h3>Global Support Operations</h3>
-                    <ul>
-                        <li><strong>24/7 Coverage:</strong> Off-hours support from India and LATAM, covering all EMEA time zones</li>
-                        <li><strong>AI-Powered Monitoring:</strong> Real-time alerts, predictive incident prevention</li>
-                        <li><strong>Rapid Response:</strong> Always-on responsiveness with zero-downtime commitment</li>
-                    </ul>
+                <div class="solution-pillar">
+                    <div class="pillar-number">3</div>
+                    <h3>Global Operations</h3>
+                    <p><strong>24/7 Coverage</strong> from India and LATAM. AI-Powered monitoring for predictive
+                        incident prevention.</p>
                 </div>
             </div>
-
-            <!-- Device Showcase -->
-            <div class="device-showcase">
-                <img src="../images/casestudies/rivoli-desktop.png" alt="Desktop View" class="device-desktop">
-                <img src="../images/casestudies/rivoli-laptop.png" alt="Laptop View" class="device-laptop">
-                <img src="../images/casestudies/rivoli-mobile.png" alt="Mobile View" class="device-mobile">
+            <div class="devices-showcase">
+                <img src="../images/casestudies/rivoli-laptop.png" alt="Rivoli Desktop" class="device-laptop">
+                <img src="../images/casestudies/rivoli-mobile.png" alt="Rivoli Mobile" class="device-mobile">
             </div>
         </div>
     </section>
 
-    <!-- Results Section (Gray Background) -->
-    <section class="section-gray">
-        <div class="container-narrow">
-            <h2 class="section-title">Results Achieved</h2>
-            <p class="section-text">Measurable improvements across reliability, performance, and customer experience.</p>
-
-            <ul class="results-list">
-                <li><strong>99.9% System Uptime:</strong> Dramatically improved platform reliability across all retail channels</li>
-                <li><strong>50% Faster Resolution:</strong> AI-powered monitoring enables predictive incident prevention</li>
-                <li><strong>Enhanced Conversion:</strong> Redesigned interfaces drive improved customer engagement and sales</li>
-                <li><strong>Operational Efficiency:</strong> Streamlined workflows reduce manual overhead and errors</li>
-                <li><strong>24/7 Always-On:</strong> Global support model ensures zero-downtime operations across time zones</li>
-            </ul>
-
-            <img src="../images/casestudies/rivoli-highlights.png" alt="Rivoli Highlights" class="highlights-image">
-        </div>
-    </section>
-
-    <!-- Services & Technologies Section (White Background) -->
-    <section class="section-white">
-        <div class="container-narrow">
-            <h2 class="section-title">Services & Technologies</h2>
-
-            <div class="services-tech-grid">
-                <div>
-                    <h3 style="font-size: 24px; font-weight: 600; color: #2B2B2B; margin-bottom: 24px;">Services Offered</h3>
-                    <div class="solution-item">
-                        <ul>
-                            <li><strong>eCommerce Development</strong> - Microservices, API integrations, headless commerce</li>
-                            <li><strong>UI/UX Design</strong> - Data-driven interfaces, responsive design</li>
-                            <li><strong>QA & Testing Automation</strong> - Regression testing, performance validation</li>
-                            <li><strong>Monitoring & Support Operations</strong> - 24/7 global coverage</li>
-                        </ul>
+    <section class="results-section">
+        <div class="results-container">
+            <div class="results-header">
+                <h2>Results</h2>
+            </div>
+            <div class="results-list">
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>99.9% System Uptime</h3>
+                        <p>Dramatically improved platform reliability</p>
                     </div>
                 </div>
-
-                <div>
-                    <h3 style="font-size: 24px; font-weight: 600; color: #2B2B2B; margin-bottom: 24px;">Technology Stack</h3>
-
-                    <div style="margin-bottom: 32px;">
-                        <h4 style="font-size: 16px; font-weight: 600; color: #424242; margin-bottom: 12px;">Engineering</h4>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Google Cloud</span>
-                        </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>50% Faster Resolution</h3>
+                        <p>AI-powered monitoring prevents incidents</p>
                     </div>
-
-                    <div>
-                        <h4 style="font-size: 16px; font-weight: 600; color: #424242; margin-bottom: 12px;">Partner Integrations</h4>
-                        <div class="tech-tags">
-                            <span class="tech-tag">commercetools</span>
-                            <span class="tech-tag">Concrete CMS</span>
-                            <span class="tech-tag">Fluent Commerce</span>
-                        </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Enhanced Conversion</h3>
+                        <p>Redesigned interfaces drive engagement</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>24/7 Always-On</h3>
+                        <p>Global support ensures zero-downtime operations</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section (Purple to Red Gradient) -->
-    <section class="cta-section">
-        <div class="container-narrow">
-            <h2>Transform Your Commerce Operations</h2>
-            <p><strong>Get 24/7 expert management, AI-powered reliability, and measurable results.</strong> Let's build your path to operational excellence.</p>
-            <a href="../contact.html" class="cta-button">Let's Talk →</a>
+    <section class="services-section">
+        <div class="services-container">
+            <div class="services-header">
+                <h2>Services Delivered</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg></div>
+                    <h3>eCommerce Development</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
+                        </svg></div>
+                    <h3>UI/UX Design</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                        </svg></div>
+                    <h3>QA & Testing</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
+                        </svg></div>
+                    <h3>Monitoring & Support</h3>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
+    <section class="technologies-section">
+        <div class="technologies-container">
+            <div class="technologies-header">
+                <h2>Technologies</h2>
+            </div>
+            <div class="tech-category">
+                <div class="tech-category-title">
+                    <h3>Engineering Stack</h3>
+                </div>
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-card"><span class="tech-name">Google Cloud</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">commercetools</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">Fluent Commerce</span></div>
+                </div>
+            </div>
+            <div class="tech-category">
+                <div class="tech-category-title">
+                    <h3>Partners</h3>
+                </div>
+                <div class="tech-partners-grid">
+                    <div class="tech-partner-card">
+                        <div class="partner-badge">C</div>
+                        <div class="partner-info"><span class="partner-name">Concrete CMS</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cs-cta">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="../services.html">All Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Platforms</h4>
-                    <ul>
-                        <li><a href="../platforms.html">All Platforms</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../work.html">Work</a></li>
-                        <li><a href="../partners.html">Partners</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NULogic. All rights reserved.</p>
-            </div>
+            <h2>Transform Your Commerce Operations</h2>
+            <p><strong>Get 24/7 expert management and measurable results.</strong> Let's build your path to operational
+                excellence.</p>
+            <a href="../contact.html" class="cs-cta-button">Let's Talk →</a>
         </div>
-    </footer>
+    </section>
+
+    <footer></footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/footer.js"></script>
 </body>
+
 </html>

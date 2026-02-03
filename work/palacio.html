@@ -1,325 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/icons/favicon.png">
     <title>El Palacio de Hierro Case Study | Mirakl Marketplace & SFCC Integration | NULogic</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/casestudy-responsive.css">
-    <style>
-        .case-study-hero {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            overflow: hidden;
-            background: linear-gradient(135deg, rgba(137, 56, 159, 0.1) 0%, rgba(237, 41, 37, 0.1) 100%);
-        }
-
-        .case-study-hero img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .client-logo-section {
-            background: white;
-            padding: 60px 0 40px;
-            text-align: center;
-        }
-
-        .client-logo-section img {
-            max-width: 300px;
-            height: auto;
-        }
-
-        .client-info-grid {
-            background: #F9F9F9;
-            padding: 60px 0;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .info-item {
-            text-align: center;
-        }
-
-        .info-label {
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #89389f;
-            margin-bottom: 12px;
-        }
-
-        .info-value {
-            font-size: 18px;
-            font-weight: 500;
-            color: #2B2B2B;
-        }
-
-        .info-value a {
-            color: #2B2B2B;
-            text-decoration: none;
-        }
-
-        .info-value a:hover {
-            color: #89389f;
-        }
-
-        .section-white {
-            background: white;
-            padding: 80px 0;
-        }
-
-        .section-gray {
-            background: #F9F9F9;
-            padding: 80px 0;
-        }
-
-        .two-column-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .two-column-layout img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .content-box {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .content-box h2 {
-            font-size: 42px;
-            font-weight: 700;
-            color: #2B2B2B;
-            margin-bottom: 24px;
-            line-height: 1.2;
-        }
-
-        .content-box h3 {
-            font-size: 24px;
-            font-weight: 600;
-            color: #2B2B2B;
-            margin-top: 40px;
-            margin-bottom: 16px;
-        }
-
-        .content-box p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #424242;
-            margin-bottom: 20px;
-        }
-
-        .content-box ul {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
-        }
-
-        .content-box ul li {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #424242;
-            margin-bottom: 16px;
-            padding-left: 30px;
-            position: relative;
-        }
-
-        .content-box ul li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #89389f;
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 1.8;
-        }
-
-        .numbered-list {
-            counter-reset: item;
-            list-style: none;
-            padding: 0;
-        }
-
-        .numbered-list li {
-            counter-increment: item;
-            margin-bottom: 32px;
-        }
-
-        .numbered-list li:before {
-            content: counter(item) ". ";
-            color: #89389f;
-            font-weight: 700;
-            font-size: 20px;
-        }
-
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .result-card {
-            background: white;
-            padding: 32px;
-            border-radius: 8px;
-            border-left: 4px solid #89389f;
-        }
-
-        .result-card h3 {
-            font-size: 20px;
-            font-weight: 700;
-            color: #89389f;
-            margin: 0 0 16px 0;
-        }
-
-        .result-card p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #424242;
-            margin: 0;
-        }
-
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .service-item h3 {
-            font-size: 20px;
-            font-weight: 600;
-            color: #2B2B2B;
-            margin: 0 0 12px 0;
-        }
-
-        .service-item p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #424242;
-            margin: 0;
-        }
-
-        .tech-logos {
-            display: flex;
-            gap: 40px;
-            align-items: center;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
-
-        .tech-logos img {
-            max-width: 200px;
-            height: auto;
-        }
-
-        .solution-images {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .solution-images img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .cta-section {
-            background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            color: white;
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .cta-section p {
-            color: rgba(255, 255, 255, 0.95);
-            font-size: 20px;
-            margin-bottom: 32px;
-        }
-
-        .cta-section .btn {
-            background: white;
-            color: #89389f;
-            padding: 16px 40px;
-            font-size: 18px;
-            font-weight: 600;
-            border-radius: 4px;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-        .cta-section .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        @media (max-width: 768px) {
-            .info-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .two-column-layout {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .solution-images {
-                grid-template-columns: 1fr;
-            }
-
-            .content-box h2 {
-                font-size: 32px;
-            }
-
-            .cta-section h2 {
-                font-size: 36px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/casestudy.css">
 </head>
+
 <body>
     <header>
         <div class="container">
             <nav>
-                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic" style="height: 32px;"></a>
+                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic"
+                        style="height: 32px;"></a>
                 <ul class="nav-links">
-                    <li class="nav-item-with-dropdown">
-                        <a href="../services.html">Services</a>
+                    <li class="nav-item-with-dropdown"><a href="../services.html">Services</a>
                         <ul class="dropdown-menu">
                             <li><a href="../commerce-build.html">Commerce Services</a></li>
                             <li><a href="../services.html#support">24/7 Run & Support</a></li>
@@ -327,8 +31,7 @@
                             <li><a href="../services.html#data-ai">Data, AI & Analytics</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="../platforms.html">Platforms</a>
+                    <li class="nav-item-with-dropdown"><a href="../platforms.html">Platforms</a>
                         <ul class="dropdown-menu">
                             <li><a href="../platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
                             <li><a href="../platforms.html#shopify">Shopify Plus</a></li>
@@ -340,8 +43,7 @@
                     <li><a href="../work.html">Work</a></li>
                     <li><a href="../partners.html">Partners</a></li>
                     <li><a href="../about.html">About</a></li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="#">EN</a>
+                    <li class="nav-item-with-dropdown"><a href="#">EN</a>
                         <ul class="dropdown-menu">
                             <li><a href="palacio.html">English</a></li>
                             <li><a href="../es/work/palacio.html">Español</a></li>
@@ -353,237 +55,220 @@
         </div>
     </header>
 
-    <!-- Hero Banner -->
     <section class="case-study-hero">
-        <img src="../images/casestudies/palacio-hero.png" alt="El Palacio de Hierro Marketplace">
-    </section>
-
-    <!-- Client Logo Section -->
-    <section class="client-logo-section">
-        <div class="container">
-            <img src="../images/casestudies/palacio-logo.png" alt="El Palacio de Hierro Logo">
-            <h1 style="font-size: 48px; font-weight: 700; color: #2B2B2B; margin-top: 32px; margin-bottom: 20px;">From Retail Icon to Marketplace Leader</h1>
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <div class="case-study-label">Case Study</div>
+                <h1 class="case-study-title">From Retail Icon to Marketplace Leader</h1>
+                <p class="case-study-intro">135-year legacy in luxury retail. Mexico's most iconic department store
+                    executing a digital-first marketplace strategy.</p>
+                <div class="hero-logo-circle"><img src="../images/casestudies/palacio-logo.png"
+                        alt="El Palacio de Hierro"></div>
+            </div>
+            <div class="hero-image-container"><img src="../images/casestudies/palacio-hero.png"
+                    alt="El Palacio de Hierro"></div>
         </div>
     </section>
 
-    <!-- Client Info Grid -->
-    <section class="client-info-grid">
-        <div class="info-grid">
-            <div class="info-item">
-                <div class="info-label">Region</div>
-                <div class="info-value">Latam</div>
-            </div>
-            <div class="info-item">
-                <div class="info-label">Website</div>
-                <div class="info-value"><a href="https://www.elpalaciodehierro.com" target="_blank">www.elpalaciodehierro.com</a></div>
-            </div>
-            <div class="info-item">
-                <div class="info-label">Client Since</div>
-                <div class="info-value">2024</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Client Overview Section -->
-    <section class="section-white">
-        <div class="content-box">
-            <h2>About the Client</h2>
-            <p><strong>135-year legacy</strong> in luxury retail. <strong>Mexico's most iconic</strong> department store. <strong>Digital-first</strong> marketplace strategy.</p>
-        </div>
-    </section>
-
-    <!-- Challenge Section -->
-    <section class="section-gray">
-        <div class="two-column-layout">
-            <div>
-                <img src="../images/casestudies/palacio-challenge.png" alt="The Challenge">
-            </div>
-            <div>
-                <h2 style="font-size: 42px; font-weight: 700; color: #2B2B2B; margin-bottom: 24px;">The Challenge</h2>
-                <p style="font-size: 18px; line-height: 1.8; color: #424242; margin-bottom: 24px;">Launch a marketplace. Keep inventory in sync. Scale without breaking.</p>
-
-                <h3 style="font-size: 24px; font-weight: 600; color: #2B2B2B; margin-top: 32px; margin-bottom: 16px;">Three Critical Issues:</h3>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li style="font-size: 18px; line-height: 1.8; color: #424242; margin-bottom: 16px; padding-left: 30px; position: relative;">
-                        <span style="position: absolute; left: 0; color: #89389f; font-weight: bold; font-size: 24px;">•</span>
-                        <strong>Data Synchronization</strong> — product categories, attributes, inventory, and pricing across platforms
-                    </li>
-                    <li style="font-size: 18px; line-height: 1.8; color: #424242; margin-bottom: 16px; padding-left: 30px; position: relative;">
-                        <span style="position: absolute; left: 0; color: #89389f; font-weight: bold; font-size: 24px;">•</span>
-                        <strong>Manual Process Elimination</strong> — moving from manual import/export to automated workflows
-                    </li>
-                    <li style="font-size: 18px; line-height: 1.8; color: #424242; margin-bottom: 16px; padding-left: 30px; position: relative;">
-                        <span style="position: absolute; left: 0; color: #89389f; font-weight: bold; font-size: 24px;">•</span>
-                        <strong>Scalable Architecture</strong> — supporting third-party sellers without performance degradation
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solution Section -->
-    <section class="section-white">
-        <div class="content-box">
-            <h2>The Solution</h2>
-            <p>Built a <strong>unified marketplace platform</strong> connecting <strong>Mirakl</strong> with <strong>Salesforce Commerce Cloud</strong> using prebuilt cartridges and API orchestration.</p>
-
-            <h3 style="margin-top: 40px;">Three Core Pillars:</h3>
-
-            <ol class="numbered-list">
-                <li>
-                    <strong style="font-size: 20px; color: #2B2B2B;">Real-Time Data Sync</strong>
-                    <p style="font-size: 18px; line-height: 1.8; color: #424242; margin-top: 12px;"><strong>Automated API orchestration</strong> continuously syncing products, pricing, and inventory across platforms</p>
-                </li>
-                <li>
-                    <strong style="font-size: 20px; color: #2B2B2B;">Scalable Architecture</strong>
-                    <p style="font-size: 18px; line-height: 1.8; color: #424242; margin-top: 12px;"><strong>Modular, API-first design</strong> enabling thousands of third-party sellers without performance loss</p>
-                </li>
-                <li>
-                    <strong style="font-size: 20px; color: #2B2B2B;">Operational Automation</strong>
-                    <p style="font-size: 18px; line-height: 1.8; color: #424242; margin-top: 12px;"><strong>Workflow automation</strong> eliminating manual processes and <strong>optimized APIs</strong> for speed</p>
-                </li>
-            </ol>
-
-            <div class="solution-images">
-                <img src="../images/casestudies/palacio-solution1.png" alt="Solution Architecture 1">
-                <img src="../images/casestudies/palacio-solution2.png" alt="Solution Architecture 2">
-                <img src="../images/casestudies/palacio-solution3.png" alt="Solution Architecture 3">
-            </div>
-        </div>
-    </section>
-
-    <!-- Results Section -->
-    <section class="section-gray">
-        <div class="content-box">
-            <h2>Results</h2>
-            <p>Marketplace launched. Sellers onboarded. Data synced. Revenue growing.</p>
-
-            <div class="results-grid">
-                <div class="result-card">
-                    <h3>Go-Live in Weeks</h3>
-                    <p>Prebuilt integrations reduced implementation timeline</p>
+    <section class="client-info-section">
+        <div class="client-info-wrapper">
+            <div class="client-info-grid">
+                <div class="client-info-item">
+                    <div class="client-info-label">Region</div>
+                    <div class="client-info-value">LATAM</div>
                 </div>
-                <div class="result-card">
-                    <h3>Real-Time Data Accuracy</h3>
-                    <p>Products and pricing sync instantly across all sellers</p>
+                <div class="client-info-item">
+                    <div class="client-info-label">Website</div>
+                    <div class="client-info-value"><a href="https://www.elpalaciodehierro.com" target="_blank"
+                            rel="noopener">www.elpalaciodehierro.com</a></div>
                 </div>
-                <div class="result-card">
-                    <h3>Built to Scale</h3>
-                    <p>Supports thousands of sellers without performance degradation</p>
-                </div>
-                <div class="result-card">
-                    <h3>Better Discovery</h3>
-                    <p>Expanded product catalog increases customer engagement</p>
-                </div>
-                <div class="result-card">
-                    <h3>Market Leadership</h3>
-                    <p>Positioned as Mexico's most innovative luxury marketplace</p>
+                <div class="client-info-item">
+                    <div class="client-info-label">Client Since</div>
+                    <div class="client-info-value">2024</div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div style="margin-top: 60px; text-align: center;">
-                <img src="../images/casestudies/palacio-results.png" alt="Results Overview" style="max-width: 100%; height: auto; border-radius: 8px;">
+    <section class="challenge-section">
+        <div class="challenge-header">
+            <h2>The <span>Challenge</span></h2>
+            <p>Launching a marketplace while keeping inventory in sync and scaling without breaking existing operations.
+            </p>
+        </div>
+        <div class="challenge-container">
+            <div class="challenge-image-wrapper">
+                <img src="../images/casestudies/palacio-challenge.png" alt="El Palacio de Hierro Challenge">
+                <div class="challenge-image-badge">Luxury Retail</div>
+            </div>
+            <div class="challenge-cards">
+                <div class="challenge-card">
+                    <h3><span class="card-number">1</span> Data Synchronization</h3>
+                    <p>Product categories, attributes, inventory, and pricing needed real-time sync across platforms</p>
+                </div>
+                <div class="challenge-card">
+                    <h3><span class="card-number">2</span> Manual Processes</h3>
+                    <p>Eliminating manual import/export tasks with automated workflows</p>
+                </div>
+                <div class="challenge-card">
+                    <h3><span class="card-number">3</span> Scalable Architecture</h3>
+                    <p>Supporting third-party sellers without degrading performance for core customers</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <section class="solution-section">
+        <div class="solution-container">
+            <div class="solution-header">
+                <h2>The Solution</h2>
+                <p>Unified marketplace platform connecting Mirakl with Salesforce Commerce Cloud.</p>
+            </div>
+            <div class="solution-pillars">
+                <div class="solution-pillar">
+                    <div class="pillar-number">1</div>
+                    <h3>Real-Time Data Sync</h3>
+                    <p><strong>Automated API orchestration</strong> continuously syncing products, pricing, and
+                        inventory across platforms.</p>
+                </div>
+                <div class="solution-pillar">
+                    <div class="pillar-number">2</div>
+                    <h3>Scalable Architecture</h3>
+                    <p><strong>Modular, API-first design</strong> enabling thousands of third-party sellers without
+                        performance loss.</p>
+                </div>
+                <div class="solution-pillar">
+                    <div class="pillar-number">3</div>
+                    <h3>Operational Automation</h3>
+                    <p><strong>Workflow automation</strong> eliminating manual processes and optimized APIs for speed.
+                    </p>
+                </div>
+            </div>
+            <div class="devices-showcase">
+                <img src="../images/casestudies/palacio-laptop.png" alt="El Palacio de Hierro Desktop"
+                    class="device-laptop">
+                <img src="../images/casestudies/palacio-mobile.png" alt="El Palacio de Hierro Mobile"
+                    class="device-mobile">
+            </div>
+        </div>
+    </section>
 
-    <!-- Services Provided Section -->
-    <section class="section-gray">
-        <div class="content-box">
-            <h2>Services Provided</h2>
+    <section class="results-section">
+        <div class="results-container">
+            <div class="results-header">
+                <h2>Results</h2>
+            </div>
+            <div class="results-list">
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Go-Live in Weeks</h3>
+                        <p>Prebuilt integrations reduced implementation timeline</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Real-Time Data Accuracy</h3>
+                        <p>Products and pricing sync instantly across all sellers</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Built to Scale</h3>
+                        <p>Supports thousands of sellers without performance degradation</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Market Leadership</h3>
+                        <p>Positioned as Mexico's most innovative luxury marketplace</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="services-section">
+        <div class="services-container">
+            <div class="services-header">
+                <h2>Services Delivered</h2>
+            </div>
             <div class="services-grid">
-                <div class="service-item">
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg></div>
                     <h3>eCommerce Development</h3>
-                    <p>Custom configuration of Mirakl connectors and SFCC cartridges</p>
                 </div>
-                <div class="service-item">
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M6 2v6h.01L6 8.01 10 12l-4 4 .01.01H6V22h12v-5.99h-.01L18 16l-4-4 4-3.99-.01-.01H18V2H6z" />
+                        </svg></div>
                     <h3>Cloud Integration</h3>
-                    <p>End-to-end API integration for automated data exchange</p>
                 </div>
-                <div class="service-item">
-                    <h3>Data Engineering & Automation</h3>
-                    <p>Streamlined workflows through data automation</p>
-                </div>
-                <div class="service-item">
-                    <h3>Monitoring & Support</h3>
-                    <p>Continuous system monitoring and dedicated support</p>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
+                        </svg></div>
+                    <h3>Data Engineering</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Technologies Section -->
-    <section class="section-white">
-        <div class="content-box">
-            <h2>Technologies & Architecture</h2>
-
-            <div class="tech-logos">
-                <img src="../images/casestudies/salesforce-logo.png" alt="Salesforce Commerce Cloud">
+    <section class="technologies-section">
+        <div class="technologies-container">
+            <div class="technologies-header">
+                <h2>Technologies</h2>
             </div>
-
-            <h3>Engineering Stack</h3>
-            <div style="margin-top: 30px;">
-                <img src="../images/casestudies/palacio-engineering.png" alt="Engineering Stack" style="max-width: 100%; height: auto; border-radius: 8px;">
+            <div class="tech-category">
+                <div class="tech-category-title">
+                    <h3>Engineering Stack</h3>
+                </div>
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-card"><span class="tech-name">Salesforce Commerce Cloud</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">Mirakl Marketplace</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">SFRA</span></div>
+                </div>
             </div>
-
-            <h3>Integration Architecture</h3>
-            <div style="margin-top: 30px;">
-                <img src="../images/casestudies/palacio-integration.png" alt="Integration Architecture" style="max-width: 100%; height: auto; border-radius: 8px;">
+            <div class="tech-category">
+                <div class="tech-category-title">
+                    <h3>Partner Integrations</h3>
+                </div>
+                <div class="tech-partners-grid">
+                    <div class="tech-partner-card">
+                        <div class="partner-badge">M</div>
+                        <div class="partner-info"><span class="partner-name">Mirakl Connector</span></div>
+                    </div>
+                </div>
             </div>
-
-            <h3 style="margin-top: 40px;">Core Technologies</h3>
-            <ul>
-                <li>Salesforce Commerce Cloud (SFCC)</li>
-                <li>Mirakl Marketplace Platform</li>
-                <li>SFRA (Storefront Reference Architecture)</li>
-                <li>Prebuilt connector cartridges (bm_mirakl, int_mirakl, int_mirakl_sfra)</li>
-                <li>API-driven real-time orchestration</li>
-                <li>Modular, API-first design</li>
-                <li>Scalable cloud-based infrastructure</li>
-            </ul>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="cs-cta">
         <div class="container">
             <h2>Ready to Build Your Marketplace?</h2>
             <p>Let's discuss your growth strategy and how we can accelerate your digital transformation.</p>
-            <a href="../contact.html" class="btn">Let's Talk →</a>
+            <a href="../contact.html" class="cs-cta-button">Let's Talk →</a>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="../services.html">All Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Platforms</h4>
-                    <ul>
-                        <li><a href="../platforms.html">All Platforms</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../work.html">Work</a></li>
-                        <li><a href="../partners.html">Partners</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NULogic. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer></footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/footer.js"></script>
 </body>
+
 </html>
