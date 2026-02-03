@@ -1,352 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forever 21: Peak Performance, Zero Downtime | NULogic Case Study</title>
-    <meta name="description" content="Forever 21 achieved zero-downtime Black Friday operations, weekly releases, and 24/7 stability with NULogic's comprehensive performance framework.">
+    <link rel="icon" type="image/png" href="../images/icons/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/casestudy-responsive.css">
-    <style>
-        /* Case Study Specific Styles */
-        .case-study-hero {
-            position: relative;
-            background-image: url('../images/casestudies/forever21-hero.png');
-            background-size: cover;
-            background-position: center;
-            padding: 120px 0 80px;
-            overflow: hidden;
-        }
-
-        .case-study-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(137, 56, 159, 0.85) 0%, rgba(237, 41, 37, 0.85) 100%);
-        }
-
-        .case-study-hero .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .case-study-hero h1 {
-            color: white;
-            font-size: 48px;
-            line-height: 1.2;
-            margin-bottom: 32px;
-            max-width: 900px;
-        }
-
-        .client-logo-section {
-            background: white;
-            padding: 48px 0;
-            text-align: center;
-        }
-
-        .client-logo-section img {
-            max-width: 200px;
-            height: auto;
-        }
-
-        .client-info-grid {
-            background: #F9F9F9;
-            padding: 48px 0;
-        }
-
-        .client-info-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 48px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .client-info-item {
-            text-align: center;
-        }
-
-        .client-info-label {
-            color: #424242;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .client-info-value {
-            color: #2B2B2B;
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        .client-info-value a {
-            color: #89389f;
-            text-decoration: none;
-        }
-
-        .client-info-value a:hover {
-            text-decoration: underline;
-        }
-
-        .section-white {
-            background: white;
-            padding: 80px 0;
-        }
-
-        .section-gray {
-            background: #F9F9F9;
-            padding: 80px 0;
-        }
-
-        .container-narrow {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .container-narrow h2 {
-            color: #2B2B2B;
-            font-size: 36px;
-            margin-bottom: 24px;
-            font-weight: 800;
-        }
-
-        .container-narrow h3 {
-            color: #2B2B2B;
-            font-size: 24px;
-            margin-bottom: 16px;
-            font-weight: 700;
-        }
-
-        .container-narrow h4 {
-            color: #89389f;
-            font-size: 20px;
-            margin-bottom: 12px;
-            font-weight: 700;
-        }
-
-        .container-narrow p {
-            color: #424242;
-            font-size: 16px;
-            line-height: 1.8;
-            margin-bottom: 16px;
-        }
-
-        .container-narrow ul {
-            margin-left: 20px;
-        }
-
-        .container-narrow ul li {
-            color: #424242;
-            font-size: 16px;
-            line-height: 1.8;
-            margin-bottom: 12px;
-        }
-
-        .challenge-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            margin-top: 40px;
-        }
-
-        .challenge-image {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .solution-pillars {
-            margin-top: 48px;
-        }
-
-        .solution-pillar {
-            margin-bottom: 40px;
-        }
-
-        .solution-pillar h3 {
-            color: #89389f;
-            margin-bottom: 16px;
-        }
-
-        .solution-initiatives {
-            margin-top: 48px;
-        }
-
-        .initiative {
-            margin-bottom: 32px;
-        }
-
-        .device-mockups {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-            margin: 60px 0;
-        }
-
-        .device-mockup img {
-            width: 100%;
-            height: auto;
-        }
-
-        .results-intro {
-            font-size: 18px;
-            line-height: 1.7;
-            color: #2B2B2B;
-            margin-bottom: 48px;
-        }
-
-        .results-metrics {
-            margin: 48px 0;
-        }
-
-        .results-metrics img {
-            width: 100%;
-            max-width: 800px;
-            height: auto;
-            margin: 0 auto;
-            display: block;
-        }
-
-        .results-list {
-            margin-top: 48px;
-        }
-
-        .results-list h3 {
-            margin-bottom: 24px;
-        }
-
-
-        .technologies-section {
-            margin-top: 32px;
-        }
-
-        .tech-category {
-            margin-bottom: 40px;
-        }
-
-        .tech-category h3 {
-            font-size: 18px;
-            margin-bottom: 20px;
-            color: #2B2B2B;
-        }
-
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .tech-tag {
-            background: white;
-            color: #89389f;
-            padding: 12px 20px;
-            font-size: 14px;
-            border-radius: 6px;
-            border: 1px solid #e0e0e0;
-            font-weight: 600;
-        }
-
-        .cta-section {
-            background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            color: white;
-            font-size: 42px;
-            margin-bottom: 24px;
-            font-weight: 800;
-        }
-
-        .cta-section p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 20px;
-            margin-bottom: 32px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #89389f;
-            padding: 16px 40px;
-            font-size: 18px;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: transform 0.2s;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-        }
-
-        @media (max-width: 991px) {
-            .case-study-hero h1 {
-                font-size: 36px;
-            }
-
-            .client-info-container {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
-
-            .challenge-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .device-mockups {
-                grid-template-columns: 1fr;
-            }
-
-            .container-narrow h2 {
-                font-size: 28px;
-            }
-
-            .cta-section h2 {
-                font-size: 32px;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .case-study-hero {
-                padding: 80px 0 60px;
-            }
-
-            .case-study-hero h1 {
-                font-size: 28px;
-            }
-
-            .testimonial-box {
-                padding: 32px 24px;
-            }
-
-            .testimonial-quote {
-                font-size: 18px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/casestudy.css">
 </head>
+
 <body>
     <header>
         <div class="container">
             <nav>
-                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic" style="height: 32px;"></a>
+                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic"
+                        style="height: 32px;"></a>
                 <ul class="nav-links">
-                    <li class="nav-item-with-dropdown">
-                        <a href="../services.html">Services</a>
+                    <li class="nav-item-with-dropdown"><a href="../services.html">Services</a>
                         <ul class="dropdown-menu">
                             <li><a href="../commerce-build.html">Commerce Services</a></li>
                             <li><a href="../services.html#support">24/7 Run & Support</a></li>
@@ -354,8 +31,7 @@
                             <li><a href="../services.html#data-ai">Data, AI & Analytics</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="../platforms.html">Platforms</a>
+                    <li class="nav-item-with-dropdown"><a href="../platforms.html">Platforms</a>
                         <ul class="dropdown-menu">
                             <li><a href="../platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
                             <li><a href="../platforms.html#shopify">Shopify Plus</a></li>
@@ -367,8 +43,7 @@
                     <li><a href="../work.html">Work</a></li>
                     <li><a href="../partners.html">Partners</a></li>
                     <li><a href="../about.html">About</a></li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="#">EN</a>
+                    <li class="nav-item-with-dropdown"><a href="#">EN</a>
                         <ul class="dropdown-menu">
                             <li><a href="forever21.html">English</a></li>
                             <li><a href="../es/work/forever21.html">Español</a></li>
@@ -380,236 +55,239 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="case-study-hero">
-        <div class="container">
-            <h1>Peak Performance, Zero Downtime</h1>
-        </div>
-    </section>
-
-    <!-- Client Logo Section -->
-    <section class="client-logo-section">
-        <div class="container">
-            <img src="../images/casestudies/forever21-logo.png" alt="Forever 21 Logo">
-        </div>
-    </section>
-
-    <!-- Client Info Grid -->
-    <section class="client-info-grid">
-        <div class="client-info-container">
-            <div class="client-info-item">
-                <div class="client-info-label">Region</div>
-                <div class="client-info-value">U.S.</div>
-            </div>
-            <div class="client-info-item">
-                <div class="client-info-label">Website</div>
-                <div class="client-info-value"><a href="https://www.forever21.com" target="_blank">forever21.com</a></div>
-            </div>
-            <div class="client-info-item">
-                <div class="client-info-label">Client Since</div>
-                <div class="client-info-value">2022</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Client Overview -->
-    <section class="section-white">
-        <div class="container-narrow">
-            <h2>Client Overview</h2>
-            <p><strong>Forever 21</strong> is a global fashion leader serving millions of shoppers. <strong>The platform:</strong> High-traffic e-commerce on <strong>Salesforce Commerce Cloud</strong>. <strong>The stakes:</strong> Every peak season, every minute down costs.</p>
-        </div>
-    </section>
-
-    <!-- Challenge Section -->
-    <section class="section-gray">
-        <div class="container-narrow">
-            <h2>The Challenge</h2>
-            <div class="challenge-grid">
-                <div>
-                    <img src="../images/casestudies/forever21-challenge.png" alt="Forever 21 Challenge" class="challenge-image">
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <div class="case-study-label">Case Study</div>
+                <h1 class="case-study-title">Peak Performance, Zero Downtime</h1>
+                <p class="case-study-intro">Forever 21 achieved zero-downtime Black Friday operations, weekly releases,
+                    and 24/7 stability with NULogic's comprehensive performance framework.</p>
+                <div class="hero-logo-circle"><img src="../images/casestudies/forever21-logo.png" alt="Forever 21">
                 </div>
-                <div>
-                    <p><strong>Peak Traffic Vulnerability:</strong> Seasonal surges (Black Friday, Cyber Monday) pushed infrastructure to breaking points. Slow load times and checkout failures threatened revenue and brand trust.</p>
-                    <p><strong>Visibility Gap:</strong> Without real-time monitoring, issues weren't caught until customers felt them. Every minute of downtime meant lost sales and frustrated shoppers.</p>
-                    <p><strong>Stability at Scale:</strong> SFCC platform needed rigorous performance testing, faster releases, and automated safeguards to handle unpredictable demand spikes.</p>
+            </div>
+            <div class="hero-image-container"><img src="../images/casestudies/forever21-hero.png" alt="Forever 21">
+            </div>
+        </div>
+    </section>
+
+    <section class="client-info-section">
+        <div class="client-info-wrapper">
+            <div class="client-info-grid">
+                <div class="client-info-item">
+                    <div class="client-info-label">Region</div>
+                    <div class="client-info-value">U.S.</div>
+                </div>
+                <div class="client-info-item">
+                    <div class="client-info-label">Website</div>
+                    <div class="client-info-value"><a href="https://www.forever21.com" target="_blank"
+                            rel="noopener">www.forever21.com</a></div>
+                </div>
+                <div class="client-info-item">
+                    <div class="client-info-label">Client Since</div>
+                    <div class="client-info-value">2022</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solution Section -->
-    <section class="section-white">
-        <div class="container-narrow">
-            <h2>The Solution</h2>
-            <p>NULogic built a <strong>three-pillar performance framework</strong> combining proactive testing, real-time monitoring, and continuous optimization.</p>
+    <section class="challenge-section">
+        <div class="challenge-header">
+            <h2>The <span>Challenge</span></h2>
+            <p>Global fashion leader serving millions with high-traffic e-commerce on Salesforce Commerce Cloud.</p>
+        </div>
+        <div class="challenge-container">
+            <div class="challenge-image-wrapper">
+                <img src="../images/casestudies/forever21-challenge.png" alt="Forever 21 Challenge">
+                <div class="challenge-image-badge">Global Leader</div>
+            </div>
+            <div class="challenge-cards">
+                <div class="challenge-card">
+                    <h3><span class="card-number">1</span> Peak Traffic Vulnerability</h3>
+                    <p>Seasonal surges pushed infrastructure to breaking points threatening revenue</p>
+                </div>
+                <div class="challenge-card">
+                    <h3><span class="card-number">2</span> Visibility Gap</h3>
+                    <p>Without real-time monitoring, issues weren't caught until customers felt them</p>
+                </div>
+                <div class="challenge-card">
+                    <h3><span class="card-number">3</span> Stability at Scale</h3>
+                    <p>SFCC platform needed rigorous testing and automated safeguards</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="solution-section">
+        <div class="solution-container">
+            <div class="solution-header">
+                <h2>The Solution</h2>
+                <p>Three-pillar performance framework combining proactive testing, real-time monitoring, and continuous
+                    optimization.</p>
+            </div>
             <div class="solution-pillars">
                 <div class="solution-pillar">
-                    <h3>Pillar 1: <strong>Stress Test & Validate</strong></h3>
-                    <ul>
-                        <li>Black Friday-scale <strong>load simulations</strong> to expose breaking points</li>
-                        <li><strong>Automated testing</strong> on every release to catch issues before production</li>
-                        <li>CDN and <strong>scaling strategies</strong> hardened through real-world patterns</li>
-                    </ul>
+                    <div class="pillar-number">1</div>
+                    <h3>Stress Test & Validate</h3>
+                    <p>Black Friday-scale <strong>load simulations</strong> and automated testing on every release with
+                        CDN scaling strategies.</p>
                 </div>
-
                 <div class="solution-pillar">
-                    <h3>Pillar 2: <strong>24/7 Monitoring & Incident Response</strong></h3>
-                    <ul>
-                        <li><strong>Real-time visibility</strong> across Splunk, New Relic, and SFCC logs</li>
-                        <li><strong>Automated anomaly detection</strong> with instant alerts to prevent downtime</li>
-                        <li><strong>SLA-driven support</strong> with failover automation and incident playbooks</li>
-                    </ul>
+                    <div class="pillar-number">2</div>
+                    <h3>24/7 Monitoring & Response</h3>
+                    <p><strong>Real-time visibility</strong> across Splunk, New Relic, SFCC logs with automated anomaly
+                        detection.</p>
                 </div>
-
                 <div class="solution-pillar">
-                    <h3>Pillar 3: <strong>Continuous Optimization</strong></h3>
-                    <ul>
-                        <li><strong>SFCC pipeline optimization</strong> and database query tuning</li>
-                        <li><strong>Infrastructure cost reduction</strong> through caching, auto-scaling, and API tuning</li>
-                        <li><strong>Seasonal readiness</strong> with capacity planning and performance audits</li>
-                    </ul>
+                    <div class="pillar-number">3</div>
+                    <h3>Continuous Optimization</h3>
+                    <p><strong>SFCC pipeline optimization</strong>, database tuning, and seasonal readiness with
+                        capacity planning.</p>
                 </div>
             </div>
-
-            <div class="solution-initiatives">
-                <h3>Key initiatives executed:</h3>
-
-                <div class="initiative">
-                    <h4>24/7 Monitoring & Rapid Response</h4>
-                    <p>Integrated <strong>Splunk, New Relic, SFCC logs</strong> with automated alerts. Issues detected and resolved before customer impact.</p>
-                </div>
-
-                <div class="initiative">
-                    <h4>High-Traffic Load & Stress Testing</h4>
-                    <p>Simulated <strong>Black Friday/Cyber Monday</strong> traffic to uncover breaking points and fine-tune <strong>CDN scaling strategies</strong>.</p>
-                </div>
-
-                <div class="initiative">
-                    <h4>System Stabilization & Optimization</h4>
-                    <p>Refactored <strong>SFCC pipelines</strong>, reduced <strong>database load</strong>, optimized <strong>API calls</strong> to OMS, CRM, payments.</p>
-                </div>
-
-                <div class="initiative">
-                    <h4>Proactive, SLA-Driven Support</h4>
-                    <p>Deployed <strong>automated failover</strong>, weekly performance audits, and incident playbooks to guarantee uptime.</p>
-                </div>
-            </div>
-
-            <div class="device-mockups">
-                <div class="device-mockup">
-                    <img src="../images/casestudies/forever21-desktop.png" alt="Forever 21 Desktop View">
-                </div>
-                <div class="device-mockup">
-                    <img src="../images/casestudies/forever21-laptop.png" alt="Forever 21 Laptop View">
-                </div>
-                <div class="device-mockup">
-                    <img src="../images/casestudies/forever21-mobile.png" alt="Forever 21 Mobile View">
-                </div>
+            <div class="devices-showcase">
+                <img src="../images/casestudies/forever21-laptop.png" alt="Forever 21 Desktop" class="device-laptop">
+                <img src="../images/casestudies/forever21-mobile.png" alt="Forever 21 Mobile" class="device-mobile">
             </div>
         </div>
     </section>
 
-    <!-- Results Section -->
-    <section class="section-gray">
-        <div class="container-narrow">
-            <h2>The Results</h2>
-            <p class="results-intro">Forever 21 now handles <strong>seasonal peaks with confidence</strong>. Every traffic spike is managed. Every release is stable. Every customer gets speed.</p>
-
-            <div class="results-metrics">
-                <img src="../images/casestudies/forever21-highlights.png" alt="Forever 21 Results Highlights">
+    <section class="results-section">
+        <div class="results-container">
+            <div class="results-header">
+                <h2>Results</h2>
             </div>
-
             <div class="results-list">
-                <h3>Key Results:</h3>
-                <ul>
-                    <li><strong>Zero downtime</strong> migrations and flawless stability during peak sales events like Black Friday.</li>
-                    <li><strong>Weekly production releases</strong> with zero disruption to customers or platform performance.</li>
-                    <li><strong>Full system visibility</strong> with real-time performance dashboards and alerting.</li>
-                    <li><strong>Developer productivity surge:</strong> Onshore team freed from firefighting; focused on innovation instead.</li>
-                    <li><strong>Major cost savings</strong> reinvested into customer experience and platform growth initiatives.</li>
-                </ul>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Zero Downtime</h3>
+                        <p>Flawless stability during peak sales events like Black Friday</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Weekly Production Releases</h3>
+                        <p>Zero disruption to customers or platform performance</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Full System Visibility</h3>
+                        <p>Real-time performance dashboards and alerting</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Developer Productivity Surge</h3>
+                        <p>Onshore team freed from firefighting for innovation</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Major Cost Savings</h3>
+                        <p>Reinvested into customer experience and platform growth</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-
-    <!-- Services & Technologies -->
-    <section class="section-gray">
-        <div class="container-narrow">
-            <h2>Services & Technologies</h2>
-
-            <div class="technologies-section">
-                <div class="tech-category">
-                    <h3>Services:</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Monitoring and Support</span>
-                        <span class="tech-tag">Performance Engineering</span>
-                        <span class="tech-tag">Quality Assurance</span>
-                        <span class="tech-tag">Dashboarding and Alerting</span>
-                    </div>
+    <section class="services-section">
+        <div class="services-container">
+            <div class="services-header">
+                <h2>Services Delivered</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                        </svg></div>
+                    <h3>Monitoring and Support</h3>
                 </div>
-
-                <div class="tech-category">
-                    <h3>Engineering Stack:</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">AWS</span>
-                        <span class="tech-tag">Splunk</span>
-                        <span class="tech-tag">Grafana</span>
-                        <span class="tech-tag">New Relic</span>
-                        <span class="tech-tag">Prometheus</span>
-                    </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg></div>
+                    <h3>Performance Engineering</h3>
                 </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                        </svg></div>
+                    <h3>Quality Assurance</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
+                        </svg></div>
+                    <h3>Dashboarding and Alerting</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="tech-category">
-                    <h3>Partner Integrations:</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Salesforce Commerce Cloud</span>
-                        <span class="tech-tag">Bloomreach</span>
+    <section class="technologies-section">
+        <div class="technologies-container">
+            <div class="technologies-header">
+                <h2>Technologies</h2>
+            </div>
+            <div class="tech-category">
+                <div class="tech-category-title">
+                    <h3>Engineering Stack</h3>
+                </div>
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-card"><span class="tech-name">AWS</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">Splunk</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">Grafana</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">New Relic</span></div>
+                </div>
+            </div>
+            <div class="tech-category">
+                <div class="tech-category-title">
+                    <h3>Partner Integrations</h3>
+                </div>
+                <div class="tech-partners-grid">
+                    <div class="tech-partner-card">
+                        <div class="partner-badge">S</div>
+                        <div class="partner-info"><span class="partner-name">Salesforce Commerce Cloud</span></div>
+                    </div>
+                    <div class="tech-partner-card">
+                        <div class="partner-badge">B</div>
+                        <div class="partner-info"><span class="partner-name">Bloomreach</span></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="cs-cta">
         <div class="container">
-            <h2><strong>Stop worrying about peak performance.</strong></h2>
-            <p>Your platform should handle Black Friday like any other day. Let's build your stability, scale, and speed.</p>
-            <a href="../contact.html" class="cta-button">Let's Talk →</a>
+            <h2>Stop worrying about peak performance.</h2>
+            <p>Your platform should handle Black Friday like any other day. Let's build your stability, scale, and
+                speed.</p>
+            <a href="../contact.html" class="cs-cta-button">Let's Talk →</a>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="../services.html">All Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Platforms</h4>
-                    <ul>
-                        <li><a href="../platforms.html">All Platforms</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../work.html">Work</a></li>
-                        <li><a href="../partners.html">Partners</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NULogic. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer></footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/footer.js"></script>
 </body>
+
 </html>

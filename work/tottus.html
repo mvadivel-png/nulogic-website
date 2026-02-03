@@ -1,302 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/icons/favicon.png">
     <title>Tottus Replatforms from ATG to commercetools on Google Cloud | NULogic</title>
-    <meta name="description" content="Tottus modernizes digital commerce by migrating from Oracle ATG to commercetools headless architecture on Google Cloud Platform for scalable multi-channel retail.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/casestudy-responsive.css">
-    <style>
-        .case-study-hero {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .case-study-title {
-            padding: 60px 0 40px;
-        }
-
-        .case-study-title h1 {
-            font-size: 48px;
-            line-height: 1.2;
-            color: #2B2B2B;
-            margin-bottom: 30px;
-            max-width: 900px;
-        }
-
-        .client-logo {
-            height: 60px;
-            margin-bottom: 40px;
-        }
-
-        .client-info-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            background: #F9F9F9;
-            padding: 50px 60px;
-            border-radius: 8px;
-            margin-bottom: 80px;
-        }
-
-        .client-info-item h3 {
-            font-size: 14px;
-            font-weight: 600;
-            color: #424242;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-        }
-
-        .client-info-item p {
-            font-size: 18px;
-            color: #2B2B2B;
-            font-weight: 500;
-        }
-
-        .client-info-item a {
-            color: #89389f;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 500;
-        }
-
-        .client-info-item a:hover {
-            text-decoration: underline;
-        }
-
-        .section-white {
-            background: white;
-            padding: 80px 0;
-        }
-
-        .section-gray {
-            background: #F9F9F9;
-            padding: 80px 0;
-        }
-
-        .section-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-
-        .section-content h2 {
-            font-size: 36px;
-            color: #2B2B2B;
-            margin-bottom: 24px;
-            font-weight: 700;
-        }
-
-        .section-content p {
-            font-size: 18px;
-            line-height: 1.7;
-            color: #424242;
-            margin-bottom: 20px;
-        }
-
-        .section-content ul {
-            list-style: disc;
-            margin-left: 24px;
-            margin-top: 16px;
-        }
-
-        .section-content li {
-            font-size: 18px;
-            line-height: 1.7;
-            color: #424242;
-            margin-bottom: 12px;
-        }
-
-        .two-column-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            margin-top: 40px;
-        }
-
-        .two-column-layout img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .client-overview {
-            background: #F9F9F9;
-            padding: 40px;
-            border-radius: 8px;
-            margin-top: 60px;
-        }
-
-        .client-overview h3 {
-            font-size: 24px;
-            color: #2B2B2B;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .client-overview p {
-            font-size: 18px;
-            line-height: 1.7;
-            color: #424242;
-        }
-
-        .device-screenshots {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .device-screenshots img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
-
-        .results-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .result-item h3 {
-            font-size: 20px;
-            color: #2B2B2B;
-            margin-bottom: 12px;
-            font-weight: 700;
-        }
-
-        .result-item p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #424242;
-        }
-
-        .services-technologies {
-            margin-top: 60px;
-        }
-
-        .tech-section {
-            margin-bottom: 40px;
-        }
-
-        .tech-section h3 {
-            font-size: 20px;
-            color: #2B2B2B;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .tech-tag {
-            background: white;
-            color: #2B2B2B;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-size: 15px;
-            font-weight: 500;
-            border: 1px solid #E0E0E0;
-        }
-
-        .cta-section {
-            background: linear-gradient(96deg, #89389f, #ed2925);
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-size: 42px;
-            color: white;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .cta-section p {
-            font-size: 20px;
-            color: rgba(255,255,255,0.95);
-            margin-bottom: 30px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #89389f;
-            padding: 16px 40px;
-            border-radius: 6px;
-            font-size: 18px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.2s;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-        }
-
-        .highlights-image {
-            width: 100%;
-            max-width: 800px;
-            margin: 60px auto 0;
-            display: block;
-            border-radius: 8px;
-        }
-
-        @media (max-width: 968px) {
-            .client-info-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .two-column-layout {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .device-screenshots {
-                grid-template-columns: 1fr;
-            }
-
-            .results-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .case-study-title h1 {
-                font-size: 36px;
-            }
-
-            .cta-section h2 {
-                font-size: 32px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/casestudy.css">
 </head>
+
 <body>
     <header>
         <div class="container">
             <nav>
-                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic" style="height: 32px;"></a>
+                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic"
+                        style="height: 32px;"></a>
                 <ul class="nav-links">
-                    <li class="nav-item-with-dropdown">
-                        <a href="../services.html">Services</a>
+                    <li class="nav-item-with-dropdown"><a href="../services.html">Services</a>
                         <ul class="dropdown-menu">
                             <li><a href="../commerce-build.html">Commerce Services</a></li>
                             <li><a href="../services.html#support">24/7 Run & Support</a></li>
@@ -304,8 +31,7 @@
                             <li><a href="../services.html#data-ai">Data, AI & Analytics</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="../platforms.html">Platforms</a>
+                    <li class="nav-item-with-dropdown"><a href="../platforms.html">Platforms</a>
                         <ul class="dropdown-menu">
                             <li><a href="../platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
                             <li><a href="../platforms.html#shopify">Shopify Plus</a></li>
@@ -317,8 +43,7 @@
                     <li><a href="../work.html">Work</a></li>
                     <li><a href="../partners.html">Partners</a></li>
                     <li><a href="../about.html">About</a></li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="#">EN</a>
+                    <li class="nav-item-with-dropdown"><a href="#">EN</a>
                         <ul class="dropdown-menu">
                             <li><a href="tottus.html">English</a></li>
                             <li><a href="../es/work/tottus.html">Español</a></li>
@@ -330,198 +55,227 @@
         </div>
     </header>
 
-    <!-- Hero Image -->
-    <img src="../images/casestudies/tottus-hero.png" alt="Tottus Case Study" class="case-study-hero">
+    <section class="case-study-hero">
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <div class="case-study-label">Case Study</div>
+                <h1 class="case-study-title">ATG to Headless Commerce Migration</h1>
+                <p class="case-study-intro">Latin America's leading omnichannel supermarket chain modernizes from Oracle
+                    ATG to cloud-native headless commerce on Google Cloud.</p>
+                <div class="hero-logo-circle"><img src="../images/casestudies/tottus-logo.png" alt="Tottus"></div>
+            </div>
+            <div class="hero-image-container"><img src="../images/casestudies/tottus-hero.png" alt="Tottus"></div>
+        </div>
+    </section>
 
-    <!-- Title Section -->
-    <section class="case-study-title">
-        <div class="container">
-            <img src="../images/casestudies/tottus-logo.png" alt="Tottus" class="client-logo">
-            <h1>ATG to Headless Commerce Migration at Scale</h1>
-
-            <!-- Client Info Grid -->
+    <section class="client-info-section">
+        <div class="client-info-wrapper">
             <div class="client-info-grid">
                 <div class="client-info-item">
-                    <h3>Region</h3>
-                    <p>Latam</p>
+                    <div class="client-info-label">Region</div>
+                    <div class="client-info-value">LATAM</div>
                 </div>
                 <div class="client-info-item">
-                    <h3>Website</h3>
-                    <p><a href="https://www.tottus.cl" target="_blank" rel="noopener">https://www.tottus.cl</a></p>
+                    <div class="client-info-label">Website</div>
+                    <div class="client-info-value"><a href="https://www.tottus.cl" target="_blank"
+                            rel="noopener">www.tottus.cl</a></div>
                 </div>
                 <div class="client-info-item">
-                    <h3>Client Since</h3>
-                    <p>2015</p>
+                    <div class="client-info-label">Client Since</div>
+                    <div class="client-info-value">2015</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Client Overview Section -->
-    <section class="section-white">
-        <div class="section-content">
-            <div class="client-overview">
-                <h3>Client Overview</h3>
-                <p><strong>Tottus</strong> is Latin America's leading omnichannel supermarket chain. Part of the <strong>Falabella Group</strong>, they seamlessly blend physical retail with digital innovation. Their <strong>Tottus App</strong> and e-commerce platform serve millions across Peru and Chile. They power commerce for global and proprietary brands at massive scale.</p>
+    <section class="challenge-section">
+        <div class="challenge-header">
+            <h2>The <span>Challenge</span></h2>
+            <p>Legacy Oracle ATG platform was costly, inflexible, and unable to scale with growth across regions and
+                brands.</p>
+        </div>
+        <div class="challenge-container">
+            <div class="challenge-image-wrapper">
+                <img src="../images/casestudies/tottus-challenge.png" alt="Tottus Challenge">
+                <div class="challenge-image-badge">Omnichannel Retail</div>
+            </div>
+            <div class="challenge-cards">
+                <div class="challenge-card">
+                    <h3><span class="card-number">1</span> Technical Debt</h3>
+                    <p>Costly on-premise legacy system limiting agility and scalability</p>
+                </div>
+                <div class="challenge-card">
+                    <h3><span class="card-number">2</span> Integration Gaps</h3>
+                    <p>Siloed back-office systems preventing unified omnichannel operations</p>
+                </div>
+                <div class="challenge-card">
+                    <h3><span class="card-number">3</span> Performance Issues</h3>
+                    <p>Heavy monolith unable to deliver fast SEO-optimized experiences</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Challenge Section -->
-    <section class="section-gray">
-        <div class="section-content">
-            <h2>Challenge</h2>
-            <div class="two-column-layout">
-                <div>
-                    <img src="../images/casestudies/tottus-challenge.png" alt="Tottus Challenge">
+    <section class="solution-section">
+        <div class="solution-container">
+            <div class="solution-header">
+                <h2>The Solution</h2>
+                <p>Seamless migration to cloud-native, API-first headless commerce.</p>
+            </div>
+            <div class="solution-pillars">
+                <div class="solution-pillar">
+                    <div class="pillar-number">1</div>
+                    <h3>Headless Commerce</h3>
+                    <p><strong>commercetools on Google Cloud</strong> with Node.js backend and React/Next.js frontend
+                        for speed.</p>
                 </div>
-                <div>
-                    <p><strong>Technical Debt:</strong> Legacy Oracle ATG running on-premise was costly, inflexible, and couldn't scale with their growth across regions and brands.</p>
-                    <p><strong>Integration Gaps:</strong> Back-office systems (PIM, supply chain, orders) operated in silos. No unified omnichannel vision.</p>
-                    <p><strong>Performance Bottlenecks:</strong> Heavy monolith couldn't deliver fast, SEO-optimized experiences their customers demanded.</p>
+                <div class="solution-pillar">
+                    <div class="pillar-number">2</div>
+                    <h3>Unified Systems</h3>
+                    <p>Integrated PIM, supply chain, and OMS into one intelligent backbone with real-time sync.</p>
                 </div>
+                <div class="solution-pillar">
+                    <div class="pillar-number">3</div>
+                    <h3>API-First Scale</h3>
+                    <p><strong>Multi-tenant architecture</strong> supporting multi-brand operations across Peru and
+                        Chile.</p>
+                </div>
+            </div>
+            <div class="devices-showcase">
+                <img src="../images/casestudies/tottus-laptop.png" alt="Tottus Desktop" class="device-laptop">
+                <img src="../images/casestudies/tottus-mobile.png" alt="Tottus Mobile" class="device-mobile">
             </div>
         </div>
     </section>
 
-    <!-- Solution Section -->
-    <section class="section-white">
-        <div class="section-content">
-            <h2>Solution</h2>
-            <p>We orchestrated a seamless "big-bang" migration from Oracle ATG to a cloud-native, API-first platform. The result: a scalable, future-proof commerce engine.</p>
-
-            <div style="margin-top: 40px;">
-                <h3 style="font-size: 22px; color: #2B2B2B; margin-bottom: 16px; font-weight: 700;">Pillar 1: <strong>Headless Commerce Engine</strong></h3>
-                <p><strong>commercetools</strong> on <strong>Google Cloud</strong> replaced legacy ATG. Built <strong>Node.js/Fastify</strong> backend with <strong>React/Next.js</strong> frontend for speed and SEO.</p>
+    <section class="results-section">
+        <div class="results-container">
+            <div class="results-header">
+                <h2>Results</h2>
             </div>
-
-            <div style="margin-top: 32px;">
-                <h3 style="font-size: 22px; color: #2B2B2B; margin-bottom: 16px; font-weight: 700;">Pillar 2: <strong>Unified Backend Systems</strong></h3>
-                <p>Integrated <strong>PIM, supply chain, catalogs, and order management</strong> into one intelligent backbone. Real-time sync across channels and regions.</p>
-            </div>
-
-            <div style="margin-top: 32px;">
-                <h3 style="font-size: 22px; color: #2B2B2B; margin-bottom: 16px; font-weight: 700;">Pillar 3: <strong>Multi-Tenant, API-First Architecture</strong></h3>
-                <p><strong>Multi-brand support</strong> across Peru and Chile. <strong>Payment, email, and third-party services</strong> plugged in via APIs. Infinite scale.</p>
-            </div>
-
-            <!-- Device Screenshots -->
-            <div class="device-screenshots">
-                <img src="../images/casestudies/tottus-desktop.png" alt="Tottus Desktop View">
-                <img src="../images/casestudies/tottus-laptop.png" alt="Tottus Laptop View">
-                <img src="../images/casestudies/tottus-mobile.png" alt="Tottus Mobile View">
-            </div>
-        </div>
-    </section>
-
-    <!-- Results Section -->
-    <section class="section-gray">
-        <div class="section-content">
-            <h2>Results</h2>
-
-            <div class="results-grid">
+            <div class="results-list">
                 <div class="result-item">
-                    <h3>Zero Downtime Migration</h3>
-                    <p>Seamless "big-bang" cutover from Oracle ATG with <strong>zero customer impact</strong>.</p>
-                </div>
-                <div class="result-item">
-                    <h3>50%+ Cost Savings</h3>
-                    <p><strong>GCP</strong> replaced expensive on-prem infrastructure. Massive OpEx reduction.</p>
-                </div>
-                <div class="result-item">
-                    <h3>2x Faster Page Loads</h3>
-                    <p>Modern <strong>Next.js/React</strong> frontend + code splitting delivered <strong>SEO gains</strong> and improved conversions.</p>
-                </div>
-                <div class="result-item">
-                    <h3>Real-Time Inventory Sync</h3>
-                    <p><strong>PIM, catalogs, and supply chain</strong> now unified. No more silos across Peru and Chile operations.</p>
-                </div>
-                <div class="result-item">
-                    <h3>Unlimited Multi-Channel Scale</h3>
-                    <p>Extensible <strong>multi-tenant API architecture</strong> ready for new brands and channels.</p>
-                </div>
-            </div>
-
-            <img src="../images/casestudies/tottus-highlights.png" alt="Tottus Highlights" class="highlights-image">
-        </div>
-    </section>
-
-    <!-- Services & Technologies Section -->
-    <section class="section-white">
-        <div class="section-content">
-            <div class="services-technologies">
-                <div class="tech-section">
-                    <h3>Services Provided</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Digital Commerce Architecture & Planning</span>
-                        <span class="tech-tag">eCommerce Development</span>
-                        <span class="tech-tag">Microservices Strategy & Assessments</span>
-                        <span class="tech-tag">Cloud Services</span>
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Zero Downtime</h3>
+                        <p>Seamless cutover with zero customer impact</p>
                     </div>
                 </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>50%+ Cost Savings</h3>
+                        <p>Massive OpEx reduction by moving to GCP</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>2x Faster Page Loads</h3>
+                        <p>Modern frontend delivered SEO gains and conversions</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Real-Time Sync</h3>
+                        <p>Unified inventory visibility across regions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="tech-section">
+    <section class="services-section">
+        <div class="services-container">
+            <div class="services-header">
+                <h2>Services Delivered</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" />
+                        </svg></div>
+                    <h3>Commerce Architecture</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg></div>
+                    <h3>eCommerce Development</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M6 2v6h.01L6 8.01 10 12l-4 4 .01.01H6V22h12v-5.99h-.01L18 16l-4-4 4-3.99-.01-.01H18V2H6z" />
+                        </svg></div>
+                    <h3>Microservices Strategy</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
+                        </svg></div>
+                    <h3>Cloud Services</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="technologies-section">
+        <div class="technologies-container">
+            <div class="technologies-header">
+                <h2>Technologies</h2>
+            </div>
+            <div class="tech-category">
+                <div class="tech-category-title">
                     <h3>Engineering Stack</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Google Cloud Platform</span>
-                        <span class="tech-tag">Next.js</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">Fastify</span>
-                    </div>
                 </div>
-
-                <div class="tech-section">
-                    <h3>Partner Integrations</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">commercetools</span>
-                        <span class="tech-tag">Oracle ATG</span>
-                        <span class="tech-tag">Contentful</span>
-                        <span class="tech-tag">Cloudflare</span>
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-card"><span class="tech-name">Google Cloud</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">Next.js</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">React</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">Node.js</span></div>
+                </div>
+            </div>
+            <div class="tech-category">
+                <div class="tech-category-title">
+                    <h3>Integrations</h3>
+                </div>
+                <div class="tech-partners-grid">
+                    <div class="tech-partner-card">
+                        <div class="partner-badge">C</div>
+                        <div class="partner-info"><span class="partner-name">commercetools</span></div>
+                    </div>
+                    <div class="tech-partner-card">
+                        <div class="partner-badge">O</div>
+                        <div class="partner-info"><span class="partner-name">Oracle ATG</span></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="cs-cta">
         <div class="container">
-            <h2>Transform Your Commerce Infrastructure</h2>
-            <p>Escape technical debt. Migrate to headless commerce with <strong>zero downtime</strong>, <strong>massive cost savings</strong>, and <strong>unlimited scale</strong>.</p>
-            <a href="../contact.html" class="cta-button">Let's Talk →</a>
+            <h2>Future-Proof Your Commerce</h2>
+            <p><strong>Migrate to headless with zero downtime.</strong> Scale without limits and reduce costs.</p>
+            <a href="../contact.html" class="cs-cta-button">Let's Talk →</a>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="../services.html">All Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Platforms</h4>
-                    <ul>
-                        <li><a href="../platforms.html">All Platforms</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../work.html">Work</a></li>
-                        <li><a href="../partners.html">Partners</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NULogic. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer></footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/footer.js"></script>
 </body>
+
 </html>

@@ -1,429 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/icons/favicon.png">
     <title>Pokemon Case Study | AWS DevOps & React Optimization | NULogic</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/casestudy-responsive.css">
-    <style>
-        /* Case Study Specific Styles */
-        .case-study-hero {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        .case-study-hero img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .case-study-title {
-            padding: 60px 0 40px;
-            text-align: center;
-        }
-
-        .case-study-title h1 {
-            color: #2B2B2B;
-            font-size: 42px;
-            line-height: 1.3;
-            max-width: 1000px;
-            margin: 0 auto 32px;
-            font-weight: 700;
-        }
-
-        .client-logo {
-            margin-bottom: 32px;
-        }
-
-        .client-logo img {
-            height: 60px;
-            margin: 0 auto;
-        }
-
-        .client-info-grid {
-            background: #F9F9F9;
-            padding: 48px 0;
-        }
-
-        .client-info-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .client-info-item {
-            text-align: center;
-        }
-
-        .client-info-label {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #979797;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .client-info-value {
-            font-size: 18px;
-            color: #2B2B2B;
-            font-weight: 600;
-        }
-
-        .client-info-value a {
-            color: #89389f;
-            text-decoration: none;
-        }
-
-        .client-info-value a:hover {
-            text-decoration: underline;
-        }
-
-        .client-overview {
-            background: #FFFFFF;
-            padding: 64px 0;
-        }
-
-        .client-overview-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .client-overview h2 {
-            font-size: 32px;
-            color: #2B2B2B;
-            margin-bottom: 24px;
-            font-weight: 700;
-        }
-
-        .client-overview p {
-            font-size: 18px;
-            line-height: 1.7;
-            color: #424242;
-            margin-bottom: 16px;
-        }
-
-        .challenge-section {
-            background: #F9F9F9;
-            padding: 64px 0;
-        }
-
-        .challenge-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
-            align-items: center;
-        }
-
-        .challenge-image {
-            width: 100%;
-        }
-
-        .challenge-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-        }
-
-        .challenge-text h2 {
-            font-size: 32px;
-            color: #2B2B2B;
-            margin-bottom: 24px;
-            font-weight: 700;
-        }
-
-        .challenge-text ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .challenge-text ul li {
-            font-size: 16px;
-            line-height: 1.7;
-            color: #424242;
-            margin-bottom: 16px;
-            padding-left: 28px;
-            position: relative;
-        }
-
-        .challenge-text ul li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #89389f;
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 1.4;
-        }
-
-        .solution-section {
-            background: #FFFFFF;
-            padding: 64px 0;
-        }
-
-        .solution-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .solution-content h2 {
-            font-size: 32px;
-            color: #2B2B2B;
-            margin-bottom: 40px;
-            font-weight: 700;
-        }
-
-        .solution-item {
-            margin-bottom: 32px;
-        }
-
-        .solution-item h3 {
-            font-size: 22px;
-            color: #2B2B2B;
-            margin-bottom: 16px;
-            font-weight: 600;
-        }
-
-        .solution-item ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .solution-item ul li {
-            font-size: 16px;
-            line-height: 1.7;
-            color: #424242;
-            margin-bottom: 12px;
-            padding-left: 28px;
-            position: relative;
-        }
-
-        .solution-item ul li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #89389f;
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        .results-section {
-            background: #F9F9F9;
-            padding: 64px 0;
-        }
-
-        .results-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .results-content h2 {
-            font-size: 32px;
-            color: #2B2B2B;
-            margin-bottom: 32px;
-            font-weight: 700;
-        }
-
-        .results-image {
-            margin-bottom: 40px;
-        }
-
-        .results-image img {
-            width: 100%;
-            max-width: 700px;
-            height: auto;
-            margin: 0 auto;
-            display: block;
-            border-radius: 12px;
-        }
-
-        .results-content ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .results-content ul li {
-            font-size: 16px;
-            line-height: 1.7;
-            color: #424242;
-            margin-bottom: 16px;
-            padding-left: 28px;
-            position: relative;
-        }
-
-        .results-content ul li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #89389f;
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        .services-section {
-            background: #F9F9F9;
-            padding: 64px 0;
-        }
-
-        .services-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .services-content h2 {
-            font-size: 32px;
-            color: #2B2B2B;
-            margin-bottom: 40px;
-            font-weight: 700;
-        }
-
-        .services-group {
-            margin-bottom: 40px;
-        }
-
-        .services-group h3 {
-            font-size: 22px;
-            color: #2B2B2B;
-            margin-bottom: 16px;
-            font-weight: 600;
-        }
-
-        .services-list {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 24px;
-        }
-
-        .services-list li {
-            font-size: 16px;
-            line-height: 1.7;
-            color: #424242;
-            margin-bottom: 12px;
-            padding-left: 28px;
-            position: relative;
-        }
-
-        .services-list li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #89389f;
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 1.4;
-        }
-
-        .tech-logos {
-            display: flex;
-            gap: 24px;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-top: 24px;
-        }
-
-        .tech-logos img {
-            height: 40px;
-            width: auto;
-        }
-
-        .cta-section {
-            background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            color: #FFFFFF;
-            font-size: 36px;
-            margin-bottom: 16px;
-            font-weight: 700;
-        }
-
-        .cta-section p {
-            color: #FFFFFF;
-            font-size: 18px;
-            margin-bottom: 32px;
-            opacity: 0.95;
-        }
-
-        .cta-section .btn {
-            background: #FFFFFF;
-            color: #89389f;
-            padding: 16px 40px;
-            font-size: 18px;
-            font-weight: 600;
-            border-radius: 12px;
-            text-decoration: none;
-            display: inline-block;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .cta-section .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .case-study-title h1 {
-                font-size: 28px;
-                padding: 0 20px;
-            }
-
-            .client-info-container {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
-
-            .challenge-content {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .challenge-image {
-                order: -1;
-            }
-
-            .client-overview h2,
-            .challenge-text h2,
-            .solution-content h2,
-            .results-content h2,
-            .services-content h2 {
-                font-size: 26px;
-            }
-
-            .solution-item h3,
-            .services-group h3 {
-                font-size: 20px;
-            }
-
-            .cta-section h2 {
-                font-size: 28px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/casestudy.css">
 </head>
+
 <body>
     <header>
         <div class="container">
             <nav>
-                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic" style="height: 32px;"></a>
+                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic"
+                        style="height: 32px;"></a>
                 <ul class="nav-links">
                     <li class="nav-item-with-dropdown">
                         <a href="../services.html">Services</a>
@@ -460,180 +58,259 @@
         </div>
     </header>
 
-    <!-- Hero Banner -->
+    <!-- Hero Section - Split Layout -->
     <section class="case-study-hero">
-        <img src="../images/casestudies/pokemon-hero.png" alt="Pokemon Case Study Hero">
-    </section>
-
-    <!-- Title Section -->
-    <section class="case-study-title">
-        <div class="container">
-            <div class="client-logo">
-                <img src="../images/casestudies/pokemon-logo.png" alt="Pokemon Logo">
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <div class="case-study-label">Case Study</div>
+                <h1 class="case-study-title">Scaling Pokémon with AWS DevOps & React Optimization</h1>
+                <p class="case-study-intro">Pokémon Center needed to handle massive traffic spikes during major product
+                    launches while maintaining security and performance.</p>
+                <div class="hero-logo-circle">
+                    <img src="../images/casestudies/pokemon-logo.png" alt="Pokémon">
+                </div>
             </div>
-            <h1>Scaling Pokémon with AWS DevOps & React Optimization</h1>
-        </div>
-    </section>
-
-    <!-- Client Info Grid -->
-    <section class="client-info-grid">
-        <div class="client-info-container">
-            <div class="client-info-item">
-                <div class="client-info-label">Region</div>
-                <div class="client-info-value">U.S.</div>
-            </div>
-            <div class="client-info-item">
-                <div class="client-info-label">Website</div>
-                <div class="client-info-value"><a href="https://www.pokemoncenter.com" target="_blank" rel="noopener">pokemoncenter.com</a></div>
-            </div>
-            <div class="client-info-item">
-                <div class="client-info-label">Client Since</div>
-                <div class="client-info-value">2019</div>
+            <div class="hero-image-container">
+                <img src="../images/casestudies/pokemon-hero.png" alt="Pokémon Products">
             </div>
         </div>
     </section>
 
-    <!-- Client Overview -->
-    <section class="client-overview">
-        <div class="client-overview-content">
-            <h2>Client Overview</h2>
-            <p><strong>Pokémon Center</strong> needed to handle massive traffic spikes during major product launches while maintaining security and performance.</p>
-            <p>NULogic delivered <strong>AWS DevOps automation</strong>, <strong>React optimization</strong>, and <strong>enterprise-grade infrastructure</strong> to scale seamlessly.</p>
+    <!-- Client Info Section -->
+    <section class="client-info-section">
+        <div class="client-info-wrapper">
+            <div class="client-info-grid">
+                <div class="client-info-item">
+                    <div class="client-info-label">Region</div>
+                    <div class="client-info-value">U.S.</div>
+                </div>
+                <div class="client-info-item">
+                    <div class="client-info-label">Website</div>
+                    <div class="client-info-value"><a href="https://www.pokemoncenter.com" target="_blank"
+                            rel="noopener">www.pokemoncenter.com</a></div>
+                </div>
+                <div class="client-info-item">
+                    <div class="client-info-label">Client Since</div>
+                    <div class="client-info-value">2019</div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Challenge Section -->
+    <!-- Challenge Section - Premium Redesign -->
     <section class="challenge-section">
-        <div class="challenge-content">
-            <div class="challenge-image">
+        <div class="challenge-header">
+            <h2>The <span>Challenge</span></h2>
+            <p>Pokémon Center needed to handle massive traffic spikes during major product launches while maintaining
+                security and performance.</p>
+        </div>
+        <div class="challenge-container">
+            <div class="challenge-image-wrapper">
                 <img src="../images/casestudies/pokemon-challenge.png" alt="Pokemon Challenge">
+                <div class="challenge-image-badge">Global Scale</div>
             </div>
-            <div class="challenge-text">
-                <h2>Challenge</h2>
-                <ul>
-                    <li><strong>Legacy Infrastructure:</strong> Outdated systems created bottlenecks and technical debt blocking growth</li>
-                    <li><strong>Security & Scalability Gaps:</strong> Vulnerability risks and manual processes hindered ability to scale</li>
-                    <li><strong>High-Traffic Events:</strong> Needed reliable, automated support during peak demand periods</li>
-                </ul>
+            <div class="challenge-cards">
+                <div class="challenge-card">
+                    <h3><span class="card-number">1</span> Legacy Infrastructure</h3>
+                    <p>Outdated systems created bottlenecks and technical debt blocking growth</p>
+                </div>
+                <div class="challenge-card">
+                    <h3><span class="card-number">2</span> Security & Scalability Gaps</h3>
+                    <p>Vulnerability risks and manual processes hindered ability to scale</p>
+                </div>
+                <div class="challenge-card">
+                    <h3><span class="card-number">3</span> High-Traffic Events</h3>
+                    <p>Needed reliable, automated support during peak demand periods</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Solution Section -->
     <section class="solution-section">
-        <div class="solution-content">
-            <h2>Solution</h2>
-
-            <div class="solution-item">
-                <h3>Pillar 1: <strong>AWS DevOps & Automation</strong></h3>
-                <ul>
-                    <li><strong>Infrastructure as Code</strong> eliminated manual provisioning errors</li>
-                    <li><strong>CI/CD pipelines</strong> accelerated deployment cycles</li>
-                    <li><strong>Automated security</strong> embedded in every deployment</li>
-                </ul>
+        <div class="solution-container">
+            <div class="solution-header">
+                <h2>The Solution</h2>
+                <p>NULogic delivered AWS DevOps automation, React optimization, and enterprise-grade infrastructure to
+                    scale seamlessly.</p>
             </div>
 
-            <div class="solution-item">
-                <h3>Pillar 2: <strong>Performance & Reliability</strong></h3>
-                <ul>
-                    <li><strong>React optimization</strong> accelerated checkout page load times</li>
-                    <li><strong>Load testing & analysis</strong> validated high-traffic readiness</li>
-                    <li><strong>Real-time monitoring</strong> with proactive alerting prevented issues</li>
-                </ul>
+            <div class="solution-pillars">
+                <div class="solution-pillar">
+                    <div class="pillar-number">1</div>
+                    <h3>AWS DevOps & Automation</h3>
+                    <p><strong>Infrastructure as Code</strong> eliminated manual provisioning errors. <strong>CI/CD
+                            pipelines</strong> accelerated deployment cycles. <strong>Automated security</strong>
+                        embedded in every deployment.</p>
+                </div>
+                <div class="solution-pillar">
+                    <div class="pillar-number">2</div>
+                    <h3>Performance & Reliability</h3>
+                    <p><strong>React optimization</strong> accelerated checkout page load times. <strong>Load testing &
+                            analysis</strong> validated high-traffic readiness. <strong>Real-time monitoring</strong>
+                        with proactive alerting prevented issues.</p>
+                </div>
+                <div class="solution-pillar">
+                    <div class="pillar-number">3</div>
+                    <h3>Security & Compliance</h3>
+                    <p><strong>Identity & access management</strong> protected customer data. <strong>Vulnerability
+                            scanning</strong> in automated pipelines. <strong>Compliance monitoring</strong> maintained
+                        enterprise standards.</p>
+                </div>
             </div>
 
-            <div class="solution-item">
-                <h3>Pillar 3: <strong>Security & Compliance</strong></h3>
-                <ul>
-                    <li><strong>Identity & access management</strong> protected customer data</li>
-                    <li><strong>Vulnerability scanning</strong> in automated pipelines</li>
-                    <li><strong>Compliance monitoring</strong> maintained enterprise standards</li>
-                </ul>
+            <!-- Device Mockups -->
+            <div class="devices-showcase">
+                <img src="../images/casestudies/pokemon-laptop.png" alt="Pokemon Desktop" class="device-laptop">
+                <img src="../images/casestudies/pokemon-tablet.png" alt="Pokemon Tablet" class="device-tablet">
+                <img src="../images/casestudies/pokemon-mobile.png" alt="Pokemon Mobile" class="device-mobile">
             </div>
         </div>
     </section>
 
     <!-- Results Section -->
     <section class="results-section">
-        <div class="results-content">
-            <h2>Results</h2>
-
-            <div class="results-image">
-                <img src="../images/casestudies/pokemon-results.png" alt="Pokemon Results">
+        <div class="results-container">
+            <div class="results-header">
+                <h2>Results</h2>
             </div>
 
-            <ul>
-                <li><strong>Zero downtime</strong> during high-traffic launch events</li>
-                <li><strong>40% faster</strong> checkout performance with React optimization</li>
-                <li><strong>99.99% uptime</strong> with automated monitoring and incident response</li>
-                <li><strong>Eliminated manual errors</strong> through Infrastructure as Code automation</li>
-                <li><strong>Accelerated releases</strong> from weeks to days with CI/CD pipelines</li>
-                <li><strong>Reduced security risks</strong> with continuous vulnerability scanning</li>
-            </ul>
+            <div class="results-list">
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>Zero Downtime</h3>
+                        <p>During high-traffic launch events</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>40% Faster Checkout</h3>
+                        <p>Performance improvement with React optimization</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>99.99% Uptime</h3>
+                        <p>With automated monitoring and incident response</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>Eliminated Manual Errors</h3>
+                        <p>Through Infrastructure as Code automation</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>Accelerated Releases</h3>
+                        <p>From weeks to days with CI/CD pipelines</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>Reduced Security Risks</h3>
+                        <p>With continuous vulnerability scanning</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Services & Technologies Section -->
+    <!-- Services Section - Enhanced -->
     <section class="services-section">
-        <div class="services-content">
-            <h2>Services & Technologies</h2>
+        <div class="services-container">
+            <div class="services-header">
+                <h2>Services Delivered</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3>Performance Engineering</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                        </svg>
+                    </div>
+                    <h3>Monitoring and Support Operations</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="services-group">
-                <h3>Services Delivered</h3>
-                <ul class="services-list">
-                    <li>Performance Engineering (checkout testing, load analysis, React optimization)</li>
-                    <li>Monitoring and Support Operations (system monitoring, security management)</li>
-                </ul>
+    <!-- Technologies Section -->
+    <section class="technologies-section">
+        <div class="technologies-container">
+            <div class="technologies-header">
+                <h2>Technologies</h2>
             </div>
 
-            <div class="services-group">
-                <h3>Engineering Stack</h3>
-                <div class="tech-logos">
-                    <img src="../images/casestudies/pokemon-aws-logo.png" alt="AWS">
-                    <img src="../images/casestudies/pokemon-tech1.png" alt="Technology Partner">
+            <div class="tech-category">
+                <div class="tech-category-title">
+                    <h3>Engineering Stack</h3>
+                </div>
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-card">
+                        <img src="../images/techs/aws.png" alt="AWS">
+                        <span class="tech-name">AWS</span>
+                    </div>
+                    <div class="tech-stack-card">
+                        <img src="../images/techs/react.png" alt="React">
+                        <span class="tech-name">React</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="cs-cta">
         <div class="container">
             <h2>Ready to scale like Pokémon?</h2>
-            <p><strong>We build infrastructure that handles millions in traffic while cutting deployment time in half.</strong></p>
-            <a href="../contact.html" class="btn">Let's Talk →</a>
+            <p>We build infrastructure that handles millions in traffic while cutting deployment time in half.</p>
+            <a href="../contact.html" class="cs-cta-button">Let's Talk →</a>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="../services.html">All Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Platforms</h4>
-                    <ul>
-                        <li><a href="../platforms.html">All Platforms</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../work.html">Work</a></li>
-                        <li><a href="../partners.html">Partners</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NULogic. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer></footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/footer.js"></script>
 </body>
+
 </html>

@@ -1,361 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/icons/favicon.png">
     <title>Sephora Case Study | Digital Transformation & Omnichannel Commerce | NULogic</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/casestudy-responsive.css">
-    <style>
-        /* Case Study Specific Styles */
-        .case-study-hero {
-            background-color: black;
-            background-image: url('../images/casestudies/sephora-banner.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            padding: 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-content-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 40px;
-        }
-
-        .case-study-label {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 20px;
-        }
-
-        .case-study-title {
-            color: #ffffff;
-            font-size: 48px;
-            line-height: 1.2;
-            font-weight: 700;
-            margin-bottom: 24px;
-            max-width: 900px;
-        }
-
-        .case-study-intro {
-            color: rgba(255, 255, 255, 0.95);
-            font-size: 20px;
-            line-height: 1.6;
-            max-width: 800px;
-        }
-
-        /* Client Info Grid */
-        .client-info-section {
-            background: #F9F9F9;
-            padding: 60px 40px;
-        }
-
-        .client-info-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 80px;
-            flex-wrap: wrap;
-        }
-
-        .client-logo-container {
-            flex: 0 0 auto;
-        }
-
-        .client-logo-container img {
-            height: 60px;
-            width: auto;
-        }
-
-        .client-info-grid {
-            flex: 1;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            min-width: 600px;
-        }
-
-        .client-info-item {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .client-info-label {
-            color: #89389f;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-        }
-
-        .client-info-value {
-            color: #2B2B2B;
-            font-size: 18px;
-            font-weight: 600;
-            line-height: 1.4;
-        }
-
-        .client-info-value a {
-            color: #89389f;
-            text-decoration: none;
-        }
-
-        .client-info-value a:hover {
-            text-decoration: underline;
-        }
-
-        /* Content Sections */
-        .content-section {
-            padding: 80px 40px;
-        }
-
-        .content-section.gray-bg {
-            background: #F9F9F9;
-        }
-
-        .content-section.white-bg {
-            background: #ffffff;
-        }
-
-        .content-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .content-wrapper-narrow {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            color: #2B2B2B;
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 24px;
-            line-height: 1.3;
-        }
-
-        .section-text {
-            color: #424242;
-            font-size: 18px;
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-
-        /* Challenge Section - Two Column Layout */
-        .challenge-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .challenge-image {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .challenge-content h2 {
-            color: #2B2B2B;
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 24px;
-        }
-
-        .challenge-content p {
-            color: #424242;
-            font-size: 18px;
-            line-height: 1.7;
-            margin-bottom: 16px;
-        }
-
-        /* Solution Images Grid */
-        .solution-images {
-            display: flex;
-            gap: 24px;
-            margin-top: 40px;
-            align-items: flex-end;
-            justify-content: center;
-        }
-
-        .solution-images img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .solution-desktop {
-            width: 35%;
-        }
-
-        .solution-laptop {
-            width: 30%;
-        }
-
-        .solution-mobile {
-            width: 15%;
-        }
-
-        /* Results Section */
-        .results-image {
-            width: 100%;
-            max-width: 900px;
-            height: auto;
-            margin: 40px auto 0;
-            display: block;
-            border-radius: 8px;
-        }
-
-
-        /* Services Section */
-        .services-content h3 {
-            color: #2B2B2B;
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            margin-top: 32px;
-        }
-
-        .services-content h3:first-of-type {
-            margin-top: 0;
-        }
-
-        .services-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 20px;
-        }
-
-        .service-tag {
-            background: #ffffff;
-            color: #2B2B2B;
-            padding: 12px 20px;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 500;
-            border: 1px solid #e0e0e0;
-        }
-
-        .technology-logo {
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        .technology-logo img {
-            height: 40px;
-            width: auto;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);
-            padding: 80px 40px;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            color: #ffffff;
-            font-size: 40px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            line-height: 1.3;
-        }
-
-        .cta-section p {
-            color: rgba(255, 255, 255, 0.95);
-            font-size: 20px;
-            line-height: 1.6;
-            margin-bottom: 32px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: #ffffff;
-            color: #89389f;
-            padding: 16px 32px;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background: #f5f5f5;
-            transform: translateY(-2px);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 968px) {
-            .challenge-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .client-info-grid {
-                grid-template-columns: repeat(2, 1fr);
-                min-width: auto;
-            }
-
-            .solution-images {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .solution-desktop,
-            .solution-laptop,
-            .solution-mobile {
-                width: 80%;
-            }
-
-            .case-study-title {
-                font-size: 36px;
-            }
-
-            .section-title {
-                font-size: 28px;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .client-info-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .case-study-title {
-                font-size: 28px;
-            }
-
-            .cta-section h2 {
-                font-size: 32px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/casestudy.css">
 </head>
+
 <body>
     <header>
         <div class="container">
             <nav>
-                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic" style="height: 32px;"></a>
+                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic"
+                        style="height: 32px;"></a>
                 <ul class="nav-links">
-                    <li class="nav-item-with-dropdown">
-                        <a href="../services.html">Services</a>
+                    <li class="nav-item-with-dropdown"><a href="../services.html">Services</a>
                         <ul class="dropdown-menu">
                             <li><a href="../commerce-build.html">Commerce Services</a></li>
                             <li><a href="../services.html#support">24/7 Run & Support</a></li>
@@ -363,8 +31,7 @@
                             <li><a href="../services.html#data-ai">Data, AI & Analytics</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="../platforms.html">Platforms</a>
+                    <li class="nav-item-with-dropdown"><a href="../platforms.html">Platforms</a>
                         <ul class="dropdown-menu">
                             <li><a href="../platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
                             <li><a href="../platforms.html#shopify">Shopify Plus</a></li>
@@ -376,8 +43,7 @@
                     <li><a href="../work.html">Work</a></li>
                     <li><a href="../partners.html">Partners</a></li>
                     <li><a href="../about.html">About</a></li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="#">EN</a>
+                    <li class="nav-item-with-dropdown"><a href="#">EN</a>
                         <ul class="dropdown-menu">
                             <li><a href="sephora.html">English</a></li>
                             <li><a href="../es/work/sephora.html">Español</a></li>
@@ -389,21 +55,21 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="case-study-hero">
         <div class="hero-content-wrapper">
-            <div class="case-study-label">Case Study</div>
-            <h1 class="case-study-title">Beauty's Digital Powerhouse: Unified Commerce at Scale</h1>
-            <p class="case-study-intro">Leading prestige beauty retailer. 2,700+ global stores. One unified commerce platform.</p>
+            <div class="hero-text-content">
+                <div class="case-study-label">Case Study</div>
+                <h1 class="case-study-title">Beauty's Digital Powerhouse</h1>
+                <p class="case-study-intro">Leading prestige beauty retailer with 2,700+ global stores. Unifying
+                    commerce for a seamless omnichannel experience.</p>
+                <div class="hero-logo-circle"><img src="../images/casestudies/sephora-logo.svg" alt="Sephora"></div>
+            </div>
+            <div class="hero-image-container"><img src="../images/casestudies/sephora-hero.png" alt="Sephora"></div>
         </div>
     </section>
 
-    <!-- Client Info Section -->
     <section class="client-info-section">
         <div class="client-info-wrapper">
-            <div class="client-logo-container">
-                <img src="../images/casestudies/sephora-logo.svg" alt="Sephora">
-            </div>
             <div class="client-info-grid">
                 <div class="client-info-item">
                     <div class="client-info-label">Region</div>
@@ -411,7 +77,8 @@
                 </div>
                 <div class="client-info-item">
                     <div class="client-info-label">Website</div>
-                    <div class="client-info-value"><a href="https://www.sephora.com" target="_blank" rel="noopener">sephora.com</a></div>
+                    <div class="client-info-value"><a href="https://www.sephora.com" target="_blank"
+                            rel="noopener">www.sephora.com</a></div>
                 </div>
                 <div class="client-info-item">
                     <div class="client-info-label">Client Since</div>
@@ -421,133 +88,188 @@
         </div>
     </section>
 
-    <!-- Client Overview Section -->
-    <section class="content-section white-bg">
-        <div class="content-wrapper-narrow">
-            <h2 class="section-title">Client Overview</h2>
-            <p class="section-text"><strong>Global beauty authority</strong> operating 2,700+ stores across 35 countries. <strong>Digital commerce leader</strong> bridging luxury retail with omnichannel excellence. Serves millions of customers across online, mobile, and in-store experiences.</p>
+    <section class="challenge-section">
+        <div class="challenge-header">
+            <h2>The <span>Challenge</span></h2>
+            <p>Fractured technology stack and operational bottlenecks drove escalating costs and limited innovation.</p>
         </div>
-    </section>
-
-    <!-- Challenge Section -->
-    <section class="content-section gray-bg">
-        <div class="content-wrapper">
-            <div class="challenge-grid">
-                <div class="challenge-image-container">
-                    <img src="../images/casestudies/sephora-challenge.png" alt="Sephora Challenge" class="challenge-image">
+        <div class="challenge-container">
+            <div class="challenge-image-wrapper">
+                <img src="../images/casestudies/sephora-challenge.png" alt="Sephora Challenge">
+                <div class="challenge-image-badge">2,700+ Stores</div>
+            </div>
+            <div class="challenge-cards">
+                <div class="challenge-card">
+                    <h3><span class="card-number">1</span> Fractured Tech</h3>
+                    <p>Multiple vendors managing commerce, POS, and apps independently with zero coordination</p>
                 </div>
-                <div class="challenge-content">
-                    <h2>The Challenge</h2>
-                    <p><strong>Fractured Technology Stack:</strong> Multiple vendors independently managing commerce platforms, POS systems, and mobile apps with zero coordination.</p>
-                    <p><strong>Operational Bottlenecks:</strong> Siloed systems created deployment delays, duplicated efforts, and conflicting priorities across teams.</p>
-                    <p><strong>Escalating Costs:</strong> Vendor sprawl and inefficient integrations drove operational expenses while limiting innovation velocity.</p>
+                <div class="challenge-card">
+                    <h3><span class="card-number">2</span> Operational Silos</h3>
+                    <p>Disconnected systems created deployment delays and conflicting priorities</p>
+                </div>
+                <div class="challenge-card">
+                    <h3><span class="card-number">3</span> Escalating Costs</h3>
+                    <p>Vendor sprawl and inefficient integrations drove expenses up while slowing velocity</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solution Section -->
-    <section class="content-section white-bg">
-        <div class="content-wrapper-narrow">
-            <h2 class="section-title">Solution Approach</h2>
-            <p class="section-text">Unified architecture. Single vendor accountability. Seamless omnichannel operation.</p>
-
-            <div class="services-content">
-                <h3>Pillar 1: <strong>Unified Commerce Platform</strong></h3>
-                <p class="section-text">Re-architected enterprise systems on <strong>commercetools</strong> with optimized APIs, eliminating vendor silos and enabling real-time cross-channel synchronization of inventory, pricing, and fulfillment.</p>
-
-                <h3>Pillar 2: <strong>Omnichannel Integration</strong></h3>
-                <p class="section-text">Unified <strong>POS-to-eCommerce</strong> systems providing seamless data flow between in-store and digital channels, delivering consistent customer experiences and accurate inventory across all touchpoints.</p>
-
-                <h3>Pillar 3: <strong>High-Performance Mobile Commerce</strong></h3>
-                <p class="section-text">Enhanced iOS and Android applications with <strong>personalized recommendations</strong> and optimized performance, supported by <strong>nearshore LATAM teams</strong> for agile, cost-effective continuous delivery.</p>
+    <section class="solution-section">
+        <div class="solution-container">
+            <div class="solution-header">
+                <h2>The Solution</h2>
+                <p>Unified commerce platform architecture with single vendor accountability.</p>
             </div>
-
-            <div class="solution-images">
-                <img src="../images/casestudies/sephora-desktop.png" alt="Sephora Desktop" class="solution-desktop">
-                <img src="../images/casestudies/sephora-laptop.png" alt="Sephora Laptop" class="solution-laptop">
-                <img src="../images/casestudies/sephora-mobile.png" alt="Sephora Mobile" class="solution-mobile">
+            <div class="solution-pillars">
+                <div class="solution-pillar">
+                    <div class="pillar-number">1</div>
+                    <h3>Unified Platform</h3>
+                    <p>Re-architected enterprise systems on <strong>commercetools</strong> to eliminate silos and sync
+                        inventory in real-time.</p>
+                </div>
+                <div class="solution-pillar">
+                    <div class="pillar-number">2</div>
+                    <h3>Omnichannel Sync</h3>
+                    <p>Unified <strong>POS-to-eCommerce</strong> data flow delivering consistent experiences across all
+                        touchpoints.</p>
+                </div>
+                <div class="solution-pillar">
+                    <div class="pillar-number">3</div>
+                    <h3>Mobile Performance</h3>
+                    <p>Enhanced iOS and Android apps with <strong>personalized recommendations</strong> and optimized
+                        performance.</p>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Results Section -->
-    <section class="content-section gray-bg">
-        <div class="content-wrapper-narrow">
-            <h2 class="section-title">Measurable Results</h2>
-            <p class="section-text">Unified architecture. Accelerated innovation. Proven ROI.</p>
-
-            <img src="../images/casestudies/sephora-highlights.png" alt="Sephora Results Highlights" class="results-image">
-
-            <div class="services-content" style="margin-top: 40px;">
-                <p class="section-text"><strong>25% faster delivery</strong> via nearshore teams and API automation reducing time-to-market.</p>
-                <p class="section-text"><strong>40% cost reduction</strong> through vendor consolidation and operational efficiency gains.</p>
-                <p class="section-text"><strong>Unified omnichannel</strong> with real-time inventory sync across 2,700+ stores and digital channels.</p>
-                <p class="section-text"><strong>Single vendor accountability</strong> replacing fragmented vendor landscape with integrated partner model.</p>
-                <p class="section-text"><strong>Seamless team collaboration</strong> enabling cross-functional alignment and faster feature releases.</p>
+            <div class="devices-showcase">
+                <img src="../images/casestudies/sephora-laptop.png" alt="Sephora Desktop" class="device-laptop">
+                <img src="../images/casestudies/sephora-mobile.png" alt="Sephora Mobile" class="device-mobile">
             </div>
         </div>
     </section>
 
-
-    <!-- Services & Technologies Section -->
-    <section class="content-section gray-bg">
-        <div class="content-wrapper-narrow">
-            <h2 class="section-title">Services Delivered</h2>
-            <div class="services-list">
-                <span class="service-tag">Enterprise Commerce Architecture Planning</span>
-                <span class="service-tag">Mobile Commerce App Development</span>
-                <span class="service-tag">Ecommerce Development & Integration</span>
-                <span class="service-tag">Integration Services</span>
-                <span class="service-tag">Point-of-Sale (POS) Systems Integrations & Support</span>
+    <section class="results-section">
+        <div class="results-container">
+            <div class="results-header">
+                <h2>Results</h2>
             </div>
-
-            <h2 class="section-title" style="margin-top: 60px;">Technologies</h2>
-            <p class="section-text">Partner Integration:</p>
-            <div class="technology-logo">
-                <img src="../images/casestudies/commercetools-logo.png" alt="commercetools">
+            <div class="results-list">
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>25% Faster Delivery</h3>
+                        <p>API automation and nearshore teams reduced time-to-market</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>40% Cost Reduction</h3>
+                        <p>Consolidated vendors and improved operational efficiency</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Unified Omnichannel</h3>
+                        <p>Real-time inventory sync across 2,700+ stores</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>Seamless Collaboration</h3>
+                        <p>Aligned cross-functional teams for faster releases</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="content-wrapper-narrow">
-            <h2>Ready to unify your commerce operations at scale?</h2>
-            <p><strong>Consolidate vendors. Accelerate delivery. Drive growth.</strong> Let's show you how unified commerce architecture transforms your business.</p>
-            <a href="../contact.html" class="cta-button">Let's Talk →</a>
+    <section class="services-section">
+        <div class="services-container">
+            <div class="services-header">
+                <h2>Services Delivered</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg></div>
+                    <h3>Architecture Planning</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z" />
+                        </svg></div>
+                    <h3>App Development</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7v2H8v2h8v-2h-2v-2h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H3V4h18v12z" />
+                        </svg></div>
+                    <h3>POS Integration</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M6 2v6h.01L6 8.01 10 12l-4 4 .01.01H6V22h12v-5.99h-.01L18 16l-4-4 4-3.99-.01-.01H18V2H6z" />
+                        </svg></div>
+                    <h3>System Integration</h3>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
+    <section class="technologies-section">
+        <div class="technologies-container">
+            <div class="technologies-header">
+                <h2>Technologies</h2>
+            </div>
+            <div class="tech-category">
+                <div class="tech-category-title">
+                    <h3>Commerce Platform</h3>
+                </div>
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-card"><span class="tech-name">commercetools</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">iOS / Android</span></div>
+                </div>
+            </div>
+            <div class="tech-category">
+                <div class="tech-category-title">
+                    <h3>Integrations</h3>
+                </div>
+                <div class="tech-partners-grid">
+                    <div class="tech-partner-card">
+                        <div class="partner-badge">S</div>
+                        <div class="partner-info"><span class="partner-name">Sephora POS</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cs-cta">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="../services.html">All Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Platforms</h4>
-                    <ul>
-                        <li><a href="../platforms.html">All Platforms</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../work.html">Work</a></li>
-                        <li><a href="../partners.html">Partners</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NULogic. All rights reserved.</p>
-            </div>
+            <h2>Ready to Unify Your Commerce?</h2>
+            <p><strong>Consolidate vendors and accelerate delivery.</strong> Let's transform your operations.</p>
+            <a href="../contact.html" class="cs-cta-button">Let's Talk →</a>
         </div>
-    </footer>
+    </section>
+
+    <footer></footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/footer.js"></script>
 </body>
+
 </html>

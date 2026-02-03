@@ -1,275 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/icons/favicon.png">
     <title>Wild Fork Foods Case Study | Shopify Plus to commercetools Migration | NULogic</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/casestudy-responsive.css">
-    <style>
-        .case-study-hero {
-            background-image: url('../images/casestudies/wildfork-hero.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            padding: 120px 0;
-            position: relative;
-        }
-        .case-study-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(137, 56, 159, 0.85) 0%, rgba(237, 41, 37, 0.85) 100%);
-        }
-        .case-study-hero .container {
-            position: relative;
-            z-index: 1;
-        }
-        .client-logo {
-            max-width: 200px;
-            margin-bottom: 32px;
-        }
-        .client-info-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 48px;
-            background: #F9F9F9;
-            padding: 48px 0;
-        }
-        .client-info-item h4 {
-            color: #89389f;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 12px;
-        }
-        .client-info-item p {
-            color: #2B2B2B;
-            font-size: 18px;
-            font-weight: 600;
-            line-height: 1.5;
-        }
-        .client-info-item a {
-            color: #2B2B2B;
-            text-decoration: none;
-        }
-        .client-info-item a:hover {
-            color: #89389f;
-        }
-        .section-white {
-            background: #FFFFFF;
-            padding: 80px 0;
-        }
-        .section-gray {
-            background: #F9F9F9;
-            padding: 80px 0;
-        }
-        .container-narrow {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        .section-title {
-            color: #2B2B2B;
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 24px;
-            line-height: 1.2;
-        }
-        .section-content {
-            color: #424242;
-            font-size: 18px;
-            line-height: 1.7;
-        }
-        .challenge-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            margin-top: 40px;
-        }
-        .challenge-image {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .solution-list {
-            margin-top: 32px;
-        }
-        .solution-item {
-            margin-bottom: 32px;
-        }
-        .solution-item h3 {
-            color: #2B2B2B;
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-        .solution-item p {
-            color: #424242;
-            font-size: 17px;
-            line-height: 1.6;
-        }
-        .solution-item ul {
-            margin-top: 12px;
-            padding-left: 24px;
-        }
-        .solution-item ul li {
-            color: #424242;
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 8px;
-        }
-        .architecture-callout {
-            background: #F9F9F9;
-            border-left: 4px solid #89389f;
-            padding: 24px;
-            margin: 40px 0;
-            border-radius: 4px;
-        }
-        .architecture-callout p {
-            color: #2B2B2B;
-            font-size: 16px;
-            font-weight: 600;
-            margin: 0;
-        }
-        .architecture-image {
-            width: 100%;
-            margin: 40px 0;
-            border-radius: 8px;
-        }
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-            margin-top: 40px;
-        }
-        .result-item {
-            background: #FFFFFF;
-            padding: 32px;
-            border-radius: 8px;
-            border-left: 4px solid #89389f;
-            text-align: center;
-        }
-        .result-item h3 {
-            color: #89389f;
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-        .result-item p {
-            color: #424242;
-            font-size: 16px;
-            line-height: 1.6;
-            margin: 0;
-        }
-        .result-images {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-top: 48px;
-        }
-        .result-images img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .services-section {
-            margin-top: 40px;
-        }
-        .services-label {
-            color: #89389f;
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            margin-bottom: 16px;
-        }
-        .tags-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 40px;
-        }
-        .tag {
-            background: #FFFFFF;
-            color: #2B2B2B;
-            padding: 12px 20px;
-            border-radius: 24px;
-            font-size: 15px;
-            font-weight: 500;
-            border: 1px solid #E0E0E0;
-        }
-        .technology-logos {
-            display: flex;
-            gap: 32px;
-            margin-top: 24px;
-            align-items: center;
-        }
-        .technology-logos img {
-            height: 40px;
-        }
-        .cta-section {
-            background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);
-            padding: 80px 0;
-            text-align: center;
-        }
-        .cta-section h2 {
-            color: #FFFFFF;
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        .cta-section p {
-            color: rgba(255, 255, 255, 0.95);
-            font-size: 20px;
-            margin-bottom: 32px;
-        }
-        .cta-button {
-            display: inline-block;
-            background: #FFFFFF;
-            color: #89389f;
-            padding: 16px 40px;
-            border-radius: 4px;
-            font-size: 16px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: transform 0.2s;
-        }
-        .cta-button:hover {
-            transform: translateY(-2px);
-        }
-        @media (max-width: 768px) {
-            .client-info-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-            .challenge-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-            .results-grid {
-                grid-template-columns: 1fr;
-            }
-            .result-images {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/casestudy.css">
 </head>
+
 <body>
     <header>
         <div class="container">
             <nav>
-                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic" style="height: 32px;"></a>
+                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic"
+                        style="height: 32px;"></a>
                 <ul class="nav-links">
-                    <li class="nav-item-with-dropdown">
-                        <a href="../services.html">Services</a>
+                    <li class="nav-item-with-dropdown"><a href="../services.html">Services</a>
                         <ul class="dropdown-menu">
                             <li><a href="../commerce-build.html">Commerce Services</a></li>
                             <li><a href="../services.html#support">24/7 Run & Support</a></li>
@@ -277,8 +31,7 @@
                             <li><a href="../services.html#data-ai">Data, AI & Analytics</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="../platforms.html">Platforms</a>
+                    <li class="nav-item-with-dropdown"><a href="../platforms.html">Platforms</a>
                         <ul class="dropdown-menu">
                             <li><a href="../platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
                             <li><a href="../platforms.html#shopify">Shopify Plus</a></li>
@@ -290,8 +43,7 @@
                     <li><a href="../work.html">Work</a></li>
                     <li><a href="../partners.html">Partners</a></li>
                     <li><a href="../about.html">About</a></li>
-                    <li class="nav-item-with-dropdown">
-                        <a href="#">EN</a>
+                    <li class="nav-item-with-dropdown"><a href="#">EN</a>
                         <ul class="dropdown-menu">
                             <li><a href="wildfork.html">English</a></li>
                             <li><a href="../es/work/wildfork.html">Español</a></li>
@@ -303,221 +55,228 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="case-study-hero">
-        <div class="container">
-            <img src="../images/casestudies/wildfork-logo-new.png" alt="Wild Fork Foods" class="client-logo">
-            <h1 style="color: white; font-size: 48px; font-weight: 700; margin-bottom: 24px; line-height: 1.2; max-width: 900px;">Scaling Specialty Food Retail at Speed</h1>
-            <p style="color: rgba(255,255,255,0.95); font-size: 20px; line-height: 1.6; max-width: 800px;">Wild Fork Foods escaped Shopify Plus constraints through <strong>commercetools migration</strong>, unlocking <strong>enterprise composable commerce</strong> for complex inventory, subscriptions, and multi-market expansion.</p>
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <div class="case-study-label">Case Study</div>
+                <h1 class="case-study-title">Scaling Specialty Food Retail at Speed</h1>
+                <p class="case-study-intro">Escaping Shopify Plus constraints through commercetools migration, unlocking
+                    enterprise composable commerce.</p>
+                <div class="hero-logo-circle"><img src="../images/casestudies/wildfork-logo-new.png"
+                        alt="Wild Fork Foods"></div>
+            </div>
+            <div class="hero-image-container"><img src="../images/casestudies/wildfork-hero.png" alt="Wild Fork Foods">
+            </div>
         </div>
     </section>
 
-    <!-- Client Info Grid -->
-    <section class="client-info-grid">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px;">
+    <section class="client-info-section">
+        <div class="client-info-wrapper">
+            <div class="client-info-grid">
                 <div class="client-info-item">
-                    <h4>Region</h4>
-                    <p>LATAM & North America</p>
+                    <div class="client-info-label">Region</div>
+                    <div class="client-info-value">Global</div>
                 </div>
                 <div class="client-info-item">
-                    <h4>Website</h4>
-                    <p><a href="https://www.wildforkfoods.com" target="_blank">wildforkfoods.com</a></p>
+                    <div class="client-info-label">Website</div>
+                    <div class="client-info-value"><a href="https://www.wildforkfoods.com" target="_blank"
+                            rel="noopener">www.wildforkfoods.com</a></div>
                 </div>
                 <div class="client-info-item">
-                    <h4>Client Since</h4>
-                    <p>2024</p>
+                    <div class="client-info-label">Client Since</div>
+                    <div class="client-info-value">2024</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Client Overview -->
-    <section class="section-white">
-        <div class="container-narrow">
-            <h2 class="section-title">Client Overview</h2>
-            <p class="section-content"><strong>Premium specialty food retailer</strong> operating across North America and LATAM. Hybrid model: physical stores + e-commerce. <strong>Explosive growth</strong> with expanding market footprint. Demanded <strong>complex inventory management</strong> for perishables, <strong>flexible subscriptions</strong>, and <strong>rapid multi-market scaling</strong>. Shopify Plus couldn't keep pace.</p>
+    <section class="challenge-section">
+        <div class="challenge-header">
+            <h2>The <span>Challenge</span></h2>
+            <p>Premium specialty food retailer hit the ceiling with Shopify Plus. Complex inventory, cold chain
+                logistics, and multi-market scaling required a robust platform.</p>
         </div>
-    </section>
-
-    <!-- The Challenge -->
-    <section class="section-gray">
-        <div class="container-narrow">
-            <h2 class="section-title">The Challenge</h2>
-            <p class="section-content">Shopify Plus hit its ceiling fast. Rigid platform, scaling barriers, limited customization. Growth strategy blocked.</p>
-
-            <div class="solution-list">
-                <div class="solution-item">
-                    <h3><strong>Complex Inventory & Cold Chain</strong></h3>
-                    <p>Perishable goods require precise tracking, storage conditions, and handling. Shopify Plus inventory system designed for standard goods—not temperature-controlled logistics, batch expiration tracking, or location-based fulfillment.</p>
+        <div class="challenge-container">
+            <div class="challenge-image-wrapper">
+                <img src="../images/casestudies/wildfork-challenge.png" alt="Wild Fork Foods Challenge">
+                <div class="challenge-image-badge">Specialty Food</div>
+            </div>
+            <div class="challenge-cards">
+                <div class="challenge-card">
+                    <h3><span class="card-number">1</span> Complex Inventory</h3>
+                    <p>Perishables required precision tracking not supported by Shopify Plus</p>
                 </div>
-
-                <div class="solution-item">
-                    <h3><strong>Subscription & Recurring Revenue</strong></h3>
-                    <p>Subscriptions are core to Wild Fork's model: flexible frequencies, product swaps, pause/resume functionality. Shopify Plus subscriptions were rigid, inflexible, and required expensive custom workarounds.</p>
+                <div class="challenge-card">
+                    <h3><span class="card-number">2</span> Rigid Subscriptions</h3>
+                    <p>Legacy platform lacked flexibility for product swaps and pause/resume</p>
                 </div>
-
-                <div class="solution-item">
-                    <h3><strong>Multi-Market Localization</strong></h3>
-                    <p>Expanding to 5+ markets meant localized pricing, payment methods, fulfillment networks, and regulatory compliance. Shopify Plus deployment per market = expensive, slow, and operationally fragmented.</p>
+                <div class="challenge-card">
+                    <h3><span class="card-number">3</span> Localization</h3>
+                    <p>Slow and expensive to deploy localized pricing and fulfillment for 5+ markets</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- The Solution -->
-    <section class="section-white">
-        <div class="container-narrow">
-            <h2 class="section-title">The Solution</h2>
-            <p class="section-content">Complete platform migration to <strong>commercetools</strong>—a composable commerce engine built for flexibility and scale. Three strategic pillars unlocked growth.</p>
-
-            <div class="solution-list">
-                <div class="solution-item">
-                    <h3><strong>Intelligent Inventory & Fulfillment</strong></h3>
-                    <p><strong>Real-time synchronization</strong> across stores and warehouses. <strong>WMS integration</strong> with cold-chain logistics. Custom fulfillment logic for <strong>temperature-controlled shipping</strong>, delivery windows, and perishability tracking. <strong>BOPIS</strong> (buy-online-pickup-in-store) capabilities. Automated allocation and replenishment.</p>
+    <section class="solution-section">
+        <div class="solution-container">
+            <div class="solution-header">
+                <h2>The Solution</h2>
+                <p>Complete migration to commercetools composable commerce engine.</p>
+            </div>
+            <div class="solution-pillars">
+                <div class="solution-pillar">
+                    <div class="pillar-number">1</div>
+                    <h3>Intelligent Fulfillment</h3>
+                    <p>Real-time sync for WMS and cold-chain logistics with custom perishability logic and BOPIS.</p>
                 </div>
-
-                <div class="solution-item">
-                    <h3><strong>Flexible Subscription & Personalization Engine</strong></h3>
-                    <p>Fully customizable subscription management: frequencies, product swaps, pause/resume. <strong>Customer self-service portal</strong> for subscriptions and preferences. <strong>Personalized recommendations</strong> based on purchase history. Multiple payment options, loyalty integration, and seamless recurring billing.</p>
+                <div class="solution-pillar">
+                    <div class="pillar-number">2</div>
+                    <h3>Flexible Subscriptions</h3>
+                    <p><strong>Fully customizable engine</strong> with self-service portal and personalized
+                        recommendations.</p>
                 </div>
+                <div class="solution-pillar">
+                    <div class="pillar-number">3</div>
+                    <h3>Composable Architecture</h3>
+                    <p><strong>API-first, headless</strong> design with microservices for independent scaling across
+                        markets.</p>
+                </div>
+            </div>
+            <div class="devices-showcase">
+                <img src="../images/casestudies/wildfork-laptop.png" alt="Wild Fork Desktop" class="device-laptop">
+                <img src="../images/casestudies/wildfork-mobile.png" alt="Wild Fork Mobile" class="device-mobile">
+            </div>
+        </div>
+    </section>
 
-                <div class="solution-item">
-                    <h3><strong>Enterprise Composable Architecture</strong></h3>
-                    <p><strong>API-first, headless</strong> design for frontend flexibility. <strong>Microservices</strong> for independent scaling. Advanced product catalog supporting <strong>complex SKUs, bundles, and attributes</strong>. <strong>Multi-currency, multi-language, multi-market</strong> support. Dynamic pricing engine with promotional capabilities.</p>
+    <section class="results-section">
+        <div class="results-container">
+            <div class="results-header">
+                <h2>Results</h2>
+            </div>
+            <div class="results-list">
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>100% Data Integrity</h3>
+                        <p>Zero-loss migration of accounts and orders</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>45% Faster To Market</h3>
+                        <p>Accelerated feature launches and expansions</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>3x Performance</h3>
+                        <p>API improvement enabled tripling traffic capacity</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check"><svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg></div>
+                    <div class="result-content">
+                        <h3>5 New Markets</h3>
+                        <p>Launched in first year post-migration</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Results -->
-    <section class="section-gray">
-        <div class="container-narrow">
-            <h2 class="section-title">Measurable Results</h2>
-            <p class="section-content">Migration achieved zero disruption and immediate impact across operations.</p>
-
-            <div class="results-grid">
-                <div class="result-item">
-                    <h3>100%</h3>
-                    <p>Zero-loss data migration. All customer accounts, orders, and catalogs transferred intact.</p>
+    <section class="services-section">
+        <div class="services-container">
+            <div class="services-header">
+                <h2>Services Delivered</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" />
+                        </svg></div>
+                    <h3>Architecture Design</h3>
                 </div>
-
-                <div class="result-item">
-                    <h3>45%</h3>
-                    <p>Faster time-to-market for new features and market expansions.</p>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg></div>
+                    <h3>Platform Migration</h3>
                 </div>
-
-                <div class="result-item">
-                    <h3>3x</h3>
-                    <p>API performance improvement enabling 3x traffic capacity.</p>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M6 2v6h.01L6 8.01 10 12l-4 4 .01.01H6V22h12v-5.99h-.01L18 16l-4-4 4-3.99-.01-.01H18V2H6z" />
+                        </svg></div>
+                    <h3>Custom Development</h3>
                 </div>
-
-                <div class="result-item">
-                    <h3>60%</h3>
-                    <p>Reduced subscription management overhead and operational manual work.</p>
-                </div>
-
-                <div class="result-item">
-                    <h3>5 Markets</h3>
-                    <p>Launched in first year post-migration, vs. estimated 2+ years on Shopify Plus.</p>
-                </div>
-
-                <div class="result-item">
-                    <h3>35%</h3>
-                    <p>Higher checkout conversion rate from improved UX and payment flexibility.</p>
-                </div>
-
-                <div class="result-item">
-                    <h3>99.9%</h3>
-                    <p>Enterprise uptime maintained throughout scaling and market launches.</p>
-                </div>
-
-                <div class="result-item">
-                    <h3>50%</h3>
-                    <p>Reduced integration development time for WMS, logistics, and CRM systems.</p>
+                <div class="service-card">
+                    <div class="service-icon"><svg viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                        </svg></div>
+                    <h3>System Integration</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services & Technologies -->
-    <section class="section-white">
-        <div class="container-narrow">
-            <div class="services-section">
-                <h4 class="services-label">Platform & Architecture</h4>
-                <div class="tags-container">
-                    <span class="tag">commercetools</span>
-                    <span class="tag">Headless Commerce</span>
-                    <span class="tag">Microservices</span>
-                    <span class="tag">API-First</span>
-                    <span class="tag">React</span>
-                    <span class="tag">Node.js</span>
+    <section class="technologies-section">
+        <div class="technologies-container">
+            <div class="technologies-header">
+                <h2>Technologies</h2>
+            </div>
+            <div class="tech-category">
+                <div class="tech-category-title">
+                    <h3>Platform & Architecture</h3>
                 </div>
-
-                <h4 class="services-label">Integrations</h4>
-                <div class="tags-container">
-                    <span class="tag">WMS Integration</span>
-                    <span class="tag">Payment Gateways</span>
-                    <span class="tag">Logistics Providers</span>
-                    <span class="tag">CRM</span>
-                    <span class="tag">Marketing Automation</span>
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-card"><span class="tech-name">commercetools</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">Headless</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">React</span></div>
+                    <div class="tech-stack-card"><span class="tech-name">Node.js</span></div>
                 </div>
-
-                <h4 class="services-label">Services Delivered</h4>
-                <div class="tags-container">
-                    <span class="tag">Platform Migration</span>
-                    <span class="tag">Shopify Plus to commercetools</span>
-                    <span class="tag">Custom Development</span>
-                    <span class="tag">Architecture Design</span>
-                    <span class="tag">Data Migration</span>
-                    <span class="tag">System Integration</span>
+            </div>
+            <div class="tech-category">
+                <div class="tech-category-title">
+                    <h3>Integrations</h3>
                 </div>
-
-                <div class="technology-logos">
-                    <img src="../images/casestudies/commercetools-logo.png" alt="commercetools">
+                <div class="tech-partners-grid">
+                    <div class="tech-partner-card">
+                        <div class="partner-badge">W</div>
+                        <div class="partner-info"><span class="partner-name">WMS Integration</span></div>
+                    </div>
+                    <div class="tech-partner-card">
+                        <div class="partner-badge">C</div>
+                        <div class="partner-info"><span class="partner-name">CRM</span></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="cs-cta">
         <div class="container">
-            <h2>Ready for enterprise composable commerce?</h2>
-            <p><strong>Break free from platform constraints.</strong> Scale globally without compromise.</p>
-            <a href="../contact.html" class="cta-button">Let's Talk →</a>
+            <h2>Ready for Enterprise Composable Commerce?</h2>
+            <p><strong>Break free from constraints.</strong> Scale globally without compromise.</p>
+            <a href="../contact.html" class="cs-cta-button">Let's Talk →</a>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="../services.html">All Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Platforms</h4>
-                    <ul>
-                        <li><a href="../platforms.html">All Platforms</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../work.html">Work</a></li>
-                        <li><a href="../partners.html">Partners</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NULogic. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer></footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/footer.js"></script>
 </body>
+
 </html>

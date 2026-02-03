@@ -1,274 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ally Bank Case Study | Snowflake Native Extraction Framework | NULogic</title>
-    <meta name="description" content="Ally Bank boosts data agility with a scalable Snowflake Native Extraction Framework, eliminating licensing costs and accelerating extract onboarding.">
+    <meta name="description"
+        content="Ally Bank boosts data agility with a scalable Snowflake Native Extraction Framework, eliminating licensing costs and accelerating extract onboarding.">
+    <link rel="icon" type="image/png" href="../images/icons/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/casestudy-responsive.css">
-    <style>
-        .case-study-hero {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            background-image: url('../images/casestudies/ally-hero.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .case-study-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(137, 56, 159, 0.75) 0%, rgba(237, 41, 37, 0.75) 100%);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            padding: 120px 0 80px;
-        }
-
-        .hero-content h1 {
-            color: white;
-            font-size: 48px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 24px;
-            max-width: 900px;
-        }
-
-        .client-info-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            background: #F9F9F9;
-            padding: 48px 0;
-        }
-
-        .client-info-item {
-            text-align: left;
-        }
-
-        .client-info-label {
-            font-size: 14px;
-            font-weight: 600;
-            color: #89389f;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-
-        .client-info-value {
-            font-size: 18px;
-            color: #2B2B2B;
-            font-weight: 500;
-        }
-
-        .client-info-value a {
-            color: #2B2B2B;
-            text-decoration: none;
-        }
-
-        .client-info-value a:hover {
-            color: #89389f;
-        }
-
-        .client-logo {
-            margin-bottom: 32px;
-        }
-
-        .client-logo img {
-            height: 60px;
-            width: auto;
-        }
-
-        .section-white {
-            background: white;
-            padding: 80px 0;
-        }
-
-        .section-gray {
-            background: #F9F9F9;
-            padding: 80px 0;
-        }
-
-        .challenge-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .challenge-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-            margin-top: 48px;
-        }
-
-        .result-card {
-            background: white;
-            border-radius: 8px;
-            padding: 24px;
-            text-align: center;
-        }
-
-        .result-card img {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 16px;
-        }
-
-        .result-card h4 {
-            font-size: 18px;
-            font-weight: 600;
-            color: #2B2B2B;
-            margin-bottom: 12px;
-        }
-
-        .result-card p {
-            font-size: 14px;
-            color: #424242;
-            line-height: 1.6;
-        }
-
-
-        .services-tech-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            margin-top: 48px;
-        }
-
-        .tech-logos {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 24px;
-            margin-top: 24px;
-        }
-
-        .tech-logo img {
-            height: 40px;
-            width: auto;
-        }
-
-        .service-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .service-list li {
-            padding: 12px 0;
-            border-bottom: 1px solid #e0e0e0;
-            font-size: 16px;
-            color: #2B2B2B;
-        }
-
-        .service-list li:last-child {
-            border-bottom: none;
-        }
-
-        .cta-section {
-            background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            color: white;
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-
-        .cta-section p {
-            color: rgba(255, 255, 255, 0.95);
-            font-size: 18px;
-            margin-bottom: 32px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #89389f;
-            padding: 16px 40px;
-            font-size: 16px;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .summary-images {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-top: 40px;
-        }
-
-        .summary-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 32px;
-            }
-
-            .client-info-grid {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
-
-            .challenge-layout {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .results-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .services-tech-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .summary-images {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/casestudy.css">
 </head>
+
 <body>
     <header>
         <div class="container">
             <nav>
-                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic" style="height: 32px;"></a>
+                <a href="../index.html" class="logo"><img src="../images/nulogic-logo.svg" alt="NULogic"
+                        style="height: 32px;"></a>
                 <ul class="nav-links">
                     <li class="nav-item-with-dropdown">
                         <a href="../services.html">Services</a>
@@ -305,34 +60,37 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Split Layout -->
     <section class="case-study-hero">
-        <div class="hero-content">
-            <div class="container">
-                <h1>Ally Bank Eliminates ETL Costs & Accelerates Data Extraction</h1>
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <div class="case-study-label">Case Study</div>
+                <h1 class="case-study-title">Ally Bank Eliminates ETL Costs & Accelerates Data Extraction</h1>
+                <p class="case-study-intro">The nation's largest all-digital bank replaces legacy ETL with native
+                    Snowflake
+                    automation for real-time data delivery.</p>
+                <div class="hero-logo-circle">
+                    <img src="../images/casestudies/ally-logo.png" alt="Ally Financial">
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <img src="../images/casestudies/ally-hero.png" alt="Ally Bank Products">
             </div>
         </div>
     </section>
 
-    <!-- Client Logo & Info Grid -->
-    <section class="section-white" style="padding-bottom: 0;">
-        <div class="container">
-            <div class="client-logo">
-                <img src="../images/casestudies/ally-logo.png" alt="Ally Financial">
-            </div>
-        </div>
-    </section>
-
-    <section class="client-info-grid">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+    <!-- Client Info Section -->
+    <section class="client-info-section">
+        <div class="client-info-wrapper">
+            <div class="client-info-grid">
                 <div class="client-info-item">
                     <div class="client-info-label">Region</div>
                     <div class="client-info-value">U.S.</div>
                 </div>
                 <div class="client-info-item">
                     <div class="client-info-label">Website</div>
-                    <div class="client-info-value"><a href="https://www.ally.com" target="_blank" rel="noopener">https://www.ally.com</a></div>
+                    <div class="client-info-value"><a href="https://www.ally.com" target="_blank"
+                            rel="noopener">www.ally.com</a></div>
                 </div>
                 <div class="client-info-item">
                     <div class="client-info-label">Client Since</div>
@@ -342,150 +100,207 @@
         </div>
     </section>
 
-    <!-- Client Overview -->
-    <section class="section-white">
-        <div class="container">
-            <h2 style="font-size: 36px; font-weight: 700; color: #2B2B2B; margin-bottom: 24px;">Client Overview</h2>
-            <p style="font-size: 18px; line-height: 1.7; color: #424242; max-width: 900px;"><strong>The nation's largest all-digital bank.</strong> Leader in auto financing and digital financial services. Ally Financial powers deposits, securities, investment advisory, and insurance through cutting-edge cloud infrastructure. <strong>Goal:</strong> Replace legacy ETL with native Snowflake automation for real-time data delivery.</p>
+    <!-- Challenge Section - Premium Redesign -->
+    <section class="challenge-section">
+        <div class="challenge-header">
+            <h2>The <span>Challenge</span></h2>
+            <p>The nation's largest all-digital bank. Leader in auto financing and digital financial services. Ally
+                Financial powers deposits, securities, investment advisory, and insurance through cutting-edge cloud
+                infrastructure.</p>
         </div>
-    </section>
-
-    <!-- Challenge Section -->
-    <section class="section-gray">
-        <div class="container">
-            <div class="challenge-layout">
-                <div class="challenge-image">
-                    <img src="../images/casestudies/ally-challenge.png" alt="Ally Bank Challenge">
+        <div class="challenge-container">
+            <div class="challenge-image-wrapper">
+                <img src="../images/casestudies/ally-challenge.png" alt="Ally Bank Challenge">
+                <div class="challenge-image-badge">All-Digital</div>
+            </div>
+            <div class="challenge-cards">
+                <div class="challenge-card">
+                    <h3><span class="card-number">1</span> Cost & Infrastructure</h3>
+                    <p>High licensing fees with Matillion ETL on EC2, plus infrastructure overhead and limited
+                        flexibility</p>
                 </div>
-                <div class="challenge-content">
-                    <h2 style="font-size: 36px; font-weight: 700; color: #2B2B2B; margin-bottom: 24px;">Challenge</h2>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 20px 0; padding-left: 24px; position: relative; font-size: 16px; line-height: 1.7; color: #424242;">
-                            <span style="position: absolute; left: 0; color: #89389f; font-weight: 700;">•</span>
-                            <strong>Cost & Infrastructure:</strong> High licensing fees with Matillion ETL on EC2, plus infrastructure overhead and limited flexibility.
-                        </li>
-                        <li style="padding: 20px 0; padding-left: 24px; position: relative; font-size: 16px; line-height: 1.7; color: #424242;">
-                            <span style="position: absolute; left: 0; color: #89389f; font-weight: 700;">•</span>
-                            <strong>Development Velocity:</strong> Each new extract required additional custom coding, delaying delivery and straining limited developer capacity.
-                        </li>
-                        <li style="padding: 20px 0; padding-left: 24px; position: relative; font-size: 16px; line-height: 1.7; color: #424242;">
-                            <span style="position: absolute; left: 0; color: #89389f; font-weight: 700;">•</span>
-                            <strong>Operational Risk:</strong> Complex troubleshooting without centralized monitoring, increasing risk and reducing visibility into data pipelines.
-                        </li>
-                    </ul>
+                <div class="challenge-card">
+                    <h3><span class="card-number">2</span> Development Velocity</h3>
+                    <p>Each new extract required additional custom coding, delaying delivery and straining limited
+                        developer capacity</p>
+                </div>
+                <div class="challenge-card">
+                    <h3><span class="card-number">3</span> Operational Risk</h3>
+                    <p>Complex troubleshooting without centralized monitoring, increasing risk and reducing visibility
+                        into data pipelines</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Solution Section -->
-    <section class="section-white">
-        <div class="container">
-            <h2 style="font-size: 36px; font-weight: 700; color: #2B2B2B; margin-bottom: 24px;">Solution</h2>
-            <p style="font-size: 18px; line-height: 1.7; color: #424242; margin-bottom: 40px; max-width: 900px;">Build a <strong>fully Snowflake-native extraction framework</strong> replacing Matillion with automated, config-driven data pipelines. No external ETL. No licensing fees.</p>
+    <section class="solution-section">
+        <div class="solution-container">
+            <div class="solution-header">
+                <h2>The Solution</h2>
+                <p>Build a fully Snowflake-native extraction framework replacing Matillion with automated, config-driven
+                    data pipelines. No external ETL. No licensing fees.</p>
+            </div>
 
-            <div style="display: grid; gap: 32px; margin-top: 48px;">
-                <div style="padding: 32px; background: #F9F9F9; border-radius: 8px; border-left: 4px solid #89389f;">
-                    <h4 style="font-size: 18px; font-weight: 600; color: #2B2B2B; margin-bottom: 12px;">Pillar 1: Automation Engine</h4>
-                    <p style="font-size: 16px; line-height: 1.7; color: #424242;"><strong>Python procedures</strong> and <strong>Snowflake Task scheduling</strong> handle all extractions. Data writes directly to <strong>S3</strong>. No external tools required.</p>
+            <div class="solution-pillars">
+                <div class="solution-pillar">
+                    <div class="pillar-number">1</div>
+                    <h3>Automation Engine</h3>
+                    <p><strong>Python procedures</strong> and <strong>Snowflake Task scheduling</strong> handle all
+                        extractions. Data writes directly to <strong>S3</strong>. No external tools required.</p>
                 </div>
+                <div class="solution-pillar">
+                    <div class="pillar-number">2</div>
+                    <h3>Config-Driven Flexibility</h3>
+                    <p>New extracts deployed <strong>instantly via configuration updates</strong>—zero code changes
+                        needed. Scales to hundreds of extracts without engineering overhead.</p>
+                </div>
+                <div class="solution-pillar">
+                    <div class="pillar-number">3</div>
+                    <h3>Centralized Governance</h3>
+                    <p><strong>Audit logs, monitoring tables,</strong> and <strong>dependency handling</strong> provide
+                        real-time visibility. Proactive alerts and rapid recovery reduce operational risk.</p>
+                </div>
+            </div>
 
-                <div style="padding: 32px; background: #F9F9F9; border-radius: 8px; border-left: 4px solid #89389f;">
-                    <h4 style="font-size: 18px; font-weight: 600; color: #2B2B2B; margin-bottom: 12px;">Pillar 2: Config-Driven Flexibility</h4>
-                    <p style="font-size: 16px; line-height: 1.7; color: #424242;">New extracts deployed <strong>instantly via configuration updates</strong>—zero code changes needed. Scales to hundreds of extracts without engineering overhead.</p>
-                </div>
-
-                <div style="padding: 32px; background: #F9F9F9; border-radius: 8px; border-left: 4px solid #89389f;">
-                    <h4 style="font-size: 18px; font-weight: 600; color: #2B2B2B; margin-bottom: 12px;">Pillar 3: Centralized Governance</h4>
-                    <p style="font-size: 16px; line-height: 1.7; color: #424242;"><strong>Audit logs, monitoring tables,</strong> and <strong>dependency handling</strong> provide real-time visibility. Proactive alerts and rapid recovery reduce operational risk.</p>
-                </div>
+            <!-- Summary Images -->
+            <div class="devices-showcase">
+                <img src="../images/casestudies/ally-summary-1.png" alt="Data Pipeline Architecture"
+                    class="device-laptop">
             </div>
         </div>
     </section>
 
     <!-- Results Section -->
-    <section class="section-gray">
-        <div class="container">
-            <h2 style="font-size: 36px; font-weight: 700; color: #2B2B2B; margin-bottom: 24px;">Results</h2>
-
-            <div class="results-grid">
-                <div class="result-card">
-                    <img src="../images/casestudies/ally-result-1.png" alt="Cost Savings">
-                    <h4>100% Cost Elimination</h4>
-                    <p>Matillion fully retired—no more licensing or infrastructure fees.</p>
-                </div>
-
-                <div class="result-card">
-                    <img src="../images/casestudies/ally-result-2.png" alt="Time Savings">
-                    <h4>Days to Minutes</h4>
-                    <p>New extract onboarding accelerated with zero code changes needed.</p>
-                </div>
-
-                <div class="result-card">
-                    <img src="../images/casestudies/ally-result-3.png" alt="Developer Efficiency">
-                    <h4>Developer Freedom</h4>
-                    <p>Freed resources redirected to AI-driven personalization and innovation.</p>
-                </div>
+    <section class="results-section">
+        <div class="results-container">
+            <div class="results-header">
+                <h2>Results</h2>
             </div>
 
-            <div style="margin-top: 48px;">
-                <ul style="list-style: none; padding: 0;">
-                    <li style="padding: 12px 0; padding-left: 24px; position: relative; font-size: 16px; line-height: 1.7; color: #424242;">
-                        <span style="position: absolute; left: 0; color: #89389f; font-weight: 700;">✓</span>
-                        <strong>Real-time observability:</strong> Centralized monitoring and audit logs provide complete pipeline visibility.
-                    </li>
-                    <li style="padding: 12px 0; padding-left: 24px; position: relative; font-size: 16px; line-height: 1.7; color: #424242;">
-                        <span style="position: absolute; left: 0; color: #89389f; font-weight: 700;">✓</span>
-                        <strong>Future-ready scale:</strong> Framework handles new vendors, formats, and transformations without architectural changes.
-                    </li>
-                    <li style="padding: 12px 0; padding-left: 24px; position: relative; font-size: 16px; line-height: 1.7; color: #424242;">
-                        <span style="position: absolute; left: 0; color: #89389f; font-weight: 700;">✓</span>
-                        <strong>Lower operational risk:</strong> Proactive alerting and dependency handling prevent data pipeline failures.
-                    </li>
-                </ul>
-            </div>
-
-            <div class="summary-images">
-                <div class="summary-image">
-                    <img src="../images/casestudies/ally-summary-1.png" alt="Data Pipeline Architecture">
+            <div class="results-list">
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>100% Cost Elimination</h3>
+                        <p>Matillion fully retired—no more licensing or infrastructure fees</p>
+                    </div>
                 </div>
-                <div class="summary-image">
-                    <img src="../images/casestudies/ally-summary-2.png" alt="Monitoring Dashboard">
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>Days to Minutes</h3>
+                        <p>New extract onboarding accelerated with zero code changes needed</p>
+                    </div>
                 </div>
-                <div class="summary-image">
-                    <img src="../images/casestudies/ally-summary-3.png" alt="Performance Metrics">
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>Developer Freedom</h3>
+                        <p>Freed resources redirected to AI-driven personalization and innovation</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>Real-Time Observability</h3>
+                        <p>Centralized monitoring and audit logs provide complete pipeline visibility</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>Future-Ready Scale</h3>
+                        <p>Framework handles new vendors, formats, and transformations without architectural changes</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-check">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="result-content">
+                        <h3>Lower Operational Risk</h3>
+                        <p>Proactive alerting and dependency handling prevent data pipeline failures</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- Services & Technologies Section -->
-    <section class="section-gray">
-        <div class="container">
-            <h2 style="font-size: 36px; font-weight: 700; color: #2B2B2B; margin-bottom: 48px;">Services & Technologies</h2>
-
-            <div class="services-tech-grid">
-                <div>
-                    <h3 style="font-size: 24px; font-weight: 600; color: #2B2B2B; margin-bottom: 24px;">Services</h3>
-                    <ul class="service-list">
-                        <li style="padding: 16px 0; border-bottom: 1px solid #d7d7d7; font-size: 16px; color: #2B2B2B;">Data Engineering</li>
-                        <li style="padding: 16px 0; font-size: 16px; color: #2B2B2B;">Cloud Services</li>
-                    </ul>
+    <!-- Services Section - Enhanced -->
+    <section class="services-section">
+        <div class="services-container">
+            <div class="services-header">
+                <h2>Services Delivered</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
+                        </svg>
+                    </div>
+                    <h3>Data Engineering</h3>
                 </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" />
+                        </svg>
+                    </div>
+                    <h3>Cloud Services</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div>
-                    <h3 style="font-size: 24px; font-weight: 600; color: #2B2B2B; margin-bottom: 24px;">Technologies</h3>
-                    <div class="tech-logos">
-                        <div class="tech-logo">
-                            <img src="../images/casestudies/ally-aws-logo.png" alt="AWS">
-                        </div>
-                        <div class="tech-logo">
-                            <img src="../images/casestudies/ally-tech-1.png" alt="Snowflake">
-                        </div>
-                        <div class="tech-logo">
-                            <img src="../images/casestudies/ally-tech-2.png" alt="Python">
-                        </div>
+    <!-- Technologies Section -->
+    <section class="technologies-section">
+        <div class="technologies-container">
+            <div class="technologies-header">
+                <h2>Technologies</h2>
+            </div>
+
+            <div class="tech-category">
+                <div class="tech-category-title">
+                    <h3>Engineering Stack</h3>
+                </div>
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-card">
+                        <img src="../images/techs/aws.png" alt="AWS">
+                        <span class="tech-name">AWS</span>
+                    </div>
+                    <div class="tech-stack-card">
+                        <img src="../images/techs/snowflake.png" alt="Snowflake">
+                        <span class="tech-name">Snowflake</span>
+                    </div>
+                    <div class="tech-stack-card">
+                        <img src="../images/techs/python.png" alt="Python">
+                        <span class="tech-name">Python</span>
                     </div>
                 </div>
             </div>
@@ -493,70 +308,17 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="cs-cta">
         <div class="container">
             <h2>Ready to Eliminate ETL Costs?</h2>
-            <p>Build native data pipelines in Snowflake and redirect engineering resources to innovation. Let's make your data extraction faster, cheaper, and smarter.</p>
-            <a href="../contact.html" class="cta-button">Let's Talk →</a>
-
-            <div style="margin-top: 48px; display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;">
-                <div style="color: white;">
-                    <p style="font-size: 14px; opacity: 0.9; margin-bottom: 8px;">Email</p>
-                    <a href="mailto:sales@nulogic.io" style="color: white; text-decoration: none; font-size: 16px; font-weight: 600;">sales@nulogic.io</a>
-                </div>
-                <div style="color: white;">
-                    <p style="font-size: 14px; opacity: 0.9; margin-bottom: 8px;">Phone</p>
-                    <a href="tel:+14699226985" style="color: white; text-decoration: none; font-size: 16px; font-weight: 600;">+1 (469) 922-6985</a>
-                </div>
-            </div>
+            <p>Build native data pipelines in Snowflake and redirect engineering resources to innovation.</p>
+            <a href="../contact.html" class="cs-cta-button">Let's Talk →</a>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="../services.html">All Services</a></li>
-                        <li><a href="../services.html#commerce-build">Commerce Services</a></li>
-                        <li><a href="../services.html#support">24/7 Run & Support</a></li>
-                        <li><a href="../services.html#cloud">Cloud, Performance & Reliability</a></li>
-                        <li><a href="../services.html#data-ai">Data, AI & Analytics</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Platforms</h4>
-                    <ul>
-                        <li><a href="../platforms.html">All Platforms</a></li>
-                        <li><a href="../platforms.html#sfcc">Salesforce Commerce Cloud</a></li>
-                        <li><a href="../platforms.html#shopify">Shopify Plus</a></li>
-                        <li><a href="../platforms.html#commercetools">commercetools</a></li>
-                        <li><a href="../platforms.html#shopware">Shopware</a></li>
-                        <li><a href="../platforms.html#magento">Magento / Adobe Commerce</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../work.html">Work</a></li>
-                        <li><a href="../partners.html">Partners</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Connect</h4>
-                    <ul>
-                        <li><a href="mailto:sales@nulogic.io">sales@nulogic.io</a></li>
-                        <li><a href="tel:+14699226985">+1 (469) 922-6985</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NULogic. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer></footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/footer.js"></script>
 </body>
+
 </html>

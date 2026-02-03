@@ -1,3 +1,259 @@
+/* === Case Study Standard Layout === */
+.cs-hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 0;
+    position: relative;
+}
+
+.cs-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(137, 56, 159, 0.85) 0%, rgba(237, 41, 37, 0.85) 100%);
+}
+
+.cs-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.cs-hero .cs-logo {
+    max-width: 200px;
+    margin-bottom: 32px;
+}
+
+.cs-hero h1 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.2;
+    max-width: 900px;
+}
+
+.cs-hero p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.cs-client-info {
+    background: #F9F9F9;
+    padding: 48px 0;
+}
+
+.cs-client-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.cs-client-info-item h4 {
+    color: #89389f;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.cs-client-info-item p {
+    color: #2B2B2B;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.cs-client-info-item a {
+    color: #2B2B2B;
+    text-decoration: none;
+}
+
+.cs-client-info-item a:hover {
+    color: #89389f;
+}
+
+.cs-section-white {
+    background: #fff;
+    padding: 80px 0;
+}
+
+.cs-section-gray {
+    background: #F9F9F9;
+    padding: 80px 0;
+}
+
+.cs-section-title {
+    color: #2B2B2B;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.cs-section-content {
+    color: #424242;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.cs-section-content p {
+    margin-bottom: 16px;
+}
+
+.cs-challenge-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.cs-challenge-grid img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.cs-solution-item {
+    margin-bottom: 32px;
+}
+
+.cs-solution-item h3 {
+    color: #2B2B2B;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.cs-solution-item p {
+    color: #424242;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.cs-results-grid {
+    display: grid;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.cs-result-item {
+    background: #fff;
+    padding: 28px;
+    border-radius: 8px;
+    border-left: 4px solid #89389f;
+}
+
+.cs-result-item h3 {
+    color: #89389f;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.cs-result-item p {
+    color: #424242;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.cs-tags-label {
+    color: #89389f;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 16px;
+}
+
+.cs-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.cs-tag {
+    background: #fff;
+    color: #2B2B2B;
+    padding: 12px 20px;
+    border-radius: 24px;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid #E0E0E0;
+}
+
+.cs-cta {
+    background: linear-gradient(135deg, #89389f 0%, #ed2925 100%);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cs-cta h2 {
+    color: #fff;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.cs-cta p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 20px;
+    margin-bottom: 32px;
+}
+
+.cs-cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #89389f;
+    padding: 16px 40px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.cs-cta-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Case study mobile overrides */
+@media (max-width: 768px) {
+    .cs-hero {
+        padding: 80px 0;
+    }
+
+    .cs-hero h1 {
+        font-size: 32px;
+    }
+
+    .cs-hero p {
+        font-size: 17px;
+    }
+
+    .cs-client-info-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .cs-challenge-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .cs-cta h2 {
+        font-size: 32px;
+    }
+}
+
 /* Case Study Responsive Styles */
 
 /* Hide testimonials/customer feedback sections */
@@ -17,7 +273,6 @@ body section:has(div[style*="border-left: 6px solid #89389f"]):not(:has(h2)) {
 /* Base responsive image handling */
 body img {
     max-width: 100% !important;
-    height: auto !important;
 }
 
 /* Ensure containers have proper padding on all devices */
@@ -42,7 +297,7 @@ body section[style*="padding: 0"] div img {
     width: 100% !important;
     height: auto !important;
     border-radius: 8px !important;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
 }
 
 /* Mobile: reduce hero padding */
@@ -58,6 +313,7 @@ body section[style*="padding: 0"] div img {
 
 /* Tablet and below (max-width: 992px) */
 @media screen and (max-width: 992px) {
+
     /* Adjust section padding for tablets */
     body section[style*="padding"] {
         padding-top: 60px !important;
@@ -96,6 +352,7 @@ body section[style*="padding: 0"] div img {
 
 /* Mobile devices (max-width: 768px) */
 @media screen and (max-width: 768px) {
+
     /* Container padding */
     .container {
         padding-left: 20px !important;
@@ -240,6 +497,7 @@ body section[style*="padding: 0"] div img {
 
 /* Small mobile devices (max-width: 480px) */
 @media screen and (max-width: 480px) {
+
     /* Tighter container padding */
     .container {
         padding-left: 16px !important;
@@ -307,6 +565,7 @@ body section[style*="padding: 0"] div img {
 
 /* Override for max-width containers to ensure proper width */
 @media screen and (max-width: 900px) {
+
     body div[style*="max-width: 900px"],
     body div[style*="max-width:900px"] {
         max-width: 100% !important;
@@ -314,6 +573,7 @@ body section[style*="padding: 0"] div img {
 }
 
 @media screen and (max-width: 700px) {
+
     body div[style*="max-width: 700px"],
     body div[style*="max-width:700px"] {
         max-width: 100% !important;
